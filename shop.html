@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filofino · Servicio de Afilado y Reparación</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (нужно для корзины) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ===========================
+         MOBILE BURGER MENU
+    ============================ -->
+    <div id="burgerMenu" class="burger-overlay">
+      <button class="close-btn" id="closeBurger">&times;</button>
+
+      <ul>
+        <li><a href="index.html#services">Servicios</a></li>
+        <li><a href="index.html#tarifas">Tarifas</a></li>
+        <li><a href="index.html#catalogo">Productos</a></li>
+        <li><a href="index.html#why">¿Por qué elegirnos?</a></li>
+        <li><a href="index.html#about">Sobre nosotros</a></li>
+        <li><a href="index.html#proceso">Proceso</a></li>
+        <li><a href="index.html#testimonios">Opiniones</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+
+        <!-- 🔥 MOBILE CART BUTTON -->
+        <li class="nav-item mt-3">
+          <button id="cartButtonMobile" class="btn-cart position-relative">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCountMobile" class="cart-count">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ===========================
+            NAVBAR DESKTOP
+    ============================ -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html#">Filofino</a>
+
+        <!-- Desktop menu -->
+        <div class="d-none d-lg-block">
+          <ul class="navbar-nav ms-auto flex-row align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#tarifas">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#catalogo">Productos</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarNosotros"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Nosotros
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="index.html#why"
+                    >¿Por qué elegirnos?</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#about"
+                    >Sobre nosotros</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#proceso">Proceso</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#testimonios"
+                    >Opiniones</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="index.html#faq">FAQ</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+
+            <!-- 🔥 DESKTOP CART BUTTON -->
+            <li class="nav-item ms-3">
+              <button id="cartButton" class="btn-cart position-relative">
+                <i class="bi bi-cart3"></i>
+                <span id="cartCount" class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BURGER ICON -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          id="burgerToggle"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===========================
+            HERO
+    ============================ -->
+    <header
+      class="hero-about d-flex align-items-center justify-content-center text-center"
+    >
+      <div class="container">
+        <h1 class="display-5 fw-bold text-white">Nuestra Tienda</h1>
+        <p class="text-light">
+          Más de 5 años dedicados al afilado y reparación profesional.
+        </p>
+      </div>
+    </header>
+
+    <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+    <main class="py-5">
+      <div class="container">
+        <!-- TABS -->
+        <ul class="nav nav-pills justify-content-center mb-5" id="shopTabs">
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              data-bs-toggle="pill"
+              data-bs-target="#manicura"
+            >
+              💅 Manicura
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#peluqueria"
+            >
+              ✂️ Peluquería
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="pill"
+              data-bs-target="#accesorios"
+            >
+              ⚙️ Accesorios
+            </button>
+          </li>
+        </ul>
+
+        <!-- TAB CONTENT -->
+        <div class="tab-content">
+          <!-- ================= MANICURA ================= -->
+          <div class="tab-pane fade show active" id="manicura">
+            <div class="row g-4">
+              <!-- PRODUCT 1 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/Alicates_Expert.webp"
+                    class="card-img-top"
+                    alt="Staleks Alicates Pro"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Staleks Alicates Pro</h5>
+                    <p class="card-text">
+                      Alicates de precisión profesional con acero inoxidable
+                      japonés.
+                    </p>
+                    <p class="fw-bold text-orange">€29.90</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="staleks-pro"
+                      data-name="Staleks Alicates Pro"
+                      data-price="29.90"
+                      data-image="images/Alicates_Expert.webp"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PRODUCT 2 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/ALICATES-STALEKS-PARA-UNAS.webp"
+                    class="card-img-top"
+                    alt="Olton Tijeras Clásicas"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Olton Tijeras Clásicas</h5>
+                    <p class="card-text">
+                      Tijeras finas para cutícula, afiladas a mano.
+                    </p>
+                    <p class="fw-bold text-orange">€22.50</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="olton-tijeras"
+                      data-name="Olton Tijeras Clásicas"
+                      data-price="22.50"
+                      data-image="images/ALICATES-STALEKS-PARA-UNAS.webp"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PRODUCT 3 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/empujaodr.webp"
+                    class="card-img-top"
+                    alt="Olton Pusher Pro"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Olton Pusher Pro</h5>
+                    <p class="card-text">
+                      Empujador profesional doble, ideal para manicura clásica.
+                    </p>
+                    <p class="fw-bold text-orange">€15.90</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="olton-pusher"
+                      data-name="Olton Pusher Pro"
+                      data-price="15.90"
+                      data-image="images/empujaodr.webp"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= PELUQUERÍA ================= -->
+          <div class="tab-pane fade" id="peluqueria">
+            <div class="row g-4">
+              <!-- PRODUCT 1 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/tijeras-peluqueria.jpg"
+                    class="card-img-top"
+                    alt="Tijeras Profesionales 6.0"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Tijeras Profesionales 6.0"</h5>
+                    <p class="card-text">
+                      Acero japonés 440C, filo convexo y acabado mate.
+                    </p>
+                    <p class="fw-bold text-orange">€79.00</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="peluqueria-60"
+                      data-name="Tijeras Profesionales 6.0"
+                      data-price="79.00"
+                      data-image="images/tijeras-peluqueria.jpg"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PRODUCT 2 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/tijeras-thinning.jpg"
+                    class="card-img-top"
+                    alt="Tijeras de Entresacar"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Tijeras de Entresacar</h5>
+                    <p class="card-text">30 dientes, movimiento suave.</p>
+                    <p class="fw-bold text-orange">€69.00</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="entresacar-30"
+                      data-name="Tijeras de Entresacar"
+                      data-price="69.00"
+                      data-image="images/tijeras-thinning.jpg"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= ACCESORIOS ================= -->
+          <div class="tab-pane fade" id="accesorios">
+            <div class="row g-4">
+              <!-- PRODUCT 1 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/lamp-uv.jpg"
+                    class="card-img-top"
+                    alt="Lámpara UV 48W"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Lámpara UV 48W</h5>
+                    <p class="card-text">Secado rápido para uñas de gel.</p>
+                    <p class="fw-bold text-orange">€35.00</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="uv-48"
+                      data-name="Lámpara UV 48W"
+                      data-price="35.00"
+                      data-image="images/lamp-uv.jpg"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PRODUCT 2 -->
+              <div class="col-md-4">
+                <div class="card h-100 text-center shadow-sm">
+                  <img
+                    src="images/machine-cut.jpg"
+                    class="card-img-top"
+                    alt="Máquina de Corte Pro"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Máquina de Corte Pro</h5>
+                    <p class="card-text">
+                      Motor silencioso, cuchillas de titanio.
+                    </p>
+                    <p class="fw-bold text-orange">€89.00</p>
+                    <button
+                      class="btn btn-outline-primary"
+                      data-add-to-cart
+                      data-id="machine-pro"
+                      data-name="Máquina de Corte Pro"
+                      data-price="89.00"
+                      data-image="images/machine-cut.jpg"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===========================
+            FOOTER
+    ============================ -->
+    <footer id="contacto" class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- О мастерской -->
+          <div class="col-md-6 mb-3">
+            <h5>Filo Fino</h5>
+
+            <p>
+              Taller de <strong>afilado profesional en Valencia</strong> de
+              herramientas de peluquería, cuchillos de cocina y manicura.
+            </p>
+
+            <p>
+              Compartimos ejemplos reales de trabajos, procesos de afilado y
+              resultados antes y después en nuestro
+              <a data-instagram target="_blank" rel="noopener noreferrer">
+                Instagram </a
+              >.
+            </p>
+
+            <div class="footer-legal">
+              <a href="../legal/aviso-legal.html">Aviso legal</a>
+              <a href="../legal/politica-privacidad.html"
+                >Política de privacidad</a
+              >
+              <a href="../legal/politica-cookies.html">Política de cookies</a>
+            </div>
+          </div>
+
+          <!-- Контакт и график -->
+          <div class="col-md-6 mb-3">
+            <h5>Contacto</h5>
+
+            <p>
+              📍
+              <a data-address target="_blank" rel="noopener noreferrer"></a>
+            </p>
+
+            <p>
+              💬
+              <a data-whatsapp target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
+            </p>
+
+            <p class="mb-0">
+              🕒 <strong class="horario">Horario</strong><br />
+              <span data-schedule></span>
+            </p>
+          </div>
+        </div>
+
+        <p class="text-center mt-4 mb-0" data-copyright></p>
+      </div>
+    </footer>
+
+    <!-- ===========================
+            CART MODAL
+    ============================ -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">🛒 Tu carrito</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body" id="cart-items">
+            <p>Tu carrito está vacío.</p>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-success" id="checkoutBtn">
+              Enviar pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+            SCRIPTS
+    ============================ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Your JS -->
+    <script src="script.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

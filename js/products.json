@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Alicate de manicura profesional",
+    "price": 25,
+    "img": "images/alicate.jpg",
+    "desc": "Alicate de manicura de acero inoxidable con corte preciso, ideal para uso profesional y doméstico."
+  },
+  {
+    "id": 2,
+    "title": "Tijeras de manicura",
+    "price": 15,
+    "img": "images/tijeras.jpg",
+    "desc": "Tijeras finas y afiladas para un acabado limpio. Diseñadas para cortes delicados y precisos en manicura."
+  },
+  {
+    "id": 3,
+    "title": "Tijeras de peluquería",
+    "price": 35,
+    "img": "images/tijeras-peluqueria.jpg",
+    "desc": "Tijeras de peluquería de alta calidad con filo profesional. Perfectas para estilistas y barberos."
+  },
+  {
+    "id": 4,
+    "title": "Cuchillo de cocina chef",
+    "price": 28,
+    "img": "images/cuchillo-chef.jpg",
+    "desc": "Cuchillo de cocina multiuso con hoja de acero inoxidable, equilibrado y duradero para cortes precisos."
+  },
+  {
+    "id": 5,
+    "title": "Aceite lubricante para herramientas",
+    "price": 8,
+    "img": "images/aceite.jpg",
+    "desc": "Aceite especial para el cuidado de tijeras y alicates. Reduce la fricción y prolonga la vida útil."
+  },
+  {
+    "id": 6,
+    "title": "Piedra de afilar",
+    "price": 20,
+    "img": "images/piedra-afilar.jpg",
+    "desc": "Piedra de afilar doble cara, ideal para el mantenimiento regular de cuchillos y tijeras."
+  }
+]

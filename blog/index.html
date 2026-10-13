@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Blog de afilado profesional en Valencia | Consejos y guías · Filo Fino
+    </title>
+
+    <link rel="canonical" href="https://filofino.es/blog/" />
+
+    <meta
+      name="description"
+      content="Casos reales del taller: por qué las tijeras tiran, cuándo afilar un cuchillo, cómo se recupera una herramienta mal afilada. Consejos y guías de afilado profesional en Valencia."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:site_name"
+      content="Filo Fino · Afilado profesional en Valencia"
+    />
+    <meta
+      property="og:title"
+      content="Blog de afilado profesional en Valencia | Filo Fino"
+    />
+    <meta
+      property="og:description"
+      content="Casos reales y consejos del taller en Valencia: cuchillos, tijeras, manicura y máquinas. Contacto directo por WhatsApp."
+    />
+    <meta property="og:url" content="https://filofino.es/blog/" />
+    <meta property="og:image" content="https://filofino.es/images/taller.jpg" />
+    <link rel="icon" href="../favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles-blog.css" />
+
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand fw-bold" href="/">Filo Fino</a>
+
+        <div class="d-none d-lg-flex align-items-center ms-auto gap-3">
+          <ul class="navbar-nav flex-row mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/#tarifas">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#proceso">Cómo trabajamos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/servicios/">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/blog/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#contacto">Contacto</a>
+            </li>
+          </ul>
+
+          <a class="navbar-phone btn-styleNav" data-phone>
+            <i class="bi bi-telephone"></i>
+          </a>
+        </div>
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          id="burgerToggle"
+          aria-controls="burgerMenu"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Overlay меню для мобильных -->
+    <div
+      id="burgerMenu"
+      class="burger-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <button
+        class="close-btn"
+        id="closeBurger"
+        type="button"
+        aria-label="Cerrar menú"
+      >
+        &times;
+      </button>
+      <ul>
+        <li><a href="/#tarifas">Tarifas</a></li>
+        <li><a href="/#proceso">Cómo trabajamos</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN -->
+    <main id="blog" class="blog-page">
+      <!-- HERO -->
+      <section class="blog-hero">
+        <div class="container">
+          <div class="blog-hero__inner">
+            <div class="blog-hero__text">
+              <p class="blog-hero__kicker">Afilado profesional en Valencia</p>
+
+              <h1 class="blog-hero__title">
+                Afilado de cuchillos, tijeras y herramientas en Valencia
+              </h1>
+
+              <p class="blog-hero__subtitle">
+                Taller local en Valencia con evaluación real del filo.
+              </p>
+
+              <p class="blog-hero__trust">
+                ¿Buscas afilar cuchillos o tijeras cerca de ti? Escríbeme por
+                WhatsApp y te digo exactamente qué necesita tu herramienta.
+              </p>
+            </div>
+
+            <div class="blog-hero__badge">
+              <div class="blog-hero__badge-card">
+                <div class="blog-hero__badge-title">Contacto rápido</div>
+
+                <div class="blog-hero__badge-row">
+                  <i class="bi bi-telephone"></i>
+                  <a data-phone></a>
+                </div>
+
+                <div class="blog-hero__badge-row">
+                  <i class="bi bi-geo-alt"></i>
+                  <a data-address target="_blank"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="blog-shell">
+        <div class="blog-shell__inner">
+          <div class="container">
+            <div class="blog-layout">
+              <!-- MAIN -->
+              <div class="blog-main">
+                <!-- TITLE -->
+                <div class="blog-section-title">
+                  <h2 id="featuredCardsTitle">Afilado en Valencia</h2>
+                  <p id="featuredCardsSubtitle">
+                    Acceso rápido a los servicios más buscados:
+                  </p>
+                </div>
+
+                <!-- 🔥 DINAMIC BLOCK -->
+                <div
+                  id="featuredCardsGrid"
+                  class="blog-grid mb-5"
+                  aria-live="polite"
+                ></div>
+
+                <!-- TRUST BLOCK -->
+                <div class="blog-highlight mb-5">
+                  ✔ Taller local en Valencia<br />
+                  ✔ Evaluación real antes de afilar<br />
+                  ✔ Sin eliminar material innecesario<br />
+                  ✔ Herramientas domésticas y profesionales
+                </div>
+
+                <!-- Trabajos reales en taller-->
+                <div class="blog-section-title mt-5">
+                  <h2>Trabajos reales en taller</h2>
+                  <p>Resultados reales antes y después del afilado:</p>
+                </div>
+
+                <div class="blog-grid blog-grid--videos mb-5">
+                  <div class="videoBlogWrap">
+                    <video
+                      class="videoBlog"
+                      controls
+                      preload="metadata"
+                      playsinline
+                      poster="../images/tijeras_tiran_despues_afilado.webp"
+                    >
+                      <source
+                        src="../videos/tijeras_tiran_despues_afilado.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+
+                  <div class="videoBlogWrap">
+                    <video
+                      class="videoBlog"
+                      controls
+                      preload="metadata"
+                      playsinline
+                      poster="../images/maquena_afilado_cortan.webp"
+                    >
+                      <source
+                        src="../videos/maquena_afilado_cortan.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+
+                  <div class="videoBlogWrap">
+                    <video
+                      class="videoBlog"
+                      controls
+                      preload="metadata"
+                      playsinline
+                      poster="../images/cuchillo_para_profecional01.webp"
+                    >
+                      <source
+                        src="../videos/cuchillo_para_profecional.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+
+                <!-- nuevo -->
+                <div class="blog-section-title mt-5">
+                  <h2>Cómo trabajo en el taller</h2>
+                  <p>
+                    Proceso claro, sin complicaciones y con evaluación real.
+                  </p>
+                </div>
+
+                <div class="blog-grid mb-5">
+                  <article class="blog-card">
+                    <div class="blog-card__link">
+                      <div class="blog-card__meta">1. Revisión</div>
+                      <h3 class="blog-card__title">
+                        Primero veo el estado real de la herramienta
+                      </h3>
+                      <div class="blog-card__cta">
+                        No afilo a ciegas. Reviso filo, desgaste y
+                        comportamiento antes de tocar nada.
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="blog-card">
+                    <div class="blog-card__link">
+                      <div class="blog-card__meta">2. Orientación</div>
+                      <h3 class="blog-card__title">
+                        Te digo qué necesita y si compensa hacerlo
+                      </h3>
+                      <div class="blog-card__cta">
+                        Si la herramienta necesita ajuste o afilado, te lo
+                        explico de forma clara.
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="blog-card">
+                    <div class="blog-card__link">
+                      <div class="blog-card__meta">3. Tiempo</div>
+                      <h3 class="blog-card__title">
+                        Trabajo con tiempos razonables y atención directa
+                      </h3>
+                      <div class="blog-card__cta">
+                        Escríbeme por WhatsApp y te diré disponibilidad y plazo
+                        según el tipo de herramienta.
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="blog-card">
+                    <div class="blog-card__link">
+                      <div class="blog-card__meta">4. Tarifas</div>
+                      <h3 class="blog-card__title">
+                        Precios claros antes de empezar
+                      </h3>
+                      <div class="blog-card__cta">
+                        Si quieres, te orientaré por WhatsApp antes de traer la
+                        herramienta al taller.
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="blog-highlight mb-5">
+                  💬 Antes de traer tu herramienta, puedes escribirme por
+                  WhatsApp, decirme qué tienes y te orientaré sobre el servicio,
+                  el plazo y el tipo de trabajo que necesita.
+                </div>
+
+                <!-- CASOS -->
+                <div class="blog-section-title">
+                  <h2>Casos reales y problemas habituales</h2>
+                  <p>Ejemplos reales de herramientas revisadas en taller:</p>
+                </div>
+
+                <div id="blogArticlesGrid" class="blog-grid">
+                  <!-- CUCHILLOS -->
+                  <article class="blog-card" data-category="cuchillos">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/cuchillo-no-corta.html"
+                    >
+                      <div class="blog-card__meta">Cuchillos</div>
+                      <h3 class="blog-card__title">
+                        El cuchillo ya no corta y cocinar se vuelve un suplicio
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <article class="blog-card" data-category="cuchillos">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/cuchillo-aplasta.html"
+                    >
+                      <div class="blog-card__meta">Cuchillos</div>
+                      <h3 class="blog-card__title">
+                        Por qué el cuchillo aplasta en cocina profesional
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <article class="blog-card" data-category="cuchillos">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/afilado-empeora.html"
+                    >
+                      <div class="blog-card__meta">Cuchillos</div>
+                      <h3 class="blog-card__title">
+                        Después de afilar, el cuchillo corta peor
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <!-- PELUQUERÍA -->
+                  <article class="blog-card" data-category="peluqueria">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/tijeras-tiran.html"
+                    >
+                      <div class="blog-card__meta">Peluquería</div>
+                      <h3 class="blog-card__title">
+                        Las tijeras tiran del pelo y la mano se cansa
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <article class="blog-card" data-category="peluqueria">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/tijeras-despues-afilado.html"
+                    >
+                      <div class="blog-card__meta">Peluquería</div>
+                      <h3 class="blog-card__title">
+                        Después del afilado, el resultado empeora
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <article class="blog-card" data-category="peluqueria">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/tijeras-no-uniformes.html"
+                    >
+                      <div class="blog-card__meta">Peluquería</div>
+                      <h3 class="blog-card__title">
+                        El corte no es uniforme con las tijeras
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <!-- MÁQUINAS -->
+                  <article class="blog-card" data-category="maquinas">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/maquina-muerde.html"
+                    >
+                      <div class="blog-card__meta">Máquinas</div>
+                      <h3 class="blog-card__title">
+                        La máquina muerde y deja marcas en la piel
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <!-- MANICURA -->
+                  <article class="blog-card" data-category="manicura">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/alicate-ruega.html"
+                    >
+                      <div class="blog-card__meta">Manicura</div>
+                      <h3 class="blog-card__title">
+                        El alicate desgarra en lugar de cortar
+                      </h3>
+                      <div class="blog-card__cta">Ver caso →</div>
+                    </a>
+                  </article>
+
+                  <!-- DECISIÓN -->
+                  <article class="blog-card" data-category="reparacion">
+                    <a
+                      class="blog-card__link"
+                      href="../articulos/reparar-o-cambiar.html"
+                    >
+                      <div class="blog-card__meta">Decisión</div>
+                      <h3 class="blog-card__title">
+                        Reparar o comprar nuevo: dónde se pierde dinero
+                      </h3>
+                      <div class="blog-card__cta">Ver guía →</div>
+                    </a>
+                  </article>
+                </div>
+
+                <!-- SEO TEXT -->
+                <div class="blog-seo-text mt-5">
+                  <p>
+                    Taller de afilado profesional en Valencia especializado en
+                    cuchillos de cocina, tijeras de peluquería y herramientas de
+                    uso intensivo.
+                  </p>
+
+                  <p>
+                    Cada herramienta se evalúa antes de afilar para recuperar el
+                    corte sin eliminar material innecesario.
+                  </p>
+
+                  <p>
+                    Si buscas afilar cuchillos en Valencia o encontrar un
+                    servicio cerca de ti, puedes escribirme directamente por
+                    WhatsApp antes de traer tu herramienta.
+                  </p>
+                </div>
+              </div>
+
+              <!-- SIDEBAR -->
+              <aside class="blog-sidebar-col">
+                <div class="blog-sidebar__sticky">
+                  <div class="blog-sidebar__box">
+                    <div class="blog-sidebar__title">Contacto</div>
+                    <p class="blog-sidebar__cta">
+                      ¿Quieres saber si tu herramienta tiene solución?
+                    </p>
+
+                    <div class="blog-sidebar__row">
+                      <i class="bi bi-telephone"></i>
+                      <a data-phone></a>
+                    </div>
+
+                    <div class="blog-sidebar__row">
+                      <i class="bi bi-geo-alt"></i>
+                      <a data-address target="_blank"></a>
+                    </div>
+
+                    <div class="blog-sidebar__row">
+                      <i class="bi bi-chat-dots"></i>
+                      <a data-whatsapp target="_blank">WhatsApp</a>
+                    </div>
+                  </div>
+
+                  <div class="blog-sidebar__box">
+                    <div class="blog-sidebar__title">Tip del taller</div>
+                    <p class="blog-sidebar__tip">
+                      Si necesitas hacer más presión para cortar, el problema
+                      suele ser el filo. Revisar a tiempo evita desgaste y gasto
+                      innecesario.
+                    </p>
+                  </div>
+
+                  <div class="blog-sidebar__box">
+                    <div class="blog-sidebar__title">Categorías</div>
+                    <p class="blog-sidebar__hint">Filtra por servicio:</p>
+
+                    <div class="blog-tags">
+                      <button class="blog-tag active" data-category="all">
+                        Todas
+                      </button>
+                      <button class="blog-tag" data-category="cuchillos">
+                        Cuchillos
+                      </button>
+                      <button class="blog-tag" data-category="peluqueria">
+                        Peluquería
+                      </button>
+                      <button class="blog-tag" data-category="maquinas">
+                        Máquinas
+                      </button>
+                      <button class="blog-tag" data-category="manicura">
+                        Manicura
+                      </button>
+                      <button class="blog-tag" data-category="reparacion">
+                        Decisión
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- О мастерской -->
+          <div class="col-md-6 mb-3">
+            <h5>Filo Fino</h5>
+
+            <p>
+              Taller de <strong>afilado profesional en Valencia</strong> de
+              herramientas de peluquería, cuchillos de cocina y manicura.
+            </p>
+
+            <p>
+              Compartimos ejemplos reales de trabajos, procesos de afilado y
+              resultados antes y después en nuestro
+              <a data-instagram target="_blank" rel="noopener noreferrer">
+                Instagram </a
+              >.
+            </p>
+
+            <div class="footer-legal">
+              <a href="/legal/aviso-legal.html">Aviso legal</a>
+              <a href="/legal/politica-privacidad.html"
+                >Política de privacidad</a
+              >
+              <a href="/legal/politica-cookies.html">Política de cookies</a>
+            </div>
+          </div>
+
+          <!-- Контакт и график -->
+          <div class="col-md-6 mb-3">
+            <h5>Contacto</h5>
+
+            <p>
+              📍
+              <a data-address target="_blank" rel="noopener noreferrer"></a>
+            </p>
+
+            <p>
+              💬
+              <a data-whatsapp target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
+            </p>
+
+            <p class="mb-0">
+              🕒 <strong class="horario">Horario</strong><br />
+              <span data-schedule></span>
+            </p>
+          </div>
+        </div>
+
+        <p class="text-center mt-4 mb-0" data-copyright></p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/blog-filter.js"></script>
+    <script src="../js/site-config.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/blog-featured-cards.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
