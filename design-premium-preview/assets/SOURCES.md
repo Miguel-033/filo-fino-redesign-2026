@@ -33,4 +33,4 @@ Display font: 109,428 bytes. Variable body font: 164,700 bytes. Both use `font-d
 
 ## Own resources
 
-The blade wordmark treatment, simple inline SVG icons, layouts, CSS and native JavaScript were written for this isolated prototype. Screenshot files are browser captures of this implementation. No GSAP, Motion, React, Tailwind, WebGL, paid API, analytics or external account is used. Python 3 is optional for a local static server; Chromium/Playwright were existing environment tools used for verification, not website dependencies.
+The blade wordmark treatment, simple inline SVG icons (including the new instrument selectors and Japanese-knife mark), layouts, CSS and native JavaScript were written for this isolated prototype. The refinement adds only native media-manifest and motion files; no image or font was replaced. Screenshot files are browser captures of this implementation. No GSAP, Motion, React, Tailwind, WebGL, paid API, analytics or external account is used. Python 3 is optional for a local static server; Chromium/Playwright were existing environment tools used for verification, not website dependencies.

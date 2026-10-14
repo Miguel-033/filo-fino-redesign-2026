@@ -60,3 +60,276 @@ h2,h3{text-wrap:balance}
 @media(max-width:359px){.hero-content .eyebrow{font-size:10px}}
 
 @media(max-width:767px){.hero-photo::after{background:linear-gradient(90deg,#182024c0,#18202470 65%,#18202410),linear-gradient(0deg,#182024,transparent 65%)}}
+
+/* Refinement pass: the approved composition, readable text and a shared edge language. */
+body { font-size: 16px; line-height: 1.7; }
+.hero h1 .hero-line { display: block; color: var(--paper); }
+.hero h1 .hero-line:last-child { color: var(--steel); }
+.eyebrow, .hero-content .eyebrow, .section-heading .eyebrow,
+.craft-lead > .eyebrow, .craft-copy > .eyebrow, .visit > .eyebrow {
+  font-size: 13px; letter-spacing: .025em;
+}
+.hero-copy { font-size: 16px; max-width: 390px; line-height: 1.65; }
+.hero-actions .button, .visit-actions .button, .button { font-size: 14px; min-height: 54px; }
+.hero-service-link { font-size: 14px; min-height: 44px; }
+.hero-foot { font-size: 11px; letter-spacing: .025em; }
+.hero-foot span:last-child { font-size: 12px; }
+.section-heading > p { font-size: 15px; }
+.service-title p { font-size: 13px; line-height: 1.55; text-shadow: 0 1px 6px #111719; }
+.service-detail summary { font-size: 14px; padding: 16px 20px; }
+.service-detail p { font-size: 15px; line-height: 1.7; }
+.service-consult {
+  display: flex; align-items: center; gap: 10px; padding: 12px 20px 18px;
+  min-height: 48px; font-size: 14px; color: var(--brass);
+}
+.service-consult svg { width: 19px; height: 19px; }
+.craft-intro p, .craft-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.75; }
+.craft-principles { margin-top: 28px; }
+.craft-principles > div { grid-template-columns: 112px 1fr; gap: 18px; }
+.craft-principles dt { font-size: 14px; }
+.craft-principles dd { font-size: 15px; line-height: 1.65; color: #43555d; }
+.craft-photo figcaption, .visit-photo figcaption, .process-visual figcaption { font-size: 12px; line-height: 1.55; }
+.text-link { font-size: 14px; }
+.japanese-mark { width: 52px; height: 52px; color: #526a74; stroke-width: 1.25; }
+.japanese-note p { font-size: 15px; line-height: 1.7; color: #43555d; }
+.japanese-note a { font-size: 14px; min-height: 48px; }
+.gallery-item figcaption { font-size: 12px; line-height: 1.55; }
+.archive-note { font-size: 14px; line-height: 1.75; }
+.process-stage p { font-size: 15px; line-height: 1.7; }
+.step-button > span { font-size: 12px; }
+.visit-top > p { font-size: 16px; line-height: 1.75; }
+.visit-address h3 { font-size: 17px; }
+.visit-address p, .hours > div, .phone-link { font-size: 14px; }
+.phone-link { min-height: 48px; }
+.hours > div { padding: 8px 0; }
+.menu-trigger { font-size: 13px; }
+.menu-bottom, .menu-bottom > a { font-size: 14px; }
+.menu-top .eyebrow { font-size: 13px; }
+.menu-future > span { font-size: 12px; }
+.menu-layout nav > a { transition: color .2s, padding-left .25s; }
+.menu-layout nav > a:hover, .menu-layout nav > a:focus-visible { padding-left: 12px; }
+.menu-dialog::before {
+  content: ''; position: absolute; right: 0; top: 0; width: 18%; height: 100%;
+  background: linear-gradient(125deg, transparent, #8d9b9f18); pointer-events: none;
+}
+
+/* Instrument selectors are a connected metal rail, not three unrelated CTA buttons. */
+@media (max-width: 767px) {
+  .hero-shortcuts { gap: 8px; border: 0; margin-top: 12px; }
+  .hero-shortcuts a {
+    min-height: 82px; padding: 12px 10px 10px; align-items: flex-start; justify-content: flex-end;
+    flex-direction: column; gap: 7px; font-size: 14px; font-weight: 600; color: var(--paper);
+    background: linear-gradient(130deg, #38484f66, #202b30); border: 1px solid #7b909a;
+    transition: transform .2s, border-color .2s, background-color .2s; overflow: hidden;
+  }
+  .hero-shortcuts a:not(:last-child)::after { display: none; }
+  .hero-shortcuts a::before {
+    content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent, #e8be8230, transparent);
+    transform: translateX(-110%); transition: transform .45s; pointer-events: none;
+  }
+  .hero-shortcuts a:hover::before, .hero-shortcuts a:focus-visible::before { transform: translateX(110%); }
+  .hero-shortcuts a:hover, .hero-shortcuts a:focus-visible { border-color: var(--brass); }
+  .hero-shortcuts a:active { transform: scale(.97); border-color: var(--brass); }
+  .shortcut-tool { width: 22px; height: 22px; color: var(--brass); }
+  .shortcut-arrow { position: absolute; right: 8px; top: 10px; width: 14px; height: 14px; color: var(--steel); }
+}
+.button { overflow: hidden; }
+.button::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(100deg, transparent 10%, #ffffff30 50%, transparent 85%);
+  transform: translateX(-115%); transition: transform .45s;
+}
+.button:hover::before, .button:focus-visible::before { transform: translateX(115%); }
+.button:active { transform: translateY(1px) scale(.98); }
+.service-link:active .service-arrow, .service-link:focus-visible .service-arrow {
+  background: var(--brass); color: var(--ink); transform: rotate(7deg);
+}
+.gallery-open:active .image-expand, .gallery-open:focus-visible .image-expand,
+.gallery-open:hover .image-expand { background: var(--brass); color: var(--ink); transform: rotate(90deg); }
+.image-expand { transition: transform .25s, background-color .25s, color .25s; }
+.service-link { transition: box-shadow .25s; }
+.service-link:focus-visible { outline-offset: 3px; box-shadow: inset 0 0 0 2px var(--brass); }
+
+/* Full source frames: a stable work surface, without stretching or hiding the tool. */
+.process-frame {
+  height: 500px; padding: 20px; background: #132025; border: 1px solid #647c87;
+  position: relative; overflow: hidden;
+}
+.process-frame #process-image {
+  width: 100%; height: 100%; object-fit: contain; object-position: center; clip-path: none;
+}
+.process-frame::after {
+  content: ''; position: absolute; left: 8px; top: 8px; width: 35px; height: 35px;
+  border-top: 1px solid var(--brass); border-left: 1px solid var(--brass); pointer-events: none;
+}
+.process-image-edge { right: 0; bottom: 30px; width: 90px; transform: rotate(-32deg); }
+.process-stage { position: relative; }
+.process-stage::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;
+  background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .45s;
+}
+.process-stage.is-current::after { transform: scaleX(1); }
+
+/* Carousel navigation and details live inside the modal; homepage previews do not change. */
+.gallery-toolbar p { font-size: 14px; }
+.gallery-thumbnails {
+  display: flex; justify-content: center; gap: 12px; padding: 12px 0 6px; flex-shrink: 0;
+  max-width: 100%; overflow-x: auto;
+}
+.gallery-thumbnail {
+  width: 48px; height: 58px; flex-shrink: 0; padding: 3px; border: 1px solid #677f89;
+  background: #243238; transition: border-color .2s, transform .2s;
+}
+.gallery-thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumbnail[aria-current='true'] { border-color: var(--brass); transform: translateY(-3px); }
+.gallery-controls { gap: 22px; min-height: 110px; }
+.gallery-description { max-width: 480px; text-align: center; }
+.gallery-controls p { font-size: 14px; line-height: 1.5; }
+.gallery-consult {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13px;
+  color: var(--brass); text-decoration: underline; text-underline-offset: 4px;
+}
+.gallery-consult svg { width: 17px; height: 17px; }
+
+/* The footer is a compact directory, with the brand signature retained. */
+.site-footer { padding-top: 54px; padding-bottom: 28px; }
+.footer-top { align-items: flex-end; padding-bottom: 42px; }
+.footer-top p { font-size: 15px; max-width: 330px; color: #b9c8ce; line-height: 1.7; }
+.footer-directory { display: grid; grid-template-columns: 1.15fr 1fr 1fr 1.2fr; gap: 40px; padding: 30px 0 35px; border-top: 1px solid #52666f; }
+.footer-column { min-width: 0; }
+.footer-column h2 { font-family: var(--body); font-size: 13px; line-height: 1.5; letter-spacing: .04em; color: var(--steel); font-weight: 600; margin-bottom: 14px; }
+.footer-column a { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; line-height: 1.55; }
+.footer-column a:hover, .footer-column a:focus-visible { color: var(--brass); }
+.footer-column address { font-size: 14px; line-height: 1.75; font-style: normal; margin-bottom: 6px; }
+.footer-column svg { width: 17px; height: 17px; }
+.footer-column p { font-size: 13px; line-height: 1.65; color: var(--steel); margin-top: 8px; }
+.footer-future { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--steel); min-height: 44px; }
+.footer-future small { font-size: 12px; color: var(--steel); border-bottom: 1px solid #52666f; }
+.footer-hours { font-size: 14px; line-height: 1.55; font-variant-numeric: tabular-nums; }
+.footer-hours > div { margin-bottom: 12px; }
+.footer-hours dt { font-size: 13px; color: var(--steel); margin-bottom: 4px; }
+.footer-hours dd { margin: 0; }
+.footer-bottom { font-size: 12px; color: var(--steel); padding-top: 20px; }
+.footer-bottom nav { gap: 24px; }
+.footer-bottom nav a { min-height: 44px; font-size: 12px; }
+.preview-note { font-size: 12px; color: var(--steel); }
+
+/* Section seams and the steel light respond once on entry. No pinned scrolling or loops. */
+.section-heading { position: relative; padding-bottom: 12px; }
+.section-heading::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;
+  background: linear-gradient(90deg, var(--steel), #a9bbc31a); transform-origin: left;
+}
+.motion-entered .section-heading::after { animation: edge-draw .9s cubic-bezier(.2,.65,.2,1) both; }
+.craft.motion-entered::before { animation: steel-light 1.2s ease-out both; }
+@keyframes edge-draw { from { transform: scaleX(.12); opacity: .2; } to { transform: scaleX(1); opacity: .65; } }
+@keyframes steel-light { from { transform: translateX(35px); opacity: .3; } to { transform: none; opacity: 1; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .craft-photo img, .visit-photo img {
+      animation: material-travel linear both; animation-timeline: view(); animation-range: entry 0% exit 100%;
+    }
+    @keyframes material-travel { from { transform: translateY(9px) scale(1.02); } to { transform: translateY(-9px) scale(1.02); } }
+  }
+}
+@media (max-width: 1100px) {
+  .footer-directory { grid-template-columns: 1fr 1fr; gap: 32px 50px; }
+  .footer-top p { max-width: 250px; }
+}
+@media (max-width: 767px) {
+  body { font-size: 16px; }
+  .hero-content .eyebrow, .section-heading .eyebrow, .craft-lead > .eyebrow,
+  .craft-copy > .eyebrow, .visit > .eyebrow { font-size: 12px; }
+  .hero-copy { font-size: 15px; line-height: 1.65; max-width: 360px; }
+  .hero-actions .button { font-size: 13px; gap: 8px; padding: 12px; min-height: 54px; }
+  .hero-service-link { font-size: 13px; margin-top: 10px; min-height: 44px; }
+  .menu-trigger span:first-child { font-size: 12px; }
+  .service-link, .service-scissors:has(details[open]) .service-link,
+  .service-manicure:has(details[open]) .service-link { height: 238px; min-height: 238px; }
+  .service-knives .service-link, .service-knives:has(details[open]) .service-link { height: 208px; min-height: 208px; }
+  .service-title { left: 14px; right: 12px; bottom: 18px; }
+  .service-title p { font-size: 12px; line-height: 1.5; }
+  .service-title h3 { font-size: 33px; }
+  .service-detail summary { font-size: 13px; line-height: 1.6; min-height: 72px; padding: 13px 12px; }
+  .service-detail p { font-size: 14px; padding: 3px 12px 16px; line-height: 1.7; }
+  .service-consult { font-size: 13px; padding: 12px; gap: 8px; line-height: 1.6; }
+  .service-consult svg { width: 16px; height: 16px; }
+  .craft-intro p, .craft-copy > p:not(.eyebrow) { font-size: 16px; }
+  .craft-principles > div { grid-template-columns: 98px 1fr; gap: 12px; }
+  .craft-principles dt { font-size: 14px; }
+  .craft-principles dd { font-size: 15px; }
+  .craft-photo figcaption, .visit-photo figcaption, .process-visual figcaption { font-size: 12px; }
+  .text-link { font-size: 14px; }
+  .japanese-note { grid-template-columns: 42px 1fr; gap: 16px; padding-top: 25px; }
+  .japanese-mark { width: 42px; height: 48px; }
+  .japanese-note h3 { font-size: 28px; line-height: 1.1; }
+  .japanese-note p { font-size: 15px; }
+  .japanese-note a { font-size: 14px; min-height: 48px; white-space: normal; }
+  .works .section-heading > p, .process .section-heading > p { display: none; }
+  .gallery-item figcaption { font-size: 12px; }
+  .archive-note { font-size: 14px; }
+  .process-frame { height: 320px; padding: 14px; }
+  .process-stage p { font-size: 15px; padding-left: 34px; }
+  .step-button { font-size: 36px; min-height: 48px; }
+  .step-button > span { font-size: 12px; }
+  .visit-top > p { font-size: 16px; max-width: none; }
+  .visit-address h3 { font-size: 16px; }
+  .visit-address p, .phone-link { font-size: 14px; }
+  .hours > div { font-size: 14px; align-items: baseline; }
+  .hours dd { white-space: normal; text-align: right; }
+  .visit-actions .button { font-size: 13px; min-height: 54px; }
+  .menu-top .eyebrow { font-size: 12px; letter-spacing: .02em; }
+  .menu-future > span { font-size: 12px; }
+  .menu-bottom, .menu-bottom > a { font-size: 14px; }
+  .gallery-controls { gap: 12px; min-height: 116px; }
+  .gallery-controls p { font-size: 14px; }
+  .gallery-description { min-width: 0; }
+  .gallery-consult { font-size: 13px; gap: 7px; }
+  .gallery-consult svg { display: none; }
+  .footer-top { padding-bottom: 28px; }
+  .footer-top p { font-size: 15px; max-width: 330px; }
+  .footer-directory { grid-template-columns: 1fr; gap: 0; padding-top: 12px; padding-bottom: 18px; }
+  .footer-column { display: grid; grid-template-columns: 95px 1fr; gap: 0 20px; padding: 22px 0; border-bottom: 1px solid #40535d; }
+  .footer-column h2 { grid-row: 1 / span 6; font-size: 12px; margin: 10px 0 0; }
+  .footer-column > a, .footer-column > address, .footer-column > dl,
+  .footer-column > span, .footer-column > p { grid-column: 2; }
+  .footer-column address { font-size: 14px; }
+  .footer-hours { font-size: 14px; }
+  .footer-bottom { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 12px; }
+  .footer-bottom nav { width: 100%; order: 3; gap: 18px; }
+  .footer-bottom > a { margin-left: auto; }
+  .preview-note { font-size: 12px; margin-top: 14px; }
+}
+@media (max-width: 359px) {
+  .hero-copy { font-size: 15px; }
+  .hero-actions .button { font-size: 12px; padding: 12px 9px; }
+  .hero-shortcuts a { font-size: 13px; padding-inline: 8px; }
+  .service-title h3 { font-size: 29px; }
+  .service-title p { font-size: 12px; }
+  .craft-principles > div { grid-template-columns: 84px 1fr; gap: 10px; }
+  .craft-principles dt { font-size: 13px; }
+  .craft-principles dd { font-size: 14px; }
+  .hours > div { font-size: 13px; }
+  .footer-column { grid-template-columns: 80px 1fr; gap: 0 14px; }
+  .footer-whatsapp { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .craft-photo img, .visit-photo img, .button:active, .hero-shortcuts a:active { transform: none; }
+}
+.menu-top { position: sticky; top: 0; z-index: 3; background: var(--paper); padding-bottom: 10px; }
+.gallery-open.js-only { display: none !important; }
+.has-js .gallery-open.js-only { display: block !important; }
+@media (max-width: 767px) {
+  .hero-shortcuts a:hover .shortcut-tool, .hero-shortcuts a:focus-visible .shortcut-tool { transform: translateY(-2px) rotate(-4deg); }
+  .shortcut-tool { transition: transform .25s; }
+}
+@media (max-width: 767px) {
+  .footer-directory { grid-template-columns: 1fr 1fr; column-gap: 18px; }
+  .footer-column:first-child, .footer-column:last-child { grid-column: 1 / -1; }
+  .footer-column:nth-child(2), .footer-column:nth-child(3) { display: block; }
+  .footer-column:nth-child(2) h2, .footer-column:nth-child(3) h2 { margin: 0 0 14px; }
+}
+@media (max-width: 767px) {
+  .service-manicure .service-title h3 { font-size: clamp(24px, 7.3vw, 33px); }
+}
