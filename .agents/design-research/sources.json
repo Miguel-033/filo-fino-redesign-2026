@@ -1,0 +1,446 @@
+{
+  "title": "Filo Fino design research",
+  "checked_on": "2026-10-14",
+  "temporal_scope": "Available evidence through 2026-10-14; November–December 2026 require revalidation",
+  "research_only": true,
+  "rendered_device_tests": false,
+  "performance_benchmarks": false,
+  "base_commit": "4117219f9c833862421790875fbfce7604690897",
+  "sources": [
+    {
+      "id": "magic-bento",
+      "url": "https://magicui.design/docs/components/bento-grid",
+      "publisher": "Magic UI",
+      "type": "component documentation",
+      "verification": "opened + TSX source read",
+      "used_for": "R01",
+      "license_note": "MIT public repository; Pro excluded",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "magic-blur",
+      "url": "https://magicui.design/docs/components/blur-fade",
+      "publisher": "Magic UI",
+      "type": "component documentation",
+      "verification": "opened + TSX source read",
+      "used_for": "R06",
+      "license_note": "MIT public repository; Pro excluded",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "aceternity-carousel",
+      "url": "https://ui.aceternity.com/components/apple-cards-carousel",
+      "publisher": "Aceternity UI",
+      "type": "component documentation",
+      "verification": "opened",
+      "used_for": "R02",
+      "license_note": "specific free-artifact scope not confirmed; reference only",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "aceternity-sidebar",
+      "url": "https://ui.aceternity.com/components/sidebar",
+      "publisher": "Aceternity UI",
+      "type": "component documentation",
+      "verification": "opened",
+      "used_for": "R04",
+      "license_note": "specific free-artifact scope not confirmed; reference only",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "aceternity-compare",
+      "url": "https://ui.aceternity.com/components/compare",
+      "publisher": "Aceternity UI",
+      "type": "component documentation",
+      "verification": "opened",
+      "used_for": "R10",
+      "license_note": "specific free-artifact scope not confirmed; reference only",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "aceternity-timeline",
+      "url": "https://ui.aceternity.com/components/timeline",
+      "publisher": "Aceternity UI",
+      "type": "component documentation",
+      "verification": "opened",
+      "used_for": "R13",
+      "license_note": "specific free-artifact scope not confirmed; reference only",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "aceternity-licence",
+      "url": "https://ui.aceternity.com/licence",
+      "publisher": "Aceternity UI",
+      "type": "licensing",
+      "verification": "opened; /license spelling returned error",
+      "used_for": "licensing",
+      "license_note": "custom Licence; Pro heading; do not assume MIT",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codrops-infinite-article",
+      "url": "https://tympanus.net/codrops/2026/07/30/building-an-infinite-gsap-scroll-gallery-with-parallax-and-flip-transitions/",
+      "publisher": "Codrops",
+      "type": "tutorial",
+      "verification": "opened",
+      "used_for": "rejected",
+      "license_note": "default demo MIT policy; linked repository README says MIT but LICENSE missing",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codrops-infinite-demo",
+      "url": "https://tympanus.net/Tutorials/InfiniteScrollGSAPGallery/",
+      "publisher": "Codrops",
+      "type": "live demo endpoint",
+      "verification": "opened without rendered device test",
+      "used_for": "rejected",
+      "license_note": "code policy distinct from GSAP and images",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codrops-infinite-source",
+      "url": "https://github.com/surya-aditya/codrops-infinite-scroll-and-content-transition",
+      "publisher": "Codrops author / GitHub",
+      "type": "source repository",
+      "verification": "README and tree read; LICENSE 404",
+      "used_for": "rejected",
+      "license_note": "README: MIT; credits: images generated with Midjourney",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codrops-haoqi",
+      "url": "https://tympanus.net/codrops/2026/08/15/inside-haoqi-design-letting-dom-and-webgl-share-a-retro-futurist-stage/",
+      "publisher": "Codrops",
+      "type": "case study",
+      "verification": "opened",
+      "used_for": "rejected",
+      "license_note": "not assumed to license featured site's assets",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codrops-licence",
+      "url": "https://tympanus.net/codrops/licensing/",
+      "publisher": "Codrops",
+      "type": "licensing",
+      "verification": "opened",
+      "used_for": "licensing",
+      "license_note": "downloadable demos MIT unless stated otherwise; freebies have separate restrictions",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codepen-stanko",
+      "url": "https://codepen.io/stanko/pen/myddXKm",
+      "publisher": "CodePen / Stanko",
+      "type": "live example and source",
+      "verification": "opened; indexed markup examined",
+      "used_for": "R08",
+      "license_note": "public Pen MIT policy; media separately",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codepen-mrwweb",
+      "url": "https://codepen.io/mrwweb/pen/QpKBMM",
+      "publisher": "CodePen / mrwweb",
+      "type": "live example and source",
+      "verification": "indexed HTML examined; no rendered device test",
+      "used_for": "R08",
+      "license_note": "public Pen MIT policy; media separately",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "codepen-licence",
+      "url": "https://blog.codepen.io/docs/pens/licensing/",
+      "publisher": "CodePen",
+      "type": "licensing",
+      "verification": "opened",
+      "used_for": "licensing",
+      "license_note": "public Pens MIT; private Pens no implicit license",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "awwwards-dodivetro",
+      "url": "https://www.awwwards.com/sites/dodivetro",
+      "publisher": "Awwwards",
+      "type": "featured website record",
+      "verification": "indexed official record examined",
+      "used_for": "R03",
+      "license_note": "inspiration only; site and media reuse not established",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "landbook-workshop",
+      "url": "https://land-book.com/websites/59269-workshop",
+      "publisher": "Land-book",
+      "type": "featured website record",
+      "verification": "opened; listing indicates Webflow",
+      "used_for": "R03",
+      "license_note": "inspiration only; site and media reuse not established",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "opl-newmaterial",
+      "url": "https://onepagelove.com/new-material",
+      "publisher": "One Page Love",
+      "type": "featured website record",
+      "verification": "opened; published 2026-10-11, tech Tailwind CSS",
+      "used_for": "R14 / direction C",
+      "license_note": "inspiration only; ABC Favorit assets not licensed by listing",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "opl-digitalmeadow",
+      "url": "https://onepagelove.com/digital-meadow",
+      "publisher": "One Page Love",
+      "type": "featured website record",
+      "verification": "opened; published 2026-01-23, tech Astro",
+      "used_for": "rejected effects / contrast reference",
+      "license_note": "inspiration only",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "motion-inview",
+      "url": "https://motion.dev/docs/inview",
+      "publisher": "Motion",
+      "type": "JS docs/examples",
+      "verification": "opened",
+      "used_for": "R05",
+      "license_note": "MIT core library; paid examples not assumed included",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "motion-animate",
+      "url": "https://motion.dev/docs/animate",
+      "publisher": "Motion",
+      "type": "JS docs/examples",
+      "verification": "opened",
+      "used_for": "R05",
+      "license_note": "MIT core library; quoted sizes are vendor figures, not our benchmark",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "motion-press",
+      "url": "https://motion.dev/docs/press",
+      "publisher": "Motion",
+      "type": "JS docs/examples",
+      "verification": "opened",
+      "used_for": "R11",
+      "license_note": "MIT core library",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "motion-press-demo",
+      "url": "https://examples.motion.dev/js/press",
+      "publisher": "Motion",
+      "type": "live example endpoint",
+      "verification": "opened; source/tutorial endpoint visible; no rendered test",
+      "used_for": "R11",
+      "license_note": "MIT core library; not a general Motion+ license grant",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "gsap-scrolltrigger",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/",
+      "publisher": "GSAP",
+      "type": "docs/examples",
+      "verification": "opened",
+      "used_for": "R12",
+      "license_note": "Standard No Charge GSAP License",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "gsap-drawsvg",
+      "url": "https://gsap.com/docs/v3/Plugins/DrawSVGPlugin/",
+      "publisher": "GSAP",
+      "type": "docs/examples",
+      "verification": "opened",
+      "used_for": "R12",
+      "license_note": "Standard No Charge GSAP License",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "gsap-licence",
+      "url": "https://gsap.com/community/standard-license/",
+      "publisher": "GSAP",
+      "type": "licensing",
+      "verification": "opened via /standard-license redirect",
+      "used_for": "licensing",
+      "license_note": "commercial use no charge; not MIT; visual builder restrictions",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "photoswipe-demo",
+      "url": "https://photoswipe.com/",
+      "publisher": "PhotoSwipe",
+      "type": "live demo/docs",
+      "verification": "opened; page states 5.4.4",
+      "used_for": "R07",
+      "license_note": "MIT library; images separate",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "photoswipe-docs",
+      "url": "https://photoswipe.com/getting-started/",
+      "publisher": "PhotoSwipe",
+      "type": "documentation",
+      "verification": "opened",
+      "used_for": "R07",
+      "license_note": "MIT library",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "comparison-demo",
+      "url": "https://img-comparison-slider.sneas.io/",
+      "publisher": "img-comparison-slider",
+      "type": "live demo/docs",
+      "verification": "opened",
+      "used_for": "R09",
+      "license_note": "MIT library; author's mobile/a11y claims not independently tested",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "slicey-home",
+      "url": "https://www.slicey.ca/",
+      "publisher": "Slicey",
+      "type": "real sharpening service website",
+      "verification": "opened",
+      "used_for": "R13 / direction B",
+      "license_note": "no open site/media license established",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "slicey-services",
+      "url": "https://www.slicey.ca/services",
+      "publisher": "Slicey",
+      "type": "real service page",
+      "verification": "opened directly",
+      "used_for": "R14",
+      "license_note": "no open site/media license established",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "mdn-dialog",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog",
+      "publisher": "MDN",
+      "type": "browser API documentation/examples",
+      "verification": "opened",
+      "used_for": "R04",
+      "license_note": "native API; MDN example code not copied",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "mdn-observer",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+      "publisher": "MDN",
+      "type": "browser API documentation/examples",
+      "verification": "opened",
+      "used_for": "R05",
+      "license_note": "native API; MDN example code not copied",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "whatsapp-chat",
+      "url": "https://faq.whatsapp.com/5913398998672934",
+      "publisher": "WhatsApp",
+      "type": "official service documentation",
+      "verification": "URL opened but extractor empty; official indexed content verified wa.me and prefilled text",
+      "used_for": "R14",
+      "license_note": "service/brand terms, not MIT",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "shoelace-drawer",
+      "url": "https://shoelace.style/components/drawer",
+      "publisher": "Shoelace",
+      "type": "component documentation",
+      "verification": "opened; page states sunset/no active development",
+      "used_for": "rejected dependency",
+      "license_note": "not selected; replacement not installed",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "web-guidelines",
+      "url": "https://github.com/vercel-labs/web-interface-guidelines/blob/main/command.md",
+      "publisher": "Vercel",
+      "type": "current interface guidelines",
+      "verification": "read via GitHub fetch_file",
+      "used_for": "evaluation criteria",
+      "license_note": "instructions used; code not copied",
+      "checked_on": "2026-10-14"
+    },
+    {
+      "id": "web-vitals",
+      "url": "https://web.dev/articles/vitals",
+      "publisher": "web.dev",
+      "type": "performance definitions",
+      "verification": "opened",
+      "used_for": "future evaluation criteria",
+      "license_note": "documentation paraphrased; no benchmark performed",
+      "checked_on": "2026-10-14"
+    }
+  ],
+  "license_artifacts": [
+    {
+      "repository": "magicuidesign/magicui",
+      "path": "LICENSE.md",
+      "license": "MIT",
+      "git_blob_sha": "30efc351ba9c469535dc012930ba6ee30c23f957",
+      "url": "https://github.com/magicuidesign/magicui/blob/main/LICENSE.md",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    },
+    {
+      "repository": "motiondivision/motion",
+      "path": "LICENSE.md",
+      "license": "MIT",
+      "git_blob_sha": "81110442c72270dd317667cc52181522647401f2",
+      "url": "https://github.com/motiondivision/motion/blob/main/LICENSE.md",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    },
+    {
+      "repository": "dimsemenov/PhotoSwipe",
+      "path": "LICENSE",
+      "license": "MIT",
+      "git_blob_sha": "5e0ff4d6c825895d919e888b6985caef745bbb74",
+      "url": "https://github.com/dimsemenov/PhotoSwipe/blob/master/LICENSE",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    },
+    {
+      "repository": "sneas/img-comparison-slider",
+      "path": "LICENSE",
+      "license": "MIT",
+      "git_blob_sha": "8bffb2812d6511dd15c7937a6197a5d75923725e",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/LICENSE",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    },
+    {
+      "repository": "google/fonts",
+      "path": "ofl/sourcesans3/OFL.txt",
+      "license": "SIL OFL 1.1",
+      "git_blob_sha": "50ee76cf00fbfe42fb7c74a9b95c9508dec5bb8f",
+      "url": "https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    },
+    {
+      "repository": "google/fonts",
+      "path": "ofl/literata/OFL.txt",
+      "license": "SIL OFL 1.1",
+      "git_blob_sha": "9d3b4e3b1e9068fbda799f57833ff831d05cc271",
+      "url": "https://github.com/google/fonts/blob/main/ofl/literata/OFL.txt",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    },
+    {
+      "repository": "google/fonts",
+      "path": "ofl/ibmplexsans/OFL.txt",
+      "license": "SIL OFL 1.1",
+      "git_blob_sha": "c35c4c618fab33da8695177b3a6cefe0810b7b28",
+      "url": "https://github.com/google/fonts/blob/main/ofl/ibmplexsans/OFL.txt",
+      "checked_on": "2026-10-14",
+      "downloaded_runtime": false
+    }
+  ]
+}
