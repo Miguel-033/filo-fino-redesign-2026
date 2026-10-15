@@ -2,7 +2,7 @@
 
 Updated 15 October 2026 with explicit owner authorization for the existing test Pages only.
 
-Source: `66fa0ca51abc697da4df3a1c15cfe2bad887b8b0`, branch `codex/premium-owner-corrections`, Draft PR #8. Publishing parent: `d1d7f8b35f08592eafe21a390a92f497bdb0454f`.
+Source: `179a24edc3b3958c9eb44612f22db7466c3700c8`, branch `codex/premium-owner-corrections`, Draft PR #8. Publishing parent: `d1d7f8b35f08592eafe21a390a92f497bdb0454f`.
 
 Only static prototype HTML, CSS, JS and required SVG/PR4 photos updated. Existing noindex and .nojekyll retained. Service and legal URLs point to their existing filofino.es destinations; this does not modify production. No CNAME, settings, workflows, analytics or video added.
 
