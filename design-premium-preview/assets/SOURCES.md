@@ -1,36 +1,32 @@
-# Asset provenance
+# Источники медиа — 15 октября 2026
 
-Captured 14 October 2026. No reference-site photographs, templates or JavaScript were imported.
+Использованы только восемь реально просмотренных фотографий из доступной части папки владельца **Foto proyecto filo fino**, подпапка **Foto**. Просмотрены 22 кадра; это выборка, а не утверждение о полном составе загружаемого архива. Папка Vídeo не открывалась, видео не скачивались и не интегрировались.
 
-## Existing Filo Fino files
+| Исходник Google Drive | Что видно | Где используется | Локальный WebP |
+|---|---|---|---|
+| `IMG_6874.JPG` | Набор ножей | Карточка ножей, превью 1, галерея, этап «Escuchar» | `assets/images/drive/img_6874.webp` |
+| `IMG_7034.JPG` | Два кухонных ножа с красными рукоятями | Галерея | `assets/images/drive/img_7034.webp` |
+| `IMG_8001.JPG` | Макро кончика и режущей кромки ножа | Hero, галерея | `assets/images/drive/img_8001.webp` |
+| `IMG_6018.JPG` | Макро фаски ножа | Галерея, этап «Revisar» | `assets/images/drive/img_6018.webp` |
+| `IMG_0734.JPG` | Маленькие маникюрные ножницы в руке | Карточка маникюра, превью 2, галерея | `assets/images/drive/img_0734.webp` |
+| `IMG_1118.JPG` | Разобранный ножевой блок машинки | Галерея | `assets/images/drive/img_1118.webp` |
+| `IMG_7653.JPG` | Парикмахерские ножницы в руке | Карточка парикмахера, превью 3, галерея, этап «Comprobar» | `assets/images/drive/img_7653.webp` |
+| `IMG_6463.JPG` | Крупный план маленьких ножниц | Редакционный блок, меню, галерея | `assets/images/drive/img_6463.webp` |
 
-Copied byte-for-byte from the working repository, under the owner's instruction to use its available photographs. These copies do not modify the originals and do not grant a public stock-photo licence. Confirm the archive's ownership/consents for any future production use.
+Все файлы приведены к правильной EXIF-ориентации, оптимизированы в WebP (1350 × 1800), без ретуши результата. EXIF не переносится. Имена исходников, локальные пути и размеры сохранены в [media-manifest.json](media-manifest.json). Прямые ссылки и идентификаторы Google Drive не публикуются; точные имена позволяют найти исходники в папке владельца. Фото отражают разные инструменты; не выдаются за последовательность одной работы, пары до/после или доказательство конкретной проверки.
 
-| Prototype asset | Existing source |
-|---|---|
-| `images/afilado.webp` | `images/hero.webp` |
-| `images/cuchillos.webp` | `images/Cuchillos.webp` |
-| `images/manicura.webp` | `images/Heramientas-manicura.webp` |
-| `images/tijeras.webp` | `images/tijeras_tiran.webp` |
-| `images/prueba-tijeras.webp` | `images/tijeras_tiran_despues_afilado.webp` |
-| `images/revision.webp` | `images/afilado-profesional-cuchillos-valencia.webp` |
-| `images/taller.webp` | `images/filo-fino-interior-taller-afilado-valencia.webp` |
+Все активные `<img>` в HTML и JS ссылаются на `images/drive/`. Семь старых копий из PR №4 остаются в истории Git, но удалены из текущего прототипа, чтобы исключить случайное повторное использование. Чужие/стоковые и сгенерированные фотографии не используются.
 
-Cropping, monochrome treatment and lighting are CSS presentation only. No fake restoration, portrait, before/after pair or customer outcome has been generated. The sequence mixes archive photographs of different tools to explain the general process; it is not a documented single commission.
+## Временные материалы
 
-## Locally hosted fonts
-
-Google Fonts repository, [Barlow Condensed](https://github.com/google/fonts/tree/main/ofl/barlowcondensed) and [Manrope](https://github.com/google/fonts/tree/main/ofl/manrope). Unmodified TTF files; no installer, network font calls, subsetting or new dependency. Full SIL Open Font License 1.1 notices accompany the files.
-
-| Local file | Source file | Immutable Git blob SHA |
+| Слот | Текущее состояние | Будущая замена |
 |---|---|---|
-| `fonts/display.ttf` | `ofl/barlowcondensed/BarlowCondensed-SemiBold.ttf` | `9df66576492bee4bd0559066825472808fa98adc` |
-| `fonts/body.ttf` | `ofl/manrope/Manrope[wght].ttf` | `75274da58537d6123b14f2cd0c355ad4681fc2b3` |
-| `fonts/Barlow-Condensed-OFL.txt` | `ofl/barlowcondensed/OFL.txt` | `2f22ba6ca4dbc12145ae40b14c3368f387cba0e2` |
-| `fonts/Manrope-OFL.txt` | `ofl/manrope/OFL.txt` | `e271172a9ed0cddc895aabb6509f1c7d880b492d` |
+| `process-video` | CSS-фон, собственный линейный SVG лезвия, текст «Vídeo pendiente · espacio reservado»; появляется на шаге 03 Afilar. Без ложной кнопки Play | Согласованный ролик процесса, когда загрузка завершится; размеры секции сохраняются |
+| `workshop-entrance` | Типографическая композиция с фактическим адресом; подпись о недостающей фотографии входа | Реальное фото фасада/входа из папки владельца |
+| Шаги 01 / 02 / 04 | Настоящие архивные фото как временные иллюстрации; подписи обозначают архив/референс, шаг 04 не обозначен тестом реза | Кадры реального приёма, осмотра и проверки; поменять `stages` в premium.js и исходный HTML шага 01 |
 
-Display font: 109,428 bytes. Variable body font: 164,700 bytes. Both use `font-display: swap`; the display font is preloaded.
+Служебные SVG нарисованы для макета, не являются фотографиями мастерской. Слоты отмечены `data-media-slot`. Фото в Hero/карточках/галерее — реальные доступные материалы, не заглушки.
 
-## Own resources
+## Шрифты и графика
 
-The blade wordmark treatment, simple inline SVG icons, layouts, CSS and native JavaScript were written for this isolated prototype. Screenshot files are browser captures of this implementation. No GSAP, Motion, React, Tailwind, WebGL, paid API, analytics or external account is used. Python 3 is optional for a local static server; Chromium/Playwright were existing environment tools used for verification, not website dependencies.
+Локальные Barlow Condensed и Manrope из PR №4 сохранены; уведомления SIL OFL 1.1 находятся рядом с TTF. Источники: Google Fonts `ofl/barlowcondensed` и `ofl/manrope`. Нет внешних загрузок шрифтов или сторонних JS/CSS. Графика, CSS и JS собственные. Анимации используют CSS и Web Animations API, без библиотек.
