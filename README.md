@@ -1,3 +1,11 @@
+## Knife service page — 15 October 2026
+
+Source `61425d8c3996caf531085ed203ac0ffe1d8ebba4`, Draft PR9. New route `servicios/afilado-cuchillos-valencia/`; all homepage knife service links lead here. Other undeveloped services retain existing production destinations.
+
+Only index.html, knives.css and knives.js are exported for the service page, using existing shared assets. No production-seo.json, canonical or production JSON-LD is published. Both preview pages remain noindex, nofollow. Shared homepage style and its other interactions are unchanged. No DNS/CNAME/Pages settings/workflows/main/production changes.
+
+Local DOM/resource/CSS/metadata and interaction-state checks PASS. Actual Chromium cannot start and iPhone Safari is unverified. HTTP deployment checks are recorded in PR9. Old publication details below refer to the prior homepage update.
+
 # Filo Fino — La línea del filo, test preview
 
 Updated 15 October 2026 with explicit owner authorization for the existing test Pages only.
