@@ -1,0 +1,5 @@
+# INERT TEMPLATE; final review required, never export to test Pages.
+User-agent: *
+Allow: /
+
+Sitemap: https://filofino.es/sitemap.xml

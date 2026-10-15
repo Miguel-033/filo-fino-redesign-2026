@@ -1,0 +1,8 @@
+/* Existing eyebrow and brand headline retain their roles inside one visible H1.
+   No hidden SEO copy, new section, palette change or headline scale change. */
+.hero h1 .hero-heading-context{display:block;font:500 12px/1.5 var(--body);letter-spacing:.035em;color:#d9dfdf;margin-bottom:21px;text-shadow:none}
+.hero h1 .hero-heading-display{display:block;color:var(--paper)}
+.hero h1 .hero-heading-display>span{color:var(--steel)}
+.hero h1 .hero-heading-context .tiny-edge{width:22px;height:1px}
+@media(max-width:767px){.hero h1 .hero-heading-context{font-size:12px;letter-spacing:.015em}}
+@media(max-width:359px){.hero h1 .hero-heading-context{font-size:11px}}

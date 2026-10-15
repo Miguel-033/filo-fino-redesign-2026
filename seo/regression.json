@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "method": "jsdom state checks with dialog/animation test doubles",
+  "components": [
+    "homepage menu/gallery/stages/WhatsApp",
+    "knife gallery/menu/FAQ HTML/WhatsApp"
+  ],
+  "notTested": [
+    "rendered layout",
+    "native focus/Escape/swipe",
+    "Safari",
+    "Lighthouse/CWV"
+  ]
+}

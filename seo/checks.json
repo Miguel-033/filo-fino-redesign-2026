@@ -1,0 +1,211 @@
+{
+  "status": "PASS",
+  "method": "offline HTML/config/CSS/graph/file checks",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Taller de afilado en Valencia | Filo Fino",
+      "h1": "Taller de afilado en Valencia Cada filo. Su oficio.",
+      "htmlBytes": 23667,
+      "directAndCSSResourceBytes": 518187,
+      "images": 13,
+      "links": 46,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Taller de afilado en Valencia Cada filo. Su oficio."
+        ],
+        [
+          "h2",
+          "Tu herramienta. Su mejor corte."
+        ],
+        [
+          "h3",
+          "Afilado de cuchillos"
+        ],
+        [
+          "h3",
+          "Afilado de tijeras"
+        ],
+        [
+          "h3",
+          "Afilado de herramientas de manicura"
+        ],
+        [
+          "h2",
+          "Trae la herramienta. Hablemos del corte."
+        ],
+        [
+          "h3",
+          "Al traerla"
+        ],
+        [
+          "h3",
+          "Antes de empezar"
+        ],
+        [
+          "h3",
+          "Al recogerla"
+        ],
+        [
+          "h3",
+          "¿Tienes un cuchillo japonés?"
+        ],
+        [
+          "h2",
+          "El trabajo, de cerca."
+        ],
+        [
+          "h2",
+          "Del problema al filo."
+        ],
+        [
+          "h3",
+          "01 Escuchar"
+        ],
+        [
+          "h3",
+          "02 Revisar"
+        ],
+        [
+          "h3",
+          "03 Afilar"
+        ],
+        [
+          "h3",
+          "04 Comprobar"
+        ],
+        [
+          "h2",
+          "Ven al taller. O escríbeme."
+        ],
+        [
+          "h3",
+          "Calle Maestro Guerrero, 4"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-valencia/",
+      "title": "Afilado de cuchillos en Valencia | Filo Fino",
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "htmlBytes": 24478,
+      "directAndCSSResourceBytes": 409367,
+      "images": 5,
+      "links": 49,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado profesional de cuchillos en Valencia"
+        ],
+        [
+          "h2",
+          "Un buen corte empieza por conocer tu cuchillo."
+        ],
+        [
+          "h3",
+          "Cuchillos de cocina"
+        ],
+        [
+          "h3",
+          "Cuchillos profesionales"
+        ],
+        [
+          "h3",
+          "Cuchillos japoneses"
+        ],
+        [
+          "h2",
+          "Antes de afilar, hay que mirar."
+        ],
+        [
+          "h3",
+          "Conocer el problema"
+        ],
+        [
+          "h3",
+          "Revisar y valorar"
+        ],
+        [
+          "h3",
+          "Trabajar la hoja"
+        ],
+        [
+          "h3",
+          "Comprobar y entregar"
+        ],
+        [
+          "h2",
+          "Tu cuchillo japonés, visto de cerca."
+        ],
+        [
+          "h2",
+          "El filo se entiende mirándolo."
+        ],
+        [
+          "h2",
+          "Tráelos bien protegidos."
+        ],
+        [
+          "h3",
+          "Limpios y secos"
+        ],
+        [
+          "h3",
+          "Filo y punta cubiertos"
+        ],
+        [
+          "h3",
+          "Cada pieza sujeta"
+        ],
+        [
+          "h2",
+          "Preguntas con respuesta."
+        ],
+        [
+          "h2",
+          "Tus cuchillos. Un taller cercano."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    }
+  ],
+  "retainedMigrationURLs": 42,
+  "protectedAssetAndInteractionFiles": 27,
+  "limitations": [
+    "No rendered/mobile/Safari verification",
+    "No Lighthouse/CWV measurement",
+    "No Google Rich Results Test or guarantee of indexing/rankings"
+  ]
+}

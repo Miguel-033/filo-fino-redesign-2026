@@ -1,0 +1,63 @@
+{
+  "version": "2026-10-15",
+  "productionOrigin": "https://filofino.es",
+  "previewBase": "https://miguel-033.github.io/filo-fino-redesign-2026/",
+  "sourceRoot": "design-premium-preview",
+  "sharedAssets": ["premium.css", "refinement.css", "premium.js", "seo.css"],
+  "business": {
+    "name": "Filo Fino",
+    "id": "https://filofino.es/#business",
+    "telephone": "+34614005053",
+    "streetAddress": "Calle Maestro Guerrero, 4",
+    "addressLocality": "Valencia",
+    "addressCountry": "ES",
+    "hoursStatus": "owner-confirmation-required",
+    "maps": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7"
+  },
+  "pages": [
+    {
+      "path": "/",
+      "source": "index.html",
+      "status": "developed",
+      "role": "workshop-hub",
+      "title": "Taller de afilado en Valencia | Filo Fino",
+      "description": "Taller de afilado en Valencia para cuchillos, tijeras y herramientas de manicura. Atención directa en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+      "h1Contains": "Taller de afilado en Valencia",
+      "primaryIntent": "Local workshop and branded/multi-tool service discovery",
+      "mustLink": ["/servicios/afilado-cuchillos-valencia/", "/servicios/afilar-tijeras-peluqueria-valencia/", "/servicios/herramientas-manicura-pedicura-valencia/"]
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-valencia/",
+      "source": "servicios/afilado-cuchillos-valencia/index.html",
+      "assets": ["knives.css", "knives.js"],
+      "status": "developed",
+      "role": "knife-service",
+      "title": "Afilado de cuchillos en Valencia | Filo Fino",
+      "description": "Afilado de cuchillos de cocina, profesionales y japoneses en Valencia. Revisión de cada pieza en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+      "h1Contains": "Afilado profesional de cuchillos en Valencia",
+      "serviceName": "Afilado de cuchillos",
+      "primaryIntent": "Local knife sharpening service, not sharpener purchase",
+      "mustLink": ["/", "/servicios/afilar-tijeras-peluqueria-valencia/", "/servicios/herramientas-manicura-pedicura-valencia/", "/articulos/cuchillo-no-corta.html"]
+    },
+    {
+      "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "status": "planned-replacement-retain-live",
+      "role": "scissors-service",
+      "serviceName": "Afilado de tijeras de peluquería",
+      "title": "Afilar tijeras de peluquería en Valencia | Filo Fino",
+      "description": "Afilado y revisión de tijeras de peluquería en Valencia. Consulta el filo, el ajuste y otras tijeras de uso doméstico o de costura. Atención directa en taller.",
+      "h1Contains": "Afilado de tijeras de peluquería en Valencia",
+      "primaryIntent": "Hair scissors first; confirmed other scissors as a useful subsection, not a URL replacement"
+    },
+    {
+      "path": "/servicios/herramientas-manicura-pedicura-valencia/",
+      "status": "planned-replacement-retain-live",
+      "role": "manicure-service",
+      "serviceName": "Afilado de herramientas de manicura y pedicura",
+      "title": "Afilado de manicura y pedicura en Valencia | Filo Fino",
+      "description": "Afilado y revisión de alicates, tijeras y herramientas de manicura y pedicura en Valencia. Consulta tu herramienta por WhatsApp o visita el taller.",
+      "h1Contains": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "primaryIntent": "Instrument sharpening and adjustment, not beauty appointments or tool shopping"
+    }
+  ]
+}
