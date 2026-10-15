@@ -1,0 +1,21 @@
+{
+  "page": "Afilado de cuchillos",
+  "date": "2026-10-15T14:28:21.261Z",
+  "passed": [
+    "Spanish metadata and one H1",
+    "noindex and no active canonical/production JSON-LD",
+    "resource files, CSS URL refs and syntax",
+    "unique IDs and all anchors/SVG symbols",
+    "3 types, 4 steps, 7 native FAQ details",
+    "3 gallery views with wrap, keyboard state and zoom reset",
+    "menu state/aria-expanded",
+    "WhatsApp prefix and 3 contexts without JS rewrite",
+    "all homepage knife links point at new route",
+    "production JSON graph/ref consistency without hours/ratings",
+    "no video, fabricated numeric price/time or text arrows"
+  ],
+  "limitations": [
+    "DOM test doubles are not rendered browser, native Escape/focus/swipe, mobile overflow or Safari tests",
+    "No measured field performance or rich-result validation"
+  ]
+}
