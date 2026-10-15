@@ -1,5 +1,7 @@
 # Afilado de cuchillos — premium service page
 
+> Current mandatory standard: [SEO_ARCHITECTURE_2026.md](../../../SEO_ARCHITECTURE_2026.md). Metadata now comes from `seo/routes.json`; this page's production-seo.json is generated from the central production handoff, not a separate source of truth. The notes below document the original service-page task.
+
 15 October 2026. One new service page in the existing La línea del filo visual system. Source base: PR8 `179a24edc3b3958c9eb44612f22db7466c3700c8`. Its local equivalent has the same tree, `6dd3db5791fcb2c4013249102a8bd30a2f9ad86f`. Current test publishing base: `5ccde2ddd0272f5b508e88a15e1204efc8d2ac82`.
 
 ## Page and visual decisions

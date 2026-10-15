@@ -1,5 +1,5 @@
 {
-  "status": "Prepared for owner review; NOT injected in the noindex preview; not an instruction to deploy",
+  "status": "INERT HANDOFF — not approved or exported for production",
   "canonical": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
   "robots": "index, follow",
   "title": "Afilado de cuchillos en Valencia | Filo Fino",
@@ -21,17 +21,13 @@
         }
       },
       {
-        "@type": "Service",
-        "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#service",
-        "name": "Afilado de cuchillos",
-        "serviceType": "Afilado de cuchillos de cocina, profesionales y japoneses",
-        "url": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
-        "provider": {
+        "@type": "WebSite",
+        "@id": "https://filofino.es/#website",
+        "url": "https://filofino.es/",
+        "name": "Filo Fino",
+        "inLanguage": "es-ES",
+        "publisher": {
           "@id": "https://filofino.es/#business"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Valencia"
         }
       },
       {
@@ -40,11 +36,28 @@
         "url": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
         "name": "Afilado de cuchillos en Valencia | Filo Fino",
         "inLanguage": "es-ES",
+        "isPartOf": {
+          "@id": "https://filofino.es/#website"
+        },
         "mainEntity": {
           "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#service"
         },
         "breadcrumb": {
           "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#breadcrumb"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#service",
+        "url": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
+        "name": "Afilado de cuchillos",
+        "serviceType": "Afilado de cuchillos",
+        "provider": {
+          "@id": "https://filofino.es/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Valencia"
         }
       },
       {
