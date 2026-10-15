@@ -1,3 +1,9 @@
+## SEO architecture update — 15 October 2026
+
+Source `8440792040128df7cea547f6bc59057f95e5db91`, Draft PR10. Updated safe metadata on home and knife service, visible home H1 context with preserved brand display, contextual blog/article links, async below-fold decoding and seo.css. All photography, existing core CSS/JS, routes and interactions are retained. Source specification, route registry and checks remain in the source PR, not this static export.
+
+Both pages remain noindex, nofollow. No canonical, production JSON-LD, production sitemap or robots template is exported. No CNAME/DNS/Pages settings/workflows/main/production changes. Static checks and DOM-state regression tests passed; rendered mobile/Safari, Lighthouse/CWV and Google Rich Results remain unverified. Publication HTTP/hash results are recorded in PR10.
+
 ## Knife service page — 15 October 2026
 
 Source `61425d8c3996caf531085ed203ac0ffe1d8ebba4`, Draft PR9. New route `servicios/afilado-cuchillos-valencia/`; all homepage knife service links lead here. Other undeveloped services retain existing production destinations.
