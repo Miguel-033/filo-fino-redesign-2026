@@ -55,7 +55,14 @@ def main():
         files += [str(Path(relative).parent / name) for name in page.get('assets', [])]
     for name in files:
         shutil.copyfile(SOURCE / name, dest / name)
-    shutil.copytree(SOURCE / 'assets', dest / 'assets', dirs_exist_ok=True)
+    # Markdown provenance in the existing publishing tree has GitHub-adapted
+    # document links. Keep it rather than reintroduce source-only relative URLs.
+    # New media/provenance changes require a separately reviewed export update.
+    for asset in (SOURCE / 'assets').rglob('*'):
+        if asset.is_file() and asset.suffix != '.md':
+            target = dest / 'assets' / asset.relative_to(SOURCE / 'assets')
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(asset, target)
     # No robots, sitemap, production metadata, source-only checks or docs are copied.
     assert not (dest / 'robots.txt').exists() and not (dest / 'sitemap.xml').exists()
     print('PASS: local preview export complete; no git push, ref update or deployment performed')
