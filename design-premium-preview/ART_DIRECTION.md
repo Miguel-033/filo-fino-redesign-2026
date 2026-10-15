@@ -34,4 +34,4 @@ Las adaptaciones propias funcionan en HTML/CSS/JS sin dependencias de estas fuen
 4. Pares antes/después del mismo instrumento y ángulo, con consentimiento del cliente.
 5. Fachada y acceso a pie para reconocer el taller.
 
-El nivel visual final depende de esta sesión fotográfica. El prototipo usa exclusivamente archivos que ya estaban en el repositorio; no se presenta un archivo de trabajo como un caso documentado con resultado garantizado.
+El nivel visual final depende de esta sesión fotográfica. Actualización, 15 octubre 2026: el prototipo usa ocho fotografías revisadas de la carpeta del propietario en Google Drive. La procedencia y los dos espacios reservados están en `assets/SOURCES.md`. La selección no incluye un proceso completo ni la entrada del taller. No se presenta un archivo como un caso documentado con resultado garantizado. Se conserva la dirección visual de PR №4; los servicios se apilan en móvil para que preguntas y textos sean legibles.
