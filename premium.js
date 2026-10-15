@@ -12,7 +12,7 @@ const whatsappMessages = {
   "general": "Hola, tengo una consulta sobre el afilado de una herramienta. ¿Te puedo enviar una foto?",
   "knives": "Hola, me gustaría afilar mis cuchillos. ¿Te puedo enviar unas fotos para consultar el trabajo y el plazo?",
   "japanese": "Hola, tengo un cuchillo japonés y me gustaría saber si puedes afilarlo. ¿Te puedo enviar unas fotos?",
-  "hair": "Hola, quisiera consultar el afilado y ajuste de mis herramientas de peluquería. ¿Te puedo enviar unas fotos?",
+  "hair": "Hola, quisiera consultar el afilado y ajuste de mis tijeras. ¿Te puedo enviar unas fotos y contarte para qué las utilizo?",
   "manicure": "Hola, me gustaría revisar mis herramientas de manicura. ¿Te puedo enviar unas fotos y contarte qué les ocurre?"
 };
 document.querySelectorAll('[data-whatsapp]').forEach(link => {
@@ -77,44 +77,19 @@ menu.querySelectorAll('a[href^="#"]').forEach(link => {
 // Add reviewed owner photos here; retain the first three preview indexes.
 const photographs = [
   {
-    "src": "assets/images/drive/img_6874.webp",
-    "alt": "Selección de cuchillos del archivo de Filo Fino",
-    "caption": "Cuchillos / Distintas piezas, distintos filos"
+    "src": "assets/illustrations/knife-study.svg",
+    "alt": "Ilustración de un cuchillo de cocina",
+    "caption": "Cuchillos / La forma sigue al uso"
   },
   {
-    "src": "assets/images/drive/img_0734.webp",
-    "alt": "Tijeras pequeñas de manicura en una mano enguantada",
-    "caption": "Manicura / Herramientas en detalle"
+    "src": "assets/images/manicura.webp",
+    "alt": "Alicate de manicura entre manos enguantadas",
+    "caption": "Manicura / La pieza, en detalle"
   },
   {
-    "src": "assets/images/drive/img_7653.webp",
-    "alt": "Tijeras de peluquería abiertas en una mano enguantada",
-    "caption": "Peluquería / Geometría y ajuste"
-  },
-  {
-    "src": "assets/images/drive/img_7034.webp",
-    "alt": "Dos cuchillos de cocina con mangos rojos",
-    "caption": "Cocina / Las piezas completas"
-  },
-  {
-    "src": "assets/images/drive/img_8001.webp",
-    "alt": "Primer plano de la punta y el filo de un cuchillo",
-    "caption": "Cuchillos / El filo, de cerca"
-  },
-  {
-    "src": "assets/images/drive/img_6018.webp",
-    "alt": "Detalle del bisel de un cuchillo",
-    "caption": "Cuchillos / Geometría del bisel"
-  },
-  {
-    "src": "assets/images/drive/img_1118.webp",
-    "alt": "Dos piezas de un bloque de corte de máquina en una mano enguantada",
-    "caption": "Máquinas / Bloque de corte desmontado"
-  },
-  {
-    "src": "assets/images/drive/img_6463.webp",
-    "alt": "Puntas de unas tijeras pequeñas en una mano enguantada",
-    "caption": "Manicura / Una mirada al detalle"
+    "src": "assets/images/tijeras.webp",
+    "alt": "Prueba de corte de unas tijeras sobre un mechón",
+    "caption": "Tijeras / Una prueba de corte"
   }
 ];
 let photographIndex = 0;
@@ -177,29 +152,27 @@ galleryView.addEventListener('touchend', event => {
   touchStart = null;
 }, { passive: true });
 
-// Illustrative archive photos, not evidence of the actual process step.
+// Original vector studies, not photos or a documented customer commission.
 const stages = [
   {
-    "src": "assets/images/drive/img_6874.webp",
-    "alt": "Selección de cuchillos del archivo de Filo Fino",
-    "caption": "Cuchillos / Distintas piezas, distintos filos",
-    "stageCaption": "01 / Escuchar · Fotografía de referencia del archivo"
+    "src": "assets/illustrations/escuchar.svg",
+    "alt": "Conversación sobre la herramienta apoyada en la mesa",
+    "stageCaption": "01 / Escuchar · El uso y lo que notas al cortar"
   },
   {
-    "src": "assets/images/drive/img_6018.webp",
-    "alt": "Detalle del bisel de un cuchillo",
-    "caption": "Cuchillos / Geometría del bisel",
-    "stageCaption": "02 / Revisar · Detalle del filo del archivo"
+    "src": "assets/illustrations/revisar.svg",
+    "alt": "Inspección visual del filo con una lupa sin tocar el corte",
+    "stageCaption": "02 / Revisar · El estado, la geometría y el ajuste"
   },
   {
-    "placeholder": true,
-    "stageCaption": "03 / Afilar · Vídeo pendiente de incorporar"
+    "src": "assets/illustrations/afilar.svg",
+    "alt": "Afilado ilustrativo sobre piedra: mano en el mango y apoyo en la cara de la hoja",
+    "stageCaption": "03 / Afilar · Trabajo adaptado a cada herramienta"
   },
   {
-    "src": "assets/images/drive/img_7653.webp",
-    "alt": "Tijeras de peluquería abiertas en una mano enguantada",
-    "caption": "Peluquería / Geometría y ajuste",
-    "stageCaption": "04 / Comprobar · Pieza del archivo, no una prueba de corte"
+    "src": "assets/illustrations/comprobar.svg",
+    "alt": "Prueba de corte en papel con la mano de sujeción alejada del recorrido del cuchillo",
+    "stageCaption": "04 / Comprobar · Una prueba adecuada a la pieza"
   }
 ];
 const processImage = document.querySelector('#process-image');
@@ -209,21 +182,12 @@ document.querySelectorAll('.step-button').forEach((button, index) => {
       stage.classList.toggle('is-current', stageIndex === index);
       stage.querySelector('button').setAttribute('aria-pressed', String(stageIndex === index));
     });
-    const stage = stages[index];
-    const placeholder = document.querySelector('#process-placeholder');
-    processImage.hidden = Boolean(stage.placeholder);
-    placeholder.hidden = !stage.placeholder;
-    if (!stage.placeholder) {
-      processImage.src = stage.src;
-      processImage.alt = stage.alt;
-    }
-    document.querySelector('#process-caption').textContent = stage.stageCaption;
+    processImage.src = stages[index].src;
+    processImage.alt = stages[index].alt;
+    document.querySelector('#process-caption').textContent = stages[index].stageCaption;
     document.querySelector('.process-line span').style.transform = `scaleY(${(index + 1) / stages.length})`;
-    const visual = stage.placeholder ? placeholder : processImage;
-    visual.getAnimations().forEach(animation => animation.cancel());
-    animate(visual, [{ opacity: .25, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], {
-      duration: 420, easing: 'cubic-bezier(.22,.7,.2,1)'
-    });
+    processImage.getAnimations().forEach(animation => animation.cancel());
+    animate(processImage, [{ opacity: .3, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }], {duration: 380, easing: 'ease-out'});
   });
 });
 
@@ -234,15 +198,29 @@ animate(document.querySelector('.hero h1'), [{ opacity: .25, transform: 'transla
 animate(document.querySelector('.hero-photo'), [{ opacity: .25, transform: 'translateX(44px)' }, { opacity: 1, transform: 'none' }], {
   duration: 750, easing: 'cubic-bezier(.2,.6,.2,1)'
 });
+// Replay only after leaving the viewport: readable even without JS/observer.
+// No scroll handlers or layout reads; at most one group of cards moves together.
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      animate(entry.target, [{ opacity: .45, transform: 'translateY(28px)' }, { opacity: 1, transform: 'none' }], { duration: 600, easing: 'ease-out' });
-      observer.unobserve(entry.target);
+      if (!entry.isIntersecting) { entry.target.dataset.inView = 'false'; return; }
+      if (entry.target.dataset.inView === 'true') return;
+      entry.target.dataset.inView = 'true';
+      const cards = entry.target.matches('.service-composition, .intake-grid') ? [...entry.target.children] : [entry.target];
+      cards.forEach((item, index) => {
+        item.getAnimations().forEach(animation => animation.cancel());
+        animate(item, [{ opacity: .25, transform: 'translateY(30px)' }, { opacity: 1, transform: 'none' }], { duration: 650, delay: index * 85, fill: 'backwards', easing: 'cubic-bezier(.2,.65,.2,1)' });
+      });
+      const graphic = entry.target.querySelector('.craft-rule, .process-line span, .address-line');
+      if (graphic) animate(graphic, [{ opacity: .2, transform: 'scaleY(.2)' }, { opacity: 1, transform: 'none' }], {duration: 800, easing: 'ease-out'});
     });
-  }, { threshold: .15 });
-  document.querySelectorAll('.section-heading, .craft-photo, .gallery-main, .visit-photo, .footer-top').forEach(item => observer.observe(item));
+  }, { threshold: .08 });
+  document.querySelectorAll('.section-heading, .service-composition, .craft-lead, .intake-grid, .japanese-note, .gallery-composition, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
+  // Brief touch hint, only in service shortcuts; offscreen/reduced motion stays still.
+  const hints = new IntersectionObserver(entries => entries.forEach(entry => {
+    entry.target.classList.toggle('hint-visible', entry.isIntersecting);
+  }), {threshold: .4});
+  hints.observe(document.querySelector('.hero-shortcuts'));
 }
 
 // Native disclosures stay useful without JavaScript; motion is enhancement only.

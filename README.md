@@ -1,33 +1,13 @@
-# Filo Fino — isolated GitHub Pages preview · PR №6
+# Filo Fino — La línea del filo, test preview
 
-Подготовлено 15 октября 2026 из Draft PR №6, ветка `codex/premium-media-refinement`.
-Исходный SHA: `27b6aa4212d658e3c16b01d5c8deb46ee66e1e1e`.
-Publishing-база: `gh-pages-preview`, SHA `4c6682ff9684e010c2fa0e57115e1f4c2a769cce`.
-Инструкция: `design-premium-preview/PREVIEW_UPDATE.md` указанного исходного коммита.
+Updated 15 October 2026 with explicit owner authorization for the existing test Pages only.
 
-## Содержимое
+Source: `66fa0ca51abc697da4df3a1c15cfe2bad887b8b0`, branch `codex/premium-owner-corrections`, Draft PR #8. Publishing parent: `d1d7f8b35f08592eafe21a390a92f497bdb0454f`.
 
-Только `index.html`, `premium.css`, `refinement.css`, `premium.js`, `assets/`, этот README и существующий `.nojekyll`. Дизайн и содержимое PR №6 не перерабатывались. CSS, JavaScript, фотографии, шрифты, лицензии и реестр источников совпадают с исходником побайтово.
+Only static prototype HTML, CSS, JS and required SVG/PR4 photos updated. Existing noindex and .nojekyll retained. Service and legal URLs point to their existing filofino.es destinations; this does not modify production. No CNAME, settings, workflows, analytics or video added.
 
-Единственная адаптация HTML: все 16 ссылок `href="/…"` преобразованы в существующие абсолютные `https://filofino.es/…` (семь уникальных страниц услуг и правовых документов). На GitHub Pages они не будут ошибочно открываться в корне github.io. Якоря, локальные assets, WhatsApp, телефон, Instagram и Maps не изменены.
+Photos and graphic provenance: assets/SOURCES.md. Knife-study.svg is an owner-selection slot, not a photographic after result. Existing assets/images/drive and media-manifest.json remain an inactive archive of PR6; no client element references them.
 
-Галерея содержит восемь реальных фотографий и три превью. Видеофайлы и player отсутствуют. Временные слоты и происхождение фото описаны в `assets/SOURCES.md`; приватных ссылок и ID Google Drive нет. Старые семь неиспользуемых изображений предыдущего preview удалены только из этой publishing-копии и восстанавливаются из Git.
+Local checks: CSS/JS/resources/links and interaction state tests passed. Local Chromium cannot start (SIGTRAP); do not claim local mobile/render checks passed. Published browser checks are recorded on Draft PR #8. Physical iPhone Safari testing remains separate.
 
-## Проверки подготовки
-
-- Локальный HTTP-сервер под префиксом `/filo-fino-redesign-2026/`: главная, CSS, JS, все восемь фото, оба шрифта и остальные файлы пакета отвечают 200, содержимое соответствует файлам. Локальных 404 не обнаружено.
-- `node --check premium.js`, разбор обоих CSS, проверка локальных путей и всех якорей.
-- Восемь WebP декодируются, размеры соответствуют реестру, EXIF отсутствует. Оба TTF-файла проверены по заголовкам и границам таблиц; шрифты не менялись.
-- В jsdom исполнялся настоящий JS: пять контекстов WhatsApp с `[Filo Fino · Web]`, совпадение HTML/JS ссылок, четыре состояния процесса, восемь кадров галереи, круговой просмотр и сброс zoom. Сообщения/звонки не отправлялись.
-- Ссылки услуг/правовых страниц соответствуют существующим путям исходного сайта; содержимое семи страниц также доступно через веб-ридер. Это не гарантия текущего HTTP-статуса внешних сервисов.
-- Сохранены `.nojekyll`, `noindex, nofollow` и лицензии шрифтов. Нет CNAME, workflows, аналитики, магазина или других страниц.
-
-Граница проверки: jsdom не подтверждает реальный рендеринг, focus trap, Escape, свайп и анимации. Новые Chromium-скриншоты не получены в предыдущем этапе из-за ограничений среды; здесь визуальная проверка не объявляется выполненной. Отсутствие 404 проверено для локальной publishing-копии, а не для ещё не опубликованной новой версии GitHub Pages. Расписание/контактные сведения перенесены без редактирования; известное примечание PR №6 о расхождении часов с production JSON-LD остаётся на отдельное подтверждение владельца.
-
-## Публикация только после решения владельца
-
-Подготовлена отдельная review-ветка и PR в `gh-pages-preview`. До одобрения PR не объединять. Если Pages использует эту ветку, merge запустит публикацию — это отдельное действие владельца. Настройки GitHub Pages, домена/DNS, ветки main и оригинального репозитория не меняются.
-
-После одобренного merge проверить фактический Pages URL, загрузку ресурсов, три услуги, пять контекстов WhatsApp, галерею и четыре этапа на телефоне/desktop. Для отката использовать обычный revert принятого preview-коммита, без force-push и без отката чужих последующих изменений.
-
-`noindex` не является контролем доступа: опубликованный preview и его фотографии доступны публично.
+Rollback using a new revert commit of this preview update; do not reset or force-push the publishing branch.

@@ -5,14 +5,14 @@ body{font-size:16px}
 .hero-actions .button,.visit-actions .button{font-size:14px}.hero-service-link{font-size:14px;margin-top:16px}
 .hero-shortcuts{display:flex;gap:10px;margin-top:14px;max-width:500px;border:0;align-items:stretch}
 .hero-shortcuts a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:50px;flex:1;padding:12px 16px;border:1px solid #8a9ba3;background:#182024ed;font-size:14px;color:var(--paper);transition:background-color .2s,border-color .2s,transform .2s}
-.hero-shortcuts a::after,.hero-shortcuts a:not(:last-child)::after{content:'↗';position:static;width:auto;height:auto;background:none;color:var(--brass);font-size:18px;transition:transform .25s}
+.hero-shortcuts a::after,.hero-shortcuts a:not(:last-child)::after{content:none;position:static;width:auto;height:auto;background:none;color:var(--brass);font-size:18px;transition:transform .25s}
 .hero-shortcuts a:hover,.hero-shortcuts a:focus-visible{background:#35444b;border-color:var(--brass);color:var(--paper)}
 .hero-shortcuts a:hover::after{transform:translate(2px,-2px)}.hero-shortcuts a:active{transform:translateY(1px)}
 .hero-foot{font-size:12px;letter-spacing:.02em}.hero-foot span:last-child{font-size:13px}.photo-note{font-size:12px}
 .section-heading>p{font-size:15px}.eyebrow{font-size:12px}
 .service-title p{font-size:13px;line-height:1.6}.service-detail summary{font-size:14px;min-height:60px}.service-detail p{font-size:15px;line-height:1.75}
 .service-detail p .service-consult{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:10px 0;text-decoration:none;border-top:1px solid var(--line)}
-.service-consult::after{content:'↗';font-size:20px}.service-consult:hover{text-decoration:underline!important;text-underline-offset:5px}
+.service-consult::after{content:none;font-size:20px}.service-consult:hover{text-decoration:underline!important;text-underline-offset:5px}
 .craft-intro p,.craft-copy>p:not(.eyebrow){font-size:16px}.craft-principles dt,.craft-principles dd{font-size:14px}.text-link{font-size:14px}
 .craft-photo figcaption{font-size:13px}.japanese-note{display:grid;grid-template-columns:1fr auto;gap:40px;padding-top:32px;padding-bottom:32px}
 .japanese-note h3{font-size:32px}.japanese-note p{font-size:15px;line-height:1.75}.japanese-note a{font-size:14px;border-bottom:1px solid #7b8e94;grid-column:auto}
@@ -49,3 +49,56 @@ body{font-size:16px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.step-button:hover,.button:hover svg,.text-link:hover svg,.japanese-note a:hover svg,.hero-shortcuts a:hover::after,.hero-shortcuts a:active{transform:none}}
 /* Keep the reserved frame stable regardless of portrait intrinsic dimensions. */
 .process-frame>img,.process-frame>.media-placeholder{position:absolute;inset:0}
+/* Owner corrections: La línea del filo, existing palette and typography. */
+.hero-photo img{object-position:58% center;filter:none}
+.hero-content{padding-bottom:86px}.hero-copy{max-width:390px}
+.hero-shortcuts{display:flex;gap:0;max-width:720px;margin-top:18px;border-top:1px solid #80929870;border-bottom:1px solid #80929870;align-items:stretch}
+.hero-shortcuts a{flex:1;min-width:0;justify-content:space-between;gap:12px;min-height:88px;padding:16px 18px 16px 0;border:0;background:transparent;font-size:14px;line-height:1.5;position:relative}
+.hero-shortcuts a+a{padding-left:18px}.hero-shortcuts a::after,.hero-shortcuts a:not(:last-child)::after,.service-consult::after{content:none}
+.hero-shortcuts a:hover,.hero-shortcuts a:focus-visible{background:transparent;color:var(--brass);border:0;transform:none}
+.hero-shortcuts a>span:first-child{text-decoration:underline;text-decoration-color:#91a4ad80;text-underline-offset:6px;text-decoration-thickness:1px}
+.hero-shortcuts a:hover>span:first-child{text-decoration-color:var(--brass)}
+.shortcut-affordance{display:flex;align-items:center;gap:5px;flex:none}.shortcut-affordance>svg:not(.touch-hand){width:17px;height:17px;color:var(--brass)}
+svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var(--paper)}
+.hand-outline{fill:var(--ink)}.touch-ring{stroke:#ee6c68;stroke-width:2;fill:none;opacity:.7;transform-box:fill-box;transform-origin:center}
+.hint-visible .touch-ring{animation:touch-pulse 1.8s ease-out 2}.hint-visible .touch-ring-two{animation-delay:.25s}
+@keyframes touch-pulse{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.6);opacity:.1}}
+.hero-service-link svg{width:18px;height:18px;color:var(--brass)}.hero-foot>span:last-child{display:flex;align-items:center;gap:10px}.hero-foot svg{width:16px;height:16px}
+.service-title h3{font-size:40px;line-height:1.06;max-width:420px}.service-knives .service-title h3{font-size:70px;max-width:370px}
+.service-manicure .service-title h3{font-size:34px;max-width:340px}.service-knives .service-link img{object-fit:contain;padding:24px;object-position:center}
+.service-scissors .service-link img{object-position:50% 40%}.service-manicure .service-link img{object-position:50% 44%;filter:none}
+.service-consult{display:flex!important;align-items:center;gap:10px}.service-detail p a svg{width:17px;height:17px;vertical-align:middle;margin-left:8px}
+.intake-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;padding-top:50px;padding-bottom:56px}
+.intake-grid article{border-top:1px solid #a0afb3;padding-top:24px}.intake-grid h3{font-size:38px;margin-bottom:18px}.intake-grid p{font-size:16px;line-height:1.8;color:#43555d}
+.gallery-main .gallery-open img,.gallery-main>img{object-fit:contain;padding:18px;background:#202e35}
+.gallery-side .gallery-item:first-child img{filter:none;object-position:center 45%}.gallery-side .gallery-item:last-child img{object-position:center 42%}
+.gallery-controls .icon-button svg{width:20px;height:20px}.gallery-controls p{font-size:14px}
+.process-frame{background:#1c282e;border:1px solid #657880;aspect-ratio:16/11}
+.process-visual .process-frame img{padding:0;object-fit:contain;object-position:center}
+.address-study{transition:background-color .25s}.address-study:hover{background:#d5dfe0}.address-study p{text-decoration:underline;text-underline-offset:5px}.address-study:focus-visible{outline-offset:-6px;outline-color:var(--ink)}
+.footer-bottom>a{gap:9px}.footer-bottom>a svg{width:17px;height:17px}
+.menu-photo img{object-position:center 48%}.menu-photo p{text-shadow:0 2px 14px #111719}
+@media(min-width:768px){.hero{min-height:800px}.hero-content{padding-top:54px}.hero-shortcuts{width:62%;max-width:740px}.hero-shortcuts a{font-size:13px;gap:8px}.hero-shortcuts a+a{padding-left:14px}.shortcut-affordance{gap:3px}svg.touch-hand{width:28px;height:34px}.service-composition{grid-template-columns:1.25fr .75fr;grid-template-rows:auto auto;gap:18px}.service-knives{grid-row:1/3}.service-knives .service-link{min-height:500px}.service:not(.service-knives) .service-link{height:240px;min-height:240px}}
+@media(min-width:768px) and (max-width:1100px){.hero-shortcuts{width:73%}.hero-shortcuts a{font-size:12px}.hero-photo{opacity:.7}.service-title h3{font-size:34px}.service-manicure .service-title h3{font-size:29px}.service-knives .service-title h3{font-size:60px}.intake-grid{gap:24px}.intake-grid h3{font-size:32px}}
+@media(max-width:767px){
+ .hero-content{padding-bottom:0}.hero-copy{font-size:16px;max-width:360px}.hero-shortcuts{display:flex;flex-direction:column;gap:0;margin-top:12px;max-width:none;border-bottom:0}
+ .hero-shortcuts a,.hero-shortcuts a+a{padding:12px 2px;min-height:64px;font-size:15px;gap:16px;border-bottom:1px solid #80929870;flex:auto;justify-content:space-between}
+ .hero-shortcuts a>span:first-child{max-width:250px}.shortcut-affordance{gap:10px}svg.touch-hand{width:30px;height:35px}.shortcut-affordance>svg:not(.touch-hand){width:20px;height:20px}
+ .service-composition{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ .service-knives{grid-row:auto;grid-column:1/-1}
+ .service .service-link,.service:has(details[open]) .service-link,.service-scissors:has(details[open]) .service-link,.service-manicure:has(details[open]) .service-link{height:210px;min-height:210px;flex:none}
+ .service-knives .service-link,.service-knives:has(details[open]) .service-link{height:310px;min-height:310px}
+ .service-title{left:14px;right:12px;bottom:18px}.service-title p{font-size:12px;line-height:1.4;margin-bottom:9px;max-width:150px}
+ .service-title h3{font-size:31px;line-height:1.06}.service-manicure .service-title h3{font-size:27px;line-height:1.06}.service-knives .service-title h3{font-size:48px;max-width:270px}
+ .service-arrow{width:30px;height:30px;top:12px;right:12px}.service-arrow svg{width:15px;height:15px}
+ .service-detail summary{font-size:13px;padding:12px;min-height:78px;align-items:flex-start}.service-detail summary svg{margin-top:4px;flex-shrink:0}
+ .service-detail p{font-size:14px;padding:0 12px 18px}.service-detail p a svg{margin-left:0}.service-detail p .service-consult{font-size:14px}
+ .craft-lead{padding-top:46px}.craft-lead h2{font-size:clamp(48px,13.5vw,66px)}.craft-intro{margin:24px 0 0;gap:20px}.craft-intro p{font-size:15px}.craft-rule{width:45px}
+ .intake-grid{grid-template-columns:1fr;gap:24px;padding-top:34px;padding-bottom:34px}.intake-grid article{padding-top:18px}.intake-grid h3{font-size:32px;margin-bottom:12px}.intake-grid p{font-size:16px;line-height:1.75}
+ .section-heading>p,.works .section-heading>p,.process .section-heading>p{font-size:13px;max-width:170px}.process .section-heading{display:block}.process .section-heading>p{max-width:none;margin-top:20px}
+ .process-frame{aspect-ratio:16/11}.process-visual figcaption{font-size:13px;min-height:44px}.process-layout{gap:26px}.step-button{font-size:36px}
+ .gallery-main .gallery-open img{height:310px;padding:6px}.gallery-item figcaption{font-size:12px}.gallery-controls p{font-size:12px}.address-study{display:flex}
+ .menu-photo{height:130px}.menu-photo p{font-size:30px}.footer-grid nav>a{line-height:1.5;padding:8px 0}
+}
+@media(max-width:359px){.service-title h3{font-size:28px}.service-manicure .service-title h3{font-size:24px}.hero-shortcuts a{font-size:14px}.hero-actions{flex-direction:column}.works .section-heading{display:block}.works .section-heading>p{max-width:none;margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.touch-ring{animation:none!important;opacity:.7}.hero-shortcuts a:hover,.step-button:hover{transform:none}}
