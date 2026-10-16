@@ -61,8 +61,8 @@ body{font-size:16px}
 .shortcut-affordance{display:flex;align-items:center;gap:5px;flex:none}.shortcut-affordance>svg:not(.touch-hand){width:17px;height:17px;color:var(--brass)}
 svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var(--paper)}
 .hand-outline{fill:var(--ink)}.touch-ring{stroke:#ee6c68;stroke-width:2;fill:none;opacity:.7;transform-box:fill-box;transform-origin:center}
-.hint-visible .touch-ring{animation:touch-pulse 1.8s ease-out 2}.hint-visible .touch-ring-two{animation-delay:.25s}
-@keyframes touch-pulse{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.6);opacity:.1}}
+.hint-visible .touch-ring{animation:touch-pulse 3.8s ease-out infinite}.hint-visible .touch-ring-two{animation-delay:.35s}
+@keyframes touch-pulse{0%{transform:scale(.7);opacity:.9}36%{transform:scale(1.6);opacity:0}37%,100%{transform:scale(1.6);opacity:0}}
 .hero-service-link svg{width:18px;height:18px;color:var(--brass)}.hero-foot>span:last-child{display:flex;align-items:center;gap:10px}.hero-foot svg{width:16px;height:16px}
 .service-title h3{font-size:40px;line-height:1.06;max-width:420px}.service-knives .service-title h3{font-size:70px;max-width:370px}
 .service-manicure .service-title h3{font-size:34px;max-width:340px}.service-knives .service-link img{object-fit:contain;padding:24px;object-position:center}
@@ -107,7 +107,7 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
 .hero .hero-actions{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:10px;max-width:440px;flex-direction:row}
 .hero .hero-actions .button{width:100%;min-width:0;min-height:52px;font-size:14px;gap:8px;padding:14px 12px;text-align:center;line-height:1.35}
 .hero .hero-actions .button svg{width:18px;height:18px;flex:0 0 18px}
-.service-touch{position:absolute;top:24px;left:24px;z-index:2;pointer-events:none;display:block}
+.service-touch{position:absolute;top:24px;right:24px;left:auto;z-index:2;pointer-events:none;display:block}
 .service-touch svg.touch-hand{width:34px;height:40px}
 .hero.hero--service{min-height:0;padding-bottom:0}
 .hero--service .hero-content{padding-top:20px;padding-bottom:42px}
@@ -134,7 +134,7 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
  .hero--service .breadcrumbs{margin-bottom:12px;font-size:12px}
  .hero--service .hero-copy{font-size:16px;line-height:1.65;margin-top:22px}
  .hero--service .hero-actions{margin-top:18px}
- .service-touch{left:16px;top:24px}
+ .service-touch{left:auto;right:16px;top:20px}
  .service-touch svg.touch-hand{width:30px;height:35px}
  .service:not(.service-knives) .service-title h3{font-size:clamp(22px,7.2vw,31px)}
  .service-manicure .service-title h3{font-size:clamp(22px,6.5vw,27px)}
@@ -144,3 +144,22 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
  .knives-page .knife-jump a:first-child{min-height:52px}
 }
 @media(prefers-reduced-motion:reduce){.service-touch .touch-ring{animation:none!important;opacity:.7}}
+
+/* Targeted navigation polish: full hit areas, quiet surfaces and compact rows. */
+.hero .hero-shortcuts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:8px;border:0;max-width:560px}
+.hero .hero-shortcuts a,.hero .hero-shortcuts a+a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;min-height:52px;padding:12px 14px;border:1px solid #71858d80;border-radius:4px;background:#a9bbc309;font-size:14px;font-weight:600;line-height:1.45;transition:background-color .2s,border-color .2s,color .2s}
+.hero .hero-shortcuts a:first-child{grid-column:1/-1}
+.hero .hero-shortcuts a>span:first-child{min-width:0;max-width:none;text-decoration:none;overflow-wrap:break-word}
+.hero .hero-shortcuts .shortcut-affordance{flex:0 0 16px}
+.hero .hero-shortcuts .shortcut-affordance>svg{width:16px;height:16px}
+.hero .hero-shortcuts a:hover,.hero .hero-shortcuts a:focus-visible{background:#a9bbc312;border-color:var(--brass);color:var(--paper)}
+.knives-page .knife-jump a{min-height:52px;padding:10px 14px;gap:10px;background:#a9bbc309;border-color:#71858d80;border-radius:4px;font-size:14px;line-height:1.35;font-weight:600;align-items:center}
+.knives-page .knife-jump a>svg{width:16px;height:16px;flex:0 0 16px}
+.knives-page .knife-jump a:hover,.knives-page .knife-jump a:focus-visible{background:#a9bbc312;border-color:var(--brass)}
+@media(max-width:767px){
+ .hero .hero-shortcuts{width:100%;max-width:none;gap:8px}
+ .hero .hero-shortcuts a,.hero .hero-shortcuts a+a{min-height:52px;padding:11px 12px;font-size:14px;gap:8px}
+ .knives-page .knife-jump a{min-height:56px;padding:10px 12px;gap:10px}
+ .knives-page .knife-jump a:first-child{min-height:48px}
+}
+@media(max-width:359px){.hero .hero-shortcuts a,.hero .hero-shortcuts a+a{font-size:13px}}
