@@ -22,6 +22,7 @@ def main():
     assert remote == 'https://github.com/Miguel-033/filo-fino-redesign-2026.git'
     assert branch.startswith('preview/') and dest != ROOT, 'Use a separate preview/* worktree'
     assert (dest / '.nojekyll').exists() and not (dest / 'CNAME').exists()
+    subprocess.run(['python', str(ROOT / 'design-system/render_components.py'), '--check'], check=True)
     developed = {p['path'] for p in CONFIG['pages'] if p['status'] == 'developed'}
     files = list(CONFIG['sharedAssets'])
     for page in CONFIG['pages']:
