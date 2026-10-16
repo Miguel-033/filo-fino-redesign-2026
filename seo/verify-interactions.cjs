@@ -16,5 +16,5 @@ d.querySelector('.gallery-open').click();for(let i=1;i<=3;i++){assert.equal(d.qu
 console.log('PASS: resources, CSS syntax, unique IDs, anchors, SVG symbols, no text arrows/technical labels, 3 full links/3 hands/6 rings, five WhatsApp contexts + no-JS href parity, 4 stage SVGs/state, gallery 3/3/wrap/zoom reset, menu state. DOM test doubles; no rendering or native dialog/focus claims.');
 
 require('node:child_process').execFileSync(process.execPath,[path.join(root,'servicios/afilado-cuchillos-valencia/verify.cjs')],{stdio:'inherit',env:process.env});
-fs.writeFileSync(path.join(__dirname,'regression.json'),JSON.stringify({status:'PASS',method:'jsdom state checks with dialog/animation test doubles',components:['homepage menu/gallery/stages/WhatsApp','knife gallery/menu/FAQ HTML/WhatsApp'],notTested:['rendered layout','native focus/Escape/swipe','Safari','Lighthouse/CWV']},null,2)+'\n');
+fs.writeFileSync(path.join(__dirname,'regression.json'),JSON.stringify({status:'PASS',method:'jsdom state checks with dialog/animation test doubles',components:['homepage menu/gallery/stages/WhatsApp','knife menu/FAQ HTML/WhatsApp/compact hero/navigation/map'],notTested:['rendered layout','native focus/Escape/swipe','Safari','Lighthouse/CWV']},null,2)+'\n');
 

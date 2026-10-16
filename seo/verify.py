@@ -154,9 +154,13 @@ def main():
                  'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js']
     protected += subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', base,
                                         'design-premium-preview/assets'], cwd=ROOT, text=True).splitlines()
+    # Owner-authorized knife-only UX revision, 16.10.2026. Shared/home/media
+    # remain at PR9; page-level CSS/JS have explicit reviewed hashes, not exemptions.
+    knife_ui_baselines = {'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css': '3c8d419dd315bcafdfa760a088b0c20292ca4c98df34a39e889f7189e4929751', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js': 'cad7e0b8fe271b8416960e8f741cea99750870475c0a73a41363baba8d78f514'}
     for path in protected:
         before = subprocess.check_output(['git', 'show', base + ':' + path], cwd=ROOT)
-        assert hashlib.sha256(before).digest() == hashlib.sha256((ROOT / path).read_bytes()).digest(), path
+        expected = knife_ui_baselines.get(path, hashlib.sha256(before).hexdigest())
+        assert expected == hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), path
     report = {'status': 'PASS', 'method': 'offline HTML/config/CSS/graph/file checks',
               'pages': results, 'retainedMigrationURLs': len(rows),
               'protectedAssetAndInteractionFiles': len(protected),
