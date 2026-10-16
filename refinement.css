@@ -102,3 +102,45 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
 }
 @media(max-width:359px){.service-title h3{font-size:28px}.service-manicure .service-title h3{font-size:24px}.hero-shortcuts a{font-size:14px}.hero-actions{flex-direction:column}.works .section-heading{display:block}.works .section-heading>p{max-width:none;margin-top:18px}}
 @media(prefers-reduced-motion:reduce){.touch-ring{animation:none!important;opacity:.7}.hero-shortcuts a:hover,.step-button:hover{transform:none}}
+
+/* Shared 2026 composition. Existing palette, typefaces and media remain the source. */
+.hero .hero-actions{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:10px;max-width:440px;flex-direction:row}
+.hero .hero-actions .button{width:100%;min-width:0;min-height:52px;font-size:14px;gap:8px;padding:14px 12px;text-align:center;line-height:1.35}
+.hero .hero-actions .button svg{width:18px;height:18px;flex:0 0 18px}
+.service-touch{position:absolute;top:24px;left:24px;z-index:2;pointer-events:none;display:block}
+.service-touch svg.touch-hand{width:34px;height:40px}
+.hero.hero--service{min-height:0;padding-bottom:0}
+.hero--service .hero-content{padding-top:20px;padding-bottom:42px}
+.hero--service .hero-photo{bottom:0}
+.hero--service h1{font-size:clamp(68px,7vw,106px);line-height:.94;max-width:760px}
+.hero--service h1>span{display:block;color:var(--paper)}
+.hero--service h1>span:last-child{color:var(--steel)}
+.hero--service .breadcrumbs{margin-bottom:20px;max-width:fit-content}
+.hero--service .hero-copy{margin-top:24px;max-width:39ch}
+.knives-page .knife-jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:1100px;margin:0 auto;padding-top:20px;padding-bottom:24px;border:0}
+.knives-page .knife-jump a{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;min-width:0;min-height:56px;gap:16px;padding:14px 18px;background:#24343b;border:1px solid #647983;border-radius:3px;font-size:15px;line-height:1.45;transition:background-color .2s,border-color .2s}
+.knives-page .knife-jump a>svg{display:block;flex:0 0 18px;width:18px;height:18px;color:var(--brass)}
+.knives-page .knife-jump a:hover,.knives-page .knife-jump a:active{background:#34464f;border-color:var(--brass);color:var(--paper)}
+.knife-jump a>span{min-width:0;overflow-wrap:break-word}
+.site-footer .text-link{font-size:14px}
+@media(max-width:767px){
+ .site-header,.knives-page .site-header{height:72px}
+ .hero .hero-actions{gap:8px;max-width:440px}
+ .hero .hero-actions .button{min-height:50px;font-size:13px;padding:12px 8px;gap:6px}
+ .hero .hero-actions .button svg{width:17px;height:17px;flex-basis:17px}
+ .hero--service .hero-content{padding:10px 20px 24px}
+ .hero--service h1{font-size:clamp(44px,12.8vw,58px);line-height:.98;max-width:620px}
+ .hero--service .hero-photo{top:64px;bottom:auto;height:250px;width:70%;opacity:.86}
+ .hero--service .breadcrumbs{margin-bottom:12px;font-size:12px}
+ .hero--service .hero-copy{font-size:16px;line-height:1.65;margin-top:22px}
+ .hero--service .hero-actions{margin-top:18px}
+ .service-touch{left:16px;top:24px}
+ .service-touch svg.touch-hand{width:30px;height:35px}
+ .service:not(.service-knives) .service-title h3{font-size:clamp(22px,7.2vw,31px)}
+ .service-manicure .service-title h3{font-size:clamp(22px,6.5vw,27px)}
+ .knives-page .knife-jump{grid-template-columns:repeat(2,minmax(0,1fr));max-width:600px;padding-top:16px;padding-bottom:24px;gap:8px}
+ .knives-page .knife-jump a:first-child{grid-column:1/-1}
+ .knives-page .knife-jump a{padding:12px;min-height:64px;gap:10px;align-items:center}
+ .knives-page .knife-jump a:first-child{min-height:52px}
+}
+@media(prefers-reduced-motion:reduce){.service-touch .touch-ring{animation:none!important;opacity:.7}}
