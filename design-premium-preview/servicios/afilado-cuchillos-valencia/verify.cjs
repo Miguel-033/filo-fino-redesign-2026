@@ -13,19 +13,16 @@ for(const f of [root+'/premium.css',root+'/refinement.css',dir+'/knives.css']){c
 assert.ok(!/[←→↑↓↗↘]/u.test(html));assert.equal(d.querySelectorAll('.knife-type').length,3);assert.equal(d.querySelectorAll('.knife-faq-list details').length,7);assert.equal(d.querySelectorAll('[data-photo],#detalle,#knife-gallery-dialog,.edge-study').length,0);assert.equal(d.querySelectorAll('.knife-method li').length,4);assert.equal(d.querySelectorAll('video,iframe').length,0);
 
 // Actual UX/SEO contracts for this owner-requested page simplification.
-assert.equal(d.querySelectorAll('.knife-hero-visual').length,1);
-assert.equal(d.querySelector('.knife-hero-grid>h1').nextElementSibling.className,'knife-hero-visual');
-assert.equal(d.querySelector('.knife-hero-visual img').getAttribute('fetchpriority'),'high');
-assert.equal(d.querySelectorAll('.knife-hero-copy>.eyebrow').length,0);
+assert.equal(d.querySelectorAll('.hero.hero--service>.hero-photo img').length,1);
+assert.equal(d.querySelector('.hero-photo img').getAttribute('fetchpriority'),'high');
 assert.equal(d.querySelector('.knife-contact-card a.address-study').href,'https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7');
 for(const a of d.querySelectorAll('.knife-jump a')){assert.ok(a.querySelector(':scope>span'));assert.ok(a.querySelector(':scope>svg'));assert.ok(d.getElementById(a.hash.slice(1)));}
-const cssAst=postcss.parse(fs.readFileSync(dir+'/knives.css','utf8'));
+const cssAst=postcss.parse(fs.readFileSync(root+'/refinement.css','utf8'));
 function declarations(selector,media){const out={};cssAst.walkRules(rule=>{if(rule.selector!==selector)return;const m=rule.parent.type==='atrule'?rule.parent.params:null;if(m!==media)return;rule.walkDecls(x=>out[x.prop]=x.value)});return out;}
-assert.equal(declarations('.knife-actions','(max-width:767px)').display,'grid');
-assert.ok(declarations('.knife-actions','(max-width:767px)')['grid-template-columns'].includes('minmax'));
+assert.equal(declarations('.hero .hero-actions',null).display,'grid');
 assert.equal(declarations('.knives-page .knife-jump a',null)['flex-direction'],'row');
 assert.equal(declarations('.knives-page .knife-jump a',null)['flex-wrap'],'nowrap');
-assert.equal(declarations('.knife-hero-visual>img','(max-width:767px)').height,'clamp(140px,41vw,220px)');
+assert.equal(declarations('.knives-page .knife-jump a:first-child','(max-width:767px)')['grid-column'],'1/-1');
 
 const mainText=d.querySelector('main').textContent;assert.ok(!/\d+\s*(?:€|minutos|días)/.test(mainText));assert.ok(!/garantía|reseñas|certificad/i.test(mainText));assert.ok(/sin cita previa/.test(mainText));
 const wa=[...d.querySelectorAll('a[href^="https://wa.me/"]')];assert.ok(wa.length>=6);const msgs=wa.map(a=>new URL(a.href).searchParams.get('text'));msgs.forEach(t=>assert.ok(t.startsWith('[Filo Fino · Web]\n')));assert.ok(msgs.some(t=>t.includes('cocina profesional')));assert.ok(msgs.some(t=>t.includes('cuchillo japonés')));
@@ -35,4 +32,4 @@ const prod=JSON.parse(fs.readFileSync(dir+'/production-seo.json','utf8'));assert
 w.matchMedia=()=>({matches:true,addEventListener(){}});w.Element.prototype.getAnimations=()=>[];d.getAnimations=()=>[];w.Element.prototype.scrollTo=()=>{};w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
 w.eval(js);
 d.querySelector('.menu-trigger').click();assert.equal(d.querySelector('#menu-dialog').open,true);assert.equal(d.querySelector('.menu-trigger').getAttribute('aria-expanded'),'true');d.querySelector('.menu-close').click();assert.equal(d.querySelector('.menu-trigger').getAttribute('aria-expanded'),'false');assert.deepEqual([...d.querySelectorAll('a[href^="https://wa.me/"]')].map(a=>new URL(a.href).searchParams.get('text')),msgs);
-const report={page:'Afilado de cuchillos',date:new Date().toISOString(),passed:['Spanish metadata and one H1','noindex and no active canonical/production JSON-LD','resource files, CSS URL refs and syntax','unique IDs and all anchors/SVG symbols','3 types, 4 steps, 7 native FAQ details','deleted decorative gallery and diagram; one photo within hero','menu state/aria-expanded','WhatsApp prefix and 3 contexts without JS rewrite','all homepage knife links point at new route','production JSON graph/ref consistency without hours/ratings','no video, fabricated numeric price/time or text arrows'],limitations:['DOM test doubles are not rendered browser, native Escape/focus/swipe, mobile overflow or Safari tests','No measured field performance or rich-result validation']};fs.writeFileSync(dir+'/checks.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+const report={page:'Afilado de cuchillos',date:new Date().toISOString(),passed:['Spanish metadata and one H1','noindex and no active canonical/production JSON-LD','resource files, CSS URL refs and syntax','unique IDs and all anchors/SVG symbols','3 types, 4 steps, 7 native FAQ details','shared photographic hero; no decorative gallery; compact 1+2 navigation','menu state/aria-expanded','WhatsApp prefix and 3 contexts without JS rewrite','all homepage knife links point at new route','production JSON graph/ref consistency without hours/ratings','no video, fabricated numeric price/time or text arrows'],limitations:['DOM test doubles are not rendered browser, native Escape/focus/swipe, mobile overflow or Safari tests','No measured field performance or rich-result validation']};fs.writeFileSync(dir+'/checks.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

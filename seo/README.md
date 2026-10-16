@@ -1,6 +1,11 @@
 # SEO tooling
 
 Read [SEO_ARCHITECTURE_2026.md](../SEO_ARCHITECTURE_2026.md) before changing a page.
+Also read [DESIGN_SYSTEM_2026.md](../DESIGN_SYSTEM_2026.md). Shared header/footer
+templates are materialized with `python design-system/render_components.py`;
+the SEO verifier checks them with `--check`. The interaction suite includes
+`design-system/verify.cjs` for preservation and responsive CSS contracts; these
+contracts do not replace an actual browser/mobile/Safari rendering check.
 
 ```sh
 python seo/prepare_metadata.py --apply-preview

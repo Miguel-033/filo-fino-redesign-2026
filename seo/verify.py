@@ -121,6 +121,7 @@ def inspect(page):
 
 def main():
     subprocess.run([sys.executable, str(ROOT / 'seo/prepare_metadata.py'), '--check'], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'design-system/render_components.py'), '--check'], check=True)
     pages = [p for p in CONFIG['pages'] if p['status'] == 'developed']
     assert len(pages) >= 2, 'Register additional developed pages explicitly'
     assert len({p['path'] for p in CONFIG['pages']}) == len(CONFIG['pages'])
@@ -154,12 +155,12 @@ def main():
                  'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js']
     protected += subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', base,
                                         'design-premium-preview/assets'], cwd=ROOT, text=True).splitlines()
-    # Owner-authorized knife-only UX revision, 16.10.2026. Shared/home/media
-    # remain at PR9; page-level CSS/JS have explicit reviewed hashes, not exemptions.
-    knife_ui_baselines = {'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css': '3c8d419dd315bcafdfa760a088b0c20292ca4c98df34a39e889f7189e4929751', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js': 'cad7e0b8fe271b8416960e8f741cea99750870475c0a73a41363baba8d78f514'}
+    # Owner-authorized shared design unification, 16.10.2026. Media and premium.css
+    # retain PR9; reviewed CSS/JS revisions remain hash-pinned, not exempted.
+    ui_baselines = {'design-premium-preview/refinement.css': 'efff97c8e3bb4a00997e2e57fa07368da194701f479506536586386b1c2cc3c8', 'design-premium-preview/premium.js': 'd7dc13116c2a0643ed064319a32fd48e45d05bb6e6ef4911c8f7f4c02e803ee9', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css': 'ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js': 'cae16237eec4baf53f66ee403981bcf3108df15661fcc7e86d17b73f84363c43'}
     for path in protected:
         before = subprocess.check_output(['git', 'show', base + ':' + path], cwd=ROOT)
-        expected = knife_ui_baselines.get(path, hashlib.sha256(before).hexdigest())
+        expected = ui_baselines.get(path, hashlib.sha256(before).hexdigest())
         assert expected == hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), path
     report = {'status': 'PASS', 'method': 'offline HTML/config/CSS/graph/file checks',
               'pages': results, 'retainedMigrationURLs': len(rows),

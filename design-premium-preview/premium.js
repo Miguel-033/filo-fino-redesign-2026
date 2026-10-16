@@ -216,11 +216,11 @@ if ('IntersectionObserver' in window) {
     });
   }, { threshold: .08 });
   document.querySelectorAll('.section-heading, .service-composition, .craft-lead, .intake-grid, .japanese-note, .gallery-composition, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
-  // Brief touch hint, only in service shortcuts; offscreen/reduced motion stays still.
+  // Approved touch hints live only on the large service cards; respect reduced motion.
   const hints = new IntersectionObserver(entries => entries.forEach(entry => {
     entry.target.classList.toggle('hint-visible', entry.isIntersecting);
   }), {threshold: .4});
-  hints.observe(document.querySelector('.hero-shortcuts'));
+  document.querySelectorAll('.service-link').forEach(card => hints.observe(card));
 }
 
 // Native disclosures stay useful without JavaScript; motion is enhancement only.

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "page": "/",
+      "widths": [
+        320,
+        360,
+        390,
+        425,
+        430,
+        768,
+        1440
+      ],
+      "method": "DOM and stylesheet cascade contracts; not rendered layout",
+      "status": "PASS"
+    },
+    {
+      "page": "/servicios/afilado-cuchillos-valencia/",
+      "widths": [
+        320,
+        360,
+        390,
+        425,
+        430,
+        768,
+        1440
+      ],
+      "method": "DOM and stylesheet cascade contracts; not rendered layout",
+      "status": "PASS"
+    }
+  ],
+  "renderedBrowser": false,
+  "Safari": false,
+  "Lighthouse": false
+}
