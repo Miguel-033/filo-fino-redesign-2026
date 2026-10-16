@@ -157,7 +157,7 @@ def main():
                                         'design-premium-preview/assets'], cwd=ROOT, text=True).splitlines()
     # Owner-authorized shared design unification, 16.10.2026. Media and premium.css
     # retain PR9; reviewed CSS/JS revisions remain hash-pinned, not exempted.
-    ui_baselines = {'design-premium-preview/refinement.css': 'efff97c8e3bb4a00997e2e57fa07368da194701f479506536586386b1c2cc3c8', 'design-premium-preview/premium.js': 'd7dc13116c2a0643ed064319a32fd48e45d05bb6e6ef4911c8f7f4c02e803ee9', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css': 'ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js': 'cae16237eec4baf53f66ee403981bcf3108df15661fcc7e86d17b73f84363c43'}
+    ui_baselines = {'design-premium-preview/refinement.css': '4a39c12568ea4d121ed734c2a4eba84c60bb5e622ce45b9bb3933b532c776684', 'design-premium-preview/premium.js': 'd7dc13116c2a0643ed064319a32fd48e45d05bb6e6ef4911c8f7f4c02e803ee9', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css': 'ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js': 'cae16237eec4baf53f66ee403981bcf3108df15661fcc7e86d17b73f84363c43'}
     for path in protected:
         before = subprocess.check_output(['git', 'show', base + ':' + path], cwd=ROOT)
         expected = ui_baselines.get(path, hashlib.sha256(before).hexdigest())
