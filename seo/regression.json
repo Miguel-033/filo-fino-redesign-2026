@@ -3,7 +3,7 @@
   "method": "jsdom state checks with dialog/animation test doubles",
   "components": [
     "homepage menu/gallery/stages/WhatsApp",
-    "knife gallery/menu/FAQ HTML/WhatsApp"
+    "knife menu/FAQ HTML/WhatsApp/compact hero/navigation/map"
   ],
   "notTested": [
     "rendered layout",

@@ -103,10 +103,10 @@
       "path": "/servicios/afilado-cuchillos-valencia/",
       "title": "Afilado de cuchillos en Valencia | Filo Fino",
       "h1": "Afilado profesional de cuchillos en Valencia",
-      "htmlBytes": 24478,
-      "directAndCSSResourceBytes": 409367,
-      "images": 5,
-      "links": 49,
+      "htmlBytes": 20889,
+      "directAndCSSResourceBytes": 404500,
+      "images": 2,
+      "links": 46,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -153,10 +153,6 @@
         [
           "h2",
           "Tu cuchillo japonés, visto de cerca."
-        ],
-        [
-          "h2",
-          "El filo se entiende mirándolo."
         ],
         [
           "h2",
