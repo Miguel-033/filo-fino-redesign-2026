@@ -6,10 +6,10 @@
       "path": "/",
       "title": "Taller de afilado en Valencia | Filo Fino",
       "h1": "Taller de afilado en Valencia Cada filo. Su oficio.",
-      "htmlBytes": 21905,
-      "directAndCSSResourceBytes": 536664,
-      "images": 13,
-      "links": 48,
+      "htmlBytes": 23728,
+      "directAndCSSResourceBytes": 784335,
+      "images": 11,
+      "links": 50,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -59,7 +59,27 @@
         ],
         [
           "h2",
-          "El trabajo, de cerca."
+          "Envíanos tus herramientas desde cualquier punto de España"
+        ],
+        [
+          "h3",
+          "Contacta"
+        ],
+        [
+          "h3",
+          "Prepara"
+        ],
+        [
+          "h3",
+          "Envía"
+        ],
+        [
+          "h3",
+          "Afilamos"
+        ],
+        [
+          "h3",
+          "Recibe"
         ],
         [
           "h2",
@@ -100,6 +120,30 @@
         [
           "h3",
           "El taller"
+        ],
+        [
+          "h2",
+          "Cómo preparar y enviar tus herramientas"
+        ],
+        [
+          "h3",
+          "Contacta con el taller"
+        ],
+        [
+          "h3",
+          "Prepara una caja adecuada"
+        ],
+        [
+          "h3",
+          "Envíala y avísanos"
+        ],
+        [
+          "h3",
+          "Confirmamos y afilamos"
+        ],
+        [
+          "h3",
+          "Preparamos la vuelta"
         ]
       ]
     },

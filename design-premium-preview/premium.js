@@ -19,109 +19,11 @@ document.querySelectorAll('[data-whatsapp]').forEach(link => {
   const message = whatsappMessages[link.dataset.whatsapp];
   if (message) link.href = `https://wa.me/34614005053?text=${encodeURIComponent(`${whatsappPrefix}\n${message}`)}`;
 });
-const gallery = document.querySelector('#gallery-dialog');
-let returnFocus = null;
-
 function animate(element, frames, options) {
   if (!reduceMotion.matches && typeof element.animate === 'function') {
     return element.animate(frames, options);
   }
 }
-
-function openModal(dialog, trigger) {
-  returnFocus = trigger;
-  dialog.showModal();
-  document.body.classList.add('modal-open');
-}
-
-function closeModal(dialog) {
-  dialog.close();
-}
-
-[gallery].forEach(dialog => {
-  dialog.addEventListener('close', () => {
-    document.body.classList.remove('modal-open');
-    returnFocus?.focus({ preventScroll: true });
-  });
-});
-
-// Add reviewed owner photos here; retain the first three preview indexes.
-const photographs = [
-  {
-    "src": "assets/illustrations/knife-study.svg",
-    "alt": "Ilustración de un cuchillo de cocina",
-    "caption": "Cuchillos / La forma sigue al uso"
-  },
-  {
-    "src": "assets/images/manicura.webp",
-    "alt": "Alicate de manicura entre manos enguantadas",
-    "caption": "Manicura / La pieza, en detalle"
-  },
-  {
-    "src": "assets/images/tijeras.webp",
-    "alt": "Prueba de corte de unas tijeras sobre un mechón",
-    "caption": "Tijeras / Una prueba de corte"
-  }
-];
-let photographIndex = 0;
-const galleryImage = document.querySelector('#gallery-image');
-const galleryView = document.querySelector('.gallery-view');
-const zoomButton = document.querySelector('.gallery-zoom');
-
-function resetZoom() {
-  galleryView.classList.remove('is-zoomed');
-  zoomButton.setAttribute('aria-pressed', 'false');
-  zoomButton.setAttribute('aria-label', 'Ampliar imagen');
-  galleryView.scrollTo(0, 0);
-}
-
-function showPhotograph(index) {
-  photographIndex = (index + photographs.length) % photographs.length;
-  const photo = photographs[photographIndex];
-  resetZoom();
-  galleryImage.onload = () => {
-    galleryImage.getAnimations().forEach(animation => animation.cancel());
-    animate(galleryImage, [{ opacity: .25, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }], { duration: 320, easing: 'ease-out' });
-  };
-  galleryImage.src = photo.src;
-  galleryImage.alt = photo.alt;
-  document.querySelector('#gallery-caption').textContent = photo.caption;
-  document.querySelector('#gallery-counter').textContent = `${photographIndex + 1} / ${photographs.length}`;
-
-}
-
-document.querySelectorAll('.gallery-open').forEach(button => {
-  button.addEventListener('click', () => {
-    showPhotograph(Number(button.dataset.gallery));
-    openModal(gallery, button);
-    document.querySelector('.gallery-close').focus();
-  });
-});
-document.querySelector('.gallery-close').addEventListener('click', () => closeModal(gallery));
-document.querySelector('.gallery-prev').addEventListener('click', () => showPhotograph(photographIndex - 1));
-document.querySelector('.gallery-next').addEventListener('click', () => showPhotograph(photographIndex + 1));
-zoomButton.addEventListener('click', () => {
-  const zoomed = galleryView.classList.toggle('is-zoomed');
-  zoomButton.setAttribute('aria-pressed', String(zoomed));
-  zoomButton.setAttribute('aria-label', zoomed ? 'Restaurar tamaño de imagen' : 'Ampliar imagen');
-});
-gallery.addEventListener('keydown', event => {
-  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-    event.preventDefault();
-    showPhotograph(photographIndex + (event.key === 'ArrowRight' ? 1 : -1));
-  }
-});
-let touchStart = null;
-galleryView.addEventListener('touchstart', event => {
-  touchStart = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
-}, { passive: true });
-galleryView.addEventListener('touchend', event => {
-  if (!touchStart || galleryView.classList.contains('is-zoomed')) return;
-  const dx = event.changedTouches[0].clientX - touchStart.x;
-  const dy = event.changedTouches[0].clientY - touchStart.y;
-  if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) showPhotograph(photographIndex + (dx < 0 ? 1 : -1));
-  touchStart = null;
-}, { passive: true });
 
 // Original vector studies, not photos or a documented customer commission.
 const stages = [
@@ -186,7 +88,5 @@ if ('IntersectionObserver' in window) {
       if (graphic) animate(graphic, [{ opacity: .2, transform: 'scaleY(.2)' }, { opacity: 1, transform: 'none' }], {duration: 800, easing: 'ease-out'});
     });
   }, { threshold: .08 });
-  document.querySelectorAll('.section-heading, .craft-lead, .intake-grid, .japanese-note, .gallery-composition, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
+  document.querySelectorAll('.section-heading, .craft-lead, .intake-grid, .japanese-note, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
 }
-
-document.querySelectorAll('[data-photo-count]').forEach(item => { item.textContent = photographs.length; });

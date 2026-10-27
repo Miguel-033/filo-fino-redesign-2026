@@ -37,11 +37,11 @@ for(const page of contracts.pages){
   assert.equal(d.querySelectorAll('.touch-hand,.touch-ring,#servicios details').length,0);
   assert.equal(d.querySelectorAll('#servicios .service-link').length,3);
   for(const card of d.querySelectorAll('#servicios .service-link')){assert.equal(card.querySelectorAll('.service-cta').length,1);assert.equal(card.querySelector('.service-cta>span').textContent,'Ver servicio y precios');assert.equal(card.querySelectorAll('a,button,details').length,0);}
-  for(const width of [320,360,390,430]){const composition=style(d.querySelector('.service-composition'),width);assert.equal(composition['grid-template-columns'],'minmax(0,1fr)');assert.equal(style(d.querySelector('.service-knives'),width)['grid-column'],'auto');}
+  for(const width of [320,360,390,430]){const composition=style(d.querySelector('.service-composition'),width);assert.equal(composition['grid-template-columns'],width<380?'minmax(0,1fr)':'repeat(2,minmax(0,1fr))');assert.equal(style(d.querySelector('.service-knives'),width)['grid-column'],width<380?'auto':'1/-1');}
   assert.equal(style(d.querySelector('.service-knives'),1440)['grid-row'],'1/3');
 
  }
  reports.push({page:page.route,widths,method:'DOM and stylesheet cascade contracts; not rendered layout',status:'PASS'});
 }
 fs.writeFileSync(path.join(__dirname,'checks.json'),JSON.stringify({status:'PASS',checks:reports,renderedBrowser:false,Safari:false,Lighthouse:false},null,2)+'\n');
-console.log('PASS: shared header/footer source check, registry metadata and retained links, integrated heroes, CTA and 1+2 grid CSS contracts at 320/360/390/425/430/768/1440; single-action cards, full-width mobile / asymmetric desktop grid. NOT a rendered-browser test.');
+console.log('PASS: shared header/footer source check, registry metadata and retained links, integrated heroes, CTA and 1+2 grid CSS contracts at 320/360/390/425/430/768/1440; single-action cards, adaptive asymmetric mobile and desktop grid. NOT a rendered-browser test.');
