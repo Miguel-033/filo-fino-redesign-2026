@@ -23,9 +23,9 @@ const report={date:new Date().toISOString(),browser:'',widths:[],checks:[]};
   assert.equal(await page.locator('a.address-study').getAttribute('href'),'https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7');
   const labels=await page.locator('.hero-shortcuts a>span:first-child').allTextContents();assert.deepEqual(labels,['Afilado de herramientas de manicura','Afilado de tijeras','Afilado de cuchillos']);
   assert.equal(await page.locator('body').innerText().then(t=>/[←→↑↓↗↘]/u.test(t)),false);
-  const cardSizes=await page.locator('.service-link').evaluateAll(e=>e.map(n=>({w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));assert.ok(cardSizes[0].h>cardSizes[1].h);if(width<768)assert.ok(cardSizes[0].w>cardSizes[1].w*1.8);
+  const cardSizes=await page.locator('.service-link').evaluateAll(e=>e.map(n=>({w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));if(width<768){assert.ok(Math.abs(cardSizes[0].w-cardSizes[1].w)<1);assert.ok(Math.abs(cardSizes[1].w-cardSizes[2].w)<1)}else assert.ok(cardSizes[0].h>cardSizes[1].h);
 assert.equal(await page.locator('video,iframe').count(),0);
-  const wa=await page.locator('a[data-whatsapp]').evaluateAll(links=>links.map(a=>({context:a.dataset.whatsapp,text:new URL(a.href).searchParams.get('text')})));assert.equal(new Set(wa.map(a=>a.context)).size,5);wa.forEach(a=>assert.ok(a.text.startsWith('[Filo Fino · Web]\n')));
+  const wa=await page.locator('a[data-whatsapp]').evaluateAll(links=>links.map(a=>({context:a.dataset.whatsapp,text:new URL(a.href).searchParams.get('text')})));assert.equal(new Set(wa.map(a=>a.context)).size,2);wa.forEach(a=>assert.ok(a.text.startsWith('[Filo Fino · Web]\n')));
   const photoStatus=await page.locator('img').evaluateAll(imgs=>imgs.map(i=>({src:i.getAttribute('src'),ok:i.complete&&i.naturalWidth>0})));photoStatus.forEach(i=>{assert.ok(i.src.startsWith('assets/')); assert.ok(i.ok,i.src)});
   for(let i=0;i<4;i++) {await page.locator('.step-button').nth(i).click();assert.equal(await page.locator('.step-button[aria-pressed="true"]').count(),1);assert.ok((await page.locator('#process-image').getAttribute('src')).endsWith(['escuchar.svg','revisar.svg','afilar.svg','comprobar.svg'][i]));assert.equal(await page.locator('#process-image').evaluate(el=>getComputedStyle(el).objectFit),'contain');}
   await page.locator('.step-button').nth(0).click();await page.locator('.gallery-open').first().click();
@@ -34,7 +34,7 @@ assert.equal(await page.locator('video,iframe').count(),0);
   await page.locator('.menu-trigger').click();assert.equal(await page.locator('#menu-dialog').isVisible(),true);
   if(width===390)await page.screenshot({path:output+'/mobile-menu.jpg',type:'jpeg',quality:85});
   await page.keyboard.press('Escape');assert.equal(await page.locator('.menu-trigger').evaluate(el=>el===document.activeElement),true);
-  await page.locator('.service-detail summary').first().click();assert.equal(await page.locator('.service-consult[data-whatsapp="knives"]').isVisible(),true);await page.locator('.service-detail summary').first().click();
+  assert.equal(await page.locator('#servicios details,#servicios button').count(),0);assert.equal(await page.locator('#servicios .service-cta').count(),3);
   if([390,1440].includes(width)){
     const prefix=width===390?'mobile':'desktop';
     await page.evaluate(()=>{document.getAnimations().forEach(a=>a.finish());window.scrollTo({top:0,behavior:'instant'})});
@@ -47,6 +47,6 @@ assert.equal(await page.locator('video,iframe').count(),0);
   assert.deepEqual(errors,[],`Browser errors at ${width}`);assert.deepEqual(external,[]);report.widths.push({width,overflow:false,errors,externalResourceRequests:external,checks:'photos, WhatsApp, four steps, gallery three, zoom, Escape, focus, disclosure'});await context.close();
  }
  const reduced=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});const p=await reduced.newPage();await p.goto(baseUrl);await p.locator('.step-button').nth(2).click();assert.equal(await p.evaluate(()=>document.getAnimations().length),0);report.checks.push('prefers-reduced-motion: no active animations after interaction');await reduced.close();
- const nojs=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false});const n=await nojs.newPage();await n.goto(baseUrl);assert.equal(await n.locator('.hero-shortcuts a').count(),3);assert.equal(await n.locator('.process-stage p').count(),4);assert.equal(await n.locator('.hero-actions a').first().isVisible(),true);await n.locator('.service-detail summary').first().click();assert.equal(await n.locator('.service-consult[data-whatsapp="knives"]').isVisible(),true);report.checks.push('No JavaScript: navigation, WhatsApp, all four descriptions and native disclosure available');await nojs.close();
+ const nojs=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false});const n=await nojs.newPage();await n.goto(baseUrl);assert.equal(await n.locator('.hero-shortcuts a').count(),3);assert.equal(await n.locator('.process-stage p').count(),4);assert.equal(await n.locator('.hero-actions a').first().isVisible(),true);assert.equal(await n.locator('#servicios .service-link').count(),3);report.checks.push('No JavaScript: navigation, WhatsApp, all four descriptions and service links available');await nojs.close();
  fs.writeFileSync(output+'/verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
