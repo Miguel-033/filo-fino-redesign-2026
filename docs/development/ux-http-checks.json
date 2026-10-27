@@ -1,0 +1,80 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "bytes": 24749,
+    "matches": true
+  },
+  {
+    "file": "servicios/afilado-cuchillos-valencia/index.html",
+    "status": 200,
+    "bytes": 23024,
+    "matches": true
+  },
+  {
+    "file": "servicios/afilar-tijeras-peluqueria-valencia/index.html",
+    "status": 200,
+    "bytes": 16165,
+    "matches": true
+  },
+  {
+    "file": "servicios/herramientas-manicura-pedicura-valencia/index.html",
+    "status": 200,
+    "bytes": 16034,
+    "matches": true
+  },
+  {
+    "file": "servicios/afilado-cuchillas-maquinas-valencia/index.html",
+    "status": 200,
+    "bytes": 15925,
+    "matches": true
+  },
+  {
+    "file": "servicios/afilado-cuchillos-hosteleria-valencia/index.html",
+    "status": 200,
+    "bytes": 17294,
+    "matches": true
+  },
+  {
+    "file": "servicios/index.html",
+    "status": 200,
+    "bytes": 9691,
+    "matches": true
+  },
+  {
+    "file": "premium.css",
+    "status": 200,
+    "bytes": 34427,
+    "matches": true
+  },
+  {
+    "file": "refinement.css",
+    "status": 200,
+    "bytes": 27631,
+    "matches": true
+  },
+  {
+    "file": "services.css",
+    "status": 200,
+    "bytes": 7598,
+    "matches": true
+  },
+  {
+    "file": "premium.js",
+    "status": 200,
+    "bytes": 10029,
+    "matches": true
+  },
+  {
+    "file": "navigation.js",
+    "status": 200,
+    "bytes": 1861,
+    "matches": true
+  },
+  {
+    "file": "servicios/afilado-cuchillos-valencia/knives.js",
+    "status": 200,
+    "bytes": 2168,
+    "matches": true
+  }
+]
