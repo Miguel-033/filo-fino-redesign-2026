@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict');cons
 const root=path.resolve(__dirname,'../design-premium-preview');
 const html=fs.readFileSync(root+'/index.html','utf8'),js=fs.readFileSync(root+'/premium.js','utf8');const dom=new JSDOM(html,{url:'https://example.test/design-premium-preview/',runScripts:'outside-only'}),w=dom.window,d=w.document;
 assert.equal(new Set([...d.querySelectorAll('[id]')].map(x=>x.id)).size,d.querySelectorAll('[id]').length);
-for(const el of d.querySelectorAll('img[src],script[src],link[rel="stylesheet"],link[rel="preload"]'))assert.ok(fs.existsSync(path.join(root,el.getAttribute('src')||el.getAttribute('href'))));
+for(const el of d.querySelectorAll('img[src],script[src],link[rel="stylesheet"],link[rel="preload"]'))assert.ok(fs.existsSync(path.join(root,(el.getAttribute('src')||el.getAttribute('href')).split('?')[0])));
 for(const a of d.querySelectorAll('a[href^="#"]'))if(a.getAttribute('href')!=='#')assert.ok(d.querySelector(a.getAttribute('href')));
 for(const u of d.querySelectorAll('use'))assert.ok(d.querySelector(u.getAttribute('href')));
 for(const f of ['premium.css','refinement.css']){const c=fs.readFileSync(root+'/'+f,'utf8');assert.ok(!/[←→↑↓↗↘]/u.test(c));const ast=postcss.parse(c);ast.walkDecls(x=>{for(const m of x.value.matchAll(/url\(['"]?([^)'"\s]+)/g))assert.ok(fs.existsSync(path.join(root,m[1])))})}

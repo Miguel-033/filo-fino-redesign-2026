@@ -99,7 +99,7 @@ def inspect(page):
     css, resources = [], set()
     for ref in doc.resources:
         assert not ref.startswith(('https:', 'http:', '//')), 'External automatic resource: ' + ref
-        target = (file.parent / ref).resolve()
+        target = (file.parent / ref.split('?')[0]).resolve()
         assert target.is_relative_to(WEB) and target.is_file(), (file, ref)
         resources.add(target)
         if target.suffix == '.css':

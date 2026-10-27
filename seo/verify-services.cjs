@@ -35,11 +35,11 @@ for(const p of pages){
   if(url.hostname==='wa.me'){assert.equal(url.pathname,'/34614005053');assert.ok(url.searchParams.get('text')?.length>15);}
  }
  for(const el of d.querySelectorAll('img[src],script[src],source[src],video[poster],link[rel=stylesheet],link[rel=preload]')){
-  const ref=el.getAttribute('src')||el.getAttribute('poster')||el.getAttribute('href'),target=path.resolve(path.dirname(file),ref);
+  const ref=el.getAttribute('src')||el.getAttribute('poster')||el.getAttribute('href'),target=path.resolve(path.dirname(file),ref.split('?')[0]);
   assert.ok(target.startsWith(web+path.sep)&&fs.existsSync(target),p.path+' missing asset: '+ref);
  }
  for(const img of d.querySelectorAll('img')){assert.ok(img.hasAttribute('alt'));assert.ok(+img.width>0&&+img.height>0);}
- for(const css of d.querySelectorAll('link[rel=stylesheet]'))postcss.parse(fs.readFileSync(path.resolve(path.dirname(file),css.getAttribute('href')),'utf8'));
+ for(const css of d.querySelectorAll('link[rel=stylesheet]'))postcss.parse(fs.readFileSync(path.resolve(path.dirname(file),css.getAttribute('href').split('?')[0]),'utf8'));
  for(const v of d.querySelectorAll('video')){assert.equal(v.preload,'none');assert.equal(v.autoplay,false);assert.equal(v.controls,true);assert.ok(v.hasAttribute('playsinline'));}
  if(p.serviceName){
   assert.equal(d.querySelectorAll('video').length,1);assert.ok(d.querySelector('a[href="tel:+34614005053"]'));

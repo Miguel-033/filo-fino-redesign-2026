@@ -8,7 +8,7 @@ for(const a of d.querySelectorAll('a[href^="#"]'))if(a.getAttribute('href')!=='#
 for(const use of d.querySelectorAll('use[href^="#"]'))assert.ok(d.getElementById(use.getAttribute('href').slice(1)));
 const resources=new Set();for(const e of d.querySelectorAll('img[src],script[src],link[rel="stylesheet"],link[rel="preload"]'))resources.add(e.getAttribute('src')||e.getAttribute('href'));
 for(const a of d.querySelectorAll('.knife-gallery-trigger'))resources.add(a.getAttribute('href'));
-for(const ref of resources)assert.ok(fs.existsSync(path.resolve(dir,ref)),ref);
+for(const ref of resources)assert.ok(fs.existsSync(path.resolve(dir,ref.split('?')[0])),ref);
 for(const f of [root+'/premium.css',root+'/refinement.css',dir+'/knives.css']){const css=fs.readFileSync(f,'utf8');assert.ok(!/[←→↑↓↗↘]/u.test(css));postcss.parse(css).walkDecls(x=>{assert.ok(!(x.prop==='transition'&&x.value.startsWith('all')));for(const m of x.value.matchAll(/url\(['"]?([^)'"\s]+)/g))assert.ok(fs.existsSync(path.resolve(path.dirname(f),m[1])));});}
 assert.ok(!/[←→↑↓↗↘]/u.test(html));assert.equal(d.querySelectorAll('.knife-type').length,3);assert.equal(d.querySelectorAll('.knife-faq-list details').length,7);assert.equal(d.querySelectorAll('[data-photo],#detalle,#knife-gallery-dialog,.edge-study').length,0);assert.equal(d.querySelectorAll('.knife-method li').length,4);assert.equal(d.querySelectorAll('iframe').length,0);assert.equal(d.querySelectorAll('video').length,1);assert.equal(d.querySelector('video').getAttribute('preload'),'none');assert.equal(d.querySelector('video').autoplay,false);
 
