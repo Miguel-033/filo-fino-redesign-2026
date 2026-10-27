@@ -187,19 +187,6 @@ if ('IntersectionObserver' in window) {
     });
   }, { threshold: .08 });
   document.querySelectorAll('.section-heading, .service-composition, .craft-lead, .intake-grid, .japanese-note, .gallery-composition, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
-  // Approved touch hints live only on the large service cards; respect reduced motion.
-  const hints = new IntersectionObserver(entries => entries.forEach(entry => {
-    entry.target.classList.toggle('hint-visible', entry.isIntersecting);
-  }), {threshold: .4});
-  document.querySelectorAll('.service-link').forEach(card => hints.observe(card));
 }
 
-// Native disclosures stay useful without JavaScript; motion is enhancement only.
-document.querySelectorAll('.service-detail').forEach(detail => {
-  detail.addEventListener('toggle', () => {
-    if (detail.open) animate(detail.querySelector('p'), [
-      { opacity: .35, transform: 'translateY(-8px)' }, { opacity: 1, transform: 'none' }
-    ], { duration: 280, easing: 'ease-out' });
-  });
-});
 document.querySelectorAll('[data-photo-count]').forEach(item => { item.textContent = photographs.length; });
