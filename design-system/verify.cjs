@@ -21,7 +21,7 @@ for(const page of contracts.pages){
  const widths=[320,360,390,425,430,768,1440];
  for(const width of widths){
   const actions=style(d.querySelector('.hero-actions'),width);assert.equal(actions.display,'grid');assert.ok(actions['grid-template-columns'].includes('minmax(0,1.65fr)'));
-  const header=style(d.querySelector('.site-header'),width);assert.equal(header.height,width<=767?'72px':'92px');
+  const header=style(d.querySelector('.site-header'),width);assert.equal(header.height,'var(--header-height)');assert.equal(style(d.documentElement,width)['--header-height'],width<=767?'72px':'92px');assert.equal(header.position,'sticky');assert.equal(header.top,'0');
   const photo=style(d.querySelector('.hero-photo'),width);assert.equal(photo.position,'absolute');
   if(page.route!=='/'){
    const jump=style(d.querySelector('.knife-jump'),width);assert.equal(jump.display,'grid');assert.ok(jump['grid-template-columns'].includes(width<=767?'repeat(2,':'repeat(3,'));

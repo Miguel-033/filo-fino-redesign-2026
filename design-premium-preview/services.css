@@ -3,3 +3,42 @@
 @media(max-width:767px){.service-section{grid-template-columns:minmax(0,1fr);gap:32px;padding-top:44px;padding-bottom:44px}.service-section h2{font-size:46px}.service-section h3{font-size:32px}.service-hero-facts{font-size:17px;gap:8px 16px;margin-top:18px}.service-fact-note{font-size:14px}.service-prices>div{gap:14px;font-size:15px}.service-prices dd{max-width:16ch}.service-evidence img{max-height:400px}.service-extra{padding-top:30px;padding-bottom:30px}.service-extra h2{font-size:34px}.service-catalog{padding-top:42px;padding-bottom:42px}.service-page .hero .breadcrumbs{font-size:12px;line-height:1.6}.service-page .hero h1{font-size:clamp(40px,10vw,58px)}}
 
 .service-video{background:#24343b;padding-top:48px;padding-bottom:48px}.service-video h2{font-size:clamp(38px,5vw,62px);margin-bottom:18px}.service-video p{max-width:64ch;font-size:16px;line-height:1.8;margin-bottom:24px}.service-video video{display:block;width:100%;max-width:760px;height:auto;max-height:540px;aspect-ratio:9/16;object-fit:contain;background:#111719;margin:0 auto}
+
+/* Hostelería prototype only: immersive photograph, soft shade, natural content height.
+   Owner approval is required before applying this composition to the other services. */
+.hero.hero--hospitality{background:#0b1215;isolation:isolate}
+.hero--hospitality .hero-photo{inset:0 0 0 auto;width:68%;height:100%;clip-path:none;opacity:1;z-index:0}
+.hero--hospitality .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(.65)}
+.hero--hospitality .hero-photo::after{background:linear-gradient(90deg,#0b1215 0%,#0b1215a8 38%,#0b121522 85%),linear-gradient(0deg,#0b1215 0%,transparent 65%)}
+.hero--hospitality .hero-content{padding:26px clamp(20px,5vw,84px) 56px}
+.hero--hospitality .breadcrumbs{max-width:none;margin:0 0 42px;font-size:13px;line-height:1.65;color:#c2ced2}
+.hero--hospitality .hospitality-kicker{display:flex;align-items:center;gap:14px;color:var(--brass);font-size:12px;letter-spacing:.16em;line-height:1.6;margin-bottom:20px}
+.hospitality-kicker::before{content:'';width:28px;height:1px;background:var(--brass);flex-shrink:0}
+.hero.hero--hospitality h1{max-width:750px;font-size:clamp(62px,6vw,88px);line-height:1.02;letter-spacing:-.02em;text-shadow:none}
+.hero--hospitality h1 em{display:block;font-style:normal;color:var(--brass)}
+.hero.hero--hospitality h1 .hospitality-context{display:block;max-width:32ch;font:500 20px/1.5 var(--body);letter-spacing:0;color:#e0e5e4;margin-top:18px}
+.hero--hospitality .hero-copy{max-width:46ch;margin-top:24px;font-size:16px;line-height:1.75;color:#d4dddf}
+.hero--hospitality .service-hero-facts{display:grid;grid-template-columns:1fr 1fr;max-width:440px;gap:24px;padding:24px 0;margin:28px 0 0;border-top:1px solid #81939765}
+.hospitality-price,.hospitality-deadline{display:flex;flex-direction:column;align-items:flex-start;font:400 14px/1.5 var(--body);color:#bdcdd3}
+.hospitality-price strong{font:600 44px/1.1 var(--display);color:var(--brass);margin:4px 0}
+.hospitality-deadline{border-left:1px solid #81939765;padding-left:24px}
+.hospitality-deadline strong{font:600 28px/1.25 var(--display);color:var(--brass);margin-top:8px}
+.hero--hospitality .hero-actions{max-width:540px;margin-top:8px}
+.hero--hospitality .knife-address{font-size:14px;line-height:1.6;margin-top:24px;color:#c2ced2;max-width:100%}
+@media(max-width:767px){
+ .hero--hospitality .hero-content{padding:20px 24px 36px}
+ .hero--hospitality .hero-photo{inset:70px 0 auto;width:100%;height:620px;opacity:1}
+ .hero--hospitality .hero-photo img{object-position:62% 16%;object-fit:cover}
+ .hero--hospitality .hero-photo::after{background:linear-gradient(90deg,#0b1215ef 0%,#0b1215cc 48%,#0b12157a 100%),linear-gradient(0deg,#0b1215 6%,#0b1215b3 38%,transparent 78%)}
+ .hero--hospitality .breadcrumbs{font-size:12px;line-height:1.65;margin-bottom:32px;gap:8px}
+ .hero--hospitality .hospitality-kicker{font-size:11px;letter-spacing:.13em;margin-bottom:18px}
+ .hero.hero--hospitality h1{font-size:clamp(48px,12.8vw,58px);line-height:1.02;max-width:100%}
+ .hero.hero--hospitality h1 .hospitality-context{font-size:17px;line-height:1.55;max-width:28ch;margin-top:18px}
+ .hero--hospitality .hero-copy{font-size:16px;line-height:1.75;max-width:100%;margin-top:24px}
+ .hero--hospitality .service-hero-facts{margin-top:26px;padding:24px 0;gap:20px}
+ .hero.hero--hospitality .hero-actions{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:10px;max-width:none}
+ .hero.hero--hospitality .hero-actions .button{min-height:56px;font-size:15px;padding:16px 18px;justify-content:flex-start;text-align:left;gap:14px}
+ .hero.hero--hospitality .hero-actions .button svg{width:21px;height:21px;flex-basis:21px}
+ .hero--hospitality .knife-address{font-size:13px;gap:10px;align-items:flex-start;margin-top:24px}
+}
+@media(max-width:359px){.hero--hospitality .hero-content{padding-inline:20px}.hero--hospitality .hospitality-kicker{letter-spacing:.08em}}

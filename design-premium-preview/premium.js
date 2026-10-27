@@ -19,7 +19,6 @@ document.querySelectorAll('[data-whatsapp]').forEach(link => {
   const message = whatsappMessages[link.dataset.whatsapp];
   if (message) link.href = `https://wa.me/34614005053?text=${encodeURIComponent(`${whatsappPrefix}\n${message}`)}`;
 });
-const menu = document.querySelector('#menu-dialog');
 const gallery = document.querySelector('#gallery-dialog');
 let returnFocus = null;
 
@@ -39,38 +38,10 @@ function closeModal(dialog) {
   dialog.close();
 }
 
-[menu, gallery].forEach(dialog => {
+[gallery].forEach(dialog => {
   dialog.addEventListener('close', () => {
     document.body.classList.remove('modal-open');
     returnFocus?.focus({ preventScroll: true });
-  });
-});
-
-document.querySelector('.menu-trigger').addEventListener('click', event => {
-  openModal(menu, event.currentTarget);
-  animate(menu, [
-    { transform: 'translateX(100%)' },
-    { transform: 'none' }
-  ], { duration: 420, easing: 'cubic-bezier(.22,.7,.2,1)' });
-  menu.querySelectorAll('nav > a, .menu-future').forEach((item, index) => {
-    animate(item, [{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], {
-      duration: 350, delay: 100 + index * 35, fill: 'backwards', easing: 'ease-out'
-    });
-  });
-});
-document.querySelector('.menu-close').addEventListener('click', () => closeModal(menu));
-menu.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) returnFocus = target;
-    closeModal(menu);
-    if (!target) return;
-    target.setAttribute('tabindex', '-1');
-    target.focus({ preventScroll: true });
-    target.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth' });
-    target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
-    history.replaceState(null, '', link.getAttribute('href'));
   });
 });
 

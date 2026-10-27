@@ -3,6 +3,7 @@ import argparse
 import json
 import posixpath
 import re
+from urllib.parse import quote
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,15 +15,18 @@ def render(check=False):
     for name, prefix in PAGES:
         path = WEB / name
         before = path.read_text()
-        header = re.search(r'<header class="site-header".*?</header>', before, re.S).group()
-        nav = re.search(r'<nav class="desktop-nav".*?</nav>', header, re.S).group()
+        contact = '#visita' if 'id="visita"' in before else prefix + '#visita'
+        message = ('Hola, quiero consultar el afilado para mi restaurante o cocina profesional. ¿Puedo enviar fotos, cantidad de cuchillos y dirección para acordar precio, plazo y posible recogida y entrega?' if 'hosteleria' in name else 'Hola, tengo una consulta sobre el afilado de una herramienta. ¿Te puedo enviar una foto?')
+        whatsapp = 'https://wa.me/34614005053?text=' + quote('[Filo Fino · Web]\n' + message, safe='')
         result = before
-        for component in ['header', 'footer']:
+        for component in ['header', 'footer', 'menu']:
             template = (ROOT / 'design-system/components' / (component + '.html')).read_text().strip()
-            value = template.replace('{{root}}', prefix).replace('{{home}}', prefix or './').replace('{{desktop_nav}}', nav)
-            tag = 'header' if component == 'header' else 'footer'
-            cls = 'site-header' if component == 'header' else 'site-footer'
-            result, count = re.subn(r'<' + tag + r' class="' + cls + r'\b.*?</' + tag + '>', lambda m: value, result, count=1, flags=re.S)
+            value = template.replace('{{root}}', prefix).replace('{{home}}', prefix or './').replace('{{contact}}', contact).replace('{{whatsapp}}', whatsapp)
+            if component == 'footer' and 'hosteleria' in name:
+                value = re.sub(r'href="https://wa.me/[^"]+"', lambda m: 'href="' + whatsapp + '"', value).replace(' data-whatsapp="general"', '')
+            tag = {'header': 'header', 'footer': 'footer', 'menu': 'dialog'}[component]
+            cls = {'header': 'site-header', 'footer': 'site-footer', 'menu': 'menu-dialog'}[component]
+            result, count = re.subn(r'<' + tag + r' (?=[^>]*class="' + cls + r'\b)[^>]*>.*?</' + tag + '>', lambda m: value, result, count=1, flags=re.S)
             assert count == 1, name + ': component not found'
         if check:
             assert result == before, name + ': stale shared components; run python design-system/render_components.py'

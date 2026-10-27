@@ -49,7 +49,7 @@ for(const p of pages){
   w.Element.prototype.scrollIntoView=function(){};
   w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
   const before=[...d.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'));
-  w.eval(fs.readFileSync(path.join(web,'servicios/afilado-cuchillos-valencia/knives.js'),'utf8'));
+  w.eval(fs.readFileSync(path.join(web,'navigation.js'),'utf8'));w.eval(fs.readFileSync(path.join(web,'servicios/afilado-cuchillos-valencia/knives.js'),'utf8'));
   const button=d.querySelector('.menu-trigger'),dialog=d.querySelector('#menu-dialog');
   button.click();assert.ok(dialog.open);assert.equal(button.getAttribute('aria-expanded'),'true');
   dialog.querySelector('a[href^="#"]').click();assert.equal(dialog.open,false);assert.equal(button.getAttribute('aria-expanded'),'false');

@@ -163,3 +163,41 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
  .knives-page .knife-jump a:first-child{min-height:48px}
 }
 @media(max-width:359px){.hero .hero-shortcuts a,.hero .hero-shortcuts a+a{font-size:13px}}
+
+/* Owner UX batch, 27 October: shared navigation and local home corrections. */
+:root{--header-height:92px}
+html{scroll-padding-top:calc(var(--header-height) + 16px)}
+.site-header,.knives-page .site-header{position:sticky;top:0;z-index:30;isolation:isolate;background:#182024f5;backdrop-filter:blur(14px);height:var(--header-height)}
+.skip-link{z-index:40}
+.site-header .desktop-nav a{min-height:44px;display:flex;align-items:center}
+.menu-dialog .menu-layout{align-items:start;gap:8%}
+.menu-dialog .menu-layout nav>a{font-size:clamp(30px,3.4vw,46px);min-height:60px;line-height:1.15}
+.menu-services{padding:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:2px 24px;border-bottom:1px solid #a7b5b9}
+.menu-services a{font:600 16px/1.5 var(--body);min-height:44px;display:flex;align-items:center;padding:8px 0}
+.menu-services a:hover{color:#795425;text-decoration:underline;text-underline-offset:4px}
+.menu-dialog .menu-bottom{flex-wrap:wrap}
+.menu-dialog .menu-bottom>a{line-height:1.6;max-width:100%}
+.menu-dialog .menu-bottom svg{flex:0 0 20px;width:20px;height:20px}
+/* Stable inset: title is anchored to the card, independently of illustration size. */
+.service-knives .service-link .service-title{inset:auto 28px 28px;max-width:calc(100% - 56px);transform:none}
+.service-knives .service-link .service-title h3{font-size:clamp(44px,5.5vw,70px);line-height:1.03;max-width:11ch}
+.service-knives .service-link img{padding:24px 24px 120px}
+.hospitality-callout{margin-top:32px;padding:28px;border:1px solid var(--brass);background:linear-gradient(120deg,#e8be8218,#111719);border-left:4px solid var(--brass)}
+.hospitality-callout h3{font-size:clamp(32px,4vw,48px);line-height:1.1;color:var(--brass);margin-bottom:16px}
+.hospitality-callout p{font-size:16px;line-height:1.75;max-width:60ch}
+.hospitality-callout a{display:flex;align-items:center;gap:16px;min-height:52px;margin-top:18px;font-size:16px;font-weight:600;line-height:1.5;color:var(--brass)}
+.hospitality-callout a svg{width:20px;height:20px;flex:0 0 20px}
+@media(max-width:767px){
+ :root{--header-height:72px}
+ .menu-dialog{padding:20px}
+ .menu-dialog .menu-layout{grid-template-columns:minmax(0,1fr)}
+ .menu-dialog .menu-photo{display:none}
+ .menu-dialog .menu-top{margin-bottom:14px}
+ .menu-dialog .menu-layout nav>a{font-size:34px;min-height:54px;padding:10px 0}
+ .menu-services{gap:0 16px;padding:10px 0}
+ .menu-services a{font-size:15px}
+ .menu-dialog .menu-bottom{margin-top:20px;gap:8px}
+ .service-knives .service-link .service-title{inset:auto 20px 24px;max-width:calc(100% - 40px)}
+ .service-knives .service-link .service-title h3{font-size:48px;max-width:11ch}
+ .hospitality-callout{padding:22px;margin-top:24px}
+}
