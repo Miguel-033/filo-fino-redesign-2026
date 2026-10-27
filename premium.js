@@ -177,7 +177,7 @@ if ('IntersectionObserver' in window) {
       if (!entry.isIntersecting) { entry.target.dataset.inView = 'false'; return; }
       if (entry.target.dataset.inView === 'true') return;
       entry.target.dataset.inView = 'true';
-      const cards = entry.target.matches('.service-composition, .intake-grid') ? [...entry.target.children] : [entry.target];
+      const cards = entry.target.matches('.intake-grid') ? [...entry.target.children] : [entry.target];
       cards.forEach((item, index) => {
         item.getAnimations().forEach(animation => animation.cancel());
         animate(item, [{ opacity: .25, transform: 'translateY(30px)' }, { opacity: 1, transform: 'none' }], { duration: 650, delay: index * 85, fill: 'backwards', easing: 'cubic-bezier(.2,.65,.2,1)' });
@@ -186,7 +186,7 @@ if ('IntersectionObserver' in window) {
       if (graphic) animate(graphic, [{ opacity: .2, transform: 'scaleY(.2)' }, { opacity: 1, transform: 'none' }], {duration: 800, easing: 'ease-out'});
     });
   }, { threshold: .08 });
-  document.querySelectorAll('.section-heading, .service-composition, .craft-lead, .intake-grid, .japanese-note, .gallery-composition, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
+  document.querySelectorAll('.section-heading, .craft-lead, .intake-grid, .japanese-note, .gallery-composition, .process-layout, .visit-top, .visit-layout, .footer-top, .footer-grid').forEach(item => observer.observe(item));
 }
 
 document.querySelectorAll('[data-photo-count]').forEach(item => { item.textContent = photographs.length; });
