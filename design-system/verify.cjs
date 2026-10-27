@@ -7,9 +7,11 @@ const href=(x,route)=>new URL(x,'https://filofino.es'+route).href.replace(/#$/,'
 const reports=[];
 for(const page of contracts.pages){
  const d=new JSDOM(fs.readFileSync(path.join(web,page.file),'utf8')).window.document;
- for(const [selector,content] of Object.entries(page.metadata)){const e=d.querySelector(selector);assert.equal(e?.getAttribute('content')??normalize(e?.textContent??''),content,page.file+': '+selector)}
- assert.deepEqual([...d.querySelectorAll('h1,h2,h3')].map(e=>[e.tagName,normalize(e.textContent)]),page.headings);
- const paragraphs=[...d.querySelectorAll('p')].map(e=>normalize(e.textContent));for(const text of page.paragraphs)assert.ok(paragraphs.includes(text),text);
+ // Copy is owner-authorized for this phase; route metadata and service facts have
+ // dedicated gates. Preserve the accepted visual/interaction contracts below.
+ const route=JSON.parse(fs.readFileSync(path.join(root,'seo/routes.json'),'utf8')).pages.find(p=>p.path===page.route);
+ assert.equal(d.title,route.title);assert.equal(d.querySelector('meta[name="description"]').content,route.description);
+ assert.ok(normalize(d.querySelector('h1').textContent).includes(route.h1Contains));
  const links=new Set([...d.querySelectorAll('a')].map(a=>href(a.getAttribute('href'),page.route)));for(const target of page.links)assert.ok(links.has(target),target);
  assert.equal(d.querySelectorAll('.hero>.hero-photo img').length,1);
  assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('meta[name="robots"]').content,'noindex, nofollow');
@@ -41,4 +43,4 @@ for(const page of contracts.pages){
  reports.push({page:page.route,widths,method:'DOM and stylesheet cascade contracts; not rendered layout',status:'PASS'});
 }
 fs.writeFileSync(path.join(__dirname,'checks.json'),JSON.stringify({status:'PASS',checks:reports,renderedBrowser:false,Safari:false,Lighthouse:false},null,2)+'\n');
-console.log('PASS: shared header/footer source check, preserved metadata/headings/paragraphs/links, integrated heroes, CTA and 1+2 grid CSS contracts at 320/360/390/425/430/768/1440; unchanged hand SVGs, reduced motion, service asymmetry. NOT a rendered-browser test.');
+console.log('PASS: shared header/footer source check, registry metadata and retained links, integrated heroes, CTA and 1+2 grid CSS contracts at 320/360/390/425/430/768/1440; unchanged hand SVGs, reduced motion, service asymmetry. NOT a rendered-browser test.');

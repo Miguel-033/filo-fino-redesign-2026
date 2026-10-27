@@ -1,6 +1,6 @@
 {
   "page": "Afilado de cuchillos",
-  "date": "2026-10-16T11:08:35.981Z",
+  "date": "2026-10-26T13:01:32.891Z",
   "passed": [
     "Spanish metadata and one H1",
     "noindex and no active canonical/production JSON-LD",
@@ -12,7 +12,7 @@
     "WhatsApp prefix and 3 contexts without JS rewrite",
     "all homepage knife links point at new route",
     "production JSON graph/ref consistency without hours/ratings",
-    "no video, fabricated numeric price/time or text arrows"
+    "owner-confirmed 4 euro / 15 minute references and knife exclusions; no autoplay or text arrows"
   ],
   "limitations": [
     "DOM test doubles are not rendered browser, native Escape/focus/swipe, mobile overflow or Safari tests",

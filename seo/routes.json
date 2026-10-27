@@ -1,9 +1,15 @@
 {
-  "version": "2026-10-15",
+  "version": "2026-10-26",
   "productionOrigin": "https://filofino.es",
   "previewBase": "https://miguel-033.github.io/filo-fino-redesign-2026/",
   "sourceRoot": "design-premium-preview",
-  "sharedAssets": ["premium.css", "refinement.css", "premium.js", "seo.css"],
+  "sharedAssets": [
+    "premium.css",
+    "refinement.css",
+    "premium.js",
+    "seo.css",
+    "services.css"
+  ],
   "business": {
     "name": "Filo Fino",
     "id": "https://filofino.es/#business",
@@ -21,43 +27,131 @@
       "status": "developed",
       "role": "workshop-hub",
       "title": "Taller de afilado en Valencia | Filo Fino",
-      "description": "Taller de afilado en Valencia para cuchillos, tijeras y herramientas de manicura. Atención directa en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+      "description": "Taller especializado en afilado profesional en Valencia. Cuchillos, tijeras, herramientas de manicura y cuchillas de máquina. Calle Maestro Guerrero, 4.",
       "h1Contains": "Taller de afilado en Valencia",
       "primaryIntent": "Local workshop and branded/multi-tool service discovery",
-      "mustLink": ["/servicios/afilado-cuchillos-valencia/", "/servicios/afilar-tijeras-peluqueria-valencia/", "/servicios/herramientas-manicura-pedicura-valencia/"]
+      "mustLink": [
+        "/servicios/afilado-cuchillos-valencia/",
+        "/servicios/afilar-tijeras-peluqueria-valencia/",
+        "/servicios/herramientas-manicura-pedicura-valencia/",
+        "/servicios/afilado-cuchillas-maquinas-valencia/",
+        "/servicios/afilado-cuchillos-hosteleria-valencia/",
+        "/servicios/"
+      ]
     },
     {
       "path": "/servicios/afilado-cuchillos-valencia/",
       "source": "servicios/afilado-cuchillos-valencia/index.html",
-      "assets": ["knives.css", "knives.js"],
+      "assets": [
+        "knives.css",
+        "knives.js"
+      ],
       "status": "developed",
       "role": "knife-service",
       "title": "Afilado de cuchillos en Valencia | Filo Fino",
-      "description": "Afilado de cuchillos de cocina, profesionales y japoneses en Valencia. Revisión de cada pieza en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+      "description": "Afilado de cuchillos en Valencia desde 4 € por pieza y desde 15 minutos, según estado y carga del taller. Cocina, profesionales y japoneses. Consulta tu pieza.",
       "h1Contains": "Afilado profesional de cuchillos en Valencia",
       "serviceName": "Afilado de cuchillos",
       "primaryIntent": "Local knife sharpening service, not sharpener purchase",
-      "mustLink": ["/", "/servicios/afilar-tijeras-peluqueria-valencia/", "/servicios/herramientas-manicura-pedicura-valencia/", "/articulos/cuchillo-no-corta.html"]
+      "mustLink": [
+        "/",
+        "/servicios/afilar-tijeras-peluqueria-valencia/",
+        "/servicios/herramientas-manicura-pedicura-valencia/",
+        "/articulos/cuchillo-no-corta.html",
+        "/servicios/afilado-cuchillos-hosteleria-valencia/"
+      ]
     },
     {
       "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
-      "status": "planned-replacement-retain-live",
+      "source": "servicios/afilar-tijeras-peluqueria-valencia/index.html",
+      "status": "developed",
       "role": "scissors-service",
       "serviceName": "Afilado de tijeras de peluquería",
-      "title": "Afilar tijeras de peluquería en Valencia | Filo Fino",
-      "description": "Afilado y revisión de tijeras de peluquería en Valencia. Consulta el filo, el ajuste y otras tijeras de uso doméstico o de costura. Atención directa en taller.",
-      "h1Contains": "Afilado de tijeras de peluquería en Valencia",
-      "primaryIntent": "Hair scissors first; confirmed other scissors as a useful subsection, not a URL replacement"
+      "title": "Afilado de tijeras de peluquería en Valencia | Filo Fino",
+      "description": "Afilado de tijeras de peluquería en Valencia: rectas 17 €, entresacar 19 € y convex 22 €. Desde 2 horas, según estado y carga del taller.",
+      "h1Contains": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "primaryIntent": "scissors-service",
+      "mustLink": [
+        "/",
+        "/servicios/",
+        "/articulos/tijeras-tiran.html"
+      ]
     },
     {
       "path": "/servicios/herramientas-manicura-pedicura-valencia/",
-      "status": "planned-replacement-retain-live",
+      "source": "servicios/herramientas-manicura-pedicura-valencia/index.html",
+      "status": "developed",
       "role": "manicure-service",
       "serviceName": "Afilado de herramientas de manicura y pedicura",
-      "title": "Afilado de manicura y pedicura en Valencia | Filo Fino",
-      "description": "Afilado y revisión de alicates, tijeras y herramientas de manicura y pedicura en Valencia. Consulta tu herramienta por WhatsApp o visita el taller.",
+      "title": "Afilado de herramientas de manicura en Valencia | Filo Fino",
+      "description": "Afilado de herramientas de manicura y pedicura en Valencia. Alicates 8 €, tijeras 7 €, pinzas y empujadores 5 €. Desde 20 minutos, según cantidad y estado.",
       "h1Contains": "Afilado de herramientas de manicura y pedicura en Valencia",
-      "primaryIntent": "Instrument sharpening and adjustment, not beauty appointments or tool shopping"
+      "primaryIntent": "manicure-service",
+      "mustLink": [
+        "/",
+        "/servicios/",
+        "/articulos/alicate-ruega.html"
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "source": "servicios/afilado-cuchillas-maquinas-valencia/index.html",
+      "status": "developed",
+      "role": "clipper-blades-service",
+      "serviceName": "Afilado de cuchillas de máquinas",
+      "title": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
+      "description": "Afilado de cuchillas y bloques de máquinas de peluquería y grooming en Valencia desde 13 €. Plazo desde 2 horas, según cantidad, estado y carga del taller.",
+      "h1Contains": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "primaryIntent": "clipper-blades-service",
+      "mustLink": [
+        "/",
+        "/servicios/",
+        "/articulos/maquina-muerde.html"
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "source": "servicios/afilado-cuchillos-hosteleria-valencia/index.html",
+      "status": "developed",
+      "role": "hospitality-b2b-service",
+      "serviceName": "Afilado de cuchillos para hostelería",
+      "title": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
+      "description": "Afilado para restaurantes y cocinas profesionales en Valencia desde 6 € por cuchillo. Recogida y entrega posibles, con condiciones y coste acordados.",
+      "h1Contains": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "primaryIntent": "hospitality-b2b-service",
+      "mustLink": [
+        "/",
+        "/servicios/",
+        "/articulos/cuchillo-no-corta.html"
+      ]
+    },
+    {
+      "path": "/servicios/",
+      "source": "servicios/index.html",
+      "status": "developed",
+      "role": "service-catalog",
+      "title": "Servicios de afilado en Valencia | Filo Fino",
+      "description": "Elige el servicio de Filo Fino: cuchillos, tijeras, herramientas de manicura, bloques de máquinas y cuchillos para hostelería. Taller especializado en Valencia.",
+      "h1Contains": "Servicios de afilado en Valencia",
+      "primaryIntent": "Service selection, concise directory",
+      "mustLink": [
+        "/servicios/afilado-cuchillos-valencia/",
+        "/servicios/afilar-tijeras-peluqueria-valencia/",
+        "/servicios/herramientas-manicura-pedicura-valencia/",
+        "/servicios/afilado-cuchillas-maquinas-valencia/",
+        "/servicios/afilado-cuchillos-hosteleria-valencia/"
+      ]
     }
-  ]
+  ],
+  "productionHandoff": {
+    "status": "frozen-pending-explicit-owner-approval",
+    "files": {
+      "robots.txt": "7626ae9e01cec899a9b0bcbf6fcef69581bf196bf4fada89f199ca2e80e433ce",
+      "sitemap.xml": "71432c40ec811acc17ef4b136433e0816ed5a43f14532cc24cc9f19d533fb314",
+      "seo/production/metadata.json": "11d09940e090945da87cea149bba0f423b799045b782cabdf616a0c7438b84c5",
+      "seo/production/sitemap.candidate.xml": "2da6e7da44c51291162d334ee8cf53d9607e26225dca3b116dbc9343f6672a40",
+      "seo/production/robots.txt.template": "531613b844e88d8d1dd1397614eb4c4c17f0d8135e9f6b14a1f8dd7441f2f082",
+      "design-premium-preview/servicios/afilado-cuchillos-valencia/production-seo.json": "a9c01cfcad0437dbe1da8c69c605dd06bb7a8f09646341079af3bda92d54f270"
+    }
+  }
 }

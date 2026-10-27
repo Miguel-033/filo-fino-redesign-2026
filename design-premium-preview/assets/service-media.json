@@ -1,0 +1,54 @@
+[
+  {
+    "file": "assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4",
+    "source": "videos/afilado-profesional-de-cuchillos-en-valencia.mp4",
+    "sha256": "5614fce6fa954fc499f5f126ec6b9b363eeef408abc51e00c217bd9ba77a1814",
+    "description": "Trabajo de un cuchillo en el equipo de afilado del taller.",
+    "inspection": "Representative frame at 1s inspected; not a complete audiovisual review",
+    "audioAndCaptions": "Full audio/transcript review pending before release"
+  },
+  {
+    "file": "assets/videos/tijeras_tiran.mp4",
+    "source": "videos/tijeras_tiran.mp4",
+    "sha256": "40529932c61c45847f491c0c4cff6f49ba4fd85b8a2dcafdffc02b928f61227b",
+    "description": "Prueba de corte de tijeras sobre un mechón.",
+    "inspection": "Representative frame at 1s inspected; not a complete audiovisual review",
+    "audioAndCaptions": "Full audio/transcript review pending before release"
+  },
+  {
+    "file": "assets/videos/Heramientas-manicura.mp4",
+    "source": "videos/Heramientas-manicura.mp4",
+    "sha256": "4df9ebb3daea66462790fcc9831cc0ba6443f10951fc0e2b3d533d08a4d1231f",
+    "description": "Herramientas de manicura manipuladas en el taller.",
+    "inspection": "Representative frame at 1s inspected; not a complete audiovisual review",
+    "audioAndCaptions": "Full audio/transcript review pending before release"
+  },
+  {
+    "file": "assets/videos/maquena_afilado_cortan.mp4",
+    "source": "videos/maquena_afilado_cortan.mp4",
+    "sha256": "476adf0be64fd75b1fd68b1773ae8bb657a2435095b3c1227eb41987225b2fae",
+    "description": "Prueba de corte de un bloque de máquina sobre un mechón.",
+    "inspection": "Representative frame at 1s inspected; not a complete audiovisual review",
+    "audioAndCaptions": "Full audio/transcript review pending before release"
+  },
+  {
+    "file": "assets/videos/cuchillo_para_profecional.mp4",
+    "source": "videos/cuchillo_para_profecional.mp4",
+    "sha256": "91bbd3572176dd33c67fdde0c494b7c8ca0f194e414fb42ba1a8d62f2df6a241",
+    "description": "Demostración de corte de un cuchillo de cocina profesional.",
+    "inspection": "Representative frame at 1s inspected; not a complete audiovisual review",
+    "audioAndCaptions": "Full audio/transcript review pending before release"
+  },
+  {
+    "file": "assets/images/bloques.webp",
+    "source": "images/maquena_afilado_cortan.webp",
+    "sha256": "67d7a00365fde17d4deaf43e8994c7b0aa6beceed759fc95eec62e25c101a78c",
+    "inspection": "Viewed before integration"
+  },
+  {
+    "file": "assets/images/hosteleria.webp",
+    "source": "images/cuchillo_para_profecional01.webp",
+    "sha256": "81d9ad86f3d84a744e86f3bb69ebb2c72ed210c880cfa2ecf0774b88bd868969",
+    "inspection": "Viewed before integration"
+  }
+]
