@@ -1,0 +1,57 @@
+/* F05: only shipping section and its native dialog. */
+#trabajos.shipping{padding-block:72px;border-top:1px solid var(--line);background:var(--ink)}
+#trabajos .shipping-heading{display:grid;gap:24px}
+#trabajos .shipping-heading h2{font-size:clamp(42px,8.4vw,64px);line-height:1.02;max-width:22ch;text-wrap:balance}
+#trabajos .shipping-heading>p{font-size:16px;line-height:1.75;max-width:43ch;color:#d5dada}
+#trabajos .shipping-steps{list-style:none;padding:0;margin:36px 0;display:grid;gap:0}
+#trabajos .shipping-steps>li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;padding-block:18px;min-width:0}
+#trabajos .shipping-scene{position:relative;display:block;aspect-ratio:1;overflow:hidden;align-self:start}
+#trabajos .shipping-scene img{position:absolute;max-width:none;width:500%;height:auto;left:calc(var(--scene) * -100%);top:50%;transform:translateY(-50%)}
+#trabajos .shipping-step-copy{position:relative;padding-bottom:18px;border-bottom:1px solid var(--line)}
+#trabajos .shipping-number{display:block;color:var(--brass);font:500 13px/1.5 var(--body);margin-bottom:5px}
+#trabajos .shipping-step-copy h3{font-size:30px;line-height:1.1;margin-bottom:10px}
+#trabajos .shipping-step-copy p{font-size:15px;line-height:1.7;color:#d5dada;max-width:32ch}
+#trabajos .shipping-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px}
+#trabajos .shipping-actions .button{width:100%;min-height:58px;justify-content:space-between;text-align:left;font-size:14px;line-height:1.6;padding:16px 20px}
+#trabajos .shipping-contact{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--brass);font-size:14px;line-height:1.6}
+#trabajos .shipping-contact:hover{text-decoration:underline;text-underline-offset:5px}
+#shipping-dialog{border:1px solid var(--line);padding:0;background:var(--ink);color:var(--paper);width:min(720px,calc(100% - 24px));max-width:720px;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);margin:auto;overflow:hidden}
+#shipping-dialog[open]{display:flex;flex-direction:column}
+#shipping-dialog::backdrop{background:#080d10d9}
+#shipping-dialog .shipping-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;border-bottom:1px solid var(--line);flex-shrink:0}
+#shipping-dialog .shipping-dialog-head>p{font:500 13px/1.5 var(--body);color:var(--brass)}
+#shipping-dialog .shipping-close{background:transparent;flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center}
+#shipping-dialog .shipping-close:hover{background:var(--panel)}
+#shipping-dialog .shipping-dialog-scroll{overflow:auto;overscroll-behavior:contain;min-height:0;padding:24px 20px 32px;scroll-padding-block:24px}
+#shipping-dialog .shipping-dialog-scroll:focus-visible{outline:2px solid var(--brass);outline-offset:-3px}
+#shipping-dialog h2{font-size:clamp(32px,8vw,48px);line-height:1.08;max-width:21ch;text-wrap:balance}
+#shipping-dialog .shipping-dialog-intro{font-size:16px;line-height:1.7;margin-top:20px;color:#d5dada}
+#shipping-dialog .shipping-instructions{list-style:none;padding:0;margin:28px 0 0;counter-reset:shipping}
+#shipping-dialog .shipping-instructions>li{counter-increment:shipping;border-top:1px solid var(--line);padding:24px 0 24px 32px;position:relative}
+#shipping-dialog .shipping-instructions>li::before{content:counter(shipping,decimal-leading-zero);position:absolute;left:0;top:25px;font:500 13px/1.5 var(--body);color:var(--brass)}
+#shipping-dialog h3{font-size:26px;line-height:1.15;margin-bottom:12px}
+#shipping-dialog .shipping-instructions p{font-size:16px;line-height:1.75;color:#d5dada}
+#shipping-dialog .shipping-instructions p+p{margin-top:12px}
+#shipping-dialog .shipping-dialog-foot{padding:16px;border-top:1px solid var(--line);flex-shrink:0;background:var(--deep)}
+#shipping-dialog .shipping-dialog-foot .button{width:100%;justify-content:center;min-height:52px;font-size:14px;line-height:1.5;padding:14px 12px}
+#shipping-dialog a:focus-visible,#shipping-dialog button:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+@media(min-width:600px){
+ #trabajos .shipping-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ #trabajos .shipping-steps>li{grid-template-columns:1fr;gap:0}
+ #trabajos .shipping-scene{width:100%;aspect-ratio:1.6}
+ #trabajos .shipping-step-copy{padding:0 0 24px}
+ #trabajos .shipping-actions .button{width:auto;max-width:460px}
+ #shipping-dialog .shipping-dialog-scroll{padding:32px 40px}
+ #shipping-dialog .shipping-dialog-head{padding-inline:24px}
+ #shipping-dialog .shipping-dialog-foot{padding:20px 40px}
+}
+@media(min-width:1100px){
+ #trabajos.shipping{padding-block:96px}
+ #trabajos .shipping-heading{grid-template-columns:minmax(0,1.6fr) minmax(0,.8fr);align-items:end;gap:64px}
+ #trabajos .shipping-heading h2{font-size:clamp(64px,5.5vw,80px);max-width:23ch}
+ #trabajos .shipping-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:32px 0 40px}
+ #trabajos .shipping-scene{aspect-ratio:1.2}
+ #trabajos .shipping-step-copy{padding:0 20px 0 0;border:0}
+ #trabajos .shipping-step-copy h3{font-size:34px}
+ #trabajos .shipping-step-copy p{max-width:26ch}
+}
