@@ -32,5 +32,17 @@
   });
   dialog.querySelector('.shipping-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', restore);
+  dialog.addEventListener('keydown', event => {
+    if (event.key !== 'Tab') return;
+    const first = dialog.querySelector('.shipping-close');
+    const last = dialog.querySelector('.shipping-dialog-foot a');
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
   window.addEventListener('pageshow', () => { if (!dialog.open) restore(); });
 })();
