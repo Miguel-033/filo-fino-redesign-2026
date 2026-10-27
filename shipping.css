@@ -37,8 +37,8 @@
 #shipping-dialog a:focus-visible,#shipping-dialog button:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
 @media(min-width:600px){
  #trabajos .shipping-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
- #trabajos .shipping-steps>li{grid-template-columns:1fr;gap:0}
- #trabajos .shipping-scene{width:100%;aspect-ratio:1.6}
+ #trabajos .shipping-steps>li{grid-template-columns:88px minmax(0,1fr);gap:16px}
+ #trabajos .shipping-scene{width:88px;aspect-ratio:1}
  #trabajos .shipping-step-copy{padding:0 0 24px}
  #trabajos .shipping-actions .button{width:auto;max-width:460px}
  #shipping-dialog .shipping-dialog-scroll{padding:32px 40px}
@@ -50,7 +50,8 @@
  #trabajos .shipping-heading{grid-template-columns:minmax(0,1.6fr) minmax(0,.8fr);align-items:end;gap:64px}
  #trabajos .shipping-heading h2{font-size:clamp(64px,5.5vw,80px);max-width:23ch}
  #trabajos .shipping-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:32px 0 40px}
- #trabajos .shipping-scene{aspect-ratio:1.05}
+ #trabajos .shipping-steps>li{grid-template-columns:1fr;gap:0}
+ #trabajos .shipping-scene{width:100%;aspect-ratio:1.05}
  #trabajos .shipping-step-copy{padding:0 20px 0 0;border:0}
  #trabajos .shipping-step-copy h3{font-size:34px}
  #trabajos .shipping-step-copy p{max-width:26ch}
