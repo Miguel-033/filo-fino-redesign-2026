@@ -111,15 +111,28 @@ if __name__ == '__main__':
     parser.add_argument('--apply-preview', action='store_true')
     args = parser.parse_args()
     assert not (args.check and args.apply_preview)
-    meta = metadata()
-    output(ROOT / 'seo/production/metadata.json', meta, args.check)
-    # Backward-compatible knife handoff, generated from the same registry.
-    knife = next(p for p in meta['pages'] if p['path'] == '/servicios/afilado-cuchillos-valencia/')
-    output(ROOT / CONFIG['sourceRoot'] / 'servicios/afilado-cuchillos-valencia/production-seo.json',
-           {'status': meta['status'], **{k: v for k, v in knife.items() if k != 'path'}}, args.check)
-    sitemap_candidate(args.check)
-    if args.apply_preview:
-        for page in CONFIG['pages']:
-            if page['status'] == 'developed':
-                apply_preview(page)
-    print('PASS: metadata and candidate sitemap are consistent; no production export/deploy performed')
+    frozen = CONFIG.get('productionHandoff')
+    if frozen:
+        import hashlib
+        for name, digest in frozen['files'].items():
+            assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, 'Protected release file changed: ' + name
+        # The owner explicitly froze canonical/schema/robots/sitemap changes.
+        # Preview metadata is checked by verify.inspect; release data stays byte-identical.
+        if args.apply_preview:
+            for page in CONFIG['pages']:
+                if page['status'] == 'developed':
+                    apply_preview(page)
+        print('PASS: frozen release artifacts preserved; preview metadata only')
+    else:
+        meta = metadata()
+        output(ROOT / 'seo/production/metadata.json', meta, args.check)
+        # Backward-compatible knife handoff, generated from the same registry.
+        knife = next(p for p in meta['pages'] if p['path'] == '/servicios/afilado-cuchillos-valencia/')
+        output(ROOT / CONFIG['sourceRoot'] / 'servicios/afilado-cuchillos-valencia/production-seo.json',
+               {'status': meta['status'], **{k: v for k, v in knife.items() if k != 'path'}}, args.check)
+        sitemap_candidate(args.check)
+        if args.apply_preview:
+            for page in CONFIG['pages']:
+                if page['status'] == 'developed':
+                    apply_preview(page)
+        print('PASS: metadata and candidate sitemap are consistent; no production export/deploy performed')

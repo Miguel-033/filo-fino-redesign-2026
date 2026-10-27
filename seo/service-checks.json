@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "pages": [
+    {
+      "path": "/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-valencia/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    },
+    {
+      "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    },
+    {
+      "path": "/servicios/herramientas-manicura-pedicura-valencia/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    },
+    {
+      "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    },
+    {
+      "path": "/servicios/",
+      "status": "PASS",
+      "method": "HTML/CSS/asset and menu DOM integration; no browser layout"
+    }
+  ],
+  "limitations": [
+    "Preview server unavailable",
+    "No real mobile/desktop/Safari render",
+    "No measured Lighthouse or field CWV",
+    "No production HTTP/indexing or structured data validation"
+  ]
+}

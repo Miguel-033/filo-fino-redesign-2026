@@ -1,11 +1,13 @@
 """Materialize shared header/footer in source HTML; no browser injection or deploy."""
 import argparse
+import json
+import posixpath
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / 'design-premium-preview'
-PAGES = [('index.html', ''), ('servicios/afilado-cuchillos-valencia/index.html', '../../')]
+PAGES = [(p['source'], (posixpath.relpath('/', '/' + posixpath.dirname(p['source'])) + '/') if '/' in p['source'] else '') for p in json.loads((ROOT / 'seo/routes.json').read_text())['pages'] if p['status'] == 'developed']
 
 
 def render(check=False):
@@ -26,7 +28,7 @@ def render(check=False):
             assert result == before, name + ': stale shared components; run python design-system/render_components.py'
         else:
             path.write_text(result)
-    print('PASS: shared static header/footer ' + ('match templates' if check else 'rendered into both pages'))
+    print('PASS: shared static header/footer ' + ('match templates' if check else 'rendered into all developed pages'))
 
 
 if __name__ == '__main__':

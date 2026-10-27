@@ -6,10 +6,10 @@
       "path": "/",
       "title": "Taller de afilado en Valencia | Filo Fino",
       "h1": "Taller de afilado en Valencia Cada filo. Su oficio.",
-      "htmlBytes": 23576,
-      "directAndCSSResourceBytes": 523343,
+      "htmlBytes": 24433,
+      "directAndCSSResourceBytes": 527040,
       "images": 13,
-      "links": 46,
+      "links": 51,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -32,6 +32,10 @@
         [
           "h3",
           "Afilado de herramientas de manicura"
+        ],
+        [
+          "h2",
+          "Más servicios del taller"
         ],
         [
           "h2",
@@ -103,10 +107,10 @@
       "path": "/servicios/afilado-cuchillos-valencia/",
       "title": "Afilado de cuchillos en Valencia | Filo Fino",
       "h1": "Afilado profesional de cuchillos en Valencia",
-      "htmlBytes": 20864,
-      "directAndCSSResourceBytes": 407375,
+      "htmlBytes": 22628,
+      "directAndCSSResourceBytes": 411072,
       "images": 2,
-      "links": 47,
+      "links": 51,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -129,6 +133,18 @@
         [
           "h3",
           "Cuchillos japoneses"
+        ],
+        [
+          "h2",
+          "Daños que se pueden valorar"
+        ],
+        [
+          "h3",
+          "Qué no se acepta"
+        ],
+        [
+          "h3",
+          "Restaurantes y cocinas profesionales"
         ],
         [
           "h2",
@@ -172,6 +188,10 @@
         ],
         [
           "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
           "Preguntas con respuesta."
         ],
         [
@@ -181,6 +201,319 @@
         [
           "h2",
           "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "title": "Afilado de tijeras de peluquería en Valencia | Filo Fino",
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "htmlBytes": 15834,
+      "directAndCSSResourceBytes": 473200,
+      "images": 3,
+      "links": 43,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de tijeras de peluquería y barbería en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "Otras tijeras: costura y uso doméstico"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/herramientas-manicura-pedicura-valencia/",
+      "title": "Afilado de herramientas de manicura en Valencia | Filo Fino",
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "htmlBytes": 15716,
+      "directAndCSSResourceBytes": 465388,
+      "images": 3,
+      "links": 43,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de herramientas de manicura y pedicura en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "Organiza la entrega de tu material"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "title": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "htmlBytes": 15594,
+      "directAndCSSResourceBytes": 481000,
+      "images": 3,
+      "links": 43,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "El bloque de corte y la máquina"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "title": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "htmlBytes": 16317,
+      "directAndCSSResourceBytes": 481008,
+      "images": 3,
+      "links": 44,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "Recogida, entrega y servicio regular"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/",
+      "title": "Servicios de afilado en Valencia | Filo Fino",
+      "h1": "Servicios de afilado en Valencia",
+      "htmlBytes": 8957,
+      "directAndCSSResourceBytes": 411072,
+      "images": 2,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Servicios de afilado en Valencia"
+        ],
+        [
+          "h2",
+          "Elige tu herramienta"
+        ],
+        [
+          "h3",
+          "Afilado de cuchillos"
+        ],
+        [
+          "h3",
+          "Afilado de tijeras de peluquería"
+        ],
+        [
+          "h3",
+          "Afilado de herramientas de manicura y pedicura"
+        ],
+        [
+          "h3",
+          "Afilado de cuchillas de máquinas"
+        ],
+        [
+          "h3",
+          "Afilado de cuchillos para hostelería"
         ],
         [
           "h2",

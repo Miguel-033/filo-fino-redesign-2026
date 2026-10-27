@@ -1,0 +1,465 @@
+[
+  {
+    "source": "index.html",
+    "title": [
+      "\n      Afilado profesional en Valencia. Cuchillos, tijeras y manicura · Filo Fino\n    "
+    ],
+    "description": [],
+    "h1": [
+      "\n              Afilado profesional de tijeras, cuchillos y herramientas en\n              Valencia\n            "
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://filofino.es/\" />"
+    ],
+    "robots": [],
+    "structuredData": [
+      "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"LocalBusiness\",\n        \"name\": \"Filo Fino\",\n        \"image\": \"https://filofino.es/images/taller.jpg\",\n        \"url\": \"https://filofino.es/\",\n        \"telephone\": \"+34614005053\",\n        \"address\": {\n          \"@type\": \"PostalAddress\",\n          \"streetAddress\": \"Calle Maestro Guerrero, 4\",\n          \"addressLocality\": \"Valencia\",\n          \"addressRegion\": \"Valencia\",\n          \"addressCountry\": \"ES\"\n        },\n        \"hasMap\": \"https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7\",\n        \"areaServed\": {\n          \"@type\": \"Place\",\n          \"name\": \"Valencia y alrededores\"\n        },\n        \"description\": \"Afilado profesional de cuchillos, tijeras de peluquería y herramientas de manicura en Valencia. Taller local con atención directa, precios visibles y reseñas de clientes en Google.\",\n        \"priceRange\": \"€\",\n        \"openingHoursSpecification\": [\n          {\n            \"@type\": \"OpeningHoursSpecification\",\n            \"dayOfWeek\": [\n              \"Monday\",\n              \"Tuesday\",\n              \"Wednesday\",\n              \"Thursday\",\n              \"Friday\"\n            ],\n            \"opens\": \"10:00\",\n            \"closes\": \"17:30\"\n          }\n        ],\n        \"sameAs\": [\"https://www.instagram.com/filofino.es\"]\n      }\n    "
+    ],
+    "links": [
+      "/",
+      "#tarifas",
+      "#proceso",
+      "/servicios/",
+      "/blog/",
+      "#contacto",
+      "#services",
+      "#tarifas",
+      "/servicios/",
+      "#catalogo",
+      "#why",
+      "/#proceso",
+      "#proceso",
+      "#testimonios",
+      "/blog/",
+      "#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "#tarifas",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "/servicios/afilado-cuchillos-valencia/",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "/articulos/tijeras-tiran.html",
+      "/articulos/cuchillo-no-corta.html",
+      "/articulos/alicate-ruega.html",
+      "/articulos/reparar-o-cambiar.html",
+      "/blog/",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "servicios/index.html",
+    "title": [
+      "Servicios de afilado en Valencia | Filo Fino"
+    ],
+    "description": [],
+    "h1": [
+      "Servicios de afilado en Valencia"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://filofino.es/servicios/\" />"
+    ],
+    "robots": [],
+    "structuredData": [],
+    "links": [
+      "/",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "/servicios/afilado-cuchillos-valencia/",
+      "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "/zonas/torrent/",
+      "/zonas/paterna/",
+      "/zonas/burjassot/",
+      "/zonas/sagunto/",
+      "/zonas/mislata/",
+      "/zonas/xirivella/",
+      "/zonas/quart-de-poblet/",
+      "/zonas/aldaia/",
+      "/zonas/alaquas/",
+      "/zonas/manises/",
+      "/zonas/alboraya/",
+      "/zonas/tavernes-blanques/",
+      "/zonas/puzol/",
+      "/zonas/el-puig/",
+      "/zonas/catarroja/",
+      "/zonas/gandia/",
+      "/blog/",
+      "/articulos/cuchillo-no-corta.html",
+      "/articulos/tijeras-tiran.html",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "servicios/herramientas-manicura-pedicura-valencia/index.html",
+    "title": [
+      "Afilado de herramientas de manicura en Valencia | Filo Fino"
+    ],
+    "description": [],
+    "h1": [
+      "Herramientas de manicura y pedicura en Valencia"
+    ],
+    "canonical": [
+      "<link\n      rel=\"canonical\"\n      href=\"https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/\"\n    />"
+    ],
+    "robots": [],
+    "structuredData": [
+      "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"FAQPage\",\n        \"mainEntity\": [\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Cuánto cuesta?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Depende del tipo. Como referencia: pinzas/pusher 5 €, tijeras 7 €, alicates 8 €. El ajuste adicional depende del estado.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Tengo que pedir cita?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Recomendamos escribir por WhatsApp antes para confirmar disponibilidad y orientarte según el tipo de herramienta.\"\n            }\n          }\n        ]\n      }\n    "
+    ],
+    "links": [
+      "/",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "/articulos/alicate-ruega.html",
+      "tel:+34614005053",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "servicios/afilado-cuchillos-valencia/index.html",
+    "title": [
+      "Afilado de cuchillos en Valencia desde 4€ | Filo Fino"
+    ],
+    "description": [],
+    "h1": [
+      "Afilado de cuchillos en Valencia"
+    ],
+    "canonical": [
+      "<link\n      rel=\"canonical\"\n      href=\"https://filofino.es/servicios/afilado-cuchillos-valencia/\"\n    />"
+    ],
+    "robots": [],
+    "structuredData": [
+      "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"FAQPage\",\n        \"mainEntity\": [\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Cuánto cuesta afilar un cuchillo?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Depende del tipo y estado. Para cocina doméstica, suele ser desde 5 €. Para uso profesional, el precio varía según desgaste y geometría.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿En cuánto tiempo está listo?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"La mayoría de trabajos se entregan en 1 día laborable, según carga y tipo de cuchillo.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Qué pasa si el cuchillo viene mal afilado?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Primero lo revisamos y te decimos qué conviene hacer. En algunos casos el trabajo requiere corrección adicional; te lo explicamos antes de empezar.\"\n            }\n          }\n        ]\n      }\n    "
+    ],
+    "links": [
+      "/",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "/articulos/cuchillo-no-corta.html",
+      "/articulos/cuchillo-aplasta.html",
+      "/articulos/afilado-empeora.html",
+      "tel:+34614005053",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "servicios/afilado-cuchillas-maquinas-valencia/index.html",
+    "title": [
+      "Afilado de cuchillas de máquina en Valencia | Filo Fino"
+    ],
+    "description": [],
+    "h1": [
+      "\n                Afilado de cuchillas de máquina en Valencia\n              "
+    ],
+    "canonical": [
+      "<link\n      rel=\"canonical\"\n      href=\"https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/\"\n    />"
+    ],
+    "robots": [],
+    "structuredData": [
+      "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"FAQPage\",\n        \"mainEntity\": [\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Sirve solo con afilar?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"A veces no: puede requerir ajuste y revisión. Por eso empezamos por valoración real antes de trabajar.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Cuánto tarda?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Normalmente 1 día laborable, según carga y modelo.\"\n            }\n          }\n        ]\n      }\n    "
+    ],
+    "links": [
+      "/",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "/articulos/maquina-muerde.html",
+      "tel:+34614005053",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "servicios/afilar-tijeras-peluqueria-valencia/index.html",
+    "title": [
+      "Afilar tijeras de peluquería en Valencia | Filo Fino"
+    ],
+    "description": [],
+    "h1": [
+      "Afilar tijeras de peluquería en Valencia"
+    ],
+    "canonical": [
+      "<link\n      rel=\"canonical\"\n      href=\"https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/\"\n    />"
+    ],
+    "robots": [],
+    "structuredData": [
+      "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"FAQPage\",\n        \"mainEntity\": [\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Cuánto cuesta afilar tijeras de peluquería en Valencia?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Depende del modelo y estado. Como referencia: clásica desde 17 €, entresacar desde 19 €, convex desde 22 €.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Se puede recuperar una tijera mal afilada?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"A menudo sí, pero requiere valoración. Si el problema viene de un trabajo anterior, puede ser necesario corregir geometría y ajuste.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿En cuánto tiempo está listo?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"En la mayoría de casos, 1 día laborable (según carga y tipo de tijera).\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Puedo consultar solo con fotos por WhatsApp?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Sí. Con fotos del filo, del cierre y una breve descripción del problema (tirones, corte irregular, mano cansada) podemos orientarte antes de que traigas la tijera al taller en Valencia.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Hay opiniones de otros profesionales de peluquería?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Sí: en Google Maps hay reseñas de clientes del sector. También compartimos ejemplos en Instagram cuando el cliente lo permite.\"\n            }\n          }\n        ]\n      }\n    "
+    ],
+    "links": [
+      "/",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "/articulos/tijeras-tiran.html",
+      "/articulos/tijeras-no-uniformes.html",
+      "/articulos/tijeras-despues-afilado.html",
+      "tel:+34614005053",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "servicios/afilado-cuchillos-hosteleria-valencia/index.html",
+    "title": [
+      "Afilado de cuchillos para hostelería en Valencia | Filo Fino"
+    ],
+    "description": [],
+    "h1": [
+      "\n                Afilado de cuchillos para hostelería y cocinas profesionales en Valencia\n              "
+    ],
+    "canonical": [
+      "<link\n      rel=\"canonical\"\n      href=\"https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/\"\n    />"
+    ],
+    "robots": [],
+    "structuredData": [
+      "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"FAQPage\",\n        \"mainEntity\": [\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Cuánto cuesta afilar cuchillos de cocina profesional en Valencia?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"En uso profesional/hostelería el precio depende del estado, del tamaño y del acero. Como referencia en tarifas: desde 10 € por pieza cuando el trabajo es afilado de mantenimiento sobre un filo ya recuperable. Si hace falta recuperación fuerte o mucho desgaste, se valora en taller o con fotos por WhatsApp. Para lotes se confirma presupuesto tras revisión.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Puedo traer todo el juego de cuchillos del restaurante a la vez?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Sí. Es habitual traer lotes para preparar turnos o tras varias semanas de uso. Indica cuántas piezas son y, si puedes, envía una foto del conjunto por WhatsApp para orientarte sobre plazo.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Qué frecuencia de mantenimiento recomendáis en cocina profesional?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Depende del volumen y del tipo de corte. Muchas cocinas funcionan bien con revisiones cada 2–4 semanas; otras con ciclos más largos. Lo ajustamos a tu uso real.\"\n            }\n          },\n          {\n            \"@type\": \"Question\",\n            \"name\": \"¿Es el mismo taller que el afilado doméstico?\",\n            \"acceptedAnswer\": {\n              \"@type\": \"Answer\",\n              \"text\": \"Sí: Filo Fino en Calle Maestro Guerrero, 4, Valencia. El servicio doméstico sigue en la página de afilado de cuchillos; esta página agrupa el enfoque para hostelería y cocinas profesionales.\"\n            }\n          }\n        ]\n      }\n    "
+    ],
+    "links": [
+      "/",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "/servicios/",
+      "/#tarifas",
+      "/#proceso",
+      "/blog/",
+      "/#contacto",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "tel:+34614005053",
+      "/servicios/afilado-cuchillos-valencia/",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "/servicios/afilado-cuchillos-valencia/",
+      "/#tarifas",
+      "/articulos/cuchillo-aplasta.html",
+      "tel:+34614005053",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "tel:+34614005053"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "design-premium-preview/index.html",
+    "title": [
+      "Taller de afilado en Valencia | Filo Fino"
+    ],
+    "description": [
+      "<meta name=\"description\" content=\"Taller de afilado en Valencia para cuchillos, tijeras y herramientas de manicura. Atención directa en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.\">"
+    ],
+    "h1": [
+      "<span class=\"hero-heading-context eyebrow\"><span class=\"tiny-edge\" aria-hidden=\"true\"></span>Taller de afilado en Valencia</span> <span class=\"hero-heading-display\">Cada filo.<br><span>Su oficio.</span></span>"
+    ],
+    "canonical": [],
+    "robots": [
+      "<meta name=\"robots\" content=\"noindex, nofollow\">"
+    ],
+    "structuredData": [],
+    "links": [
+      "#main",
+      "./",
+      "#servicios",
+      "#taller",
+      "#trabajos",
+      "#visita",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20una%20consulta%20sobre%20el%20afilado%20de%20una%20herramienta.%20%C2%BFTe%20puedo%20enviar%20una%20foto%3F",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "#servicios",
+      "servicios/afilado-cuchillos-valencia/",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "servicios/afilado-cuchillos-valencia/",
+      "servicios/afilado-cuchillos-valencia/",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20quisiera%20consultar%20el%20afilado%20y%20ajuste%20de%20mis%20tijeras.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20y%20contarte%20para%20qu%C3%A9%20las%20utilizo%3F",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20revisar%20mis%20herramientas%20de%20manicura.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20y%20contarte%20qu%C3%A9%20les%20ocurre%3F",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20un%20cuchillo%20japon%C3%A9s%20y%20me%20gustar%C3%ADa%20saber%20si%20puedes%20afilarlo.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%3F",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20una%20consulta%20sobre%20el%20afilado%20de%20una%20herramienta.%20%C2%BFTe%20puedo%20enviar%20una%20foto%3F",
+      "tel:+34614005053",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "./",
+      "tel:+34614005053",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20una%20consulta%20sobre%20el%20afilado%20de%20una%20herramienta.%20%C2%BFTe%20puedo%20enviar%20una%20foto%3F",
+      "servicios/afilado-cuchillos-valencia/",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "https://filofino.es/blog/",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "https://www.instagram.com/filofino.es/",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "#",
+      "#servicios",
+      "#taller",
+      "#trabajos",
+      "#proceso",
+      "#visita",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20una%20consulta%20sobre%20el%20afilado%20de%20una%20herramienta.%20%C2%BFTe%20puedo%20enviar%20una%20foto%3F"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  },
+  {
+    "source": "design-premium-preview/servicios/afilado-cuchillos-valencia/index.html",
+    "title": [
+      "Afilado de cuchillos en Valencia | Filo Fino"
+    ],
+    "description": [
+      "<meta name=\"description\" content=\"Afilado de cuchillos de cocina, profesionales y japoneses en Valencia. Revisión de cada pieza en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.\">"
+    ],
+    "h1": [
+      "<span>Afilado profesional</span> <span>de cuchillos</span> <span>en Valencia</span>"
+    ],
+    "canonical": [],
+    "robots": [
+      "<meta name=\"robots\" content=\"noindex, nofollow\">"
+    ],
+    "structuredData": [],
+    "links": [
+      "#main",
+      "../../",
+      "#cuchillos",
+      "#criterio",
+      "#preguntas",
+      "#visita",
+      "../../",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "#cuchillos",
+      "#criterio",
+      "#visita",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20trabajo%20en%20una%20cocina%20profesional%20y%20quisiera%20consultar%20el%20afilado%20de%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%3F",
+      "#japoneses",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20un%20cuchillo%20japon%C3%A9s.%20%C2%BFTe%20puedo%20enviar%20fotos%20de%20la%20hoja%20por%20ambos%20lados%20y%20contarte%20c%C3%B3mo%20lo%20utilizo%3F",
+      "#visita",
+      "https://filofino.es/articulos/cuchillo-no-corta.html",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "tel:+34614005053",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/",
+      "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/",
+      "../../",
+      "../../",
+      "tel:+34614005053",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20tengo%20una%20consulta%20sobre%20el%20afilado%20de%20una%20herramienta.%20%C2%BFTe%20puedo%20enviar%20una%20foto%3F",
+      "../../servicios/afilado-cuchillos-valencia/",
+      "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "/servicios/herramientas-manicura-pedicura-valencia/",
+      "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "https://filofino.es/blog/",
+      "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+      "https://www.instagram.com/filofino.es/",
+      "/legal/aviso-legal.html",
+      "/legal/politica-privacidad.html",
+      "/legal/politica-cookies.html",
+      "#",
+      "#cuchillos",
+      "#criterio",
+      "#japoneses",
+      "#preguntas",
+      "#visita",
+      "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F"
+    ],
+    "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
+  }
+]

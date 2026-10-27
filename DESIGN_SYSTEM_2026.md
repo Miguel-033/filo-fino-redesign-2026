@@ -7,7 +7,7 @@
 ## Общие компоненты
 
 Header и Footer: `design-system/components/header.html` и `footer.html`.
-Команда `python design-system/render_components.py` записывает их в обе HTML-страницы;
+Команда `python design-system/render_components.py` записывает их во все разработанные HTML-страницы из seo/routes.json;
 `--check` проверяет отсутствие расхождения. Компоненты доступны без JavaScript.
 Header имеет единые логотип, кнопку меню, размеры, отступы и структуру. Содержимое
 desktop-nav контекстное: разделы мастерской на home, разделы услуги на странице ножей.
