@@ -4,13 +4,13 @@
 #trabajos .shipping-heading h2{font-size:clamp(42px,8.4vw,64px);line-height:1.02;max-width:22ch;text-wrap:balance}
 #trabajos .shipping-heading>p{font-size:16px;line-height:1.75;max-width:43ch;color:#d5dada}
 #trabajos .shipping-steps{list-style:none;padding:0;margin:36px 0;display:grid;gap:0}
-#trabajos .shipping-steps>li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;padding-block:18px;min-width:0}
+#trabajos .shipping-steps>li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;padding-block:8px;min-width:0}
 #trabajos .shipping-scene{position:relative;display:block;aspect-ratio:1;overflow:hidden;align-self:start}
 #trabajos .shipping-scene img{position:absolute;max-width:none;width:500%;height:auto;left:calc(var(--scene) * -100%);top:50%;transform:translateY(-50%)}
-#trabajos .shipping-step-copy{position:relative;padding-bottom:18px;border-bottom:1px solid var(--line)}
+#trabajos .shipping-step-copy{position:relative;padding-bottom:12px;border-bottom:1px solid var(--line)}
 #trabajos .shipping-number{display:block;color:var(--brass);font:500 13px/1.5 var(--body);margin-bottom:5px}
 #trabajos .shipping-step-copy h3{font-size:30px;line-height:1.1;margin-bottom:10px}
-#trabajos .shipping-step-copy p{font-size:15px;line-height:1.7;color:#d5dada;max-width:32ch}
+#trabajos .shipping-step-copy p{font-size:14px;line-height:1.7;color:#d5dada;max-width:32ch}
 #trabajos .shipping-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px}
 #trabajos .shipping-actions .button{width:100%;min-height:58px;justify-content:space-between;text-align:left;font-size:14px;line-height:1.6;padding:16px 20px}
 #trabajos .shipping-contact{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--brass);font-size:14px;line-height:1.6}
@@ -50,7 +50,7 @@
  #trabajos .shipping-heading{grid-template-columns:minmax(0,1.6fr) minmax(0,.8fr);align-items:end;gap:64px}
  #trabajos .shipping-heading h2{font-size:clamp(64px,5.5vw,80px);max-width:23ch}
  #trabajos .shipping-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:32px 0 40px}
- #trabajos .shipping-scene{aspect-ratio:1.2}
+ #trabajos .shipping-scene{aspect-ratio:1.05}
  #trabajos .shipping-step-copy{padding:0 20px 0 0;border:0}
  #trabajos .shipping-step-copy h3{font-size:34px}
  #trabajos .shipping-step-copy p{max-width:26ch}
