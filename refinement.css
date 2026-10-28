@@ -237,26 +237,31 @@ html{scroll-padding-top:calc(var(--header-height) + 16px)}
 /* F07: service-specific headline scales and actual workshop image focal points. */
 .hero--knives h1,.hero--scissors h1,.hero--manicure h1,.hero--blades h1{line-height:1.02}
 .hero.hero--knives h1{font-size:clamp(64px,5.6vw,80px);max-width:52%}
-.hero.hero--scissors h1{font-size:clamp(60px,5.3vw,76px);max-width:52%}
-.hero.hero--manicure h1{font-size:clamp(60px,5.2vw,74px);max-width:52%}
-.hero.hero--blades h1{font-size:clamp(58px,4.9vw,70px);max-width:52%}
+.service-page .hero.hero--scissors h1{font-size:clamp(60px,5.3vw,76px);max-width:52%}
+.service-page .hero.hero--manicure h1{font-size:clamp(60px,5.2vw,74px);max-width:52%}
+.service-page .hero.hero--blades h1{font-size:clamp(58px,4.9vw,70px);max-width:52%}
 .hero--knives .hero-photo,.hero--scissors .hero-photo,.hero--manicure .hero-photo,.hero--blades .hero-photo{width:49%;height:100%;top:0;bottom:0}
 .hero--knives .hero-photo img{object-position:56% 50%}
-.hero--scissors .hero-photo img{object-position:50% 85%}
+.hero--scissors .hero-photo img{object-position:50% 50%}
 .hero--manicure .hero-photo img{object-position:50% 48%}
-.hero--blades .hero-photo img{object-position:50% 46%}
+.hero--blades .hero-photo img{object-position:50% 23%}
 @media(max-width:767px){
  .hero--knives .hero-content,.hero--scissors .hero-content,.hero--manicure .hero-content,.hero--blades .hero-content{padding:240px 20px 24px}
  .hero--knives .breadcrumbs,.hero--scissors .breadcrumbs,.hero--manicure .breadcrumbs,.hero--blades .breadcrumbs{position:absolute;top:14px;left:20px;right:20px;margin:0;max-width:none}
  .hero--knives .hero-photo,.hero--scissors .hero-photo,.hero--manicure .hero-photo,.hero--blades .hero-photo{top:64px;bottom:auto;height:160px;width:100%;opacity:1;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
  .hero--knives .hero-photo::after,.hero--scissors .hero-photo::after,.hero--manicure .hero-photo::after,.hero--blades .hero-photo::after{background:linear-gradient(0deg,#182024,transparent 30%)}
  .hero.hero--knives h1{font-size:clamp(42px,12vw,48px);max-width:100%}
- .hero.hero--scissors h1{font-size:clamp(40px,11.3vw,44px);max-width:100%}
- .hero.hero--manicure h1{font-size:clamp(40px,10.8vw,42px);max-width:100%}
- .hero.hero--blades h1{font-size:40px;max-width:100%}
+ .service-page .hero.hero--scissors h1{font-size:clamp(40px,11.3vw,44px);max-width:100%}
+ .service-page .hero.hero--manicure h1{font-size:clamp(40px,10.8vw,42px);max-width:100%}
+ .service-page .hero.hero--blades h1{font-size:40px;max-width:100%}
  .hero--knives .hero-copy,.hero--scissors .hero-copy,.hero--manicure .hero-copy,.hero--blades .hero-copy{margin-top:16px}
 }
 @media(min-width:768px) and (max-width:1099px){
- .hero.hero--knives h1,.hero.hero--scissors h1,.hero.hero--manicure h1,.hero.hero--blades h1{font-size:54px;max-width:62%}
+ .hero.hero--knives h1,.hero.hero--scissors h1,.hero.hero--manicure h1,.service-page .hero.hero--blades h1{font-size:54px;max-width:62%}
  .hero--knives .hero-photo,.hero--scissors .hero-photo,.hero--manicure .hero-photo,.hero--blades .hero-photo{width:48%}
+}
+
+@media(max-width:767px){
+ .hero--scissors .hero-photo img{position:absolute;left:50%;top:50%;width:176px;height:100vw;max-width:none;object-fit:cover;object-position:center;transform:translate(-50%,-50%) rotate(-90deg) scale(1.12)}
+ .hero--blades .hero-photo img{object-position:50% 12%}
 }
