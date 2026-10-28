@@ -265,3 +265,9 @@ html{scroll-padding-top:calc(var(--header-height) + 16px)}
  .hero--scissors .hero-photo img{position:absolute;left:50%;top:50%;width:176px;height:100vw;max-width:none;object-fit:cover;object-position:center;transform:translate(-50%,-50%) rotate(-90deg) scale(1.12)}
  .hero--blades .hero-photo img{object-position:50% 12%}
 }
+
+@media(max-width:767px){
+ .hero--scissors h1>span,.hero--manicure h1>span,.hero--blades h1>span{display:contents}
+ .service-page .hero.hero--scissors h1{font-size:42px}
+ .service-page .hero.hero--manicure h1{font-size:40px}
+}
