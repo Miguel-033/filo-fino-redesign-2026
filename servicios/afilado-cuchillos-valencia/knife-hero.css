@@ -23,7 +23,7 @@
 .knives-page .hero--knife-approved .knife-hero-fact strong{font:600 40px/1.1 var(--display);color:var(--hero-gold);margin-top:2px;white-space:nowrap}
 .knives-page .hero--knife-approved .knife-hero-fact .knife-time{font-size:29px;margin-top:8px}
 .knives-page .hero--knife-approved .knife-hero-fact small{font-size:13px;line-height:1.5;margin-top:3px;color:#d7dcdd}
-.knives-page .hero--knife-approved .knife-fact-icon{width:46px;height:65px;color:var(--hero-gold);flex:0 0 46px;transform:none;stroke-width:8}
+.knives-page .hero--knife-approved .knife-fact-icon{width:46px;height:65px;color:var(--hero-gold);flex:0 0 46px;transform:none;stroke-width:3.5}
 .knives-page .hero--knife-approved .knife-clock{width:37px;height:37px;flex:0 0 37px;color:#e4d6c1;stroke-width:1;fill:none;stroke:currentColor;margin-top:1px}
 .knives-page .hero--knife-approved .hero-actions{display:grid;grid-template-columns:1fr;gap:14px;margin:28px 0 0;max-width:none}
 .knives-page .hero--knife-approved .hero-actions .button{width:100%;min-height:60px;font-size:15px;padding:16px 22px;gap:14px;line-height:1.4;justify-content:flex-start;border-radius:0;white-space:normal}
