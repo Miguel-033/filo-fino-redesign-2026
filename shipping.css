@@ -7,13 +7,13 @@
 #trabajos .shipping-art{display:flex;height:124px;align-items:end;position:relative}
 #trabajos .shipping-scene{display:block;position:relative;overflow:hidden;width:var(--art-width);aspect-ratio:var(--crop-width)/var(--crop-height);flex-shrink:0;mix-blend-mode:lighten}
 #trabajos .shipping-scene img{position:absolute;max-width:none;width:calc(2048 / var(--crop-width) * 100%);height:auto;left:calc(var(--crop-x) / var(--crop-width) * -100%);top:calc(var(--crop-y) / var(--crop-height) * -100%)}
-#trabajos .shipping-stage-1{--crop-x:25;--crop-y:175;--crop-width:308;--crop-height:310;--art-width:124px}
-#trabajos .shipping-stage-2{--crop-x:358;--crop-y:230;--crop-width:425;--crop-height:250;--art-width:168px}
+#trabajos .shipping-stage-1{--crop-x:25;--crop-y:175;--crop-width:308;--crop-height:310;--art-width:min(124px,31.8vw)}
+#trabajos .shipping-stage-2{--crop-x:358;--crop-y:230;--crop-width:425;--crop-height:250;--art-width:min(168px,44vw)}
 #trabajos .shipping-stage-2 .shipping-scene{margin-left:-24px;margin-bottom:10px}
-#trabajos .shipping-stage-3{--crop-x:790;--crop-y:265;--crop-width:455;--crop-height:216;--art-width:280px;grid-column:1/-1;text-align:center}
+#trabajos .shipping-stage-3{--crop-x:790;--crop-y:265;--crop-width:455;--crop-height:216;--art-width:min(280px,72vw);grid-column:1/-1;text-align:center}
 #trabajos .shipping-stage-3 .shipping-art{height:112px;justify-content:center}
-#trabajos .shipping-stage-4{--crop-x:1250;--crop-y:135;--crop-width:449;--crop-height:347;--art-width:180px}
-#trabajos .shipping-stage-5{--crop-x:1700;--crop-y:215;--crop-width:348;--crop-height:315;--art-width:128px}
+#trabajos .shipping-stage-4{--crop-x:1250;--crop-y:135;--crop-width:449;--crop-height:347;--art-width:min(180px,46.2vw)}
+#trabajos .shipping-stage-5{--crop-x:1700;--crop-y:215;--crop-width:348;--crop-height:315;--art-width:min(128px,33vw)}
 #trabajos .shipping-stage-4 .shipping-art,#trabajos .shipping-stage-5 .shipping-art{height:126px}
 #trabajos .shipping-stage-5{padding-left:14px}
 #trabajos .shipping-step-copy{position:relative;padding-top:5px}
