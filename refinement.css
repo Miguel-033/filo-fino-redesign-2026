@@ -201,3 +201,22 @@ html{scroll-padding-top:calc(var(--header-height) + 16px)}
  .service-knives .service-link .service-title h3{font-size:48px;max-width:11ch}
  .hospitality-callout{padding:22px;margin-top:24px}
 }
+
+/* F02: mobile menu only. Existing desktop composition, image and links are retained. */
+@media(max-width:767px){
+ .menu-dialog{padding:0 20px max(20px,env(safe-area-inset-bottom));scroll-padding-block:88px 24px}
+ .menu-dialog .menu-top{position:sticky;top:0;z-index:2;min-height:76px;margin:0;padding:max(12px,env(safe-area-inset-top)) 0 12px;background:var(--paper);gap:16px}
+ .menu-dialog .menu-top .eyebrow{font-size:11px;line-height:1.5;min-width:0}
+ .menu-dialog .menu-close{flex:0 0 44px;width:44px;height:44px}
+ .menu-dialog .menu-layout{grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
+ .menu-dialog .menu-photo{display:block;grid-row:1;height:148px;margin:0;min-width:0;clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 20px) 100%,0 100%)}
+ .menu-dialog .menu-photo img{object-position:center 48%}
+ .menu-dialog .menu-photo p{font-size:32px;line-height:1.02;left:18px;right:18px;bottom:16px}
+ .menu-dialog .menu-layout>nav{grid-row:2;min-width:0}
+ .menu-dialog .menu-layout nav>a{font-size:34px;line-height:1.15;min-height:54px;padding:10px 0;overflow-wrap:anywhere}
+ .menu-dialog .menu-services{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;padding:12px 0}
+ .menu-dialog .menu-services a{font-size:16px;line-height:1.5;min-height:48px;min-width:0;padding:8px 0;overflow-wrap:anywhere}
+ .menu-dialog .menu-bottom{display:grid;gap:8px;margin-top:20px}
+ .menu-dialog .menu-bottom>a{display:grid;grid-template-columns:20px minmax(0,1fr);align-items:center;gap:12px;margin:0;min-height:48px;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+ .menu-dialog a{scroll-margin-block:88px 24px}
+}
