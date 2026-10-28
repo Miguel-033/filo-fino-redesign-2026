@@ -271,3 +271,11 @@ html{scroll-padding-top:calc(var(--header-height) + 16px)}
  .service-page .hero.hero--scissors h1{font-size:42px}
  .service-page .hero.hero--manicure h1{font-size:40px}
 }
+
+/* Reserve the real wrapped breadcrumb height before each mobile photograph. */
+@media(max-width:767px){
+ .hero--scissors .hero-photo,.hero--blades .hero-photo{top:96px}
+ .hero--scissors .hero-content,.hero--blades .hero-content{padding-top:272px}
+ .hero--manicure .hero-photo{top:112px}
+ .hero--manicure .hero-content{padding-top:288px}
+}
