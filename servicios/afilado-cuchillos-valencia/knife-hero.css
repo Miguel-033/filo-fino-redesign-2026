@@ -23,7 +23,7 @@
 .knives-page .hero--knife-approved .knife-hero-fact strong{font:600 40px/1.1 var(--display);color:var(--hero-gold);margin-top:2px;white-space:nowrap}
 .knives-page .hero--knife-approved .knife-hero-fact .knife-time{font-size:29px;margin-top:8px}
 .knives-page .hero--knife-approved .knife-hero-fact small{font-size:13px;line-height:1.5;margin-top:3px;color:#d7dcdd}
-.knives-page .hero--knife-approved .knife-fact-icon{width:46px;height:65px;color:var(--hero-gold);flex:0 0 46px;transform:none;stroke-width:6}
+.knives-page .hero--knife-approved .knife-fact-icon{width:46px;height:65px;color:var(--hero-gold);flex:0 0 46px;transform:none;stroke-width:8}
 .knives-page .hero--knife-approved .knife-clock{width:37px;height:37px;flex:0 0 37px;color:#e4d6c1;stroke-width:1;fill:none;stroke:currentColor;margin-top:1px}
 .knives-page .hero--knife-approved .hero-actions{display:grid;grid-template-columns:1fr;gap:14px;margin:28px 0 0;max-width:none}
 .knives-page .hero--knife-approved .hero-actions .button{width:100%;min-height:60px;font-size:15px;padding:16px 22px;gap:14px;line-height:1.4;justify-content:flex-start;border-radius:0;white-space:normal}
@@ -48,17 +48,17 @@
  .knives-page .hero--knife-approved .knife-hero-fact .knife-time{font-size:25px}
 }
 @media(max-width:767px){
- .knives-page .hero--knife-approved .hero-photo{top:0;left:0;right:0;bottom:auto;width:100%;height:clamp(400px,112vw,520px);clip-path:none}
+ .knives-page .hero--knife-approved .hero-photo{top:0;left:0;right:0;bottom:auto;width:100%;height:clamp(400px,125vw,550px);clip-path:none}
  .knives-page .hero--knife-approved .hero-photo img{object-fit:cover;object-position:30% top}
  .knives-page .hero--knife-approved .hero-photo::after{background:linear-gradient(180deg,#030e1170 0%,transparent 15%,transparent 57%,#030e1199 78%,#030e11 100%)}
  .knives-page .hero--knife-approved .hero-content{padding:10px 24px 28px}
  .knives-page .hero--knife-approved .breadcrumbs{margin:0;gap:6px;font-size:12px;line-height:1.5;min-height:44px;flex-wrap:wrap}
  .knives-page .hero--knife-approved .breadcrumbs a{min-height:44px}
  .knives-page .hero--knife-approved .breadcrumbs svg{width:10px;height:10px;flex-basis:10px}
- .knives-page .hero--knife-approved .knife-hero-story{width:auto;max-width:none;margin-top:clamp(300px,83vw,380px)}
+ .knives-page .hero--knife-approved .knife-hero-story{width:auto;max-width:none;margin-top:clamp(300px,97vw,420px)}
  .knives-page .hero--knife-approved .knife-hero-kicker{font-size:14px;gap:15px;margin-bottom:16px}
  .knives-page .hero--knife-approved h1{font-size:clamp(46px,14.1vw,61px);line-height:1.02;max-width:none;letter-spacing:-.025em}
- .knives-page .hero--knife-approved .knife-intro{font-size:16px;line-height:1.55;margin-top:20px}
+ .knives-page .hero--knife-approved .knife-intro{font-size:18px;line-height:1.55;margin-top:20px}
  .knives-page .hero--knife-approved .knife-hero-facts{margin-top:24px;padding-top:22px}
  .knives-page .hero--knife-approved .knife-hero-fact{gap:12px}
  .knives-page .hero--knife-approved .knife-hero-fact+div{padding-left:18px}
@@ -67,8 +67,8 @@
  .knives-page .hero--knife-approved .knife-clock{width:34px;height:34px;flex-basis:34px}
  .knives-page .hero--knife-approved .knife-fact-icon{width:42px;flex-basis:42px}
  .knives-page .hero--knife-approved .hero-actions{margin-top:28px;gap:14px}
- .knives-page .hero--knife-approved .hero-actions .button{min-height:60px;font-size:14px;padding:16px 20px;gap:13px;text-align:left}
- .knives-page .hero--knife-approved .knife-address{font-size:12px;margin-top:18px;gap:10px}
+ .knives-page .hero--knife-approved .hero-actions .button{min-height:64px;font-size:16px;padding:16px 20px;gap:13px;text-align:left}
+ .knives-page .hero--knife-approved .knife-address{font-size:13px;margin-top:18px;gap:10px}
 }
 @media(max-width:359px){
  .knives-page .hero--knife-approved .hero-content{padding-inline:20px}
@@ -78,5 +78,5 @@
  .knives-page .hero--knife-approved .knife-clock{width:30px;height:30px;flex-basis:30px}
  .knives-page .hero--knife-approved .knife-fact-icon{width:34px;flex-basis:34px}
  .knives-page .hero--knife-approved .knife-hero-fact .knife-time{font-size:24px}
- .knives-page .hero--knife-approved .hero-actions .button{padding-inline:16px;font-size:13px;gap:10px}
+ .knives-page .hero--knife-approved .hero-actions .button{padding-inline:16px;font-size:14px;gap:10px}
 }
