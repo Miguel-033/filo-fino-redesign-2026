@@ -14,12 +14,26 @@
  trigger.addEventListener('click',()=>{
   returnTarget=trigger;
   dialog.showModal();
+  dialog.scrollTop=0;
+  dialog.querySelector('.menu-close').focus({preventScroll:true});
   trigger.setAttribute('aria-expanded','true');
   document.body.classList.add('modal-open');
  });
  dialog.querySelector('.menu-close').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('close',unlock);
- // Native Escape provides focus trapping and close behavior; close cleans scroll lock.
+ // Keep keyboard focus between the first and last menu controls.
+ dialog.addEventListener('keydown',event=>{
+  if(event.key!=='Tab') return;
+  const first=dialog.querySelector('.menu-close');
+  const links=dialog.querySelectorAll('a[href]');
+  const last=links[links.length-1];
+  if(event.shiftKey && document.activeElement===first){
+   event.preventDefault();last.focus();
+  } else if(!event.shiftKey && document.activeElement===last){
+   event.preventDefault();first.focus({preventScroll:true});
+  }
+ });
+ // Native Escape closes the dialog; close cleans scroll lock.
  dialog.querySelectorAll('a[href]').forEach(link=>link.addEventListener('click',event=>{
   const url=new URL(link.href,location.href);
   const samePage=url.origin===location.origin && url.pathname===location.pathname;
