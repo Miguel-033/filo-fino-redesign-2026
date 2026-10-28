@@ -6,12 +6,17 @@
  if(!dialog || !trigger || typeof dialog.showModal!=='function') return;
  document.documentElement.classList.add('has-js');
  let returnTarget=trigger;
+ let pointerOpening=false;
+ trigger.addEventListener('pointerdown',()=>{pointerOpening=true;});
+ trigger.addEventListener('keydown',()=>{pointerOpening=false;});
  const unlock=()=>{
   document.body.classList.remove('modal-open');
   trigger.setAttribute('aria-expanded','false');
   returnTarget.focus({preventScroll:true});
  };
- trigger.addEventListener('click',()=>{
+ trigger.addEventListener('click',event=>{
+  dialog.dataset.inputModality=pointerOpening || event.detail>0?'pointer':'keyboard';
+  pointerOpening=false;
   returnTarget=trigger;
   dialog.showModal();
   dialog.scrollTop=0;
@@ -23,6 +28,7 @@
  dialog.addEventListener('close',unlock);
  // Keep keyboard focus between the first and last menu controls.
  dialog.addEventListener('keydown',event=>{
+  dialog.dataset.inputModality='keyboard';
   if(event.key!=='Tab') return;
   const first=dialog.querySelector('.menu-close');
   const links=dialog.querySelectorAll('a[href]');
