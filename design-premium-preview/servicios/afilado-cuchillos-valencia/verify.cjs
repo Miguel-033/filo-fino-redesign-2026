@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict');cons
 const dir=__dirname, root=path.resolve(dir,'../..');
 const html=fs.readFileSync(dir+'/index.html','utf8'),js=fs.readFileSync(dir+'/knives.js','utf8');
 const dom=new JSDOM(html,{url:'https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillos-valencia/',runScripts:'outside-only'}),w=dom.window,d=w.document;
-assert.equal(d.documentElement.lang,'es');assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('h1').textContent,'Afilado profesional de cuchillos en Valencia');assert.equal(d.querySelector('meta[name="robots"]').content,'noindex, nofollow');assert.equal(d.querySelectorAll('link[rel="canonical"],script[type="application/ld+json"]').length,0);assert.ok(d.querySelector('meta[name="description"]').content.length>100);
+assert.equal(d.documentElement.lang,'es');assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('h1').textContent,'Afilado de cuchillos en Valencia');assert.equal(d.querySelector('meta[name="robots"]').content,'noindex, nofollow');assert.equal(d.querySelectorAll('link[rel="canonical"],script[type="application/ld+json"]').length,0);assert.ok(d.querySelector('meta[name="description"]').content.length>100);
 const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);assert.equal(new Set(ids).size,ids.length);
 for(const a of d.querySelectorAll('a[href^="#"]'))if(a.getAttribute('href')!=='#')assert.ok(d.getElementById(a.hash.slice(1)),a.hash);
 for(const use of d.querySelectorAll('use[href^="#"]'))assert.ok(d.getElementById(use.getAttribute('href').slice(1)));
