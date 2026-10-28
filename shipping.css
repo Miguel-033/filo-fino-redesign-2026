@@ -36,7 +36,8 @@
 @media(min-width:1100px){
  #trabajos.shipping{padding:96px 60px 68px}
  #trabajos .shipping-heading h2{font-size:76px;line-height:1.04}
- #trabajos .shipping-heading h2 span{display:block}
+ #trabajos .shipping-break-mobile{display:none}
+ #trabajos .shipping-break-desktop{display:block}
  #trabajos .shipping-journey{margin-top:38px}
  #trabajos .shipping-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
  #trabajos .shipping-stage{grid-column:auto;text-align:left;padding:0;--art-width:100%}
@@ -83,4 +84,6 @@
  #shipping-dialog .shipping-dialog-foot{padding:20px 40px}
 }
 
-@media(max-width:1099px){#trabajos .shipping-stage-3 .shipping-step-copy{display:grid;grid-template-columns:auto auto;column-gap:8px;justify-content:center}#trabajos .shipping-stage-3 .shipping-number{margin:0;line-height:26px}#trabajos .shipping-stage-3 p{grid-column:1/-1}#trabajos .shipping-route{height:510px}}
+#trabajos .shipping-break-desktop{display:none}
+@media(max-width:1099px){#trabajos .shipping-envia-title{display:flex;align-items:center;justify-content:center;gap:8px}#trabajos .shipping-stage-3 .shipping-number{margin:0;line-height:26px}#trabajos .shipping-stage-3 h3{margin:0}#trabajos .shipping-stage-3 p{margin-top:3px}#trabajos .shipping-route{height:510px}}
+@media(min-width:1100px){#trabajos .shipping-break-desktop{display:block}}
