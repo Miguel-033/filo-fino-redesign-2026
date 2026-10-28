@@ -39,14 +39,14 @@
  #trabajos .shipping-break-mobile{display:none}
  #trabajos .shipping-break-desktop{display:block}
  #trabajos .shipping-journey{margin-top:38px}
- #trabajos .shipping-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+ #trabajos .shipping-steps{grid-template-columns:1.07fr 1.13fr 1.17fr 1.03fr .6fr;gap:0}
  #trabajos .shipping-stage{grid-column:auto;text-align:left;padding:0;--art-width:100%}
  #trabajos .shipping-art,#trabajos .shipping-stage-3 .shipping-art,#trabajos .shipping-stage-4 .shipping-art,#trabajos .shipping-stage-5 .shipping-art{height:210px;align-items:center;justify-content:start}
- #trabajos .shipping-stage-1 .shipping-scene{width:78%}
- #trabajos .shipping-stage-2 .shipping-scene{margin:0;width:100%}
- #trabajos .shipping-stage-3 .shipping-scene{width:116%;margin-left:-7%}
- #trabajos .shipping-stage-4 .shipping-scene{width:100%}
- #trabajos .shipping-stage-5 .shipping-scene{width:85%;margin-left:15%}
+ #trabajos .shipping-stage-1 .shipping-scene{width:75%}
+ #trabajos .shipping-stage-2 .shipping-scene{margin:0;width:88%}
+ #trabajos .shipping-stage-3 .shipping-scene{width:108%;margin-left:-4%}
+ #trabajos .shipping-stage-4 .shipping-scene{width:96%}
+ #trabajos .shipping-stage-5 .shipping-scene{width:115%;margin-left:0}
  #trabajos .shipping-step-copy{padding-top:14px}
  #trabajos .shipping-number,#trabajos .shipping-stage-3 .shipping-number{display:block;font-size:16px;line-height:24px;margin:0}
  #trabajos .shipping-step-copy h3{display:block;font-size:30px;line-height:34px;margin-bottom:4px}
