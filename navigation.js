@@ -6,13 +6,17 @@
  if(!dialog || !trigger || typeof dialog.showModal!=='function') return;
  document.documentElement.classList.add('has-js');
  let returnTarget=trigger;
+ let pointerOpening=false;
+ trigger.addEventListener('pointerdown',()=>{pointerOpening=true;});
+ trigger.addEventListener('keydown',()=>{pointerOpening=false;});
  const unlock=()=>{
   document.body.classList.remove('modal-open');
   trigger.setAttribute('aria-expanded','false');
   returnTarget.focus({preventScroll:true});
  };
  trigger.addEventListener('click',event=>{
-  dialog.dataset.inputModality=event.detail===0?'keyboard':'pointer';
+  dialog.dataset.inputModality=pointerOpening || event.detail>0?'pointer':'keyboard';
+  pointerOpening=false;
   returnTarget=trigger;
   dialog.showModal();
   dialog.scrollTop=0;
