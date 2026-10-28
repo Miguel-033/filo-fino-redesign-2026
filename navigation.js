@@ -11,7 +11,8 @@
   trigger.setAttribute('aria-expanded','false');
   returnTarget.focus({preventScroll:true});
  };
- trigger.addEventListener('click',()=>{
+ trigger.addEventListener('click',event=>{
+  dialog.dataset.inputModality=event.detail===0?'keyboard':'pointer';
   returnTarget=trigger;
   dialog.showModal();
   dialog.scrollTop=0;
@@ -23,6 +24,7 @@
  dialog.addEventListener('close',unlock);
  // Keep keyboard focus between the first and last menu controls.
  dialog.addEventListener('keydown',event=>{
+  dialog.dataset.inputModality='keyboard';
   if(event.key!=='Tab') return;
   const first=dialog.querySelector('.menu-close');
   const links=dialog.querySelectorAll('a[href]');

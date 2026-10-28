@@ -42,3 +42,19 @@
  .hero--hospitality .knife-address{font-size:13px;gap:10px;align-items:flex-start;margin-top:24px}
 }
 @media(max-width:359px){.hero--hospitality .hero-content{padding-inline:20px}.hero--hospitality .hospitality-kicker{letter-spacing:.08em}}
+
+/* F08: Hostelería retains its own soft photographic composition. */
+.hero--hospitality .breadcrumbs{margin-bottom:26px}
+.hero--hospitality .hero-content{padding-bottom:40px}
+@media(max-width:767px){
+ .hero--hospitality .hero-content{padding:16px 24px 24px}
+ .hero--hospitality .breadcrumbs{margin-bottom:16px}
+ .hero--hospitality .hospitality-kicker{margin-bottom:12px}
+ .hero.hero--hospitality h1 .hospitality-context{margin-top:12px}
+ .hero--hospitality .hero-copy{margin-top:16px;line-height:1.65}
+ .hero--hospitality .service-hero-facts{margin-top:18px;padding:16px 0;gap:16px}
+ .hero.hero--hospitality .hero-actions{gap:8px;margin-top:8px}
+ .hero.hero--hospitality .hero-actions .button{min-height:52px;padding:14px 18px}
+ .hero--hospitality .knife-address{margin-top:16px}
+ .hero--hospitality .hero-photo{height:500px}
+}
