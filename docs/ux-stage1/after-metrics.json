@@ -1,0 +1,653 @@
+[
+  {
+    "cards": [
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilado-cuchillos-valencia/",
+        "imageLoaded": 218,
+        "label": "service-knives-title service-knives-title-cta",
+        "rect": {
+          "bottom": 574.15625,
+          "height": 340,
+          "left": 20,
+          "right": 285,
+          "top": 234.15625,
+          "width": 265,
+          "x": 20,
+          "y": 234.15625
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilar-tijeras-peluqueria-valencia/",
+        "imageLoaded": 800,
+        "label": "service-scissors-title service-scissors-title-cta",
+        "rect": {
+          "bottom": 930.15625,
+          "height": 340,
+          "left": 20,
+          "right": 285,
+          "top": 590.15625,
+          "width": 265,
+          "x": 20,
+          "y": 590.15625
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/herramientas-manicura-pedicura-valencia/",
+        "imageLoaded": 600,
+        "label": "service-manicure-title service-manicure-title-cta",
+        "rect": {
+          "bottom": 1286.15625,
+          "height": 340,
+          "left": 20,
+          "right": 285,
+          "top": 946.15625,
+          "width": 265,
+          "x": 20,
+          "y": 946.15625
+        }
+      }
+    ],
+    "client": 305,
+    "disclosures": 0,
+    "headings": [
+      {
+        "clientWidth": 217,
+        "rect": {
+          "bottom": 486.15625,
+          "height": 72.0625,
+          "left": 44,
+          "right": 261,
+          "top": 414.09375,
+          "width": 217,
+          "x": 44,
+          "y": 414.09375
+        },
+        "scrollWidth": 217,
+        "size": "34px",
+        "text": "Afilado de cuchillos"
+      },
+      {
+        "clientWidth": 217,
+        "rect": {
+          "bottom": 842.15625,
+          "height": 36.03125,
+          "left": 44,
+          "right": 261,
+          "top": 806.125,
+          "width": 217,
+          "x": 44,
+          "y": 806.125
+        },
+        "scrollWidth": 217,
+        "size": "34px",
+        "text": "Afilado de tijeras"
+      },
+      {
+        "clientWidth": 217,
+        "rect": {
+          "bottom": 1198.15625,
+          "height": 108.09375,
+          "left": 44,
+          "right": 261,
+          "top": 1090.0625,
+          "width": 217,
+          "x": 44,
+          "y": 1090.0625
+        },
+        "scrollWidth": 217,
+        "size": "34px",
+        "text": "Afilado de herramientas de manicura"
+      }
+    ],
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilado-cuchillos-valencia/",
+        "imageLoaded": 218,
+        "label": "service-knives-title service-knives-title-cta",
+        "rect": {
+          "bottom": 582.28125,
+          "height": 340,
+          "left": 20,
+          "right": 325,
+          "top": 242.28125,
+          "width": 305,
+          "x": 20,
+          "y": 242.28125
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilar-tijeras-peluqueria-valencia/",
+        "imageLoaded": 800,
+        "label": "service-scissors-title service-scissors-title-cta",
+        "rect": {
+          "bottom": 938.28125,
+          "height": 340,
+          "left": 20,
+          "right": 325,
+          "top": 598.28125,
+          "width": 305,
+          "x": 20,
+          "y": 598.28125
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/herramientas-manicura-pedicura-valencia/",
+        "imageLoaded": 600,
+        "label": "service-manicure-title service-manicure-title-cta",
+        "rect": {
+          "bottom": 1294.28125,
+          "height": 340,
+          "left": 20,
+          "right": 325,
+          "top": 954.28125,
+          "width": 305,
+          "x": 20,
+          "y": 954.28125
+        }
+      }
+    ],
+    "client": 345,
+    "disclosures": 0,
+    "headings": [
+      {
+        "clientWidth": 245,
+        "rect": {
+          "bottom": 494.28125,
+          "height": 36.03125,
+          "left": 44,
+          "right": 288.796875,
+          "top": 458.25,
+          "width": 244.796875,
+          "x": 44,
+          "y": 458.25
+        },
+        "scrollWidth": 245,
+        "size": "34px",
+        "text": "Afilado de cuchillos"
+      },
+      {
+        "clientWidth": 245,
+        "rect": {
+          "bottom": 850.28125,
+          "height": 36.03125,
+          "left": 44,
+          "right": 288.796875,
+          "top": 814.25,
+          "width": 244.796875,
+          "x": 44,
+          "y": 814.25
+        },
+        "scrollWidth": 245,
+        "size": "34px",
+        "text": "Afilado de tijeras"
+      },
+      {
+        "clientWidth": 245,
+        "rect": {
+          "bottom": 1206.28125,
+          "height": 108.09375,
+          "left": 44,
+          "right": 288.796875,
+          "top": 1098.1875,
+          "width": 244.796875,
+          "x": 44,
+          "y": 1098.1875
+        },
+        "scrollWidth": 245,
+        "size": "34px",
+        "text": "Afilado de herramientas de manicura"
+      }
+    ],
+    "scroll": 345,
+    "width": 360
+  },
+  {
+    "cards": [
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilado-cuchillos-valencia/",
+        "imageLoaded": 218,
+        "label": "service-knives-title service-knives-title-cta",
+        "rect": {
+          "bottom": 582.15625,
+          "height": 340,
+          "left": 20,
+          "right": 355,
+          "top": 242.15625,
+          "width": 335,
+          "x": 20,
+          "y": 242.15625
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilar-tijeras-peluqueria-valencia/",
+        "imageLoaded": 800,
+        "label": "service-scissors-title service-scissors-title-cta",
+        "rect": {
+          "bottom": 938.15625,
+          "height": 340,
+          "left": 20,
+          "right": 355,
+          "top": 598.15625,
+          "width": 335,
+          "x": 20,
+          "y": 598.15625
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/herramientas-manicura-pedicura-valencia/",
+        "imageLoaded": 600,
+        "label": "service-manicure-title service-manicure-title-cta",
+        "rect": {
+          "bottom": 1294.15625,
+          "height": 340,
+          "left": 20,
+          "right": 355,
+          "top": 954.15625,
+          "width": 335,
+          "x": 20,
+          "y": 954.15625
+        }
+      }
+    ],
+    "client": 375,
+    "disclosures": 0,
+    "headings": [
+      {
+        "clientWidth": 253,
+        "rect": {
+          "bottom": 494.15625,
+          "height": 37.1875,
+          "left": 44,
+          "right": 296.546875,
+          "top": 456.96875,
+          "width": 252.546875,
+          "x": 44,
+          "y": 456.96875
+        },
+        "scrollWidth": 253,
+        "size": "35.1px",
+        "text": "Afilado de cuchillos"
+      },
+      {
+        "clientWidth": 253,
+        "rect": {
+          "bottom": 850.15625,
+          "height": 37.1875,
+          "left": 44,
+          "right": 296.546875,
+          "top": 812.96875,
+          "width": 252.546875,
+          "x": 44,
+          "y": 812.96875
+        },
+        "scrollWidth": 253,
+        "size": "35.1px",
+        "text": "Afilado de tijeras"
+      },
+      {
+        "clientWidth": 253,
+        "rect": {
+          "bottom": 1206.15625,
+          "height": 111.5625,
+          "left": 44,
+          "right": 296.546875,
+          "top": 1094.59375,
+          "width": 252.546875,
+          "x": 44,
+          "y": 1094.59375
+        },
+        "scrollWidth": 253,
+        "size": "35.1px",
+        "text": "Afilado de herramientas de manicura"
+      }
+    ],
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilado-cuchillos-valencia/",
+        "imageLoaded": 218,
+        "label": "service-knives-title service-knives-title-cta",
+        "rect": {
+          "bottom": 581.5625,
+          "height": 340,
+          "left": 21.5,
+          "right": 393.5,
+          "top": 241.5625,
+          "width": 372,
+          "x": 21.5,
+          "y": 241.5625
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilar-tijeras-peluqueria-valencia/",
+        "imageLoaded": 800,
+        "label": "service-scissors-title service-scissors-title-cta",
+        "rect": {
+          "bottom": 937.5625,
+          "height": 340,
+          "left": 21.5,
+          "right": 393.5,
+          "top": 597.5625,
+          "width": 372,
+          "x": 21.5,
+          "y": 597.5625
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/herramientas-manicura-pedicura-valencia/",
+        "imageLoaded": 600,
+        "label": "service-manicure-title service-manicure-title-cta",
+        "rect": {
+          "bottom": 1293.5625,
+          "height": 340,
+          "left": 21.5,
+          "right": 393.5,
+          "top": 953.5625,
+          "width": 372,
+          "x": 21.5,
+          "y": 953.5625
+        }
+      }
+    ],
+    "client": 415,
+    "disclosures": 0,
+    "headings": [
+      {
+        "clientWidth": 279,
+        "rect": {
+          "bottom": 493.5625,
+          "height": 41.015625,
+          "left": 45.5,
+          "right": 324.046875,
+          "top": 452.546875,
+          "width": 278.546875,
+          "x": 45.5,
+          "y": 452.546875
+        },
+        "scrollWidth": 279,
+        "size": "38.7px",
+        "text": "Afilado de cuchillos"
+      },
+      {
+        "clientWidth": 279,
+        "rect": {
+          "bottom": 849.5625,
+          "height": 41.015625,
+          "left": 45.5,
+          "right": 324.046875,
+          "top": 808.546875,
+          "width": 278.546875,
+          "x": 45.5,
+          "y": 808.546875
+        },
+        "scrollWidth": 279,
+        "size": "38.7px",
+        "text": "Afilado de tijeras"
+      },
+      {
+        "clientWidth": 279,
+        "rect": {
+          "bottom": 1205.5625,
+          "height": 123.046875,
+          "left": 45.5,
+          "right": 324.046875,
+          "top": 1082.515625,
+          "width": 278.546875,
+          "x": 45.5,
+          "y": 1082.515625
+        },
+        "scrollWidth": 279,
+        "size": "38.7px",
+        "text": "Afilado de herramientas de manicura"
+      }
+    ],
+    "scroll": 415,
+    "width": 430
+  },
+  {
+    "cards": [
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilado-cuchillos-valencia/",
+        "imageLoaded": 218,
+        "label": "service-knives-title service-knives-title-cta",
+        "rect": {
+          "bottom": 908.3125,
+          "height": 578,
+          "left": 38.390625,
+          "right": 449.765625,
+          "top": 330.3125,
+          "width": 411.375,
+          "x": 38.390625,
+          "y": 330.3125
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilar-tijeras-peluqueria-valencia/",
+        "imageLoaded": 800,
+        "label": "service-scissors-title service-scissors-title-cta",
+        "rect": {
+          "bottom": 610.3125,
+          "height": 280,
+          "left": 467.765625,
+          "right": 714.609375,
+          "top": 330.3125,
+          "width": 246.84375,
+          "x": 467.765625,
+          "y": 330.3125
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/herramientas-manicura-pedicura-valencia/",
+        "imageLoaded": 600,
+        "label": "service-manicure-title service-manicure-title-cta",
+        "rect": {
+          "bottom": 908.3125,
+          "height": 280,
+          "left": 467.765625,
+          "right": 714.609375,
+          "top": 628.3125,
+          "width": 246.84375,
+          "x": 467.765625,
+          "y": 628.3125
+        }
+      }
+    ],
+    "client": 753,
+    "disclosures": 0,
+    "headings": [
+      {
+        "clientWidth": 277,
+        "rect": {
+          "bottom": 812.3125,
+          "height": 93.25,
+          "left": 70.390625,
+          "right": 347.578125,
+          "top": 719.0625,
+          "width": 277.1875,
+          "x": 70.390625,
+          "y": 719.0625
+        },
+        "scrollWidth": 277,
+        "size": "44px",
+        "text": "Afilado de cuchillos"
+      },
+      {
+        "clientWidth": 199,
+        "rect": {
+          "bottom": 522.3125,
+          "height": 31.796875,
+          "left": 491.765625,
+          "right": 690.609375,
+          "top": 490.515625,
+          "width": 198.84375,
+          "x": 491.765625,
+          "y": 490.515625
+        },
+        "scrollWidth": 199,
+        "size": "30px",
+        "text": "Afilado de tijeras"
+      },
+      {
+        "clientWidth": 199,
+        "rect": {
+          "bottom": 820.3125,
+          "height": 95.390625,
+          "left": 491.765625,
+          "right": 690.609375,
+          "top": 724.921875,
+          "width": 198.84375,
+          "x": 491.765625,
+          "y": 724.921875
+        },
+        "scrollWidth": 199,
+        "size": "30px",
+        "text": "Afilado de herramientas de manicura"
+      }
+    ],
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "cards": [
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilado-cuchillos-valencia/",
+        "imageLoaded": 218,
+        "rect": {
+          "bottom": 889.109375,
+          "height": 578,
+          "left": 72,
+          "right": 861.375,
+          "top": 311.109375,
+          "width": 789.375,
+          "x": 72,
+          "y": 311.109375
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/afilar-tijeras-peluqueria-valencia/",
+        "imageLoaded": 800,
+        "rect": {
+          "bottom": 591.109375,
+          "height": 280,
+          "left": 879.375,
+          "right": 1353,
+          "top": 311.109375,
+          "width": 473.625,
+          "x": 879.375,
+          "y": 311.109375
+        }
+      },
+      {
+        "animation": "none",
+        "cta": "flex",
+        "href": "servicios/herramientas-manicura-pedicura-valencia/",
+        "imageLoaded": 600,
+        "rect": {
+          "bottom": 889.109375,
+          "height": 280,
+          "left": 879.375,
+          "right": 1353,
+          "top": 609.109375,
+          "width": 473.625,
+          "x": 879.375,
+          "y": 609.109375
+        }
+      }
+    ],
+    "client": 1425,
+    "disclosures": 0,
+    "headings": [
+      {
+        "clientWidth": 426,
+        "rect": {
+          "bottom": 793.109375,
+          "height": 143.46875,
+          "left": 104,
+          "right": 530.328125,
+          "top": 649.640625,
+          "width": 426.328125,
+          "x": 104,
+          "y": 649.640625
+        },
+        "scrollWidth": 426,
+        "size": "67.68px",
+        "text": "Afilado de cuchillos"
+      },
+      {
+        "clientWidth": 302,
+        "rect": {
+          "bottom": 503.109375,
+          "height": 44.515625,
+          "left": 903.375,
+          "right": 1205.765625,
+          "top": 458.59375,
+          "width": 302.390625,
+          "x": 903.375,
+          "y": 458.59375
+        },
+        "scrollWidth": 302,
+        "size": "42px",
+        "text": "Afilado de tijeras"
+      },
+      {
+        "clientWidth": 302,
+        "rect": {
+          "bottom": 801.109375,
+          "height": 133.546875,
+          "left": 903.375,
+          "right": 1205.765625,
+          "top": 667.5625,
+          "width": 302.390625,
+          "x": 903.375,
+          "y": 667.5625
+        },
+        "scrollWidth": 302,
+        "size": "42px",
+        "text": "Afilado de herramientas de manicura"
+      }
+    ],
+    "scroll": 1425,
+    "width": 1440
+  }
+]

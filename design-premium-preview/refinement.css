@@ -163,3 +163,119 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
  .knives-page .knife-jump a:first-child{min-height:48px}
 }
 @media(max-width:359px){.hero .hero-shortcuts a,.hero .hero-shortcuts a+a{font-size:13px}}
+
+/* Owner UX batch, 27 October: shared navigation and local home corrections. */
+:root{--header-height:92px}
+html{scroll-padding-top:calc(var(--header-height) + 16px)}
+.site-header,.knives-page .site-header{position:sticky;top:0;z-index:30;isolation:isolate;background:#182024f5;backdrop-filter:blur(14px);height:var(--header-height)}
+.skip-link{z-index:40}
+.site-header .desktop-nav a{min-height:44px;display:flex;align-items:center}
+.menu-dialog .menu-layout{align-items:start;gap:8%}
+.menu-dialog .menu-layout nav>a{font-size:clamp(30px,3.4vw,46px);min-height:60px;line-height:1.15}
+.menu-services{padding:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:2px 24px;border-bottom:1px solid #a7b5b9}
+.menu-services a{font:600 16px/1.5 var(--body);min-height:44px;display:flex;align-items:center;padding:8px 0}
+.menu-services a:hover{color:#795425;text-decoration:underline;text-underline-offset:4px}
+.menu-dialog .menu-bottom{flex-wrap:wrap}
+.menu-dialog .menu-bottom>a{line-height:1.6;max-width:100%}
+.menu-dialog .menu-bottom svg{flex:0 0 20px;width:20px;height:20px}
+/* Stable inset: title is anchored to the card, independently of illustration size. */
+.service-knives .service-link .service-title{inset:auto 28px 28px;max-width:calc(100% - 56px);transform:none}
+.service-knives .service-link .service-title h3{font-size:clamp(44px,5.5vw,70px);line-height:1.03;max-width:11ch}
+.service-knives .service-link img{padding:24px 24px 120px}
+.hospitality-callout{margin-top:32px;padding:28px;border:1px solid var(--brass);background:linear-gradient(120deg,#e8be8218,#111719);border-left:4px solid var(--brass)}
+.hospitality-callout h3{font-size:clamp(32px,4vw,48px);line-height:1.1;color:var(--brass);margin-bottom:16px}
+.hospitality-callout p{font-size:16px;line-height:1.75;max-width:60ch}
+.hospitality-callout a{display:flex;align-items:center;gap:16px;min-height:52px;margin-top:18px;font-size:16px;font-weight:600;line-height:1.5;color:var(--brass)}
+.hospitality-callout a svg{width:20px;height:20px;flex:0 0 20px}
+@media(max-width:767px){
+ :root{--header-height:72px}
+ .menu-dialog{padding:20px}
+ .menu-dialog .menu-layout{grid-template-columns:minmax(0,1fr)}
+ .menu-dialog .menu-photo{display:none}
+ .menu-dialog .menu-top{margin-bottom:14px}
+ .menu-dialog .menu-layout nav>a{font-size:34px;min-height:54px;padding:10px 0}
+ .menu-services{gap:0 16px;padding:10px 0}
+ .menu-services a{font-size:15px}
+ .menu-dialog .menu-bottom{margin-top:20px;gap:8px}
+ .service-knives .service-link .service-title{inset:auto 20px 24px;max-width:calc(100% - 40px)}
+ .service-knives .service-link .service-title h3{font-size:48px;max-width:11ch}
+ .hospitality-callout{padding:22px;margin-top:24px}
+}
+
+/* F02: mobile menu only. Existing desktop composition, image and links are retained. */
+@media(max-width:767px){
+ .menu-dialog{padding:0 20px max(20px,env(safe-area-inset-bottom));scroll-padding-block:88px 24px}
+ .menu-dialog .menu-top{position:sticky;top:0;z-index:2;min-height:76px;margin:0;padding:max(12px,env(safe-area-inset-top)) 0 12px;background:var(--paper);gap:16px}
+ .menu-dialog .menu-top .eyebrow{font-size:11px;line-height:1.5;min-width:0}
+ .menu-dialog .menu-close{flex:0 0 44px;width:44px;height:44px}
+ .menu-dialog .menu-layout{grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
+ .menu-dialog .menu-photo{display:grid;align-items:end;grid-row:1;height:auto;min-height:148px;margin:0;min-width:0;clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 20px) 100%,0 100%)}
+ .menu-dialog .menu-photo img{position:absolute;inset:0;width:100%;height:100%;object-position:center 48%}
+ .menu-dialog .menu-photo p{position:relative;font-size:32px;line-height:1.02;left:auto;right:auto;bottom:auto;margin:0;padding:52px 18px 16px;min-width:0;overflow-wrap:anywhere}
+ .menu-dialog .menu-layout>nav{grid-row:2;min-width:0}
+ .menu-dialog .menu-layout nav>a{font-size:34px;line-height:1.15;min-height:54px;padding:10px 0;overflow-wrap:anywhere}
+ .menu-dialog .menu-services{font-size:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,9em),1fr));gap:0 20px;padding:12px 0}
+ .menu-dialog .menu-services a{font-size:16px;line-height:1.5;min-height:48px;min-width:0;padding:8px 0;overflow-wrap:anywhere}
+ .menu-dialog .menu-bottom{display:grid;gap:8px;margin-top:20px}
+ .menu-dialog .menu-bottom>a{display:grid;grid-template-columns:20px minmax(0,1fr);align-items:center;gap:12px;margin:0;min-height:48px;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+ .menu-dialog a{scroll-margin-block:88px 24px}
+}
+
+/* F02 final: navigation and contacts precede the optional workshop photograph. */
+.menu-dialog .menu-layout{row-gap:0}
+.menu-dialog .menu-layout>nav{grid-column:1;grid-row:1}
+.menu-dialog .menu-layout>.menu-bottom{grid-column:1/-1;grid-row:2}
+.menu-dialog .menu-layout>.menu-photo{grid-column:2;grid-row:1}
+@media(max-width:767px){
+ .menu-dialog .menu-layout>nav{grid-column:1;grid-row:1}
+ .menu-dialog .menu-layout>.menu-bottom{grid-column:1;grid-row:2;margin-top:16px}
+ .menu-dialog .menu-layout>.menu-photo{grid-column:1;grid-row:3;margin-top:20px;min-height:128px}
+ .menu-dialog .menu-photo p{padding-top:32px}
+ .menu-dialog[data-input-modality="pointer"] .menu-close:focus{outline:none}
+ .menu-dialog[data-input-modality="keyboard"] .menu-close:focus-visible{outline:3px solid #795425;outline-offset:4px}
+}
+/* F07: service-specific headline scales and actual workshop image focal points. */
+.hero--knives h1,.hero--scissors h1,.hero--manicure h1,.hero--blades h1{line-height:1.02}
+.hero.hero--knives h1{font-size:clamp(64px,5.6vw,80px);max-width:52%}
+.service-page .hero.hero--scissors h1{font-size:clamp(60px,5.3vw,76px);max-width:52%}
+.service-page .hero.hero--manicure h1{font-size:clamp(60px,5.2vw,74px);max-width:52%}
+.service-page .hero.hero--blades h1{font-size:clamp(58px,4.9vw,70px);max-width:52%}
+.hero--knives .hero-photo,.hero--scissors .hero-photo,.hero--manicure .hero-photo,.hero--blades .hero-photo{width:49%;height:100%;top:0;bottom:0}
+.hero--knives .hero-photo img{object-position:56% 50%}
+.hero--scissors .hero-photo img{object-position:50% 50%}
+.hero--manicure .hero-photo img{object-position:50% 48%}
+.hero--blades .hero-photo img{object-position:50% 23%}
+@media(max-width:767px){
+ .hero--knives .hero-content,.hero--scissors .hero-content,.hero--manicure .hero-content,.hero--blades .hero-content{padding:240px 20px 24px}
+ .hero--knives .breadcrumbs,.hero--scissors .breadcrumbs,.hero--manicure .breadcrumbs,.hero--blades .breadcrumbs{position:absolute;top:14px;left:20px;right:20px;margin:0;max-width:none}
+ .hero--knives .hero-photo,.hero--scissors .hero-photo,.hero--manicure .hero-photo,.hero--blades .hero-photo{top:64px;bottom:auto;height:160px;width:100%;opacity:1;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+ .hero--knives .hero-photo::after,.hero--scissors .hero-photo::after,.hero--manicure .hero-photo::after,.hero--blades .hero-photo::after{background:linear-gradient(0deg,#182024,transparent 30%)}
+ .hero.hero--knives h1{font-size:clamp(42px,12vw,48px);max-width:100%}
+ .service-page .hero.hero--scissors h1{font-size:clamp(40px,11.3vw,44px);max-width:100%}
+ .service-page .hero.hero--manicure h1{font-size:clamp(40px,10.8vw,42px);max-width:100%}
+ .service-page .hero.hero--blades h1{font-size:40px;max-width:100%}
+ .hero--knives .hero-copy,.hero--scissors .hero-copy,.hero--manicure .hero-copy,.hero--blades .hero-copy{margin-top:16px}
+}
+@media(min-width:768px) and (max-width:1099px){
+ .hero.hero--knives h1,.hero.hero--scissors h1,.hero.hero--manicure h1,.service-page .hero.hero--blades h1{font-size:54px;max-width:62%}
+ .hero--knives .hero-photo,.hero--scissors .hero-photo,.hero--manicure .hero-photo,.hero--blades .hero-photo{width:48%}
+}
+
+@media(max-width:767px){
+ .hero--scissors .hero-photo img{position:absolute;left:50%;top:50%;width:176px;height:100vw;max-width:none;object-fit:cover;object-position:center;transform:translate(-50%,-50%) rotate(-90deg) scale(1.12)}
+ .hero--blades .hero-photo img{object-position:50% 12%}
+}
+
+@media(max-width:767px){
+ .hero--scissors h1>span,.hero--manicure h1>span,.hero--blades h1>span{display:contents}
+ .service-page .hero.hero--scissors h1{font-size:42px}
+ .service-page .hero.hero--manicure h1{font-size:40px}
+}
+
+/* Reserve the real wrapped breadcrumb height before each mobile photograph. */
+@media(max-width:767px){
+ .hero--scissors .hero-photo,.hero--blades .hero-photo{top:96px}
+ .hero--scissors .hero-content,.hero--blades .hero-content{padding-top:272px}
+ .hero--manicure .hero-photo{top:112px}
+ .hero--manicure .hero-content{padding-top:288px}
+}

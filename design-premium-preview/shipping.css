@@ -1,0 +1,91 @@
+/* Approved shipping composition. Original illustrations and dialog retained. */
+#trabajos.shipping{padding:28px 28px 16px;border-top:1px solid var(--line);background:var(--ink)}
+#trabajos .shipping-heading h2{font-size:36px;line-height:1.06;max-width:none;text-wrap:initial}
+#trabajos .shipping-journey{position:relative;margin-top:24px}
+#trabajos .shipping-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.95fr);column-gap:16px;row-gap:20px}
+#trabajos .shipping-stage{min-width:0;position:relative}
+#trabajos .shipping-art{display:flex;height:124px;align-items:end;position:relative}
+#trabajos .shipping-scene{display:block;position:relative;overflow:hidden;width:var(--art-width);aspect-ratio:var(--crop-width)/var(--crop-height);flex-shrink:0;mix-blend-mode:lighten}
+#trabajos .shipping-scene img{position:absolute;max-width:none;width:calc(2048 / var(--crop-width) * 100%);height:auto;left:calc(var(--crop-x) / var(--crop-width) * -100%);top:calc(var(--crop-y) / var(--crop-height) * -100%)}
+#trabajos .shipping-stage-1{--crop-x:25;--crop-y:175;--crop-width:308;--crop-height:310;--art-width:min(124px,31.8vw)}
+#trabajos .shipping-stage-2{--crop-x:358;--crop-y:230;--crop-width:425;--crop-height:250;--art-width:min(168px,44vw)}
+#trabajos .shipping-stage-2 .shipping-scene{margin-left:-24px;margin-bottom:10px}
+#trabajos .shipping-stage-3{--crop-x:790;--crop-y:265;--crop-width:455;--crop-height:200;--art-width:min(280px,72vw);grid-column:1/-1;text-align:center}
+#trabajos .shipping-stage-3 .shipping-art{height:124px;justify-content:center}
+#trabajos .shipping-stage-4{--crop-x:1250;--crop-y:135;--crop-width:449;--crop-height:347;--art-width:min(180px,46.2vw)}
+#trabajos .shipping-stage-5{--crop-x:1700;--crop-y:215;--crop-width:348;--crop-height:315;--art-width:min(128px,33vw)}
+#trabajos .shipping-stage-4 .shipping-art,#trabajos .shipping-stage-5 .shipping-art{height:126px}
+#trabajos .shipping-stage-5{padding-left:14px}
+#trabajos .shipping-step-copy{position:relative;padding-top:5px}
+#trabajos .shipping-number{display:block;color:var(--brass);font:500 14px/18px var(--body)}
+#trabajos .shipping-step-copy h3{font-size:24px;line-height:26px;margin:0 0 3px}
+#trabajos .shipping-step-copy p{font-size:14px;line-height:20px;color:#d5dada;max-width:none}
+#trabajos .shipping-stage-3 .shipping-number{display:inline-block;margin-right:8px;vertical-align:3px}
+#trabajos .shipping-stage-3 h3{display:inline-block}
+#trabajos .shipping-stage-3 p{margin-top:1px}
+#trabajos .shipping-actions{margin:18px -14px 0}
+#trabajos .shipping-actions .button{width:100%;min-height:52px;justify-content:space-between;text-align:left;font-size:14px;line-height:20px;padding:14px 18px;background:var(--brass);color:var(--ink);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+#trabajos .shipping-actions .button:focus-visible{clip-path:none}
+#trabajos .shipping-route{position:absolute;inset:0;width:100%;height:540px;overflow:visible;pointer-events:none;color:var(--brass);stroke-width:1.2}
+#trabajos .shipping-route-desktop{display:none}
+#trabajos .shipping-route marker path{fill:currentColor;stroke:none}
+@media(min-width:600px) and (max-width:1099px){
+ #trabajos.shipping{padding:48px max(28px,calc((100% - 430px)/2)) 40px}
+ #trabajos .shipping-heading h2{font-size:42px}
+}
+@media(min-width:1100px){
+ #trabajos.shipping{padding:96px 60px 68px}
+ #trabajos .shipping-heading h2{font-size:76px;line-height:1.04}
+ #trabajos .shipping-break-mobile{display:none}
+ #trabajos .shipping-break-desktop{display:block}
+ #trabajos .shipping-journey{margin-top:38px}
+ #trabajos .shipping-steps{grid-template-columns:1.07fr 1.13fr 1.17fr 1.03fr .6fr;gap:0}
+ #trabajos .shipping-stage{grid-column:auto;text-align:left;padding:0;--art-width:100%}
+ #trabajos .shipping-art,#trabajos .shipping-stage-3 .shipping-art,#trabajos .shipping-stage-4 .shipping-art,#trabajos .shipping-stage-5 .shipping-art{height:210px;align-items:center;justify-content:start}
+ #trabajos .shipping-stage-1 .shipping-scene{width:75%}
+ #trabajos .shipping-stage-2 .shipping-scene{margin:0;width:88%}
+ #trabajos .shipping-stage-3 .shipping-scene{width:108%;margin-left:-4%}
+ #trabajos .shipping-stage-4 .shipping-scene{width:96%}
+ #trabajos .shipping-stage-5 .shipping-scene{width:115%;margin-left:0}
+ #trabajos .shipping-step-copy{padding-top:14px}
+ #trabajos .shipping-number,#trabajos .shipping-stage-3 .shipping-number{display:block;font-size:16px;line-height:24px;margin:0}
+ #trabajos .shipping-step-copy h3{display:block;font-size:30px;line-height:34px;margin-bottom:4px}
+ #trabajos .shipping-step-copy p{font-size:16px;line-height:24px}
+ #trabajos .shipping-stage-3 p{margin-top:0}
+ #trabajos .shipping-actions{margin:72px 0 0}
+ #trabajos .shipping-actions .button{width:570px;min-height:80px;padding:20px 26px;font-size:20px;line-height:28px}
+ #trabajos .shipping-actions svg{width:32px;height:32px}
+ #trabajos .shipping-route-mobile{display:none}
+ #trabajos .shipping-route-desktop{display:block;height:210px}
+}
+#shipping-dialog{border:1px solid var(--line);padding:0;background:var(--ink);color:var(--paper);width:min(720px,calc(100% - 24px));max-width:720px;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);margin:auto;overflow:hidden}
+#shipping-dialog[open]{display:flex;flex-direction:column}
+#shipping-dialog::backdrop{background:#080d10d9}
+#shipping-dialog .shipping-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;border-bottom:1px solid var(--line);flex-shrink:0}
+#shipping-dialog .shipping-dialog-head>p{font:500 13px/1.5 var(--body);color:var(--brass)}
+#shipping-dialog .shipping-close{background:transparent;flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center}
+#shipping-dialog .shipping-close:hover{background:var(--panel)}
+#shipping-dialog .shipping-dialog-scroll{overflow:auto;overscroll-behavior:contain;min-height:0;padding:24px 20px 32px;scroll-padding-block:24px}
+#shipping-dialog .shipping-dialog-scroll:focus-visible{outline:2px solid var(--brass);outline-offset:-3px}
+#shipping-dialog h2{font-size:clamp(32px,8vw,48px);line-height:1.08;max-width:21ch;text-wrap:balance}
+#shipping-dialog .shipping-dialog-intro{font-size:16px;line-height:1.7;margin-top:20px;color:#d5dada}
+#shipping-dialog .shipping-instructions{list-style:none;padding:0;margin:28px 0 0;counter-reset:shipping}
+#shipping-dialog .shipping-instructions>li{counter-increment:shipping;border-top:1px solid var(--line);padding:24px 0 24px 32px;position:relative}
+#shipping-dialog .shipping-instructions>li::before{content:counter(shipping,decimal-leading-zero);position:absolute;left:0;top:25px;font:500 13px/1.5 var(--body);color:var(--brass)}
+#shipping-dialog h3{font-size:26px;line-height:1.15;margin-bottom:12px}
+#shipping-dialog .shipping-instructions p{font-size:16px;line-height:1.75;color:#d5dada}
+#shipping-dialog .shipping-instructions p+p{margin-top:12px}
+#shipping-dialog .shipping-dialog-foot{padding:16px;border-top:1px solid var(--line);flex-shrink:0;background:var(--deep)}
+#shipping-dialog .shipping-dialog-foot .button{width:100%;justify-content:center;min-height:52px;font-size:14px;line-height:1.5;padding:14px 12px}
+#shipping-dialog a:focus-visible,#shipping-dialog button:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+@media(min-width:600px){
+ #shipping-dialog .shipping-dialog-scroll{padding:32px 40px}
+ #shipping-dialog .shipping-dialog-head{padding-inline:24px}
+ #shipping-dialog .shipping-dialog-foot{padding:20px 40px}
+}
+
+#trabajos .shipping-break-desktop{display:none}
+@media(max-width:1099px){#trabajos .shipping-envia-title{display:flex;align-items:center;justify-content:center;gap:8px}#trabajos .shipping-stage-3 .shipping-number{margin:0;line-height:26px}#trabajos .shipping-stage-3 h3{margin:0}#trabajos .shipping-stage-3 p{margin-top:3px}#trabajos .shipping-route{height:510px}}
+@media(min-width:1100px){#trabajos .shipping-break-desktop{display:block}}
+
+@media(min-width:1100px){#trabajos .shipping-stage-5 .shipping-step-copy p{width:calc(100% + 44px)}}

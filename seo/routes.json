@@ -8,7 +8,8 @@
     "refinement.css",
     "premium.js",
     "seo.css",
-    "services.css"
+    "services.css",
+    "navigation.js"
   ],
   "business": {
     "name": "Filo Fino",
@@ -50,7 +51,7 @@
       "role": "knife-service",
       "title": "Afilado de cuchillos en Valencia | Filo Fino",
       "description": "Afilado de cuchillos en Valencia desde 4 € por pieza y desde 15 minutos, según estado y carga del taller. Cocina, profesionales y japoneses. Consulta tu pieza.",
-      "h1Contains": "Afilado profesional de cuchillos en Valencia",
+      "h1Contains": "Afilado de cuchillos en Valencia",
       "serviceName": "Afilado de cuchillos",
       "primaryIntent": "Local knife sharpening service, not sharpener purchase",
       "mustLink": [

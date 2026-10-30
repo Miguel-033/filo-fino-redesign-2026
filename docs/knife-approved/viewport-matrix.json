@@ -1,0 +1,638 @@
+[
+  {
+    "buttons": [
+      {
+        "height": 64,
+        "href": "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+        "width": 342
+      },
+      {
+        "height": 64,
+        "href": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+        "width": 342
+      }
+    ],
+    "clientWidth": 390,
+    "h1Count": 1,
+    "imageLoaded": true,
+    "lastTitleColor": "rgb(232, 183, 124)",
+    "positions": [
+      {
+        "font": "54.99px",
+        "rect": {
+          "bottom": 665.53125,
+          "height": 168.234375,
+          "left": 24,
+          "right": 366,
+          "top": 497.296875,
+          "width": 342,
+          "x": 24,
+          "y": 497.296875
+        },
+        "selector": "h1"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "bottom": 797.09375,
+          "height": 111.5625,
+          "left": 24,
+          "right": 366,
+          "top": 685.53125,
+          "width": 342,
+          "x": 24,
+          "y": 685.53125
+        },
+        "selector": ".hero-copy"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 927.78125,
+          "height": 106.6875,
+          "left": 24,
+          "right": 366,
+          "top": 821.09375,
+          "width": 342,
+          "x": 24,
+          "y": 821.09375
+        },
+        "selector": ".knife-hero-facts"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 1097.78125,
+          "height": 142,
+          "left": 24,
+          "right": 366,
+          "top": 955.78125,
+          "width": 342,
+          "x": 24,
+          "y": 955.78125
+        },
+        "selector": ".hero-actions"
+      },
+      {
+        "font": "13px",
+        "rect": {
+          "bottom": 1159.78125,
+          "height": 44,
+          "left": 24,
+          "right": 366,
+          "top": 1115.78125,
+          "width": 342,
+          "x": 24,
+          "y": 1115.78125
+        },
+        "selector": ".knife-address"
+      }
+    ],
+    "robots": "noindex, nofollow",
+    "scrollWidth": 390,
+    "viewport": [
+      390,
+      1400
+    ],
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 260.74285888671875,
+      "top": 0,
+      "width": 260.74285888671875,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "buttons": [
+      {
+        "height": 64,
+        "href": "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+        "width": 280
+      },
+      {
+        "height": 64,
+        "href": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+        "width": 280
+      }
+    ],
+    "clientWidth": 320,
+    "h1Count": 1,
+    "imageLoaded": true,
+    "lastTitleColor": "rgb(232, 183, 124)",
+    "positions": [
+      {
+        "font": "46px",
+        "rect": {
+          "bottom": 570.109375,
+          "height": 140.71875,
+          "left": 20,
+          "right": 300,
+          "top": 429.390625,
+          "width": 280,
+          "x": 20,
+          "y": 429.390625
+        },
+        "selector": "h1"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "bottom": 701.671875,
+          "height": 111.5625,
+          "left": 20,
+          "right": 300,
+          "top": 590.109375,
+          "width": 280,
+          "x": 20,
+          "y": 590.109375
+        },
+        "selector": ".hero-copy"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 832.359375,
+          "height": 106.6875,
+          "left": 20,
+          "right": 300,
+          "top": 725.671875,
+          "width": 280,
+          "x": 20,
+          "y": 725.671875
+        },
+        "selector": ".knife-hero-facts"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 1002.359375,
+          "height": 142,
+          "left": 20,
+          "right": 300,
+          "top": 860.359375,
+          "width": 280,
+          "x": 20,
+          "y": 860.359375
+        },
+        "selector": ".hero-actions"
+      },
+      {
+        "font": "13px",
+        "rect": {
+          "bottom": 1064.359375,
+          "height": 44,
+          "left": 20,
+          "right": 300,
+          "top": 1020.359375,
+          "width": 280,
+          "x": 20,
+          "y": 1020.359375
+        },
+        "selector": ".knife-address"
+      }
+    ],
+    "robots": "noindex, nofollow",
+    "scrollWidth": 320,
+    "viewport": [
+      320,
+      1400
+    ],
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 213.94285583496097,
+      "top": 0,
+      "width": 213.94285583496097,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "buttons": [
+      {
+        "height": 64,
+        "href": "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+        "width": 312
+      },
+      {
+        "height": 64,
+        "href": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+        "width": 312
+      }
+    ],
+    "clientWidth": 360,
+    "h1Count": 1,
+    "imageLoaded": true,
+    "lastTitleColor": "rgb(232, 183, 124)",
+    "positions": [
+      {
+        "font": "50.76px",
+        "rect": {
+          "bottom": 623.484375,
+          "height": 155.296875,
+          "left": 24,
+          "right": 336,
+          "top": 468.1875,
+          "width": 312,
+          "x": 24,
+          "y": 468.1875
+        },
+        "selector": "h1"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "bottom": 755.046875,
+          "height": 111.5625,
+          "left": 24,
+          "right": 336,
+          "top": 643.484375,
+          "width": 312,
+          "x": 24,
+          "y": 643.484375
+        },
+        "selector": ".hero-copy"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 885.734375,
+          "height": 106.6875,
+          "left": 24,
+          "right": 336,
+          "top": 779.046875,
+          "width": 312,
+          "x": 24,
+          "y": 779.046875
+        },
+        "selector": ".knife-hero-facts"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 1055.734375,
+          "height": 142,
+          "left": 24,
+          "right": 336,
+          "top": 913.734375,
+          "width": 312,
+          "x": 24,
+          "y": 913.734375
+        },
+        "selector": ".hero-actions"
+      },
+      {
+        "font": "13px",
+        "rect": {
+          "bottom": 1117.734375,
+          "height": 44,
+          "left": 24,
+          "right": 336,
+          "top": 1073.734375,
+          "width": 312,
+          "x": 24,
+          "y": 1073.734375
+        },
+        "selector": ".knife-address"
+      }
+    ],
+    "robots": "noindex, nofollow",
+    "scrollWidth": 360,
+    "viewport": [
+      360,
+      1400
+    ],
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 240.6857147216797,
+      "top": 0,
+      "width": 240.6857147216797,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "buttons": [
+      {
+        "height": 64,
+        "href": "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+        "width": 382
+      },
+      {
+        "height": 64,
+        "href": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+        "width": 382
+      }
+    ],
+    "clientWidth": 430,
+    "h1Count": 1,
+    "imageLoaded": true,
+    "lastTitleColor": "rgb(232, 183, 124)",
+    "positions": [
+      {
+        "font": "60.63px",
+        "rect": {
+          "bottom": 721.578125,
+          "height": 185.484375,
+          "left": 24,
+          "right": 406,
+          "top": 536.09375,
+          "width": 382,
+          "x": 24,
+          "y": 536.09375
+        },
+        "selector": "h1"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "bottom": 825.25,
+          "height": 83.671875,
+          "left": 24,
+          "right": 406,
+          "top": 741.578125,
+          "width": 382,
+          "x": 24,
+          "y": 741.578125
+        },
+        "selector": ".hero-copy"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 955.9375,
+          "height": 106.6875,
+          "left": 24,
+          "right": 406,
+          "top": 849.25,
+          "width": 382,
+          "x": 24,
+          "y": 849.25
+        },
+        "selector": ".knife-hero-facts"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 1125.9375,
+          "height": 142,
+          "left": 24,
+          "right": 406,
+          "top": 983.9375,
+          "width": 382,
+          "x": 24,
+          "y": 983.9375
+        },
+        "selector": ".hero-actions"
+      },
+      {
+        "font": "13px",
+        "rect": {
+          "bottom": 1187.9375,
+          "height": 44,
+          "left": 24,
+          "right": 406,
+          "top": 1143.9375,
+          "width": 382,
+          "x": 24,
+          "y": 1143.9375
+        },
+        "selector": ".knife-address"
+      }
+    ],
+    "robots": "noindex, nofollow",
+    "scrollWidth": 430,
+    "viewport": [
+      430,
+      1400
+    ],
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 287.4857177734375,
+      "top": 0,
+      "width": 287.4857177734375,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "buttons": [
+      {
+        "height": 60,
+        "href": "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+        "width": 366.34375
+      },
+      {
+        "height": 60,
+        "href": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+        "width": 366.34375
+      }
+    ],
+    "clientWidth": 768,
+    "h1Count": 1,
+    "imageLoaded": true,
+    "lastTitleColor": "rgb(232, 183, 124)",
+    "positions": [
+      {
+        "font": "64px",
+        "rect": {
+          "bottom": 434.296875,
+          "height": 195.796875,
+          "left": 38.390625,
+          "right": 404.734375,
+          "top": 238.5,
+          "width": 366.34375,
+          "x": 38.390625,
+          "y": 238.5
+        },
+        "selector": "h1"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 531.078125,
+          "height": 76.78125,
+          "left": 38.390625,
+          "right": 404.734375,
+          "top": 454.296875,
+          "width": 366.34375,
+          "x": 38.390625,
+          "y": 454.296875
+        },
+        "selector": ".hero-copy"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 670.171875,
+          "height": 113.09375,
+          "left": 38.390625,
+          "right": 404.734375,
+          "top": 557.078125,
+          "width": 366.34375,
+          "x": 38.390625,
+          "y": 557.078125
+        },
+        "selector": ".knife-hero-facts"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 832.171875,
+          "height": 134,
+          "left": 38.390625,
+          "right": 404.734375,
+          "top": 698.171875,
+          "width": 366.34375,
+          "x": 38.390625,
+          "y": 698.171875
+        },
+        "selector": ".hero-actions"
+      },
+      {
+        "font": "13px",
+        "rect": {
+          "bottom": 894.171875,
+          "height": 44,
+          "left": 38.390625,
+          "right": 404.734375,
+          "top": 850.171875,
+          "width": 366.34375,
+          "x": 38.390625,
+          "y": 850.171875
+        },
+        "selector": ".knife-address"
+      }
+    ],
+    "robots": "noindex, nofollow",
+    "scrollWidth": 768,
+    "viewport": [
+      768,
+      1100
+    ],
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 653.4981689453125,
+      "top": 0,
+      "width": 653.4981689453125,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "buttons": [
+      {
+        "height": 60,
+        "href": "https://wa.me/34614005053?text=%5BFilo%20Fino%20%C2%B7%20Web%5D%0AHola%2C%20me%20gustar%C3%ADa%20afilar%20mis%20cuchillos.%20%C2%BFTe%20puedo%20enviar%20unas%20fotos%20para%20consultar%20el%20trabajo%20y%20el%20plazo%3F",
+        "width": 480
+      },
+      {
+        "height": 60,
+        "href": "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
+        "width": 480
+      }
+    ],
+    "clientWidth": 1440,
+    "h1Count": 1,
+    "imageLoaded": true,
+    "lastTitleColor": "rgb(232, 183, 124)",
+    "positions": [
+      {
+        "font": "76px",
+        "rect": {
+          "bottom": 471.046875,
+          "height": 232.546875,
+          "left": 72,
+          "right": 552,
+          "top": 238.5,
+          "width": 480,
+          "x": 72,
+          "y": 238.5
+        },
+        "selector": "h1"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 542.234375,
+          "height": 51.1875,
+          "left": 72,
+          "right": 552,
+          "top": 491.046875,
+          "width": 480,
+          "x": 72,
+          "y": 491.046875
+        },
+        "selector": ".hero-copy"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 681.328125,
+          "height": 113.09375,
+          "left": 72,
+          "right": 552,
+          "top": 568.234375,
+          "width": 480,
+          "x": 72,
+          "y": 568.234375
+        },
+        "selector": ".knife-hero-facts"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "bottom": 843.328125,
+          "height": 134,
+          "left": 72,
+          "right": 552,
+          "top": 709.328125,
+          "width": 480,
+          "x": 72,
+          "y": 709.328125
+        },
+        "selector": ".hero-actions"
+      },
+      {
+        "font": "13px",
+        "rect": {
+          "bottom": 905.328125,
+          "height": 44,
+          "left": 72,
+          "right": 552,
+          "top": 861.328125,
+          "width": 480,
+          "x": 72,
+          "y": 861.328125
+        },
+        "selector": ".knife-address"
+      }
+    ],
+    "robots": "noindex, nofollow",
+    "scrollWidth": 1440,
+    "viewport": [
+      1440,
+      1000
+    ],
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 1347.8399658203125,
+      "top": 0,
+      "width": 1347.8399658203125,
+      "x": 0,
+      "y": 0
+    }
+  }
+]

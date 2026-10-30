@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Filo Fino · Revisión de tarjetas</title><style>
+*{box-sizing:border-box}body{margin:0;background:#111719;color:#f0efe8;font:14px/1.5 system-ui}header{padding:12px 20px;background:#182024;border-bottom:1px solid #455157}label{margin-right:12px}select{font:inherit;padding:6px}p{margin:6px 0 0;color:#a9bbc3}main{padding:16px 20px;width:max-content}iframe{display:block;box-sizing:content-box;border:0;height:1400px;background:#182024}
+</style></head><body><header><label for="width">Anchura CSS</label><select id="width"><option>320</option><option>360</option><option>390</option><option>430</option><option>768</option><option>1440</option></select><span id="phase"></span><p>Bloque de servicios del preview real · Chrome de escritorio, sin emulación de un sistema móvil.</p></header><main><iframe id="review" name="cards-review" title="Tarjetas de servicios"></iframe></main><script>
+const params=new URLSearchParams(location.search),select=document.querySelector('#width'),frame=document.querySelector('iframe');
+select.value=['320','360','390','430','768','1440'].includes(params.get('width'))?params.get('width'):'390';
+document.querySelector('#phase').textContent=params.get('phase')==='after'?'Después':'Antes';
+function load(){frame.width=select.value;frame.src='../?stage1='+encodeURIComponent(params.get('phase')||'before')+'#servicios';}
+frame.addEventListener('load',()=>{const w=frame.contentWindow;w.document.fonts.ready.then(()=>{const section=w.document.querySelector('#servicios');const h=w.document.querySelector('.site-header').getBoundingClientRect().height;w.scrollTo({top:section.offsetTop-h-16,behavior:'instant'});});});
+select.addEventListener('change',load);load();
+</script></body></html>

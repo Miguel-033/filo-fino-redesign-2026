@@ -1,0 +1,320 @@
+[
+  {
+    "page": {
+      "artLoaded": true,
+      "cards": [
+        {
+          "ctaFits": true,
+          "h": 390,
+          "img": "assets/images/drive/img_6874.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "44px",
+          "w": 280
+        },
+        {
+          "ctaFits": true,
+          "h": 260,
+          "img": "assets/images/tijeras-card.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "34px",
+          "w": 264
+        },
+        {
+          "ctaFits": true,
+          "h": 300,
+          "img": "assets/images/manicura.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "34px",
+          "w": 264
+        }
+      ],
+      "client": 320,
+      "scrollWidth": 320,
+      "shippingHeight": 1528.34375,
+      "width": 320,
+      "shippingColumns": "280px",
+      "shippingCSS": "shipping.css?v=stage2-5"
+    },
+    "modal": {
+      "client": 320,
+      "focus": "icon-button shipping-close",
+      "open": true,
+      "overflow": "hidden",
+      "right": 308,
+      "scrollY": 3498,
+      "scrollerContent": 1778,
+      "scrollerHeight": 646,
+      "width": 296
+    },
+    "backFocus": true,
+    "forwardFocus": true
+  },
+  {
+    "page": {
+      "artLoaded": true,
+      "cards": [
+        {
+          "ctaFits": true,
+          "h": 390,
+          "img": "assets/images/drive/img_6874.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "44px",
+          "w": 320
+        },
+        {
+          "ctaFits": true,
+          "h": 260,
+          "img": "assets/images/tijeras-card.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "34px",
+          "w": 304
+        },
+        {
+          "ctaFits": true,
+          "h": 300,
+          "img": "assets/images/manicura.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "34px",
+          "w": 304
+        }
+      ],
+      "client": 360,
+      "scrollWidth": 360,
+      "shippingHeight": 1456.953125,
+      "width": 360,
+      "shippingColumns": "320px",
+      "shippingCSS": "shipping.css?v=stage2-5"
+    },
+    "modal": {
+      "client": 360,
+      "focus": "icon-button shipping-close",
+      "open": true,
+      "overflow": "hidden",
+      "right": 348,
+      "scrollY": 3450,
+      "scrollerContent": 1545,
+      "scrollerHeight": 664,
+      "width": 336
+    },
+    "backFocus": true,
+    "forwardFocus": true
+  },
+  {
+    "page": {
+      "artLoaded": true,
+      "cards": [
+        {
+          "ctaFits": true,
+          "h": 390,
+          "img": "assets/images/drive/img_6874.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "46.8px",
+          "w": 350
+        },
+        {
+          "ctaFits": true,
+          "h": 370,
+          "img": "assets/images/tijeras-card.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "28px",
+          "w": 169
+        },
+        {
+          "ctaFits": true,
+          "h": 370,
+          "img": "assets/images/manicura.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "28px",
+          "w": 169
+        }
+      ],
+      "client": 390,
+      "scrollWidth": 390,
+      "shippingHeight": 1362.578125,
+      "width": 390,
+      "shippingColumns": "350px",
+      "shippingCSS": "shipping.css?v=stage2-5"
+    },
+    "modal": {
+      "client": 390,
+      "focus": "icon-button shipping-close",
+      "open": true,
+      "overflow": "hidden",
+      "right": 378,
+      "scrollY": 3235,
+      "scrollerContent": 1461,
+      "scrollerHeight": 664,
+      "width": 366
+    },
+    "backFocus": true,
+    "forwardFocus": true
+  },
+  {
+    "page": {
+      "artLoaded": true,
+      "cards": [
+        {
+          "ctaFits": true,
+          "h": 390,
+          "img": "assets/images/drive/img_6874.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "51.6px",
+          "w": 387
+        },
+        {
+          "ctaFits": true,
+          "h": 370,
+          "img": "assets/images/tijeras-card.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "28px",
+          "w": 187.5
+        },
+        {
+          "ctaFits": true,
+          "h": 370,
+          "img": "assets/images/manicura.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "28px",
+          "w": 187.5
+        }
+      ],
+      "client": 430,
+      "scrollWidth": 430,
+      "shippingHeight": 1295.953125,
+      "width": 430,
+      "shippingColumns": "387px",
+      "shippingCSS": "shipping.css?v=stage2-5"
+    },
+    "modal": {
+      "client": 430,
+      "focus": "icon-button shipping-close",
+      "open": true,
+      "overflow": "hidden",
+      "right": 418,
+      "scrollY": 3235,
+      "scrollerContent": 1411,
+      "scrollerHeight": 664,
+      "width": 406
+    },
+    "backFocus": true,
+    "forwardFocus": true
+  },
+  {
+    "page": {
+      "artLoaded": true,
+      "cards": [
+        {
+          "ctaFits": true,
+          "h": 658,
+          "img": "assets/images/drive/img_6874.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "48px",
+          "w": 403.921875
+        },
+        {
+          "ctaFits": true,
+          "h": 320,
+          "img": "assets/images/tijeras-card.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "30px",
+          "w": 269.296875
+        },
+        {
+          "ctaFits": true,
+          "h": 320,
+          "img": "assets/images/manicura.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "30px",
+          "w": 269.296875
+        }
+      ],
+      "client": 768,
+      "scrollWidth": 768,
+      "shippingHeight": 1142.671875,
+      "width": 768,
+      "shippingColumns": "333.609px 333.609px",
+      "shippingCSS": "shipping.css?v=stage2-5"
+    },
+    "modal": {
+      "client": 768,
+      "focus": "icon-button shipping-close",
+      "open": true,
+      "overflow": "hidden",
+      "right": 744,
+      "scrollY": 3235,
+      "scrollerContent": 1168,
+      "scrollerHeight": 656,
+      "width": 720
+    },
+    "backFocus": true,
+    "forwardFocus": true
+  },
+  {
+    "page": {
+      "artLoaded": true,
+      "cards": [
+        {
+          "ctaFits": true,
+          "h": 658,
+          "img": "assets/images/drive/img_6874.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "67.68px",
+          "w": 766.796875
+        },
+        {
+          "ctaFits": true,
+          "h": 320,
+          "img": "assets/images/tijeras-card.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "42px",
+          "w": 511.203125
+        },
+        {
+          "ctaFits": true,
+          "h": 320,
+          "img": "assets/images/manicura.webp",
+          "loaded": true,
+          "titleFits": true,
+          "titleFont": "42px",
+          "w": 511.203125
+        }
+      ],
+      "client": 1440,
+      "scrollWidth": 1440,
+      "shippingHeight": 971.484375,
+      "width": 1440,
+      "shippingColumns": "259.188px 259.203px 259.203px 259.203px 259.203px",
+      "shippingCSS": "shipping.css?v=stage2-5"
+    },
+    "modal": {
+      "client": 1440,
+      "focus": "icon-button shipping-close",
+      "open": true,
+      "overflow": "hidden",
+      "right": 1080,
+      "scrollY": 3235,
+      "scrollerContent": 1168,
+      "scrollerHeight": 656,
+      "width": 720
+    },
+    "backFocus": true,
+    "forwardFocus": true
+  }
+]
