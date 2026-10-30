@@ -1,0 +1,16 @@
+/* Scissors-only adaptation of the accepted compact knife Hero. */
+.service-page .hero--scissors-approved h1{font-size:64px;line-height:1.02}
+.service-page .hero--scissors-approved .hero-photo img{object-position:54% center}
+.service-page .hero--scissors-approved .scissors-fact-icon{width:42px;height:65px;flex:0 0 42px;fill:none;stroke:var(--hero-gold);stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+@media(min-width:768px) and (max-width:1099px){
+ .service-page .hero--scissors-approved h1{font-size:54px}
+}
+@media(max-width:767px){
+ .service-page .hero--scissors-approved h1{font-size:clamp(38px,11.3vw,48px);line-height:1.02}
+ .service-page .hero--scissors-approved .hero-photo img{object-position:58% top}
+ .service-page .hero--scissors-approved .hero-photo::after{background:linear-gradient(90deg,#030e1180 0%,#030e1120 70%,transparent),linear-gradient(180deg,#030e1150 0%,transparent 18%,#030e1199 48%,#030e11 100%)}
+ .service-page .hero--scissors-approved .knife-hero-story{margin-top:44px}
+}
+@media(max-width:359px){
+ .service-page .hero--scissors-approved .scissors-fact-icon{width:34px;flex-basis:34px}
+}
