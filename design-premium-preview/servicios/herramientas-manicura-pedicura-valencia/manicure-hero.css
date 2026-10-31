@@ -11,7 +11,7 @@
 .service-page .hero--manicure-approved .manicure-hero-story{width:680px;max-width:58%;position:relative}
 .service-page .hero--manicure-approved .manicure-hero-kicker{display:flex;align-items:center;gap:16px;color:var(--manicure-gold);font-size:15px;font-weight:600;line-height:1.5;margin:0 0 12px;letter-spacing:.025em}
 .service-page .hero--manicure-approved .manicure-hero-kicker::before{content:"";width:36px;height:1px;background:currentColor;flex:0 0 36px}
-.service-page .hero--manicure-approved h1{font-family:var(--display);font-weight:600;font-size:54px;line-height:1.02;letter-spacing:-.025em;text-wrap:initial;max-width:680px;margin:0;text-shadow:none;animation:none;transform:none;opacity:1}
+.service-page .hero.hero--manicure.hero--manicure-approved h1{font-family:var(--display);font-weight:600;font-size:54px;line-height:1.02;letter-spacing:-.025em;text-wrap:initial;max-width:680px;margin:0;text-shadow:none;animation:none;transform:none;opacity:1}
 .service-page .hero--manicure-approved h1 span{display:block;color:#f2f1ed}
 .service-page .hero--manicure-approved h1 .hero-accent{color:var(--manicure-gold)}
 .service-page .hero--manicure-approved .knife-intro{font-size:16px;line-height:1.6;font-weight:400;color:#e0e3e3;max-width:49ch;margin:14px 0 0}
@@ -38,7 +38,7 @@
 .service-page .hero--manicure-approved .knife-address svg{width:18px;height:18px;flex:0 0 18px}
 @media(min-width:768px) and (max-width:1099px){
  .service-page .hero--manicure-approved .manicure-hero-story{max-width:92%;width:620px}
- .service-page .hero--manicure-approved h1{font-size:48px}
+ .service-page .hero.hero--manicure.hero--manicure-approved h1{font-size:48px}
  .service-page .hero--manicure-approved .hero-photo img{object-position:65% center}
  .service-page .hero--manicure-approved .hero-photo::after{background:linear-gradient(90deg,#030e11 0%,#030e11e8 34%,#030e1175 66%,transparent),linear-gradient(0deg,#030e11,transparent 80%)}
 }
@@ -52,7 +52,7 @@
  .service-page .hero--manicure-approved .breadcrumbs svg{width:10px;height:10px;flex-basis:10px}
  .service-page .hero--manicure-approved .manicure-hero-story{width:auto;max-width:none;margin-top:0}
  .service-page .hero--manicure-approved .manicure-hero-kicker{font-size:13px;gap:13px;margin-bottom:7px}
- .service-page .hero--manicure-approved h1{font-size:clamp(31px,8.5vw,36px);line-height:1;max-width:none;letter-spacing:-.025em}
+ .service-page .hero.hero--manicure.hero--manicure-approved h1{font-size:clamp(31px,8.5vw,36px);line-height:1;max-width:none;letter-spacing:-.025em}
  .service-page .hero--manicure-approved .knife-intro{font-size:15px;line-height:1.45;margin-top:8px;max-width:43ch}
  .service-page .hero--manicure-approved .manicure-hero-facts{margin-top:11px;padding-top:10px}
  .service-page .hero--manicure-approved .manicure-hero-fact{gap:9px}
