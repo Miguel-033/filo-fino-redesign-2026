@@ -8,10 +8,10 @@
 .service-page .hero--manicure-approved .breadcrumbs a{min-height:44px;color:inherit;text-decoration:none}
 .service-page .hero--manicure-approved .breadcrumbs a:hover{text-decoration:underline}
 .service-page .hero--manicure-approved .breadcrumbs svg{width:12px;height:12px;flex:0 0 12px}
-.service-page .hero--manicure-approved .manicure-hero-story{width:560px;max-width:55%;position:relative}
+.service-page .hero--manicure-approved .manicure-hero-story{width:680px;max-width:58%;position:relative}
 .service-page .hero--manicure-approved .manicure-hero-kicker{display:flex;align-items:center;gap:16px;color:var(--manicure-gold);font-size:15px;font-weight:600;line-height:1.5;margin:0 0 12px;letter-spacing:.025em}
 .service-page .hero--manicure-approved .manicure-hero-kicker::before{content:"";width:36px;height:1px;background:currentColor;flex:0 0 36px}
-.service-page .hero--manicure-approved h1{font-family:var(--display);font-weight:600;font-size:64px;line-height:1.02;letter-spacing:-.025em;text-wrap:initial;max-width:600px;margin:0;text-shadow:none;animation:none;transform:none;opacity:1}
+.service-page .hero--manicure-approved h1{font-family:var(--display);font-weight:600;font-size:54px;line-height:1.02;letter-spacing:-.025em;text-wrap:initial;max-width:680px;margin:0;text-shadow:none;animation:none;transform:none;opacity:1}
 .service-page .hero--manicure-approved h1 span{display:block;color:#f2f1ed}
 .service-page .hero--manicure-approved h1 .hero-accent{color:var(--manicure-gold)}
 .service-page .hero--manicure-approved .knife-intro{font-size:16px;line-height:1.6;font-weight:400;color:#e0e3e3;max-width:49ch;margin:14px 0 0}
@@ -37,8 +37,8 @@
 .service-page .hero--manicure-approved .knife-address{display:flex;font-size:13px;line-height:1.6;color:#e1e5e5;gap:10px;margin:9px 0 0;min-height:44px}
 .service-page .hero--manicure-approved .knife-address svg{width:18px;height:18px;flex:0 0 18px}
 @media(min-width:768px) and (max-width:1099px){
- .service-page .hero--manicure-approved .manicure-hero-story{max-width:58%;width:520px}
- .service-page .hero--manicure-approved h1{font-size:56px}
+ .service-page .hero--manicure-approved .manicure-hero-story{max-width:92%;width:620px}
+ .service-page .hero--manicure-approved h1{font-size:48px}
  .service-page .hero--manicure-approved .hero-photo img{object-position:65% center}
  .service-page .hero--manicure-approved .hero-photo::after{background:linear-gradient(90deg,#030e11 0%,#030e11e8 34%,#030e1175 66%,transparent),linear-gradient(0deg,#030e11,transparent 80%)}
 }
