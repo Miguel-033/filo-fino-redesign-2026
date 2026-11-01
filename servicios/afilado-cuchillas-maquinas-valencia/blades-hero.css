@@ -90,3 +90,6 @@
 .service-page .hero--blades-approved .knife-hero-fact{flex-wrap:wrap;align-content:start}
 .service-page .hero--blades-approved .button,.service-page .hero--blades-approved .knife-address{overflow-wrap:anywhere;min-width:0}
 @media(max-width:767px){.service-page .hero--blades-approved .breadcrumbs [aria-current]{flex-basis:100%}.service-page .hero--blades-approved .breadcrumbs a{min-height:44px}}
+
+/* Prevent the shared entrance motion from moving text across adjacent flow boxes. */
+.service-page .hero--blades-approved h1,.service-page .hero--blades-approved .hero-copy,.service-page .hero--blades-approved .hero-photo{transform:none!important;opacity:1!important}
