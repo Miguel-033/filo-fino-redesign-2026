@@ -47,10 +47,10 @@
  .service-page .hero--blades-approved .hero-photo img{object-fit:cover;object-position:46% 22%}
  .service-page .hero--blades-approved .hero-photo::after{background:linear-gradient(90deg,#030e1130,transparent 75%),linear-gradient(180deg,#030e1120 0%,transparent 24%,#030e1140 48%,#030e11d9 78%,#030e11 100%)}
  .service-page .hero--blades-approved .hero-content{padding:12px 24px 28px}
- .service-page .hero--blades-approved .breadcrumbs{margin:0;gap:6px;font-size:0.75rem;line-height:1.5;min-height:44px}
- .service-page .hero--blades-approved .breadcrumbs a{min-height:38px}
+ .service-page .hero--blades-approved .breadcrumbs{margin:0;gap:2px 6px;font-size:0.75rem;line-height:1.5;min-height:0}
+ .service-page .hero--blades-approved .breadcrumbs a{min-height:24px}
  .service-page .hero--blades-approved .breadcrumbs svg{width:10px;height:10px;flex-basis:10px}
- .service-page .hero--blades-approved .knife-hero-story{width:auto;max-width:none;margin-top:44px}
+ .service-page .hero--blades-approved .knife-hero-story{width:auto;max-width:none;margin-top:12px}
  .service-page .hero--blades-approved .knife-hero-kicker{font-size:0.875rem;gap:15px;margin-bottom:10px}
  .service-page .hero--blades-approved h1{font-size:clamp(2.875rem,13.5vw,3.625rem);line-height:1.02;max-width:none;letter-spacing:-.025em}
  .service-page .hero--blades-approved .knife-intro{font-size:1.0625rem;line-height:1.55;margin-top:12px;max-width:43ch}
@@ -71,7 +71,7 @@
 }
 @media(max-width:359px){
  .service-page .hero--blades-approved .hero-content{padding-inline:20px}
- .service-page .hero--blades-approved .breadcrumbs{font-size:0.6875rem;gap:5px}
+ .service-page .hero--blades-approved .breadcrumbs{font-size:0.6875rem;gap:2px 5px}
  .service-page .hero--blades-approved .knife-hero-fact{gap:7px}
  .service-page .hero--blades-approved .knife-hero-fact+div{padding-left:10px}
  .service-page .hero--blades-approved .knife-clock{width:28px;height:28px;flex-basis:28px}
@@ -89,7 +89,7 @@
 .service-page .hero--blades-approved .breadcrumbs [aria-current]{min-width:0;max-width:100%;white-space:normal}
 .service-page .hero--blades-approved .knife-hero-fact{flex-wrap:wrap;align-content:start}
 .service-page .hero--blades-approved .button,.service-page .hero--blades-approved .knife-address{overflow-wrap:anywhere;min-width:0}
-@media(max-width:767px){.service-page .hero--blades-approved .breadcrumbs [aria-current]{flex-basis:100%}.service-page .hero--blades-approved .breadcrumbs a{min-height:44px}}
+@media(max-width:767px){.service-page .hero--blades-approved .breadcrumbs [aria-current]{flex-basis:100%}.service-page .hero--blades-approved .breadcrumbs a{min-height:24px}}
 
 /* Prevent the shared entrance motion from moving text across adjacent flow boxes. */
 .service-page .hero--blades-approved h1,.service-page .hero--blades-approved .hero-copy,.service-page .hero--blades-approved .hero-photo{transform:none!important;opacity:1!important}
