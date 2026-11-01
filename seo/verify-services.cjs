@@ -1,9 +1,9 @@
 // Integration gates for every developed page. jsdom is not a rendering engine.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
 const {JSDOM}=require('jsdom'),postcss=require('postcss');
-const root=path.resolve(__dirname,'..'),web=path.join(root,'design-premium-preview');
+const root=path.resolve(__dirname,'..'),web=path.join(root,'site');
 const config=JSON.parse(fs.readFileSync(path.join(__dirname,'routes.json'),'utf8'));
-const pages=config.pages.filter(p=>p.status==='developed'),routes=new Map(pages.map(p=>[p.path,p]));
+const pages=config.pages.filter(p=>p.status==='developed'),routes=new Map([...pages,...config.legalPages].map(p=>[p.path,p]));
 const facts={
  'knife-service':['Desde 4 €','Desde 15 minutos','cerámicos','dentado','sistema tipo Apex'],
  'scissors-service':['17 €','19 €','22 €','Desde 2 horas','Desde 5 €','Desde 7 €','grooming'],
@@ -59,10 +59,11 @@ for(const p of pages){
  result.push({path:p.path,status:'PASS',method:'HTML/CSS/asset and menu DOM integration; no browser layout'});
 }
 for(const media of JSON.parse(fs.readFileSync(path.join(web,'assets/service-media.json'),'utf8'))){
- const source=fs.readFileSync(path.join(root,media.source)),copy=fs.readFileSync(path.join(web,media.file));
- assert.deepEqual(copy,source);assert.equal(crypto.createHash('sha256').update(copy).digest('hex'),media.sha256);
+ const copy=fs.readFileSync(path.join(web,media.file));
+assert.equal(crypto.createHash('sha256').update(copy).digest('hex'),media.sha256);
 }
 // Historic paths, release files and UI assets are intentionally left intact.
-for(const [file,digest]of Object.entries(config.productionHandoff.files))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),digest);
-fs.writeFileSync(path.join(__dirname,'service-checks.json'),JSON.stringify({status:'PASS',pages:result,limitations:['Preview server unavailable','No real mobile/desktop/Safari render','No measured Lighthouse or field CWV','No production HTTP/indexing or structured data validation']},null,2)+'\n');
-console.log('PASS: seven pages; route graph, facts, metadata, resources/video loading, original media bytes and menu navigation/focus in DOM test doubles. Release files frozen.');
+// Offline handoff is generated and checked by seo/prepare_metadata.py --check.
+require('node:child_process').execFileSync('python',['seo/prepare_metadata.py','--check'],{cwd:root,stdio:'inherit'});
+fs.writeFileSync(path.join(__dirname,'service-checks.json'),JSON.stringify({status:'PASS',pages:result,limitations:['This suite does not render a browser or Safari','No measured Lighthouse or field CWV','No production HTTP/indexing or structured data validation']},null,2)+'\n');
+console.log('PASS: seven pages; route graph, facts, metadata, resources/video loading, original media bytes and menu navigation/focus in DOM test doubles. Offline handoff checked; no deployment.');

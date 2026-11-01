@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');const {JSDOM}=require('jsdom');const postcss=require('postcss');
-const root=path.resolve(__dirname,'../design-premium-preview');
-const html=fs.readFileSync(root+'/index.html','utf8'),js=fs.readFileSync(root+'/premium.js','utf8');const dom=new JSDOM(html,{url:'https://example.test/design-premium-preview/',runScripts:'outside-only'}),w=dom.window,d=w.document;
+const root=path.resolve(__dirname,'../site');
+const html=fs.readFileSync(root+'/index.html','utf8'),js=fs.readFileSync(root+'/premium.js','utf8');const dom=new JSDOM(html,{url:'https://example.test/site/',runScripts:'outside-only'}),w=dom.window,d=w.document;
 assert.equal(new Set([...d.querySelectorAll('[id]')].map(x=>x.id)).size,d.querySelectorAll('[id]').length);
 for(const el of d.querySelectorAll('img[src],script[src],link[rel="stylesheet"],link[rel="preload"]'))assert.ok(fs.existsSync(path.join(root,(el.getAttribute('src')||el.getAttribute('href')).split('?')[0])));
 for(const a of d.querySelectorAll('a[href^="#"]'))if(a.getAttribute('href')!=='#')assert.ok(d.querySelector(a.getAttribute('href')));

@@ -1,0 +1,789 @@
+{
+  "status": "PASS",
+  "method": "offline HTML/config/CSS/graph/file checks",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Taller de afilado en Valencia | Filo Fino",
+      "h1": "Taller de afilado en Valencia Cada filo. Su oficio.",
+      "htmlBytes": 24698,
+      "directAndCSSResourceBytes": 881750,
+      "images": 11,
+      "links": 49,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Taller de afilado en Valencia Cada filo. Su oficio."
+        ],
+        [
+          "h2",
+          "Tu herramienta. Su mejor corte."
+        ],
+        [
+          "h3",
+          "Afilado de cuchillos"
+        ],
+        [
+          "h3",
+          "Afilado de tijeras"
+        ],
+        [
+          "h3",
+          "Afilado de herramientas de manicura"
+        ],
+        [
+          "h2",
+          "Más servicios del taller"
+        ],
+        [
+          "h2",
+          "Trae la herramienta. Hablemos del corte."
+        ],
+        [
+          "h3",
+          "Al traerla"
+        ],
+        [
+          "h3",
+          "Antes de empezar"
+        ],
+        [
+          "h3",
+          "Al recogerla"
+        ],
+        [
+          "h3",
+          "¿Tienes un cuchillo japonés?"
+        ],
+        [
+          "h2",
+          "Envíanos tus herramientas desde cualquier punto de España"
+        ],
+        [
+          "h3",
+          "Contacta"
+        ],
+        [
+          "h3",
+          "Prepara"
+        ],
+        [
+          "h3",
+          "Envía"
+        ],
+        [
+          "h3",
+          "Afilamos"
+        ],
+        [
+          "h3",
+          "Recibe"
+        ],
+        [
+          "h2",
+          "Del problema al filo."
+        ],
+        [
+          "h3",
+          "01 Escuchar"
+        ],
+        [
+          "h3",
+          "02 Revisar"
+        ],
+        [
+          "h3",
+          "03 Afilar"
+        ],
+        [
+          "h3",
+          "04 Comprobar"
+        ],
+        [
+          "h2",
+          "Ven al taller. O escríbeme."
+        ],
+        [
+          "h3",
+          "Calle Maestro Guerrero, 4"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ],
+        [
+          "h2",
+          "Cómo preparar y enviar tus herramientas"
+        ],
+        [
+          "h3",
+          "Contacta con el taller"
+        ],
+        [
+          "h3",
+          "Prepara una caja adecuada"
+        ],
+        [
+          "h3",
+          "Envíala y avísanos"
+        ],
+        [
+          "h3",
+          "Confirmamos y afilamos"
+        ],
+        [
+          "h3",
+          "Preparamos la vuelta"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-valencia/",
+      "title": "Afilado de cuchillos en Valencia | Filo Fino",
+      "h1": "Afilado de cuchillos en Valencia",
+      "htmlBytes": 23610,
+      "directAndCSSResourceBytes": 884886,
+      "images": 2,
+      "links": 53,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de cuchillos en Valencia"
+        ],
+        [
+          "h2",
+          "Un buen corte empieza por conocer tu cuchillo."
+        ],
+        [
+          "h3",
+          "Cuchillos de cocina"
+        ],
+        [
+          "h3",
+          "Cuchillos profesionales"
+        ],
+        [
+          "h3",
+          "Cuchillos japoneses"
+        ],
+        [
+          "h2",
+          "Daños que se pueden valorar"
+        ],
+        [
+          "h3",
+          "Qué no se acepta"
+        ],
+        [
+          "h3",
+          "¿Trabajas en hostelería?"
+        ],
+        [
+          "h2",
+          "Antes de afilar, hay que mirar."
+        ],
+        [
+          "h3",
+          "Conocer el problema"
+        ],
+        [
+          "h3",
+          "Revisar y valorar"
+        ],
+        [
+          "h3",
+          "Trabajar la hoja"
+        ],
+        [
+          "h3",
+          "Comprobar y entregar"
+        ],
+        [
+          "h2",
+          "Tu cuchillo japonés, visto de cerca."
+        ],
+        [
+          "h2",
+          "Tráelos bien protegidos."
+        ],
+        [
+          "h3",
+          "Limpios y secos"
+        ],
+        [
+          "h3",
+          "Filo y punta cubiertos"
+        ],
+        [
+          "h3",
+          "Cada pieza sujeta"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Preguntas con respuesta."
+        ],
+        [
+          "h2",
+          "Tus cuchillos. Un taller cercano."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "title": "Afilado de tijeras de peluquería en Valencia | Filo Fino",
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "htmlBytes": 16936,
+      "directAndCSSResourceBytes": 797646,
+      "images": 3,
+      "links": 44,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de tijeras de peluquería y barbería en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "Otras tijeras: costura y uso doméstico"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/herramientas-manicura-pedicura-valencia/",
+      "title": "Afilado de herramientas de manicura en Valencia | Filo Fino",
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "htmlBytes": 16754,
+      "directAndCSSResourceBytes": 609935,
+      "images": 3,
+      "links": 44,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de herramientas de manicura y pedicura en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "Organiza la entrega de tu material"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "title": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
+      "h1": "Afilado de cuchillas de máquinas en Valencia",
+      "htmlBytes": 16801,
+      "directAndCSSResourceBytes": 629202,
+      "images": 3,
+      "links": 44,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de cuchillas de máquinas en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "El bloque de corte y la máquina"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "title": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
+      "h1": "Afilado de cuchillos para hostelería en Valencia",
+      "htmlBytes": 17704,
+      "directAndCSSResourceBytes": 606498,
+      "images": 3,
+      "links": 45,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Afilado de cuchillos para hostelería en Valencia"
+        ],
+        [
+          "h2",
+          "Qué puedes traer"
+        ],
+        [
+          "h3",
+          "Estado y límites del trabajo"
+        ],
+        [
+          "h2",
+          "Precio y plazo"
+        ],
+        [
+          "h2",
+          "El trabajo según tu herramienta"
+        ],
+        [
+          "h3",
+          "Recogida, entrega y servicio regular"
+        ],
+        [
+          "h2",
+          "Una demostración del taller"
+        ],
+        [
+          "h2",
+          "Antes de traer tu herramienta"
+        ],
+        [
+          "h2",
+          "Tu herramienta. Un taller en Valencia."
+        ],
+        [
+          "h2",
+          "También en Filo Fino"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/servicios/",
+      "title": "Servicios de afilado en Valencia | Filo Fino",
+      "h1": "Servicios de afilado en Valencia",
+      "htmlBytes": 9594,
+      "directAndCSSResourceBytes": 425462,
+      "images": 2,
+      "links": 36,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Servicios de afilado en Valencia"
+        ],
+        [
+          "h2",
+          "Elige tu herramienta"
+        ],
+        [
+          "h3",
+          "Afilado de cuchillos"
+        ],
+        [
+          "h3",
+          "Afilado de tijeras de peluquería"
+        ],
+        [
+          "h3",
+          "Afilado de herramientas de manicura y pedicura"
+        ],
+        [
+          "h3",
+          "Afilado de cuchillas de máquinas"
+        ],
+        [
+          "h3",
+          "Afilado de cuchillos para hostelería"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/legal/politica-privacidad.html",
+      "title": "Política de privacidad | Filo Fino",
+      "h1": "Política de privacidad",
+      "htmlBytes": 10133,
+      "directAndCSSResourceBytes": 404846,
+      "images": 1,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Política de privacidad"
+        ],
+        [
+          "h2",
+          "Responsable del tratamiento"
+        ],
+        [
+          "h2",
+          "Datos personales que se recogen"
+        ],
+        [
+          "h2",
+          "Finalidad del tratamiento"
+        ],
+        [
+          "h2",
+          "Base legal del tratamiento"
+        ],
+        [
+          "h2",
+          "Conservación de los datos"
+        ],
+        [
+          "h2",
+          "Cesión de datos a terceros"
+        ],
+        [
+          "h2",
+          "Derechos del usuario"
+        ],
+        [
+          "h2",
+          "Medidas de seguridad"
+        ],
+        [
+          "h2",
+          "Legislación aplicable"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/legal/aviso-legal.html",
+      "title": "Aviso legal | Filo Fino",
+      "h1": "Aviso legal",
+      "htmlBytes": 11921,
+      "directAndCSSResourceBytes": 404846,
+      "images": 1,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Aviso legal"
+        ],
+        [
+          "h2",
+          "Datos del titular"
+        ],
+        [
+          "h2",
+          "Objeto del sitio web"
+        ],
+        [
+          "h2",
+          "Ámbito territorial de la actividad"
+        ],
+        [
+          "h2",
+          "Condiciones de uso"
+        ],
+        [
+          "h2",
+          "Precios y contratación de servicios"
+        ],
+        [
+          "h2",
+          "Propiedad intelectual e industrial"
+        ],
+        [
+          "h2",
+          "Responsabilidad"
+        ],
+        [
+          "h2",
+          "Enlaces a terceros"
+        ],
+        [
+          "h2",
+          "Legislación aplicable y jurisdicción"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/legal/politica-cookies.html",
+      "title": "Política de cookies | Filo Fino",
+      "h1": "Política de cookies",
+      "htmlBytes": 8982,
+      "directAndCSSResourceBytes": 404846,
+      "images": 1,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Política de cookies"
+        ],
+        [
+          "h2",
+          "¿Qué son las cookies?"
+        ],
+        [
+          "h2",
+          "Tipos de cookies utilizadas"
+        ],
+        [
+          "h2",
+          "Cookies de terceros"
+        ],
+        [
+          "h2",
+          "Gestión de cookies"
+        ],
+        [
+          "h2",
+          "Aceptación de la política de cookies"
+        ],
+        [
+          "h2",
+          "Actualizaciones"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    }
+  ],
+  "retainedMigrationURLs": 65,
+  "release": {
+    "migrationURLs": 65,
+    "productionMetadataMainPages": "7/7",
+    "productionMetadataAllPages": "10/10",
+    "sitemapURLs": 10,
+    "acceptedHeroAndMainPages": 7,
+    "acceptedAssetHashesChecked": 44,
+    "builds": [
+      {
+        "mode": "preview",
+        "pages": 10,
+        "status": "PASS"
+      },
+      {
+        "mode": "production",
+        "pages": 10,
+        "status": "PASS"
+      }
+    ],
+    "redirectsInstalled": false,
+    "networkOrDeploy": false
+  },
+  "protectedAssetAndInteractionFiles": 44,
+  "limitations": [
+    "No rendered/mobile/Safari verification",
+    "No Lighthouse/CWV measurement",
+    "No Google Rich Results Test or guarantee of indexing/rankings"
+  ]
+}

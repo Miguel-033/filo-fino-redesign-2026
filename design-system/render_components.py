@@ -7,8 +7,9 @@ from urllib.parse import quote
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-WEB = ROOT / 'design-premium-preview'
-PAGES = [(p['source'], (posixpath.relpath('/', '/' + posixpath.dirname(p['source'])) + '/') if '/' in p['source'] else '') for p in json.loads((ROOT / 'seo/routes.json').read_text())['pages'] if p['status'] == 'developed']
+CONFIG = json.loads((ROOT / 'seo/routes.json').read_text())
+WEB = ROOT / CONFIG['sourceRoot']
+PAGES = [(p['source'], (posixpath.relpath('/', '/' + posixpath.dirname(p['source'])) + '/') if '/' in p['source'] else '') for p in CONFIG['pages'] + CONFIG['legalPages'] if p['status'] in ('developed', 'legal')]
 
 
 def render(check=False):

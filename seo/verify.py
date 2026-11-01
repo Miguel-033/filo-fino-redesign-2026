@@ -122,8 +122,8 @@ def inspect(page):
 def main():
     subprocess.run([sys.executable, str(ROOT / 'seo/prepare_metadata.py'), '--check'], check=True)
     subprocess.run([sys.executable, str(ROOT / 'design-system/render_components.py'), '--check'], check=True)
-    pages = [p for p in CONFIG['pages'] if p['status'] == 'developed']
-    assert len(pages) >= 2, 'Register additional developed pages explicitly'
+    pages = CONFIG['pages'] + CONFIG['legalPages']
+    assert len(pages) == 10 and len(CONFIG['pages']) == 7
     assert len({p['path'] for p in CONFIG['pages']}) == len(CONFIG['pages'])
     assert len({p['title'] for p in CONFIG['pages']}) == len(CONFIG['pages'])
     results = [inspect(p) for p in pages]
@@ -140,31 +140,11 @@ def main():
             for prop in ['provider', 'publisher', 'isPartOf', 'mainEntity', 'breadcrumb', 'about']:
                 if prop in node:
                     assert node[prop]['@id'] in ids
-    rows = list(csv.DictReader((ROOT / 'seo/migration/url-map.csv').open()))
-    assert len(rows) >= 42 and all(r['old_url'] == r['new_url'] for r in rows)
-    urls = [x.text for x in ET.parse(ROOT / 'seo/production/sitemap.candidate.xml').findall('.//{*}loc')]
-    assert set(urls) == {r['new_url'] for r in rows}
-    assert not (WEB / 'robots.txt').exists() and not (WEB / 'sitemap.xml').exists()
-    assert 'SEO_ARCHITECTURE_2026.md' in (ROOT / 'AGENTS.md').read_text()
-    # All images / core scripts preserved relative to the accepted PR9 source baseline.
-    # PR9 source tree (same immutable tree for local and GitHub commits).
-    base = '3eeaaf0f850e42a4f990415c62472274e1a7a10f'
-    protected = ['design-premium-preview/premium.css', 'design-premium-preview/refinement.css',
-                 'design-premium-preview/premium.js',
-                 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css',
-                 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js']
-    protected += subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', base,
-                                        'design-premium-preview/assets'], cwd=ROOT, text=True).splitlines()
-    # Owner-authorized navigation and local UX corrections, 27.10.2026. Media and premium.css
-    # retain PR9; reviewed CSS/JS revisions remain hash-pinned, not exempted.
-    ui_baselines = {'design-premium-preview/refinement.css': 'ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1', 'design-premium-preview/premium.js': '6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css': 'ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2', 'design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js': '02d62e3584ccef972045a6fe8ad4d889480a85b0ace0eebb2fced32dc1e91083'}
-    for path in protected:
-        before = subprocess.check_output(['git', 'show', base + ':' + path], cwd=ROOT)
-        expected = ui_baselines.get(path, hashlib.sha256(before).hexdigest())
-        assert expected == hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), path
+    from release_checks import verify_release
+    release = verify_release()
     report = {'status': 'PASS', 'method': 'offline HTML/config/CSS/graph/file checks',
-              'pages': results, 'retainedMigrationURLs': len(rows),
-              'protectedAssetAndInteractionFiles': len(protected),
+              'pages': results, 'retainedMigrationURLs': release['migrationURLs'], 'release': release,
+              'protectedAssetAndInteractionFiles': release['acceptedAssetHashesChecked'],
               'limitations': ['No rendered/mobile/Safari verification', 'No Lighthouse/CWV measurement',
                               'No Google Rich Results Test or guarantee of indexing/rankings']}
     (ROOT / 'seo/checks.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')

@@ -10,11 +10,11 @@ def before(path):
 def outside_shipping(text):
     text = re.sub(r'    <section id="trabajos"[\s\S]*?    </section>', 'SHIPPING', text, count=1)
     return re.sub(r'shipping.css\?v=[^" ]+', 'shipping.css?v=VERSION', text)
-page = ROOT / 'design-premium-preview/index.html'
+page = ROOT / 'site/index.html'
 assert outside_shipping(before(str(page.relative_to(ROOT))).decode()) == outside_shipping(page.read_text())
-for path in ['design-premium-preview/shipping.js', 'design-premium-preview/assets/illustrations/envios.webp']:
+for path in ['site/shipping.js', 'site/assets/illustrations/envios.webp']:
     assert before(path) == (ROOT / path).read_bytes(), path
-css_path = 'design-premium-preview/shipping.css'
+css_path = 'site/shipping.css'
 modal_rules = lambda s: re.findall(r'#shipping-dialog[^{}]*\{[^{}]*\}', s)
 assert modal_rules(before(css_path).decode()) == modal_rules((ROOT / css_path).read_text())
 assert 'noindex, nofollow' in page.read_text()

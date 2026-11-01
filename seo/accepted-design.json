@@ -1,0 +1,92 @@
+{
+  "sourceCommit": "b2cf0a7b0cd5f7772a58730ce6e0e338be5c1aee",
+  "pages": {
+    "index.html": {
+      "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
+      "mainWithRetiredLinksRemovedSha256": "fd3ee13221071f6c3d36a48eb054fa0c8460a4dd0febb3954678742a02aaaa11"
+    },
+    "servicios/afilado-cuchillos-valencia/index.html": {
+      "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
+      "mainWithRetiredLinksRemovedSha256": "cc3f7719461da25b8c985b7fc9ada742186f297ba90ec772058dfe395960eb49"
+    },
+    "servicios/afilar-tijeras-peluqueria-valencia/index.html": {
+      "heroSha256": "a35169fdb982a3ded057752f7ebab27b9c9fd1a2366cb0ee33d120017e77272c",
+      "mainWithRetiredLinksRemovedSha256": "7cc6eae568e81731008131dec8d7f4449f55f76efc3df152fef12ea29c8885b4"
+    },
+    "servicios/herramientas-manicura-pedicura-valencia/index.html": {
+      "heroSha256": "3ed4c06bec211fc17b50d6436a2aa7d78df38be8b3d3b42c1521dfb8a104b854",
+      "mainWithRetiredLinksRemovedSha256": "419975611d2e5659108a6c8f2ce3681a01eddae607fc3dc8af3035f1da58f796"
+    },
+    "servicios/afilado-cuchillas-maquinas-valencia/index.html": {
+      "heroSha256": "b94655b67e8c79430d62a2a9ec9842b0329f5f0f52da4fbe33cec65ed357024e",
+      "mainWithRetiredLinksRemovedSha256": "d8880d2ec91bf9f7fac02f6c1569335b8b4637c0de40ab652c3f5e019905b282"
+    },
+    "servicios/afilado-cuchillos-hosteleria-valencia/index.html": {
+      "heroSha256": "b32e6d9cb0fee304eff00411a2ac89f012b72ff56f4185bd01f7416dc12e015e",
+      "mainWithRetiredLinksRemovedSha256": "1b19528db526a2293bac2ed6552e2c63e69e334e78c1c88c630e1288f2c3d265"
+    },
+    "servicios/index.html": {
+      "heroSha256": "1673f19ab31584840df8ee6d4fb9b7a4e81326fdf4dd973397c42f392c9970bf",
+      "mainWithRetiredLinksRemovedSha256": "6e2c4198841918667fe36cb78f4eb4371c85534e233083851e1a916e09477d9d"
+    }
+  },
+  "assets": {
+    "shipping.js": "19238443f7dc417c87f82f3045eb59bdc80fa52ff84e46b1ade5a4485af13045",
+    "seo.css": "98df95844681d2b073506a6316c670b54aa6f0b5cd287c37a42493f49bfcf3bb",
+    "services.css": "b9322f75ee15848d23151f4f5195d08d6ade2f4a5ecdcaa9de104d7da32ae25b",
+    "shipping.css": "aaa94d4ced95d2b8698eb9bb2aa95b868c3e280e5c58ccd7bf13f1eecec750d6",
+    "navigation.js": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
+    "premium.css": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
+    "refinement.css": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
+    "service-cards.css": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
+    "home-hero.css": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
+    "premium.js": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
+    "servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
+    "servicios/afilado-cuchillos-valencia/knives.js": "02d62e3584ccef972045a6fe8ad4d889480a85b0ace0eebb2fced32dc1e91083",
+    "servicios/afilado-cuchillos-valencia/knives.css": "ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2",
+    "servicios/afilado-cuchillos-valencia/knife-hero.css": "6dd9e948dc7d449401f5c5fc03453e38a0e8db215077aeb94f841468086ed0ac",
+    "servicios/afilado-cuchillas-maquinas-valencia/blades-hero.css": "69eac0efbf8df5bb25e203dcae4f1ef93ab21bd716d89889f754e38e43ae60b9",
+    "servicios/afilado-cuchillos-hosteleria-valencia/hospitality-hero.css": "ed45d8c463ecb3244dda2a8f9a03ca7e88e52061955d56a458a3638df5a15d05",
+    "servicios/herramientas-manicura-pedicura-valencia/manicure-hero.css": "65dcfaded729e3a10e2dd3e771692c172e5917d329318e241df6c1155273ebdd",
+    "assets/images/tijeras-card.webp": "1e3e5334a8bf26c42761b82453b3ba073c9534cb93f34055ca1e4a474841b42d",
+    "assets/images/manicure-approved-hero.webp": "2b10ff7926f4cfbcc3dca9e73421afee632fbb6eb72ec1daa1c60f249807729e",
+    "assets/images/afilado.webp": "5bb252b5a8f537084cd079ed4b532077a253e78a386d9e0a415d2345b7b97243",
+    "assets/images/bloques.webp": "67d7a00365fde17d4deaf43e8994c7b0aa6beceed759fc95eec62e25c101a78c",
+    "assets/images/hosteleria-approved-hero.webp": "8052ae3015969122a861c8af55e7c45cec3d159a05309cfd6fc5be77b66296e5",
+    "assets/images/blade-blocks-approved-hero.webp": "158a076bfa4b73d6d0acb654fcdf94a2344a6fed51230e42bcfd0f6790cee73c",
+    "assets/images/manicura.webp": "441bccdb3ca8df27396de1a2082ef0bf2e94567936fe4114c4aed61ba63fa693",
+    "assets/images/scissors-approved-hero.webp": "35609a8972a3768d63a811b0c44ad2308728813fb389b932db7b2ea3f6f73b56",
+    "assets/images/home-tools-approved-hero.webp": "71b20a787f8ae8130218f46b3003f6d10dd5d80b35d4d7400816c73aa436a199",
+    "assets/images/tijeras.webp": "14977c2b70bdc99538fe0416ea4aa2963b8109f236df588faaee0a0d3872eba5",
+    "assets/images/hosteleria.webp": "81d9ad86f3d84a744e86f3bb69ebb2c72ed210c880cfa2ecf0774b88bd868969",
+    "assets/images/knife-approved-hero.jpeg": "89d245159058b70a9c6c3840d66dffde030282554278ebafd1749696956bab73",
+    "assets/fonts/Barlow-Condensed-OFL.txt": "f15bcb147f45ca7edb47109f4a887a3eecd09d29fc251f3fbb2d748b32abdaa2",
+    "assets/fonts/Manrope-OFL.txt": "4f67b767d602edc0065ca540cfb36d15e3d5e41eecb4c32f768a5f6d396d56fb",
+    "assets/fonts/body.ttf": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "assets/fonts/display.ttf": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9",
+    "assets/illustrations/escuchar.svg": "023653149c47e1471d89a698b2ef22601947e3b21d5e74fcd8b100c2b5f9c9c6",
+    "assets/illustrations/revisar.svg": "02f88f7c4aeee34a1b4ba8248a3490a9c8157a3d9d67f9f01e34520b41b27408",
+    "assets/illustrations/knife-study.svg": "306b002ced7b02af44368f06a036b99181c81db4aee044eb478dc29229415116",
+    "assets/illustrations/envios.webp": "0808d2357354a7bbb18b09269b7108bcd9d9205d4cf946ac1149acb1d2f26c87",
+    "assets/illustrations/afilar.svg": "360fc8869763a550e2e9a38d21d333d1a4cf9ce7edbbe83b00f4f59decdad0a6",
+    "assets/illustrations/comprobar.svg": "f1254e8ded51fa85553d763cbf3d5f7e9f756d4520e5fc4fe944d468f662b90a",
+    "assets/videos/Heramientas-manicura.mp4": "4df9ebb3daea66462790fcc9831cc0ba6443f10951fc0e2b3d533d08a4d1231f",
+    "assets/videos/maquena_afilado_cortan.mp4": "476adf0be64fd75b1fd68b1773ae8bb657a2435095b3c1227eb41987225b2fae",
+    "assets/videos/cuchillo_para_profecional.mp4": "91bbd3572176dd33c67fdde0c494b7c8ca0f194e414fb42ba1a8d62f2df6a241",
+    "assets/videos/tijeras_tiran.mp4": "40529932c61c45847f491c0c4cff6f49ba4fd85b8a2dcafdffc02b928f61227b",
+    "assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4": "5614fce6fa954fc499f5f126ec6b9b363eeef408abc51e00c217bd9ba77a1814",
+    "assets/images/drive/img_8001.webp": "06d6920451bd536b361a0dee6e5ad28385fdeb0b914adfa6f1d1812ea69e612a",
+    "assets/images/drive/img_7653.webp": "267c290877d1c6ea674c72903cfdee7c572441c86795db10cbe46a9e878bb218",
+    "assets/images/drive/img_1118.webp": "e18383492496d62f2bbfa6e932787135d8db1392653828f17a13c89e3a17f51e",
+    "assets/images/drive/img_6463.webp": "15e9e5d398f619f4f514e860a504c894c20ebddd745403d00663c243f0a1ed7c",
+    "assets/images/drive/img_6874.webp": "7c90dd5315860fa79dcb755df859206070c35994cd0a20b89cfc385907c73924",
+    "assets/images/drive/img_7034.webp": "bc648e2c581958f0438b7435c61738406dddc2a43dc06925250852031b582d52",
+    "assets/images/drive/img_0734.webp": "e816b9f695767b849df8c98bc25285cb72f80dc7078df3437b51330a8ccf5317",
+    "assets/images/drive/img_6018.webp": "d0831ca40fccdc06a2ca59bde7ba4865a16ab203064a41880fc7a548a05ae606",
+    "screenshots/pr4-baseline/mobile-menu.jpg": "b6120d42177172840cb47035375bc3898cc2c1c80f32895128837f9d3d4c23fb",
+    "screenshots/pr4-baseline/mobile-full.jpg": "d6c7e1f218fad3406d16e636cc139a33f10f252ed0133de89cd2532bd3362aae",
+    "screenshots/pr4-baseline/desktop-full.jpg": "03755533187bd2da20dfb5b345d87abdb89d1b60ae5deea928ec27e65e22eafa",
+    "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
+    "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c"
+  }
+}

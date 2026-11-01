@@ -1,0 +1,446 @@
+{
+  "previewCommit": "ae63e9410eda39aeb08f79b6de190b5229e8926a",
+  "deploymentWorkflow": 41361748781,
+  "deploymentResult": "success",
+  "allPublishedFilesMatchExport": true,
+  "publishedHTMLPages": 10,
+  "files": [
+    {
+      "path": "shipping.js",
+      "status": 200,
+      "sha256": "19238443f7dc417c87f82f3045eb59bdc80fa52ff84e46b1ade5a4485af13045",
+      "matchesExport": true
+    },
+    {
+      "path": "seo.css",
+      "status": 200,
+      "sha256": "98df95844681d2b073506a6316c670b54aa6f0b5cd287c37a42493f49bfcf3bb",
+      "matchesExport": true
+    },
+    {
+      "path": "services.css",
+      "status": 200,
+      "sha256": "b9322f75ee15848d23151f4f5195d08d6ade2f4a5ecdcaa9de104d7da32ae25b",
+      "matchesExport": true
+    },
+    {
+      "path": "shipping.css",
+      "status": 200,
+      "sha256": "aaa94d4ced95d2b8698eb9bb2aa95b868c3e280e5c58ccd7bf13f1eecec750d6",
+      "matchesExport": true
+    },
+    {
+      "path": "navigation.js",
+      "status": 200,
+      "sha256": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
+      "matchesExport": true
+    },
+    {
+      "path": "premium.css",
+      "status": 200,
+      "sha256": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
+      "matchesExport": true
+    },
+    {
+      "path": "refinement.css",
+      "status": 200,
+      "sha256": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
+      "matchesExport": true
+    },
+    {
+      "path": "service-cards.css",
+      "status": 200,
+      "sha256": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
+      "matchesExport": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "b17787a144e1cf6207f3e1909e537d5f53a1c2aa784f83962f5f04c78afdd332",
+      "matchesExport": true
+    },
+    {
+      "path": "home-hero.css",
+      "status": 200,
+      "sha256": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
+      "matchesExport": true
+    },
+    {
+      "path": "premium.js",
+      "status": 200,
+      "sha256": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
+      "matchesExport": true
+    },
+    {
+      "path": "legal/politica-privacidad.html",
+      "status": 200,
+      "sha256": "47d0d01baecb59927f0878bbc5ba46e369428c8059fbb355c9fc9e9b3c031d98",
+      "matchesExport": true
+    },
+    {
+      "path": "legal/aviso-legal.html",
+      "status": 200,
+      "sha256": "632f01146506863affd0a2b3ff97b538c7f925d385ebd88709ffbb5c5cd2c071",
+      "matchesExport": true
+    },
+    {
+      "path": "legal/politica-cookies.html",
+      "status": 200,
+      "sha256": "1f8f0ab5c5aa174855ff44c91c77700994ce70659e4ca583ab6c3aaa8cb463a3",
+      "matchesExport": true
+    },
+    {
+      "path": "legal/legal.css",
+      "status": 200,
+      "sha256": "31e3d0037455c4db729fc7a1aa380767244aa23e969eab85619f1d520eb765c9",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/index.html",
+      "status": 200,
+      "sha256": "8b2bf2557e32b27c787917026ce64adc6c86076aade3ea8ff879e816f5ba4ff1",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css",
+      "status": 200,
+      "sha256": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilar-tijeras-peluqueria-valencia/index.html",
+      "status": 200,
+      "sha256": "caf8e0d925d71f9bae6a2859d2bc36a6e3cf63f2423be4b5e95121a5893bad77",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillos-valencia/knives.js",
+      "status": 200,
+      "sha256": "02d62e3584ccef972045a6fe8ad4d889480a85b0ace0eebb2fced32dc1e91083",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillos-valencia/knives.css",
+      "status": 200,
+      "sha256": "ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillos-valencia/knife-hero.css",
+      "status": 200,
+      "sha256": "6dd9e948dc7d449401f5c5fc03453e38a0e8db215077aeb94f841468086ed0ac",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillos-valencia/index.html",
+      "status": 200,
+      "sha256": "66b039bf8d6d20a22693739857acbadd155bd9e51ed5210376ec22e582ac9206",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillas-maquinas-valencia/blades-hero.css",
+      "status": 200,
+      "sha256": "69eac0efbf8df5bb25e203dcae4f1ef93ab21bd716d89889f754e38e43ae60b9",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillas-maquinas-valencia/index.html",
+      "status": 200,
+      "sha256": "100ce8b44b69a51aebc81e214bef63a98a3af37575bb3e65a4328cd8881d9da8",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillos-hosteleria-valencia/hospitality-hero.css",
+      "status": 200,
+      "sha256": "ed45d8c463ecb3244dda2a8f9a03ca7e88e52061955d56a458a3638df5a15d05",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/afilado-cuchillos-hosteleria-valencia/index.html",
+      "status": 200,
+      "sha256": "38826c6a582a0f916ff8f5e371c78847987fbfbb24b4c25959cff5cf238caf4f",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/herramientas-manicura-pedicura-valencia/manicure-hero.css",
+      "status": 200,
+      "sha256": "65dcfaded729e3a10e2dd3e771692c172e5917d329318e241df6c1155273ebdd",
+      "matchesExport": true
+    },
+    {
+      "path": "servicios/herramientas-manicura-pedicura-valencia/index.html",
+      "status": 200,
+      "sha256": "07a8db692351ea679ed3d69f5a9e47513751e7279599204bea860c56ddfddcfe",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/tijeras-card.webp",
+      "status": 200,
+      "sha256": "1e3e5334a8bf26c42761b82453b3ba073c9534cb93f34055ca1e4a474841b42d",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/manicure-approved-hero.webp",
+      "status": 200,
+      "sha256": "2b10ff7926f4cfbcc3dca9e73421afee632fbb6eb72ec1daa1c60f249807729e",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/afilado.webp",
+      "status": 200,
+      "sha256": "5bb252b5a8f537084cd079ed4b532077a253e78a386d9e0a415d2345b7b97243",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/bloques.webp",
+      "status": 200,
+      "sha256": "67d7a00365fde17d4deaf43e8994c7b0aa6beceed759fc95eec62e25c101a78c",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/hosteleria-approved-hero.webp",
+      "status": 200,
+      "sha256": "8052ae3015969122a861c8af55e7c45cec3d159a05309cfd6fc5be77b66296e5",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/blade-blocks-approved-hero.webp",
+      "status": 200,
+      "sha256": "158a076bfa4b73d6d0acb654fcdf94a2344a6fed51230e42bcfd0f6790cee73c",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/manicura.webp",
+      "status": 200,
+      "sha256": "441bccdb3ca8df27396de1a2082ef0bf2e94567936fe4114c4aed61ba63fa693",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/scissors-approved-hero.webp",
+      "status": 200,
+      "sha256": "35609a8972a3768d63a811b0c44ad2308728813fb389b932db7b2ea3f6f73b56",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/home-tools-approved-hero.webp",
+      "status": 200,
+      "sha256": "71b20a787f8ae8130218f46b3003f6d10dd5d80b35d4d7400816c73aa436a199",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/tijeras.webp",
+      "status": 200,
+      "sha256": "14977c2b70bdc99538fe0416ea4aa2963b8109f236df588faaee0a0d3872eba5",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/hosteleria.webp",
+      "status": 200,
+      "sha256": "81d9ad86f3d84a744e86f3bb69ebb2c72ed210c880cfa2ecf0774b88bd868969",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/knife-approved-hero.jpeg",
+      "status": 200,
+      "sha256": "89d245159058b70a9c6c3840d66dffde030282554278ebafd1749696956bab73",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/fonts/Barlow-Condensed-OFL.txt",
+      "status": 200,
+      "sha256": "f15bcb147f45ca7edb47109f4a887a3eecd09d29fc251f3fbb2d748b32abdaa2",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/fonts/Manrope-OFL.txt",
+      "status": 200,
+      "sha256": "4f67b767d602edc0065ca540cfb36d15e3d5e41eecb4c32f768a5f6d396d56fb",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/fonts/body.ttf",
+      "status": 200,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/fonts/display.ttf",
+      "status": 200,
+      "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/illustrations/escuchar.svg",
+      "status": 200,
+      "sha256": "023653149c47e1471d89a698b2ef22601947e3b21d5e74fcd8b100c2b5f9c9c6",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/illustrations/revisar.svg",
+      "status": 200,
+      "sha256": "02f88f7c4aeee34a1b4ba8248a3490a9c8157a3d9d67f9f01e34520b41b27408",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/illustrations/envios.webp",
+      "status": 200,
+      "sha256": "0808d2357354a7bbb18b09269b7108bcd9d9205d4cf946ac1149acb1d2f26c87",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/illustrations/afilar.svg",
+      "status": 200,
+      "sha256": "360fc8869763a550e2e9a38d21d333d1a4cf9ce7edbbe83b00f4f59decdad0a6",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/illustrations/comprobar.svg",
+      "status": 200,
+      "sha256": "f1254e8ded51fa85553d763cbf3d5f7e9f756d4520e5fc4fe944d468f662b90a",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/videos/Heramientas-manicura.mp4",
+      "status": 200,
+      "sha256": "4df9ebb3daea66462790fcc9831cc0ba6443f10951fc0e2b3d533d08a4d1231f",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/videos/maquena_afilado_cortan.mp4",
+      "status": 200,
+      "sha256": "476adf0be64fd75b1fd68b1773ae8bb657a2435095b3c1227eb41987225b2fae",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/videos/cuchillo_para_profecional.mp4",
+      "status": 200,
+      "sha256": "91bbd3572176dd33c67fdde0c494b7c8ca0f194e414fb42ba1a8d62f2df6a241",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/videos/tijeras_tiran.mp4",
+      "status": 200,
+      "sha256": "40529932c61c45847f491c0c4cff6f49ba4fd85b8a2dcafdffc02b928f61227b",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4",
+      "status": 200,
+      "sha256": "5614fce6fa954fc499f5f126ec6b9b363eeef408abc51e00c217bd9ba77a1814",
+      "matchesExport": true
+    },
+    {
+      "path": "assets/images/drive/img_6874.webp",
+      "status": 200,
+      "sha256": "7c90dd5315860fa79dcb755df859206070c35994cd0a20b89cfc385907c73924",
+      "matchesExport": true
+    }
+  ],
+  "absentRoutesAndReleaseFiles": {
+    "sitemap.xml": 404,
+    "robots.txt": 404,
+    "blog/": 404,
+    "articulos/": 404,
+    "zonas/": 404,
+    "qa/responsive.html": 404
+  },
+  "noindexAllHTML": true,
+  "browser": {
+    "browser": "Cloud Chrome",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "pages": [
+      {
+        "path": "/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/servicios/afilado-cuchillos-valencia/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/servicios/herramientas-manicura-pedicura-valencia/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/servicios/",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/legal/politica-privacidad.html",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/legal/aviso-legal.html",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      },
+      {
+        "path": "/legal/politica-cookies.html",
+        "robots": "noindex, nofollow",
+        "fonts": "loaded",
+        "horizontalOverflow": false,
+        "brokenCompletedImages": [],
+        "retiredLinks": []
+      }
+    ],
+    "nativeMenuOpenAndClose": true,
+    "nativeShippingDialogOpenFiveStepsAndClose": true,
+    "notTested": [
+      "Safari",
+      "physical iPhone/Android",
+      "new mobile viewport matrix",
+      "Lighthouse/CWV",
+      "Google structured data validation"
+    ]
+  }
+}

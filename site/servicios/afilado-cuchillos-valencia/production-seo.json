@@ -1,0 +1,89 @@
+{
+  "status": "OFFLINE CANDIDATE — generated for review; not approved for deployment",
+  "canonical": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
+  "robots": "index, follow",
+  "title": "Afilado de cuchillos en Valencia | Filo Fino",
+  "description": "Afilado de cuchillos en Valencia desde 4 € por pieza y desde 15 minutos, según estado y carga del taller. Cocina, profesionales y japoneses. Consulta tu pieza.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://filofino.es/#business",
+        "name": "Filo Fino",
+        "url": "https://filofino.es/",
+        "telephone": "+34614005053",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Maestro Guerrero, 4",
+          "addressLocality": "Valencia",
+          "addressCountry": "ES"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://filofino.es/#website",
+        "url": "https://filofino.es/",
+        "name": "Filo Fino",
+        "inLanguage": "es-ES",
+        "publisher": {
+          "@id": "https://filofino.es/#business"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#webpage",
+        "url": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
+        "name": "Afilado de cuchillos en Valencia | Filo Fino",
+        "inLanguage": "es-ES",
+        "isPartOf": {
+          "@id": "https://filofino.es/#website"
+        },
+        "mainEntity": {
+          "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#breadcrumb"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#service",
+        "url": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
+        "name": "Afilado de cuchillos",
+        "serviceType": "Afilado de cuchillos",
+        "provider": {
+          "@id": "https://filofino.es/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Valencia"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://filofino.es/servicios/afilado-cuchillos-valencia/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://filofino.es/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Servicios",
+            "item": "https://filofino.es/servicios/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Afilado de cuchillos",
+            "item": "https://filofino.es/servicios/afilado-cuchillos-valencia/"
+          }
+        ]
+      }
+    ]
+  }
+}

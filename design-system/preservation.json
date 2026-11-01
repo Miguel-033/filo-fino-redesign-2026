@@ -1,15 +1,15 @@
 {
-  "baseline": "PR11 8f65eb19900f1b83b3dc836d1d719edd35367762",
+  "baseline": "Accepted b2cf0a7; 2026-11-02 retired links removed by owner request",
   "pages": [
     {
       "file": "index.html",
       "route": "/",
       "metadata": {
         "title": "Taller de afilado en Valencia | Filo Fino",
-        "meta[name=\"description\"]": "Taller de afilado en Valencia para cuchillos, tijeras y herramientas de manicura. Atención directa en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+        "meta[name=\"description\"]": "Taller especializado en afilado profesional en Valencia. Cuchillos, tijeras, herramientas de manicura y cuchillas de máquina. Calle Maestro Guerrero, 4.",
         "meta[name=\"robots\"]": "noindex, nofollow",
         "meta[property=\"og:title\"]": "Taller de afilado en Valencia | Filo Fino",
-        "meta[property=\"og:description\"]": "Taller de afilado en Valencia para cuchillos, tijeras y herramientas de manicura. Atención directa en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller."
+        "meta[property=\"og:description\"]": "Taller especializado en afilado profesional en Valencia. Cuchillos, tijeras, herramientas de manicura y cuchillas de máquina. Calle Maestro Guerrero, 4."
       },
       "headings": [
         [
@@ -34,6 +34,10 @@
         ],
         [
           "H2",
+          "Más servicios del taller"
+        ],
+        [
+          "H2",
           "Trae la herramienta.Hablemos del corte."
         ],
         [
@@ -54,7 +58,27 @@
         ],
         [
           "H2",
-          "El trabajo,de cerca."
+          "Envíanos tus herramientas desde cualquier punto de España"
+        ],
+        [
+          "H3",
+          "Contacta"
+        ],
+        [
+          "H3",
+          "Prepara"
+        ],
+        [
+          "H3",
+          "Envía"
+        ],
+        [
+          "H3",
+          "Afilamos"
+        ],
+        [
+          "H3",
+          "Recibe"
         ],
         [
           "H2",
@@ -95,6 +119,30 @@
         [
           "H3",
           "El taller"
+        ],
+        [
+          "H2",
+          "Cómo preparar y enviar tus herramientas"
+        ],
+        [
+          "H3",
+          "Contacta con el taller"
+        ],
+        [
+          "H3",
+          "Prepara una caja adecuada"
+        ],
+        [
+          "H3",
+          "Envíala y avísanos"
+        ],
+        [
+          "H3",
+          "Confirmamos y afilamos"
+        ],
+        [
+          "H3",
+          "Preparamos la vuelta"
         ]
       ],
       "paragraphs": [
@@ -145,7 +193,6 @@
         "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/",
         "tel:+34614005053",
         "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/",
-        "https://filofino.es/blog/",
         "https://www.instagram.com/filofino.es/",
         "https://filofino.es/legal/aviso-legal.html",
         "https://filofino.es/legal/politica-privacidad.html",
@@ -157,15 +204,15 @@
       "route": "/servicios/afilado-cuchillos-valencia/",
       "metadata": {
         "title": "Afilado de cuchillos en Valencia | Filo Fino",
-        "meta[name=\"description\"]": "Afilado de cuchillos de cocina, profesionales y japoneses en Valencia. Revisión de cada pieza en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+        "meta[name=\"description\"]": "Afilado de cuchillos en Valencia desde 4 € por pieza y desde 15 minutos, según estado y carga del taller. Cocina, profesionales y japoneses. Consulta tu pieza.",
         "meta[name=\"robots\"]": "noindex, nofollow",
         "meta[property=\"og:title\"]": "Afilado de cuchillos en Valencia | Filo Fino",
-        "meta[property=\"og:description\"]": "Afilado de cuchillos de cocina, profesionales y japoneses en Valencia. Revisión de cada pieza en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller."
+        "meta[property=\"og:description\"]": "Afilado de cuchillos en Valencia desde 4 € por pieza y desde 15 minutos, según estado y carga del taller. Cocina, profesionales y japoneses. Consulta tu pieza."
       },
       "headings": [
         [
           "H1",
-          "Afilado profesional de cuchillos en Valencia"
+          "Afilado de cuchillos en Valencia"
         ],
         [
           "H2",
@@ -182,6 +229,18 @@
         [
           "H3",
           "Cuchillos japoneses"
+        ],
+        [
+          "H2",
+          "Daños que se pueden valorar"
+        ],
+        [
+          "H3",
+          "Qué no se acepta"
+        ],
+        [
+          "H3",
+          "¿Trabajas en hostelería?"
         ],
         [
           "H2",
@@ -222,6 +281,10 @@
         [
           "H3",
           "Cada pieza sujeta"
+        ],
+        [
+          "H2",
+          "Una demostración del taller"
         ],
         [
           "H2",
@@ -298,7 +361,6 @@
         "https://filofino.es/servicios/afilado-cuchillos-valencia/#visita",
         "https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7",
         "https://filofino.es/servicios/afilado-cuchillos-valencia/#japoneses",
-        "https://filofino.es/articulos/cuchillo-no-corta.html",
         "tel:+34614005053",
         "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/",
         "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/",

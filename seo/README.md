@@ -1,34 +1,17 @@
-# SEO tooling
+# SEO and local release tools
 
-Read [SEO_ARCHITECTURE_2026.md](../SEO_ARCHITECTURE_2026.md) before changing a page.
-Also read [DESIGN_SYSTEM_2026.md](../DESIGN_SYSTEM_2026.md). Shared header/footer
-templates are materialized with `python design-system/render_components.py`;
-the SEO verifier checks them with `--check`. The interaction suite includes
-`design-system/verify.cjs` for preservation and responsive CSS contracts; these
-contracts do not replace an actual browser/mobile/Safari rendering check.
+`routes.json` is the final registry: seven developed main pages and three legal pages. `site/` is the only web source root. Production facts are taken from current accepted pages, not legacy HTML.
 
-```sh
-python seo/prepare_metadata.py --apply-preview
-python seo/verify.py
-node seo/verify-interactions.cjs
-```
+`prepare_metadata.py` generates offline `production/metadata.json` (main 7/7; all 10/10), `sitemap.candidate.xml` (exactly ten final filofino.es URLs) and the compatible knife handoff. `--check` detects drift. `--apply-preview` updates only safe title/description/OG fields, preserving noindex and absent canonical/schema. Normal cleanup does not need to rewrite accepted page metadata.
 
-Python tools use only the standard library. Interaction tests require the existing QA environment's `jsdom` and `postcss`, not browser-facing dependencies. Configure normal Node module resolution or NODE_PATH for that environment; do not add them to the site's assets. The knife component's checks.json is refreshed by its test. No analytics SDK, installer, framework or network service is required by the website.
+`build.py --mode preview|production --output /new/empty/path` follows dependencies from exactly ten registered pages: HTML resources, CSS URLs, JS illustration paths, video posters/sources/downloads and font licence notices. No source-only document, report, test, source master or migration file is published. It refuses a nonempty output directory and never pushes/deploys.
 
-`routes.json` owns title/description, URL role, developed/planned state, required links and page asset lists. When replacing another existing service page, add its source/assets and required contextual links before switching status to developed; do not invent placeholder content or URLs to satisfy tests.
+Preview: noindex,nofollow in all ten HTML files; no canonical, og:url, JSON-LD, production robots/sitemap or CNAME. Production: offline only, index,follow and self-canonical/schema; ten-URL sitemap and separate robots template. It is never copied to Pages.
 
-`prepare_metadata.py` generates inert production metadata and a candidate sitemap. `--check` detects drift; `--apply-preview` updates safe test metadata only. It has no production export or deploy command. The knife's older production-seo.json is generated from the central metadata for backward compatibility, not maintained separately. Resolve business facts and reconcile the shared entity ID before production.
+`verify.py` checks metadata, H1, hierarchy, links/anchors, resource dependencies, common component parity, JSON graphs, exact sitemap contents, migration counts and both real local output trees. `release_checks.py` compares all seven Hero and main HTML regions to accepted b2cf0a7, allowing only the requested article-link removal, and compares all active CSS/JS/media bytes. These are offline checks, not Google indexing or Safari claims.
 
-`verify.py` checks HTML, unique metadata/H1, heading hierarchy, links, resources, preview isolation and prepared JSON graphs. It also protects the accepted PR9 asset/interaction baseline tree. Intentional future shared CSS/JS/media changes need an explicitly reviewed new baseline and meaningful regression tests; do not merely weaken the test until it passes. The preservation ledger currently has 42 identity mappings; an approved future consolidation needs reviewed migration logic rather than silently dropping old URLs.
+`verify-services.cjs`: route/fact/video/media and service-menu DOM regression. `verify-interactions.cjs`: home/menu/shipping/process/WhatsApp and knife/design-system checks. QA dependencies jsdom/postcss must be available via normal Node resolution or NODE_PATH; they do not ship. Historical browser/viewport tests remain available and are updated to `site/`.
 
-`verify-interactions.cjs` tests home gallery/menu/stages and knife gallery/menu/WhatsApp using DOM test doubles. It does not certify rendered layout, native keyboard/focus/swipe, Safari or Lighthouse. Existing browser harnesses remain available in the page source; no new screenshots are claimed from them.
+`export_preview.py --output /separate/preview-worktree` validates repository and preview/* local branch, runs release checks, builds preview only, removes stale publishing files and copies its dependency closure. It never pushes. An existing `.nojekyll` and absence of CNAME are required. Changing remote refs or publishing requires the owner's task authorization; production is prohibited.
 
-For a **local-only** publishing copy, create a separate `preview/*` worktree from the actual current publishing head, then:
-
-```sh
-python seo/export_preview.py --output /absolute/path/to/the/preview-worktree
-```
-
-The exporter validates repository/branch boundaries, preserves the existing .nojekyll, refuses CNAME/robots/sitemap, copies only static allowlisted page files plus existing assets, and adapts links for the project path. It does not copy source-only metadata, checks or the production directory. It never pushes or updates a remote ref. The current owner task must separately authorize a test publication; the publish operation must use the latest expected head without force. After deployment, verify both HTML responses and resource hashes. Never export this copy to production.
-
-Reports: `checks.json` and `regression.json` record the actual offline checks. Deployment HTTP checks and the source/publishing SHAs are recorded in the Draft PR. Full raw GSC query exports are not published; the specification includes only relevant aggregates and interpretation limits.
+Do not derive sitemap from migration rows. Nonidentity redirect proposals in `migration/url-map.csv` require owner approval. Historical HTTP statuses there were not re-fetched during cleanup.

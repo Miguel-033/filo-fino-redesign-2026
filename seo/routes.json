@@ -1,8 +1,8 @@
 {
-  "version": "2026-10-26",
+  "version": "2026-11-02",
   "productionOrigin": "https://filofino.es",
   "previewBase": "https://miguel-033.github.io/filo-fino-redesign-2026/",
-  "sourceRoot": "design-premium-preview",
+  "sourceRoot": "site",
   "sharedAssets": [
     "premium.css",
     "refinement.css",
@@ -58,7 +58,6 @@
         "/",
         "/servicios/afilar-tijeras-peluqueria-valencia/",
         "/servicios/herramientas-manicura-pedicura-valencia/",
-        "/articulos/cuchillo-no-corta.html",
         "/servicios/afilado-cuchillos-hosteleria-valencia/"
       ]
     },
@@ -74,8 +73,7 @@
       "primaryIntent": "scissors-service",
       "mustLink": [
         "/",
-        "/servicios/",
-        "/articulos/tijeras-tiran.html"
+        "/servicios/"
       ]
     },
     {
@@ -90,8 +88,7 @@
       "primaryIntent": "manicure-service",
       "mustLink": [
         "/",
-        "/servicios/",
-        "/articulos/alicate-ruega.html"
+        "/servicios/"
       ]
     },
     {
@@ -102,12 +99,11 @@
       "serviceName": "Afilado de cuchillas de máquinas",
       "title": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
       "description": "Afilado de cuchillas y bloques de máquinas de peluquería y grooming en Valencia desde 13 €. Plazo desde 2 horas, según cantidad, estado y carga del taller.",
-      "h1Contains": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "h1Contains": "Afilado de cuchillas de máquinas en Valencia",
       "primaryIntent": "clipper-blades-service",
       "mustLink": [
         "/",
-        "/servicios/",
-        "/articulos/maquina-muerde.html"
+        "/servicios/"
       ]
     },
     {
@@ -118,12 +114,11 @@
       "serviceName": "Afilado de cuchillos para hostelería",
       "title": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
       "description": "Afilado para restaurantes y cocinas profesionales en Valencia desde 6 € por cuchillo. Recogida y entrega posibles, con condiciones y coste acordados.",
-      "h1Contains": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "h1Contains": "Afilado de cuchillos para hostelería en Valencia",
       "primaryIntent": "hospitality-b2b-service",
       "mustLink": [
         "/",
-        "/servicios/",
-        "/articulos/cuchillo-no-corta.html"
+        "/servicios/"
       ]
     },
     {
@@ -144,15 +139,42 @@
       ]
     }
   ],
-  "productionHandoff": {
-    "status": "frozen-pending-explicit-owner-approval",
-    "files": {
-      "robots.txt": "7626ae9e01cec899a9b0bcbf6fcef69581bf196bf4fada89f199ca2e80e433ce",
-      "sitemap.xml": "71432c40ec811acc17ef4b136433e0816ed5a43f14532cc24cc9f19d533fb314",
-      "seo/production/metadata.json": "11d09940e090945da87cea149bba0f423b799045b782cabdf616a0c7438b84c5",
-      "seo/production/sitemap.candidate.xml": "2da6e7da44c51291162d334ee8cf53d9607e26225dca3b116dbc9343f6672a40",
-      "seo/production/robots.txt.template": "531613b844e88d8d1dd1397614eb4c4c17f0d8135e9f6b14a1f8dd7441f2f082",
-      "design-premium-preview/servicios/afilado-cuchillos-valencia/production-seo.json": "a9c01cfcad0437dbe1da8c69c605dd06bb7a8f09646341079af3bda92d54f270"
+  "legalPages": [
+    {
+      "path": "/legal/politica-privacidad.html",
+      "source": "legal/politica-privacidad.html",
+      "status": "legal",
+      "role": "legal",
+      "title": "Política de privacidad | Filo Fino",
+      "description": "Política de privacidad del sitio web de Filo Fino (Valencia).",
+      "h1Contains": "Política de privacidad",
+      "mustLink": [
+        "/"
+      ]
+    },
+    {
+      "path": "/legal/aviso-legal.html",
+      "source": "legal/aviso-legal.html",
+      "status": "legal",
+      "role": "legal",
+      "title": "Aviso legal | Filo Fino",
+      "description": "Información legal del sitio web de Filo Fino (Valencia).",
+      "h1Contains": "Aviso legal",
+      "mustLink": [
+        "/"
+      ]
+    },
+    {
+      "path": "/legal/politica-cookies.html",
+      "source": "legal/politica-cookies.html",
+      "status": "legal",
+      "role": "legal",
+      "title": "Política de cookies | Filo Fino",
+      "description": "Política de cookies del sitio web de Filo Fino (Valencia).",
+      "h1Contains": "Política de cookies",
+      "mustLink": [
+        "/"
+      ]
     }
-  }
+  ]
 }

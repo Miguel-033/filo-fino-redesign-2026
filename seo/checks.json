@@ -6,8 +6,8 @@
       "path": "/",
       "title": "Taller de afilado en Valencia | Filo Fino",
       "h1": "Taller de afilado en Valencia Cada filo. Su oficio.",
-      "htmlBytes": 24541,
-      "directAndCSSResourceBytes": 794913,
+      "htmlBytes": 24698,
+      "directAndCSSResourceBytes": 881750,
       "images": 11,
       "links": 49,
       "noindex": true,
@@ -151,10 +151,10 @@
       "path": "/servicios/afilado-cuchillos-valencia/",
       "title": "Afilado de cuchillos en Valencia | Filo Fino",
       "h1": "Afilado de cuchillos en Valencia",
-      "htmlBytes": 23904,
+      "htmlBytes": 23610,
       "directAndCSSResourceBytes": 884886,
       "images": 2,
-      "links": 55,
+      "links": 53,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -264,10 +264,10 @@
       "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
       "title": "Afilado de tijeras de peluquería en Valencia | Filo Fino",
       "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
-      "htmlBytes": 17226,
+      "htmlBytes": 16936,
       "directAndCSSResourceBytes": 797646,
       "images": 3,
-      "links": 46,
+      "links": 44,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -329,10 +329,10 @@
       "path": "/servicios/herramientas-manicura-pedicura-valencia/",
       "title": "Afilado de herramientas de manicura en Valencia | Filo Fino",
       "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
-      "htmlBytes": 16103,
-      "directAndCSSResourceBytes": 479778,
+      "htmlBytes": 16754,
+      "directAndCSSResourceBytes": 609935,
       "images": 3,
-      "links": 46,
+      "links": 44,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -393,17 +393,17 @@
     {
       "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
       "title": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
-      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
-      "htmlBytes": 16013,
-      "directAndCSSResourceBytes": 877484,
+      "h1": "Afilado de cuchillas de máquinas en Valencia",
+      "htmlBytes": 16801,
+      "directAndCSSResourceBytes": 629202,
       "images": 3,
-      "links": 46,
+      "links": 44,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
         [
           "h1",
-          "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia"
+          "Afilado de cuchillas de máquinas en Valencia"
         ],
         [
           "h2",
@@ -458,17 +458,17 @@
     {
       "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
       "title": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
-      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
-      "htmlBytes": 17309,
-      "directAndCSSResourceBytes": 495398,
+      "h1": "Afilado de cuchillos para hostelería en Valencia",
+      "htmlBytes": 17704,
+      "directAndCSSResourceBytes": 606498,
       "images": 3,
-      "links": 47,
+      "links": 45,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
         [
           "h1",
-          "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia"
+          "Afilado de cuchillos para hostelería en Valencia"
         ],
         [
           "h2",
@@ -524,10 +524,10 @@
       "path": "/servicios/",
       "title": "Servicios de afilado en Valencia | Filo Fino",
       "h1": "Servicios de afilado en Valencia",
-      "htmlBytes": 9706,
+      "htmlBytes": 9594,
       "directAndCSSResourceBytes": 425462,
       "images": 2,
-      "links": 37,
+      "links": 36,
       "noindex": true,
       "productionSignalsAbsent": true,
       "headings": [
@@ -572,10 +572,215 @@
           "El taller"
         ]
       ]
+    },
+    {
+      "path": "/legal/politica-privacidad.html",
+      "title": "Política de privacidad | Filo Fino",
+      "h1": "Política de privacidad",
+      "htmlBytes": 10133,
+      "directAndCSSResourceBytes": 404846,
+      "images": 1,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Política de privacidad"
+        ],
+        [
+          "h2",
+          "Responsable del tratamiento"
+        ],
+        [
+          "h2",
+          "Datos personales que se recogen"
+        ],
+        [
+          "h2",
+          "Finalidad del tratamiento"
+        ],
+        [
+          "h2",
+          "Base legal del tratamiento"
+        ],
+        [
+          "h2",
+          "Conservación de los datos"
+        ],
+        [
+          "h2",
+          "Cesión de datos a terceros"
+        ],
+        [
+          "h2",
+          "Derechos del usuario"
+        ],
+        [
+          "h2",
+          "Medidas de seguridad"
+        ],
+        [
+          "h2",
+          "Legislación aplicable"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/legal/aviso-legal.html",
+      "title": "Aviso legal | Filo Fino",
+      "h1": "Aviso legal",
+      "htmlBytes": 11921,
+      "directAndCSSResourceBytes": 404846,
+      "images": 1,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Aviso legal"
+        ],
+        [
+          "h2",
+          "Datos del titular"
+        ],
+        [
+          "h2",
+          "Objeto del sitio web"
+        ],
+        [
+          "h2",
+          "Ámbito territorial de la actividad"
+        ],
+        [
+          "h2",
+          "Condiciones de uso"
+        ],
+        [
+          "h2",
+          "Precios y contratación de servicios"
+        ],
+        [
+          "h2",
+          "Propiedad intelectual e industrial"
+        ],
+        [
+          "h2",
+          "Responsabilidad"
+        ],
+        [
+          "h2",
+          "Enlaces a terceros"
+        ],
+        [
+          "h2",
+          "Legislación aplicable y jurisdicción"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
+    },
+    {
+      "path": "/legal/politica-cookies.html",
+      "title": "Política de cookies | Filo Fino",
+      "h1": "Política de cookies",
+      "htmlBytes": 8982,
+      "directAndCSSResourceBytes": 404846,
+      "images": 1,
+      "links": 29,
+      "noindex": true,
+      "productionSignalsAbsent": true,
+      "headings": [
+        [
+          "h1",
+          "Política de cookies"
+        ],
+        [
+          "h2",
+          "¿Qué son las cookies?"
+        ],
+        [
+          "h2",
+          "Tipos de cookies utilizadas"
+        ],
+        [
+          "h2",
+          "Cookies de terceros"
+        ],
+        [
+          "h2",
+          "Gestión de cookies"
+        ],
+        [
+          "h2",
+          "Aceptación de la política de cookies"
+        ],
+        [
+          "h2",
+          "Actualizaciones"
+        ],
+        [
+          "h2",
+          "Hablemos de tu herramienta."
+        ],
+        [
+          "h3",
+          "Tu herramienta"
+        ],
+        [
+          "h3",
+          "El taller"
+        ]
+      ]
     }
   ],
-  "retainedMigrationURLs": 42,
-  "protectedAssetAndInteractionFiles": 27,
+  "retainedMigrationURLs": 65,
+  "release": {
+    "migrationURLs": 65,
+    "productionMetadataMainPages": "7/7",
+    "productionMetadataAllPages": "10/10",
+    "sitemapURLs": 10,
+    "acceptedHeroAndMainPages": 7,
+    "acceptedAssetHashesChecked": 44,
+    "builds": [
+      {
+        "mode": "preview",
+        "pages": 10,
+        "status": "PASS"
+      },
+      {
+        "mode": "production",
+        "pages": 10,
+        "status": "PASS"
+      }
+    ],
+    "redirectsInstalled": false,
+    "networkOrDeploy": false
+  },
+  "protectedAssetAndInteractionFiles": 44,
   "limitations": [
     "No rendered/mobile/Safari verification",
     "No Lighthouse/CWV measurement",

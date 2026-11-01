@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess,re
-root=Path(__file__).resolve().parents[2];base='7e13f4e';page='design-premium-preview/servicios/afilar-tijeras-peluqueria-valencia/index.html'
-for f in subprocess.check_output(['git','ls-tree','-r','--name-only',base,'design-premium-preview'],cwd=root,text=True).splitlines():
+root=Path(__file__).resolve().parents[2];base='7e13f4e';page='site/servicios/afilar-tijeras-peluqueria-valencia/index.html'
+for f in subprocess.check_output(['git','ls-tree','-r','--name-only',base,'site'],cwd=root,text=True).splitlines():
  before=subprocess.check_output(['git','show',base+':'+f],cwd=root);after=(root/f).read_bytes()
  if f==page:
   strip=lambda t:re.sub(r'<section class="hero .*?</section>','HERO',t,count=1,flags=re.S)
