@@ -1,32 +1,32 @@
-/* Manicure Hero: approved service composition adapted to the supplied workshop photo. */
+/* Manicure Hero: approved service system. Breadcrumbs stay in flow at every text size. */
 .service-page .hero.hero--manicure-approved{--manicure-black:#030e11;--manicure-gold:#e8b77c;position:relative;isolation:isolate;min-height:0;padding:0;background:var(--manicure-black);color:#f2f1ed}
 .service-page .hero--manicure-approved .hero-photo{inset:0 0 0 auto;width:62%;height:100%;bottom:auto;clip-path:none;opacity:1;animation:none;transform:none}
 .service-page .hero--manicure-approved .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:0% 45%;filter:none;transform:none;animation:none}
 .service-page .hero--manicure-approved .hero-photo::after{background:linear-gradient(90deg,#030e11 0%,#030e11df 21%,#030e1175 55%,#030e1120 84%,#030e116b 100%),linear-gradient(0deg,#030e11 0%,#030e1120 58%,#030e1160 100%)}
-.service-page .hero--manicure-approved .hero-content{width:100%;max-width:1600px;padding:16px clamp(24px,5vw,84px) 28px;pointer-events:auto}
-.service-page .hero--manicure-approved .breadcrumbs{margin:0 0 22px;max-width:660px;min-height:44px;gap:8px;color:#f1f1ee;font-size:13px;line-height:1.5;flex-wrap:wrap}
+.service-page .hero--manicure-approved .hero-content{width:100%;max-width:1600px;padding:16px clamp(1.5rem,5vw,5.25rem) 28px;pointer-events:auto}
+.service-page .hero--manicure-approved .breadcrumbs{position:static;inset:auto;height:auto;transform:none;margin:0 0 22px;max-width:660px;min-height:44px;gap:8px;color:#f1f1ee;font-size:0.8125rem;line-height:1.5;flex-wrap:wrap}
 .service-page .hero--manicure-approved .breadcrumbs a{min-height:44px;color:inherit;text-decoration:none}
 .service-page .hero--manicure-approved .breadcrumbs a:hover{text-decoration:underline}
 .service-page .hero--manicure-approved .breadcrumbs svg{width:12px;height:12px;flex:0 0 12px}
 .service-page .hero--manicure-approved .manicure-hero-story{width:680px;max-width:58%;position:relative}
-.service-page .hero--manicure-approved .manicure-hero-kicker{display:flex;align-items:center;gap:16px;color:var(--manicure-gold);font-size:15px;font-weight:600;line-height:1.5;margin:0 0 12px;letter-spacing:.025em}
+.service-page .hero--manicure-approved .manicure-hero-kicker{display:flex;align-items:center;gap:16px;color:var(--manicure-gold);font-size:0.9375rem;font-weight:600;line-height:1.5;margin:0 0 12px;letter-spacing:.025em}
 .service-page .hero--manicure-approved .manicure-hero-kicker::before{content:"";width:36px;height:1px;background:currentColor;flex:0 0 36px}
-.service-page .hero.hero--manicure.hero--manicure-approved h1{font-family:var(--display);font-weight:600;font-size:54px;line-height:1.02;letter-spacing:-.025em;text-wrap:initial;max-width:680px;margin:0;text-shadow:none;animation:none;transform:none;opacity:1}
+.service-page .hero.hero--manicure.hero--manicure-approved h1{font-family:var(--display);font-weight:600;font-size:3.375rem;line-height:1.02;letter-spacing:-.025em;text-wrap:initial;max-width:680px;margin:0;text-shadow:none;animation:none;transform:none;opacity:1}
 .service-page .hero--manicure-approved h1 span{display:block;color:#f2f1ed}
 .service-page .hero--manicure-approved h1 .hero-accent{color:var(--manicure-gold)}
-.service-page .hero--manicure-approved .knife-intro{font-size:16px;line-height:1.6;font-weight:400;color:#e0e3e3;max-width:49ch;margin:14px 0 0}
-.service-page .hero--manicure-approved .manicure-hero-facts{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #7d888b66;margin-top:18px;padding-top:16px}
+.service-page .hero--manicure-approved .knife-intro{font-size:1rem;line-height:1.6;font-weight:400;color:#e0e3e3;max-width:49ch;margin:14px 0 0}
+.service-page .hero--manicure-approved .manicure-hero-facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-top:1px solid #7d888b66;margin-top:18px;padding-top:16px}
 .service-page .hero--manicure-approved .manicure-hero-fact{display:flex;align-items:center;gap:14px;min-width:0}
 .service-page .hero--manicure-approved .manicure-hero-fact+div{border-left:1px solid #7d888b55;padding-left:20px}
 .service-page .hero--manicure-approved .manicure-hero-fact>div{display:flex;flex-direction:column;min-width:0}
-.service-page .hero--manicure-approved .manicure-hero-fact span{font-size:14px;line-height:1.4;color:#d7dcdd}
-.service-page .hero--manicure-approved .manicure-hero-fact strong{font:600 34px/1.1 var(--display);color:var(--manicure-gold);margin-top:2px;white-space:nowrap}
-.service-page .hero--manicure-approved .manicure-hero-fact .manicure-time{font-size:26px}
+.service-page .hero--manicure-approved .manicure-hero-fact span{font-size:0.875rem;line-height:1.4;color:#d7dcdd}
+.service-page .hero--manicure-approved .manicure-hero-fact strong{font:600 2.125rem/1.1 var(--display);color:var(--manicure-gold);margin-top:2px;white-space:normal}
+.service-page .hero--manicure-approved .manicure-hero-fact .manicure-time{font-size:1.625rem}
 .service-page .hero--manicure-approved .manicure-fact-icon{width:48px;height:52px;flex:0 0 48px;fill:none;stroke:var(--manicure-gold);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
 .service-page .hero--manicure-approved .manicure-clock{width:36px;height:36px;flex:0 0 36px;color:#e4d6c1;stroke-width:1;fill:none;stroke:currentColor}
-.service-page .hero--manicure-approved .manicure-fact-note{font-size:12px;line-height:1.55;color:#adb9bc;max-width:54ch;margin:7px 0 0}
+.service-page .hero--manicure-approved .manicure-fact-note{font-size:0.75rem;line-height:1.55;color:#adb9bc;max-width:54ch;margin:7px 0 0}
 .service-page .hero--manicure-approved .manicure-actions{display:grid;grid-template-columns:1fr;gap:9px;margin:17px 0 0;max-width:530px}
-.service-page .hero--manicure-approved .manicure-actions .button{width:100%;min-height:56px;font-size:15px;padding:14px 20px;gap:14px;line-height:1.4;justify-content:flex-start;border-radius:0;white-space:normal}
+.service-page .hero--manicure-approved .manicure-actions .button{width:100%;min-height:56px;font-size:0.9375rem;padding:14px 20px;gap:14px;line-height:1.4;justify-content:flex-start;border-radius:0;white-space:normal}
 .service-page .hero--manicure-approved .manicure-actions .button-brass{background:linear-gradient(110deg,#edc28c,#e5b378);color:#10191a}
 .service-page .hero--manicure-approved .manicure-actions .button-brass::after{background:linear-gradient(45deg,transparent 47%,#030e11 50%);width:8px;height:8px}
 .service-page .hero--manicure-approved .manicure-actions .button-outline{border:1px solid #9eaaaa;background:transparent;color:#f2f1ed}
@@ -34,51 +34,58 @@
 .service-page .hero--manicure-approved .manicure-actions .button-outline:hover{background:#ffffff0d}
 .service-page .hero--manicure-approved .manicure-actions .button svg{width:22px;height:22px;flex:0 0 22px;stroke-width:1.6}
 .service-page .hero--manicure-approved .manicure-actions .manicure-cta-arrow{margin-left:auto;width:20px;height:20px;flex-basis:20px}
-.service-page .hero--manicure-approved .knife-address{display:flex;font-size:13px;line-height:1.6;color:#e1e5e5;gap:10px;margin:9px 0 0;min-height:44px}
+.service-page .hero--manicure-approved .knife-address{display:flex;font-size:0.8125rem;line-height:1.6;color:#e1e5e5;gap:10px;margin:9px 0 0;min-height:44px}
 .service-page .hero--manicure-approved .knife-address svg{width:18px;height:18px;flex:0 0 18px}
 @media(min-width:768px) and (max-width:1099px){
  .service-page .hero--manicure-approved .manicure-hero-story{max-width:92%;width:620px}
- .service-page .hero.hero--manicure.hero--manicure-approved h1{font-size:48px}
- .service-page .hero--manicure-approved .hero-photo{left:56%;right:0;width:44%}.hero-photo img{object-position:0% center}
+ .service-page .hero.hero--manicure.hero--manicure-approved h1{font-size:3rem}
+ .service-page .hero--manicure-approved .hero-photo{left:56%;right:0;width:44%}.service-page .hero--manicure-approved .hero-photo img{object-position:0% center}
  .service-page .hero--manicure-approved .hero-photo::after{background:linear-gradient(90deg,#030e11 0%,#030e11e8 34%,#030e1175 66%,transparent),linear-gradient(0deg,#030e11,transparent 80%)}
 }
 @media(max-width:767px){
- .service-page .hero--manicure-approved .hero-photo{top:0;left:40%;right:0;bottom:auto;width:60%;height:310px;clip-path:none}
+ .service-page .hero--manicure-approved .hero-photo{top:75px;left:46%;right:auto;bottom:auto;width:68%;height:360px;clip-path:none}
  .service-page .hero--manicure-approved .hero-photo img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:0% 25%}
- .service-page .hero--manicure-approved .hero-photo::after{background:linear-gradient(90deg,#030e11e8 0%,#030e1190 48%,#030e1120 100%),linear-gradient(180deg,#030e1136 0%,#030e1166 43%,#030e11d9 79%,#030e11 100%)}
- .service-page .hero--manicure-approved .hero-content{padding:6px 24px 16px}
- .service-page .hero--manicure-approved .breadcrumbs{margin:0 0 4px;gap:6px;font-size:12px;line-height:1.45;min-height:38px}
+ .service-page .hero--manicure-approved .hero-photo::after{background:linear-gradient(90deg,#030e1190 0%,#030e1130 48%,transparent 100%),linear-gradient(180deg,#030e1120 0%,#030e1120 45%,#030e1180 73%,#030e11 100%)}
+ .service-page .hero--manicure-approved .hero-content{padding:12px 24px 28px}
+ .service-page .hero--manicure-approved .breadcrumbs{margin:0 0 18px;gap:6px;font-size:0.75rem;line-height:1.5;min-height:44px}
  .service-page .hero--manicure-approved .breadcrumbs a{min-height:38px}
  .service-page .hero--manicure-approved .breadcrumbs svg{width:10px;height:10px;flex-basis:10px}
- .service-page .hero--manicure-approved .manicure-hero-story{width:auto;max-width:58%;margin-top:0}
- .service-page .hero--manicure-approved .manicure-hero-kicker{font-size:13px;gap:13px;margin-bottom:7px}
- .service-page .hero.hero--manicure.hero--manicure-approved h1{font-size:clamp(31px,8.5vw,36px);line-height:1;max-width:none;letter-spacing:-.025em}
- .service-page .hero--manicure-approved .knife-intro{font-size:15px;line-height:1.45;margin-top:8px;max-width:43ch}
- .service-page .hero--manicure-approved .manicure-hero-facts{width:calc(100vw - 48px);margin-top:11px;padding-top:10px}
+ .service-page .hero--manicure-approved .manicure-hero-story{width:100%;max-width:none;margin-top:0}
+ .service-page .hero--manicure-approved .manicure-hero-kicker{font-size:0.875rem;gap:13px;margin-bottom:12px}
+ .service-page .hero.hero--manicure.hero--manicure-approved h1{font-size:clamp(2.375rem,10.5vw,2.875rem);line-height:1.04;max-width:70%;letter-spacing:-.025em}
+ .service-page .hero--manicure-approved .knife-intro{font-size:1.0625rem;line-height:1.55;margin-top:14px;max-width:none}
+ .service-page .hero--manicure-approved .manicure-hero-facts{width:100%;margin-top:16px;padding-top:16px}
  .service-page .hero--manicure-approved .manicure-hero-fact{gap:9px}
  .service-page .hero--manicure-approved .manicure-hero-fact+div{padding-left:14px}
- .service-page .hero--manicure-approved .manicure-hero-fact span{font-size:12px}
- .service-page .hero--manicure-approved .manicure-hero-fact strong{font-size:31px}
- .service-page .hero--manicure-approved .manicure-hero-fact .manicure-time{font-size:22px}
+ .service-page .hero--manicure-approved .manicure-hero-fact span{font-size:0.75rem}
+ .service-page .hero--manicure-approved .manicure-hero-fact strong{font-size:1.9375rem}
+ .service-page .hero--manicure-approved .manicure-hero-fact .manicure-time{font-size:1.375rem}
  .service-page .hero--manicure-approved .manicure-fact-icon{width:40px;height:43px;flex-basis:40px}
  .service-page .hero--manicure-approved .manicure-clock{width:32px;height:32px;flex-basis:32px}
- .service-page .hero--manicure-approved .manicure-fact-note{width:calc(100vw - 48px);font-size:11px;line-height:1.4;margin-top:5px}
- .service-page .hero--manicure-approved .manicure-actions{width:calc(100vw - 48px);margin-top:10px;gap:7px;max-width:none}
- .service-page .hero--manicure-approved .manicure-actions .button{min-height:52px;font-size:15px;padding:12px 16px;gap:11px}
+ .service-page .hero--manicure-approved .manicure-fact-note{width:100%;font-size:0.6875rem;line-height:1.4;margin-top:5px}
+ .service-page .hero--manicure-approved .manicure-actions{width:100%;margin-top:14px;gap:10px;max-width:none}
+ .service-page .hero--manicure-approved .manicure-actions .button{min-height:60px;font-size:1rem;padding:16px 18px;gap:11px}
  .service-page .hero--manicure-approved .manicure-actions .button svg{width:20px;height:20px;flex-basis:20px}
- .service-page .hero--manicure-approved .knife-address{width:calc(100vw - 48px);font-size:12px;margin-top:5px;gap:8px;min-height:38px}
+ .service-page .hero--manicure-approved .knife-address{width:100%;font-size:0.75rem;margin-top:5px;gap:8px;min-height:38px}
  .service-page .hero--manicure-approved .knife-address svg{width:16px;height:16px;flex-basis:16px}
 }
 @media(max-width:359px){
- .service-page .hero--manicure-approved .hero-content{padding-inline:20px}.manicure-hero-story{max-width:62%}.manicure-hero-facts,.manicure-fact-note,.manicure-actions,.knife-address{width:calc(100vw - 40px)}.hero-photo{left:40%;width:60%}
- .service-page .hero--manicure-approved .breadcrumbs{font-size:11px;gap:5px}
+ .service-page .hero--manicure-approved .hero-content{padding-inline:20px}
+ .service-page .hero--manicure-approved .breadcrumbs{font-size:0.6875rem;gap:5px}
  .service-page .hero--manicure-approved .manicure-hero-fact{gap:7px}
  .service-page .hero--manicure-approved .manicure-hero-fact+div{padding-left:10px}
  .service-page .hero--manicure-approved .manicure-clock{width:28px;height:28px;flex-basis:28px}
  .service-page .hero--manicure-approved .manicure-fact-icon{width:34px;flex-basis:34px}
- .service-page .hero--manicure-approved .manicure-hero-fact .manicure-time{font-size:20px}
- .service-page .hero--manicure-approved .manicure-actions .button{padding-inline:13px;font-size:14px;gap:9px}
+ .service-page .hero--manicure-approved .manicure-hero-fact .manicure-time{font-size:1.25rem}
+ .service-page .hero--manicure-approved .manicure-actions .button{padding-inline:13px;font-size:0.875rem;gap:9px}
 }
 @media(prefers-reduced-motion:reduce){
  .service-page .hero--manicure-approved,.service-page .hero--manicure-approved *,.service-page .hero--manicure-approved *::before,.service-page .hero--manicure-approved *::after{animation:none!important;transition:none!important}
 }
+/* Natural wrapping also supports enlarged text without fixed-height text boxes. */
+.service-page .hero--manicure-approved h1{overflow-wrap:anywhere}
+.service-page .hero--manicure-approved .breadcrumbs{width:100%;min-width:0;overflow-wrap:anywhere}
+.service-page .hero--manicure-approved .breadcrumbs [aria-current]{min-width:0;max-width:100%;white-space:normal}
+.service-page .hero--manicure-approved .manicure-hero-fact{flex-wrap:wrap;align-content:start}
+.service-page .hero--manicure-approved .button,.service-page .hero--manicure-approved .knife-address{overflow-wrap:anywhere;min-width:0}
+@media(max-width:767px){.service-page .hero--manicure-approved .breadcrumbs [aria-current]{flex-basis:100%}.service-page .hero--manicure-approved .breadcrumbs a{min-height:44px}}
