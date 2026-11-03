@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
-      "mainWithRetiredLinksRemovedSha256": "cbe439b04ec7de3edbe83b2d9b370cdf8279d702755c295ac35b9146e526d222"
+      "mainWithRetiredLinksRemovedSha256": "f11e40fabf708ef8b901aa4dd66bb764d23f3fa81d03a84c0587b9c8c925ccaa"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -38,7 +38,7 @@
     "navigation.js": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
     "premium.css": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
     "refinement.css": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
-    "service-cards.css": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
+    "service-cards.css": "4da3179e483d68df787fdb348732f5232d5b500132368d06fa7665e2017d2a60",
     "home-hero.css": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
     "premium.js": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
     "servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
@@ -88,9 +88,12 @@
     "screenshots/pr4-baseline/desktop-full.jpg": "03755533187bd2da20dfb5b345d87abdb89d1b60ae5deea928ec27e65e22eafa",
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
     "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
-    "assets/images/home-cuchillos-owner.webp": "783c8ad88a72b04b5832a6bbe87cb550e32a1938ae8b28beddf651c0f5878b59",
-    "assets/images/home-tijeras-owner.webp": "683cfe39d3bc002e04a8a6e8d08f2df5560b8c589aaae3b597528d498196ebce",
-    "assets/images/home-manicura-owner.webp": "821623daf7dd00e9d267fbec9857d3a89ada7318725a96592040c2d8f1532b15"
+    "assets/images/home-cuchillos-owner.webp": "c30a335198c4ba1d8f96de7678c4de3ccb2d0b0dbc74fba378450c72041374da",
+    "assets/images/home-tijeras-owner.webp": "53b9fdd0058c77bd5bac9d99575c70bfb2ff9025873c49c6a9fe8f3557a2f3a9",
+    "assets/images/home-manicura-owner.webp": "a75ed57674120458566ad5007089102ba853c4436d081e0f95169e35d75e239a",
+    "assets/images/home-cuchillos-owner-mobile.webp": "e656706b771e0f5044c8e4cdeffbe99c666e65e5dc711b450b1f22edff5a9a80",
+    "assets/images/home-tijeras-owner-mobile.webp": "ee09ea004dcbfdc950e5635ac504f013f07bd4db7c3084a20bbeb1e7ad82fa65",
+    "assets/images/home-manicura-owner-mobile.webp": "c2b5c157ce4174c0285182c4765cb594ab5f2361f0d5d47c72304b4fa5b2482c"
   },
   "authorizedUpdates": [
     {
@@ -107,6 +110,12 @@
         "IMG_2143.JPG": "3565d57a92a1805bc26d0277e82542f71cfe3bcd0b36774729d9b99e6d01d345",
         "IMG_3933.JPG": "16117539200d202c0ea1e97bc0d5fd53707640f9b315338d2bb84d639438da7c"
       }
+    },
+    {
+      "task": "H01 content visibility correction",
+      "date": "2026-11-03",
+      "authorization": "Owner explicitly allowed local block CSS correction after reviewing desktop and mobile screenshots",
+      "scope": "Only three homepage card picture elements, source crops/rotations, and local photo/text placement CSS. Card bounds, words, links, Hero and other sections preserved."
     }
   ]
 }
