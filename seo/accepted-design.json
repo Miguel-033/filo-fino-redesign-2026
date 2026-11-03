@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
-      "mainWithRetiredLinksRemovedSha256": "f11e40fabf708ef8b901aa4dd66bb764d23f3fa81d03a84c0587b9c8c925ccaa"
+      "mainWithRetiredLinksRemovedSha256": "d37a99561d4fb746a67ae58aedc5dfb6913a84b7ffe81d7acb1506281447ab51"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -38,7 +38,7 @@
     "navigation.js": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
     "premium.css": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
     "refinement.css": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
-    "service-cards.css": "90d47fe9fe95a63966f63a89d994a5f5b86ae80ac5fd6d59e8971a0adbf06e8d",
+    "service-cards.css": "4133c6b49fff8566c6fbf1e189f13cc2e72119d4a46a99d90b210038771cdafb",
     "home-hero.css": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
     "premium.js": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
     "servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
@@ -116,6 +116,11 @@
       "date": "2026-11-03",
       "authorization": "Owner explicitly allowed local block CSS correction after reviewing desktop and mobile screenshots",
       "scope": "Only three homepage card picture elements, source crops/rotations, and local photo/text placement CSS. Card bounds, words, links, Hero and other sections preserved."
+    },
+    {
+      "task": "Homepage service-card full-width photographs and mobile stacking",
+      "date": "2026-11-03",
+      "scope": "Only service-card CSS and picture source media. Same photos, text and links; mobile cards stack full width."
     }
   ]
 }
