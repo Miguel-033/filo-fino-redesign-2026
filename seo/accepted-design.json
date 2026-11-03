@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
-      "mainWithRetiredLinksRemovedSha256": "fd3ee13221071f6c3d36a48eb054fa0c8460a4dd0febb3954678742a02aaaa11"
+      "mainWithRetiredLinksRemovedSha256": "120c611325f80948122cd5c33b6f6584030a321b0be4ade5c75a8edd6313ad7a"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -87,6 +87,26 @@
     "screenshots/pr4-baseline/mobile-full.jpg": "d6c7e1f218fad3406d16e636cc139a33f10f252ed0133de89cd2532bd3362aae",
     "screenshots/pr4-baseline/desktop-full.jpg": "03755533187bd2da20dfb5b345d87abdb89d1b60ae5deea928ec27e65e22eafa",
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
-    "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c"
-  }
+    "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
+    "assets/images/home-cuchillos-owner.webp": "783c8ad88a72b04b5832a6bbe87cb550e32a1938ae8b28beddf651c0f5878b59",
+    "assets/images/home-tijeras-owner.webp": "683cfe39d3bc002e04a8a6e8d08f2df5560b8c589aaae3b597528d498196ebce",
+    "assets/images/home-manicura-owner.webp": "c1c12e45f4146fdf90736ee62953c342495ae016df4bacb160fe64795ed46eeb"
+  },
+  "authorizedUpdates": [
+    {
+      "task": "H01",
+      "date": "2026-11-03",
+      "scope": "Only three homepage service-card image src/alt/dimensions; all CSS, JS, Heroes, text and links unchanged",
+      "confirmedOwnerMapping": {
+        "knives": "IMG_7188.JPG",
+        "scissors": "IMG_2143.JPG",
+        "manicure": "IMG_3933.JPG"
+      },
+      "sourceImagesSha256": {
+        "IMG_7188.JPG": "0c77a3fa8866fbbc36c4c43ce104b6cea374e25a890a2eb73900620e81d84c07",
+        "IMG_2143.JPG": "3565d57a92a1805bc26d0277e82542f71cfe3bcd0b36774729d9b99e6d01d345",
+        "IMG_3933.JPG": "16117539200d202c0ea1e97bc0d5fd53707640f9b315338d2bb84d639438da7c"
+      }
+    }
+  ]
 }
