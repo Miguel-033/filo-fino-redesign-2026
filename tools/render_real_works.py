@@ -14,7 +14,7 @@ def render():
   label='Vídeo'if x['type']=='video'else'Foto'
   verb='Reproducir vídeo'if x['type']=='video'else'Ampliar foto'
   cards.append(f'''        <figure class="real-work">
-          <a class="real-work__open" data-real-work="{escape(x['id'])}" href="{escape(x['source'])}" aria-label="{verb}: {escape(x['caption'])}">
+          <a class="real-work__open" data-real-work="{escape(x['id'])}"{(' data-poster="'+escape(x['poster'])+'"')if x.get('poster')else''} href="{escape(x['source'])}" aria-label="{verb}: {escape(x['caption'])}">
             <span class="real-work__preview"><img src="{escape(x['thumbnail'])}" alt="{escape(x['alt'])}" width="360" height="640" loading="lazy" decoding="async"><span class="real-work__type">{label}{(' · '+escape(x['duration']))if x.get('duration')else''}</span></span>
             <span class="real-work__action">{'Ver vídeo'if x['type']=='video'else'Ver foto'}</span>
           </a>

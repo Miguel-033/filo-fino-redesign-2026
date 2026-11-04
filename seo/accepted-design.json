@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "23ea16789b48871bc3133b806f683923f48dfbc9cb40d86cbac5858d71a4687a",
-      "mainWithRetiredLinksRemovedSha256": "af8e89093b7018d7c372f3a2b97b0ed067b5d8d7ab4225cb480a69a02c2b7bc5"
+      "mainWithRetiredLinksRemovedSha256": "b9c0b66d11de9e2dff79d939e9cd3c3d1f2d8b27698e5282d42375297f29cdd6"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",

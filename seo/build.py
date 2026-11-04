@@ -23,7 +23,7 @@ class References(HTMLParser):
         d = dict(attrs)
         if tag == 'a' and d.get('href'):
             self.links.append(d['href'])
-        for attr in ('src', 'poster'):
+        for attr in ('src', 'poster', 'data-poster'):
             if d.get(attr):
                 self.resources.append(d[attr])
         if tag == 'link' and d.get('rel') in ('stylesheet', 'preload', 'icon', 'manifest'):
