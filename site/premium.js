@@ -28,22 +28,22 @@ function animate(element, frames, options) {
 // Original vector studies, not photos or a documented customer commission.
 const stages = [
   {
-    "src": "assets/illustrations/escuchar.svg",
-    "alt": "Conversación sobre la herramienta apoyada en la mesa",
+    "src": "assets/illustrations/escuchar.svg?v=process-20261104",
+    "alt": "El cliente entrega un cuchillo al maestro en el taller",
     "stageCaption": "01 / Escuchar · El uso y lo que notas al cortar"
   },
   {
-    "src": "assets/illustrations/revisar.svg",
+    "src": "assets/illustrations/revisar.svg?v=process-20261104",
     "alt": "Inspección visual del filo con una lupa sin tocar el corte",
     "stageCaption": "02 / Revisar · El estado, la geometría y el ajuste"
   },
   {
-    "src": "assets/illustrations/afilar.svg",
-    "alt": "Afilado ilustrativo sobre piedra: mano en el mango y apoyo en la cara de la hoja",
+    "src": "assets/illustrations/afilar.svg?v=process-20261104",
+    "alt": "Cuchillo sujeto en la guía de una máquina de afilado con muela de agua",
     "stageCaption": "03 / Afilar · Trabajo adaptado a cada herramienta"
   },
   {
-    "src": "assets/illustrations/comprobar.svg",
+    "src": "assets/illustrations/comprobar.svg?v=process-20261104",
     "alt": "Prueba de corte en papel con la mano de sujeción alejada del recorrido del cuchillo",
     "stageCaption": "04 / Comprobar · Una prueba adecuada a la pieza"
   }

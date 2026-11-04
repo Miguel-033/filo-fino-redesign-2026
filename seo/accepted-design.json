@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
-      "mainWithRetiredLinksRemovedSha256": "fd3ee13221071f6c3d36a48eb054fa0c8460a4dd0febb3954678742a02aaaa11"
+      "mainWithRetiredLinksRemovedSha256": "a40d77fb23a972aba4c20f8276ba221af53cd019b22cd1e5b48e24d4fea05c99"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -40,7 +40,7 @@
     "refinement.css": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
     "service-cards.css": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
     "home-hero.css": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
-    "premium.js": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
+    "premium.js": "be005274e84352c142bbf246985cb14a7757d8c0cb51fd9e8695fb066fc82945",
     "servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
     "servicios/afilado-cuchillos-valencia/knives.js": "02d62e3584ccef972045a6fe8ad4d889480a85b0ace0eebb2fced32dc1e91083",
     "servicios/afilado-cuchillos-valencia/knives.css": "ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2",
@@ -64,12 +64,12 @@
     "assets/fonts/Manrope-OFL.txt": "4f67b767d602edc0065ca540cfb36d15e3d5e41eecb4c32f768a5f6d396d56fb",
     "assets/fonts/body.ttf": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
     "assets/fonts/display.ttf": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9",
-    "assets/illustrations/escuchar.svg": "023653149c47e1471d89a698b2ef22601947e3b21d5e74fcd8b100c2b5f9c9c6",
-    "assets/illustrations/revisar.svg": "02f88f7c4aeee34a1b4ba8248a3490a9c8157a3d9d67f9f01e34520b41b27408",
+    "assets/illustrations/escuchar.svg": "ca997cd18b5d4b78f7bc7977c298a2a42daddd45229e8fee9feade2f98eaa204",
+    "assets/illustrations/revisar.svg": "3a28e2c6dc81b0fb41621a64ac3442e1f343328aae28ce60a1a1ec08258a5747",
     "assets/illustrations/knife-study.svg": "306b002ced7b02af44368f06a036b99181c81db4aee044eb478dc29229415116",
     "assets/illustrations/envios.webp": "0808d2357354a7bbb18b09269b7108bcd9d9205d4cf946ac1149acb1d2f26c87",
-    "assets/illustrations/afilar.svg": "360fc8869763a550e2e9a38d21d333d1a4cf9ce7edbbe83b00f4f59decdad0a6",
-    "assets/illustrations/comprobar.svg": "f1254e8ded51fa85553d763cbf3d5f7e9f756d4520e5fc4fe944d468f662b90a",
+    "assets/illustrations/afilar.svg": "e57b60fc0cd377f3c2980d9e074b0f203e72ccda2429d587d0f30f24fb553284",
+    "assets/illustrations/comprobar.svg": "589f1ae77428342d726d0be332df4177fbe9a5081073db695475169c6f174a0a",
     "assets/videos/Heramientas-manicura.mp4": "4df9ebb3daea66462790fcc9831cc0ba6443f10951fc0e2b3d533d08a4d1231f",
     "assets/videos/maquena_afilado_cortan.mp4": "476adf0be64fd75b1fd68b1773ae8bb657a2435095b3c1227eb41987225b2fae",
     "assets/videos/cuchillo_para_profecional.mp4": "91bbd3572176dd33c67fdde0c494b7c8ca0f194e414fb42ba1a8d62f2df6a241",
