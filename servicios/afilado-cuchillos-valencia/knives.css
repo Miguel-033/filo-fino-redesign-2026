@@ -49,3 +49,8 @@
 
 
 }
+
+/* Portrait player sizing; the shared video rule remains the single sizing declaration. */
+.knives-page:not(.service-page) .service-video{--service-video-max-width:360px;--service-video-max-height:none}
+.knives-page:not(.service-page) .service-video video:fullscreen{width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:auto;object-fit:contain}
+@media(max-width:767px){.knives-page:not(.service-page) .service-video{--service-video-max-width:288px}}
