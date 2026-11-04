@@ -6,12 +6,13 @@
       "caption": "Afilado de un cuchillo en el taller",
       "alt": "Cuchillo sujeto en el equipo de afilado del taller",
       "source": "assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4",
-      "thumbnail": "assets/real-works/knife-video.webp",
       "poster": "assets/real-works/knife-video.webp",
       "width": 1080,
       "height": 1920,
       "duration": "0:19",
-      "provenance": "Existing workshop archive video; already used on the knife service page."
+      "provenance": "Existing workshop archive video; already used on the knife service page.",
+      "cover": "assets/real-works/covers/knife-sharpening.svg",
+      "coverTitle": "Afilado de cuchillo"
     },
     {
       "id": "scissors-detail",
@@ -19,45 +20,11 @@
       "caption": "Tijeras de entresacar",
       "alt": "Tijeras de entresacar sujetas con un guante en el taller",
       "source": "assets/images/tijeras-card.webp",
-      "thumbnail": "assets/real-works/scissors-photo.webp",
       "width": 600,
       "height": 1305,
-      "provenance": "Existing owner-approved tijeras-card.webp; workshop tool frame. No before/after claim."
-    },
-    {
-      "id": "manicure-detail",
-      "type": "image",
-      "caption": "Prueba de corte con alicate",
-      "alt": "Alicate de manicura cortando una lámina fina durante una comprobación",
-      "source": "assets/images/manicura.webp",
-      "thumbnail": "assets/real-works/manicure-photo.webp",
-      "width": 600,
-      "height": 1305,
-      "provenance": "Existing owner-approved manicura.webp, frame from Heramientas-manicura.mp4."
-    },
-    {
-      "id": "knife-detail",
-      "type": "image",
-      "caption": "Cuchillo en la guía de afilado",
-      "alt": "Cuchillo de cocina fijado en la guía durante el trabajo de afilado",
-      "source": "assets/images/knife-sharpening-poster.webp",
-      "thumbnail": "assets/real-works/knife-photo.webp",
-      "width": 720,
-      "height": 1280,
-      "provenance": "Frame extracted from the existing workshop knife video at 2 seconds; used as the knife page poster."
-    },
-    {
-      "id": "scissors-work",
-      "type": "video",
-      "caption": "Prueba de tijeras con una mecha",
-      "alt": "Tijeras cortando una mecha de cabello de prueba",
-      "source": "assets/videos/tijeras_tiran.mp4",
-      "thumbnail": "assets/real-works/scissors-video.webp",
-      "poster": "assets/real-works/scissors-video.webp",
-      "width": 1080,
-      "height": 1920,
-      "duration": "0:11",
-      "provenance": "Existing workshop archive tijeras_tiran.mp4; test on a hair sample."
+      "provenance": "Existing owner-approved tijeras-card.webp; workshop tool frame. No before/after claim.",
+      "cover": "assets/real-works/covers/thinning-scissors.svg",
+      "coverTitle": "Tijeras de entresacar"
     },
     {
       "id": "manicure-work",
@@ -65,12 +32,27 @@
       "caption": "Comprobación de un alicate de manicura",
       "alt": "Prueba de corte de un alicate de manicura entre manos enguantadas",
       "source": "assets/videos/Heramientas-manicura.mp4",
-      "thumbnail": "assets/real-works/manicure-video.webp",
       "poster": "assets/real-works/manicure-video.webp",
       "width": 1080,
       "height": 1920,
       "duration": "0:11",
-      "provenance": "Existing workshop archive Heramientas-manicura.mp4; cut test."
+      "provenance": "Existing workshop archive Heramientas-manicura.mp4; cut test.",
+      "cover": "assets/real-works/covers/manicure-test.svg",
+      "coverTitle": "Alicate de manicura"
+    },
+    {
+      "id": "scissors-work",
+      "type": "video",
+      "caption": "Prueba de tijeras con una mecha",
+      "alt": "Tijeras cortando una mecha de cabello de prueba",
+      "source": "assets/videos/tijeras_tiran.mp4",
+      "poster": "assets/real-works/scissors-video.webp",
+      "width": 1080,
+      "height": 1920,
+      "duration": "0:11",
+      "provenance": "Existing workshop archive tijeras_tiran.mp4; test on a hair sample.",
+      "cover": "assets/real-works/covers/scissors-test.svg",
+      "coverTitle": "Prueba de tijeras"
     }
   ]
 }

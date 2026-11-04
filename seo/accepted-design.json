@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "23ea16789b48871bc3133b806f683923f48dfbc9cb40d86cbac5858d71a4687a",
-      "mainWithRetiredLinksRemovedSha256": "b9c0b66d11de9e2dff79d939e9cd3c3d1f2d8b27698e5282d42375297f29cdd6"
+      "mainWithRetiredLinksRemovedSha256": "c21c1ddcdb445950c6ba1e5aa3a975b2d26f0f46d2160d764cb3814fda749051"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -89,13 +89,14 @@
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
     "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
     "assets/images/knife-sharpening-poster.webp": "f8cfcef5bedfeb3540874aa545d4dc86b9a03d6ae2890119aadc679fb2f4efeb",
-    "real-works.css": "6f5c2bd2ac29b6f6f1256d0ef76d1e8a31a4ee519c31e60f1fb6b847b22ffe83",
+    "real-works.css": "b9482d1c5329656ffb510b4be13220391ca920088eee376a8662ee43a6e6731c",
     "real-works.js": "71bb75fc909855230b25bf0d5f61b760fa7915df0013896a9fb4268e8261f824",
-    "assets/real-works/scissors-photo.webp": "47be7ab0dbab9caef9a16a5dd2734aa457d6a1a2d9b32462da403c8d089084f5",
     "assets/real-works/manicure-video.webp": "a0b48994360aae53a512dd4badc7d3a913aab70c65e4d4946189909f0d43245b",
     "assets/real-works/scissors-video.webp": "72ae7e508a2e089a310564c502a36d6813ac4f9c8fdd00824444593bdbda4fe7",
     "assets/real-works/knife-video.webp": "1fd64ea55cb152e44872dd12d8cc1cc22c37cd53066027fd56fadeeb6509aef0",
-    "assets/real-works/manicure-photo.webp": "131bd04592e7490235a617e62bbe7f0cf2aae2afd7123a5a910e63856af558ef",
-    "assets/real-works/knife-photo.webp": "d2109b4e769e412d13f2328fca4230f02fea3788da951d75cdadbe7b788c6afe"
+    "assets/real-works/covers/scissors-test.svg": "f068a298c28ffcd5a69e5da7f0d6ad79ae967dfe79027b97c9f1777983382ae5",
+    "assets/real-works/covers/thinning-scissors.svg": "80cb39b0ed5b481cb6655243371f2402e6c076d9d8fe7ff38b2259deb25702f2",
+    "assets/real-works/covers/manicure-test.svg": "2d77ba981c19d5bdbeffc2854be7f774a8a94fd4c0cc0815704bad4c8ebc0de4",
+    "assets/real-works/covers/knife-sharpening.svg": "7d5360a179f9e040b2db8c9c5d99b666fd49bcc75ddf7b0768e480938b86b94f"
   }
 }

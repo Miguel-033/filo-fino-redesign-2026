@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title"><title id="title">Ilustración de una prueba de tijeras sobre una mecha</title><rect width="640" height="480" fill="#182024"/><g fill="none" stroke="#b98b57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<!-- A held lock of hair, separate from a person's head. -->
+<path d="M112 83c30 4 51 11 66 25l29 10m-94-18 55 22 27 21m-59-33 18 30 39 16c12 4 21-1 18-9l-20-12m-15-26 30-9 37 11 17 18c7 9 0 19-9 12l-18-11-23 1"/>
+<path d="M223 117c69-4 102 4 153 3m-148 5c56 2 93 8 147 4m-147 4c51 8 96 11 148 5m-144 3c53 12 92 15 145 6m-140 1c55 14 96 16 141 8m-135-1c53 15 89 19 134 12m-130-3c44 15 85 20 131 13" stroke-width="1.15"/>
+<!-- Two slender blades close across the free ends of the lock. -->
+<path d="m350 121 43 91-15 9-36-100c0-5 5-5 8 0Zm36 21 8 73-13 5 0-77c0-6 5-7 5-1Z" fill="#182024"/>
+<circle cx="387" cy="223" r="7"/>
+<path d="M382 229c-18 8-28 17-33 26m42-23c5 10 12 15 25 23"/>
+<ellipse cx="334" cy="267" rx="27" ry="19" transform="rotate(-25 334 267)"/><ellipse cx="429" cy="269" rx="28" ry="19" transform="rotate(18 429 269)"/>
+<path d="M311 263c-17-8-36-5-48 2l-16 14m86 7-28 6m130-42 24-6 25 13 14 23m-53 7 24 6"/>
+</g></svg>
