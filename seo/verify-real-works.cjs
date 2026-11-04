@@ -1,0 +1,18 @@
+// Component contracts with native dialog/media methods substituted; not a browser render.
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),{JSDOM}=require('jsdom');
+const root=path.resolve(__dirname,'../site'),html=fs.readFileSync(root+'/index.html','utf8');
+const dom=new JSDOM(html,{url:'https://example.test/',runScripts:'outside-only'}),w=dom.window,d=w.document;
+const items=JSON.parse(d.querySelector('#real-works-data').textContent),manifest=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../content/real-works.json'),'utf8')).items;
+assert.deepEqual(items,manifest.map(({provenance,...item})=>item));assert.equal(items.length,6);assert.equal(items.filter(x=>x.type==='video').length,3);
+assert.deepEqual([...d.querySelectorAll('.hero-shortcuts a')].map(a=>[a.getAttribute('href'),a.querySelector('span').textContent]),[['servicios/','Ver precios'],['#trabajos-reales','Ver trabajos reales'],['#trabajos','Recogida y entrega']]);
+const grid=d.querySelector('#trabajos-reales');assert.ok(grid);assert.equal(grid.querySelectorAll('[data-real-work]').length,6);assert.equal(grid.querySelectorAll('video').length,0);
+for(const item of items){for(const key of ['source','thumbnail','poster'])if(item[key])assert.ok(fs.existsSync(path.join(root,item[key])));const a=grid.querySelector(`[data-real-work="${item.id}"]`);assert.equal(a.getAttribute('href'),item.source);assert.equal(a.querySelector('img').getAttribute('src'),item.thumbnail);assert.equal(a.querySelector('img').getAttribute('loading'),'lazy');}
+const dialog=d.querySelector('#real-works-dialog'),host=dialog.querySelector('.real-works-dialog__media'),close=dialog.querySelector('button');assert.equal(host.children.length,0);
+w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
+let stopped=0,unloaded=0,position;w.HTMLMediaElement.prototype.pause=function(){stopped++};w.HTMLMediaElement.prototype.load=function(){unloaded++};w.scrollTo=p=>position=p;
+d.body.style.overflow='auto';d.body.style.paddingRight='7px';
+w.eval(fs.readFileSync(root+'/real-works.js','utf8'));
+const photo=grid.querySelector('[data-real-work="scissors-detail"]');photo.click();assert.equal(dialog.open,true);assert.equal(d.activeElement,close);assert.equal(d.body.style.overflow,'hidden');assert.equal(host.querySelector('img').getAttribute('src'),'assets/images/tijeras-card.webp');assert.equal(dialog.querySelector('h2').textContent,'Tijeras de entresacar');
+const escape=new w.Event('cancel',{cancelable:true});dialog.dispatchEvent(escape);assert.equal(escape.defaultPrevented,true);assert.equal(dialog.open,false);assert.equal(host.children.length,0);assert.equal(d.activeElement,photo);assert.equal(d.body.style.overflow,'auto');assert.equal(d.body.style.paddingRight,'7px');assert.equal(position.top,0);
+const trigger=grid.querySelector('[data-real-work="knife-work"]');trigger.click();const v=host.querySelector('video');assert.ok(v);assert.equal(v.controls,true);assert.equal(v.playsInline,true);assert.equal(v.preload,'metadata');assert.equal(v.autoplay,false);assert.equal(v.getAttribute('src'),'assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4');assert.equal(v.width/v.height,9/16);close.click();assert.equal(dialog.open,false);assert.equal(stopped,1);assert.equal(unloaded,1);assert.equal(host.children.length,0);assert.equal(d.activeElement,trigger);
+console.log('PASS: gallery manifest, six lazy previews, retained native fallbacks, image/video open, Escape/close, media release, scroll/focus restore and three shortcut destinations. DOM contracts; no rendered-mobile claim.');

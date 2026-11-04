@@ -2,8 +2,8 @@
   "sourceCommit": "b2cf0a7b0cd5f7772a58730ce6e0e338be5c1aee",
   "pages": {
     "index.html": {
-      "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
-      "mainWithRetiredLinksRemovedSha256": "a40d77fb23a972aba4c20f8276ba221af53cd019b22cd1e5b48e24d4fea05c99"
+      "heroSha256": "23ea16789b48871bc3133b806f683923f48dfbc9cb40d86cbac5858d71a4687a",
+      "mainWithRetiredLinksRemovedSha256": "af8e89093b7018d7c372f3a2b97b0ed067b5d8d7ab4225cb480a69a02c2b7bc5"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -88,6 +88,14 @@
     "screenshots/pr4-baseline/desktop-full.jpg": "03755533187bd2da20dfb5b345d87abdb89d1b60ae5deea928ec27e65e22eafa",
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
     "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
-    "assets/images/knife-sharpening-poster.webp": "f8cfcef5bedfeb3540874aa545d4dc86b9a03d6ae2890119aadc679fb2f4efeb"
+    "assets/images/knife-sharpening-poster.webp": "f8cfcef5bedfeb3540874aa545d4dc86b9a03d6ae2890119aadc679fb2f4efeb",
+    "real-works.css": "6f5c2bd2ac29b6f6f1256d0ef76d1e8a31a4ee519c31e60f1fb6b847b22ffe83",
+    "real-works.js": "71bb75fc909855230b25bf0d5f61b760fa7915df0013896a9fb4268e8261f824",
+    "assets/real-works/scissors-photo.webp": "47be7ab0dbab9caef9a16a5dd2734aa457d6a1a2d9b32462da403c8d089084f5",
+    "assets/real-works/manicure-video.webp": "a0b48994360aae53a512dd4badc7d3a913aab70c65e4d4946189909f0d43245b",
+    "assets/real-works/scissors-video.webp": "72ae7e508a2e089a310564c502a36d6813ac4f9c8fdd00824444593bdbda4fe7",
+    "assets/real-works/knife-video.webp": "1fd64ea55cb152e44872dd12d8cc1cc22c37cd53066027fd56fadeeb6509aef0",
+    "assets/real-works/manicure-photo.webp": "131bd04592e7490235a617e62bbe7f0cf2aae2afd7123a5a910e63856af558ef",
+    "assets/real-works/knife-photo.webp": "d2109b4e769e412d13f2328fca4230f02fea3788da951d75cdadbe7b788c6afe"
   }
 }

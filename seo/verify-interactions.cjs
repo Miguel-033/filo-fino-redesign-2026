@@ -7,7 +7,7 @@ for(const a of d.querySelectorAll('a[href^="#"]'))if(a.getAttribute('href')!=='#
 for(const u of d.querySelectorAll('use'))assert.ok(d.querySelector(u.getAttribute('href')));
 for(const f of ['premium.css','refinement.css']){const c=fs.readFileSync(root+'/'+f,'utf8');assert.ok(!/[←→↑↓↗↘]/u.test(c));const ast=postcss.parse(c);ast.walkDecls(x=>{for(const m of x.value.matchAll(/url\(['"]?([^)'"\s]+)/g))assert.ok(fs.existsSync(path.join(root,m[1])))})}
 assert.ok(!/[←→↑↓↗↘]/u.test(html));assert.equal(d.querySelectorAll('.service-link .touch-hand').length,0);assert.equal(d.querySelectorAll('.touch-hand').length,0);assert.equal(d.querySelectorAll('.hero-shortcuts .touch-hand').length,0);assert.equal(d.querySelectorAll('.touch-ring').length,0);
-assert.deepEqual([...d.querySelectorAll('.hero-shortcuts a>span:first-child')].map(e=>e.textContent),['Afilado de herramientas de manicura','Afilado de tijeras','Afilado de cuchillos']);
+assert.deepEqual([...d.querySelectorAll('.hero-shortcuts a>span:first-child')].map(e=>e.textContent),['Ver precios','Ver trabajos reales','Recogida y entrega']);
 assert.ok(!/pendiente|provisional|temporal/i.test(d.body.textContent));assert.equal(d.querySelector('a.address-study').href,'https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7');
 const before=[...d.querySelectorAll('[data-whatsapp]')].map(a=>a.href);w.matchMedia=()=>({matches:true,addEventListener(){}});w.Element.prototype.getAnimations=()=>[];d.getAnimations=()=>[];w.Element.prototype.scrollTo=()=>{};w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};w.eval(fs.readFileSync(root+'/navigation.js','utf8'));w.eval(js);assert.deepEqual([...d.querySelectorAll('[data-whatsapp]')].map(a=>a.href),before);
 assert.equal(d.querySelectorAll('#servicios details,#servicios button').length,0);assert.equal(d.querySelectorAll('#servicios .service-cta').length,3);
@@ -23,5 +23,6 @@ console.log('PASS: resources, CSS syntax, unique IDs, anchors, SVG symbols, no t
 
 require('node:child_process').execFileSync(process.execPath,[path.join(root,'servicios/afilado-cuchillos-valencia/verify.cjs')],{stdio:'inherit',env:process.env});
 require('node:child_process').execFileSync(process.execPath,[path.resolve(__dirname,'../design-system/verify.cjs')],{stdio:'inherit',env:process.env});
+require('node:child_process').execFileSync(process.execPath,[path.resolve(__dirname,'verify-real-works.cjs')],{stdio:'inherit',env:process.env});
 fs.writeFileSync(path.join(__dirname,'regression.json'),JSON.stringify({status:'PASS',method:'jsdom state checks with dialog/animation test doubles',components:['homepage menu/shipping/stages/WhatsApp','knife menu/FAQ HTML/WhatsApp/compact hero/navigation/map'],notTested:['rendered layout','native focus/Escape/swipe','Safari','Lighthouse/CWV']},null,2)+'\n');
 
