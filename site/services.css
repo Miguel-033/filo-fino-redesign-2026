@@ -58,3 +58,11 @@
  .hero--hospitality .knife-address{margin-top:16px}
  .hero--hospitality .hero-photo{height:500px}
 }
+
+/* Homepage workshop links: full-surface graphite buttons. */
+#main > .service-extra > a{min-height:64px;margin-block:10px;padding:16px 20px;border:1px solid var(--line);border-left:2px solid var(--brass);border-radius:0;background:var(--panel);color:var(--paper);font:600 15px/1.5 var(--body);text-decoration:none;transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+#main > .service-extra > a:focus-visible{outline:2px solid var(--paper);outline-offset:3px;border-color:var(--brass)}
+#main > .service-extra > a:active{background:var(--ink);border-color:var(--brass);color:var(--paper)}
+@media(hover:hover) and (pointer:fine){#main > .service-extra > a:hover{background:var(--deep);border-color:var(--brass)}}
+@media(max-width:767px){#main > .service-extra > a{min-height:60px;padding:14px 16px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){#main > .service-extra > a{transition:none}}
