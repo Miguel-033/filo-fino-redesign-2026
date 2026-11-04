@@ -5,8 +5,8 @@
 #servicios .service-knives .service-link{height:390px}
 #servicios .service-link::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 75% 10%,#b8793620,transparent 65%);opacity:.45;transition:opacity .25s ease}
 #servicios .service-link::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(0deg,#0c1011 0%,#0c101100 40%)}
-#servicios .service .service-link img{position:absolute;inset:0;width:100%;height:128px;padding:0;object-fit:contain;object-position:center;filter:none;transform:none;transition:filter .25s ease;z-index:-1;mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent),linear-gradient(0deg,transparent,#000 8%,#000 99%,transparent);mask-composite:intersect}
-#servicios .service-knives .service-link img{height:190px;object-position:center top}
+#servicios .service .service-link img{position:absolute;inset:0;margin-inline:auto;width:min(100%,227.55px);height:auto;aspect-ratio:16/9;padding:0;object-fit:contain;object-position:center;filter:none;transform:none;transition:filter .25s ease;z-index:-1;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 96%,transparent),linear-gradient(0deg,transparent,#000 12%,#000 94%,transparent);mask-composite:intersect}
+#servicios .service-knives .service-link img{width:min(100%,285px);aspect-ratio:3/2;object-position:center top}
 #servicios .service-manicure .service-link img{object-position:65% top}
 #servicios .service .service-title{display:flex;flex-direction:column;position:relative;inset:auto;transform:none;box-sizing:border-box;width:100%;max-width:none;padding:18px 22px;z-index:1}
 #servicios .service-title p{font:400 12px/1.45 var(--body);color:#c8cccb;max-width:none;margin:0 0 8px}
@@ -20,15 +20,15 @@
 @media(max-width:379px){
  #servicios .service-scissors .service-link{height:260px}
  #servicios .service-manicure .service-link{height:300px}
- #servicios .service .service-link img{height:120px}
- #servicios .service-knives .service-link img{height:190px}
+ #servicios .service .service-link img{width:min(100%,213.33px)}
+ #servicios .service-knives .service-link img{width:min(100%,285px);aspect-ratio:3/2}
 }
 @media(min-width:380px) and (max-width:767px){
  #servicios .service-composition{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
  #servicios .service-knives{grid-column:1/-1}
  #servicios .service:not(.service-knives) .service-link{height:370px}
  #servicios .service:not(.service-knives) .service-title{padding:16px 14px}
- #servicios .service:not(.service-knives) .service-link img{height:140px;object-position:center top}
+ #servicios .service:not(.service-knives) .service-link img{width:min(100%,248.88px);object-position:center top}
  #servicios .service:not(.service-knives) .service-title h3{font-size:clamp(23px,6vw,28px);line-height:1.06}
  #servicios .service:not(.service-knives) .service-title p{font-size:11px;line-height:1.45}
  #servicios .service:not(.service-knives) .service-cta{font-size:12px;margin-top:14px}
@@ -38,8 +38,8 @@
  #servicios .service-knives{grid-column:1;grid-row:1/3}
  #servicios .service .service-link{height:320px}
  #servicios .service-knives .service-link{height:658px}
- #servicios .service .service-link img{height:150px;object-position:center top}
- #servicios .service-knives .service-link img{height:390px;object-position:60% top}
+ #servicios .service .service-link img{width:min(100%,266.66px);object-position:center top}
+ #servicios .service-knives .service-link img{width:min(100%,585px);aspect-ratio:3/2;object-position:60% top}
  #servicios .service .service-title{padding:18px 24px}
  #servicios .service .service-title h3{font-size:clamp(28px,2.4vw,34px)}
  #servicios .service-knives .service-title{padding:28px 32px}
