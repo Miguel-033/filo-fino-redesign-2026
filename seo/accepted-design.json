@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "44f6d4fbf86eec2d083e49cae73deadd1e43af6bd4dbee33567ad3043d7cadb4",
-      "mainWithRetiredLinksRemovedSha256": "d6207067f5bc98ff33b19edda90f2a64ff165bfe1048183ada932de7f15383e7"
+      "mainWithRetiredLinksRemovedSha256": "fd3ee13221071f6c3d36a48eb054fa0c8460a4dd0febb3954678742a02aaaa11"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -38,7 +38,7 @@
     "navigation.js": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
     "premium.css": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
     "refinement.css": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
-    "service-cards.css": "447326fba6c26afb1357c6e2aea633bad99ffcedaf02223fc8090049dcf2eaf4",
+    "service-cards.css": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
     "home-hero.css": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
     "premium.js": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
     "servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
@@ -87,16 +87,6 @@
     "screenshots/pr4-baseline/mobile-full.jpg": "d6c7e1f218fad3406d16e636cc139a33f10f252ed0133de89cd2532bd3362aae",
     "screenshots/pr4-baseline/desktop-full.jpg": "03755533187bd2da20dfb5b345d87abdb89d1b60ae5deea928ec27e65e22eafa",
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
-    "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
-    "assets/images/home-manicure-editorial.webp": "cdbcb6fedc973c297ab7e4af6c5a4ba8559611350a0ece7e8f2c87c13fb2983c",
-    "assets/images/home-scissors-editorial.webp": "ee56a90633e52323327165d8d4ad327098b1ba2dc322e62e553e33917cd7003d",
-    "assets/images/home-knives-editorial.webp": "3fca24b073f50a9783fea5eaf6ca289dbb8734ae3db634c90777c79d30cfc368"
-  },
-  "authorizedUpdates": [
-    {
-      "task": "Owner-supplied editorial service-card photographs",
-      "date": "2026-11-04",
-      "scope": "Three card photos, their accessible descriptions, arrow-free typographic CTA and scoped CSS. Existing card grid and dimensions retained; other page sections unchanged."
-    }
-  ]
+    "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c"
+  }
 }
