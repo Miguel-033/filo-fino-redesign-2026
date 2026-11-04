@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "heroSha256": "23ea16789b48871bc3133b806f683923f48dfbc9cb40d86cbac5858d71a4687a",
-      "mainWithRetiredLinksRemovedSha256": "c21c1ddcdb445950c6ba1e5aa3a975b2d26f0f46d2160d764cb3814fda749051"
+      "mainWithRetiredLinksRemovedSha256": "9bc2b8d26f295296c484ecba347dcbd2c8dbbd858c538493d6a7a7e6864f2f20"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
@@ -89,14 +89,13 @@
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
     "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
     "assets/images/knife-sharpening-poster.webp": "f8cfcef5bedfeb3540874aa545d4dc86b9a03d6ae2890119aadc679fb2f4efeb",
-    "real-works.css": "b9482d1c5329656ffb510b4be13220391ca920088eee376a8662ee43a6e6731c",
+    "real-works.css": "def1145e83a901157a2bfab1e4b32ffa8f070deca241d971f51e50370ba2f66f",
     "real-works.js": "71bb75fc909855230b25bf0d5f61b760fa7915df0013896a9fb4268e8261f824",
     "assets/real-works/manicure-video.webp": "a0b48994360aae53a512dd4badc7d3a913aab70c65e4d4946189909f0d43245b",
     "assets/real-works/scissors-video.webp": "72ae7e508a2e089a310564c502a36d6813ac4f9c8fdd00824444593bdbda4fe7",
     "assets/real-works/knife-video.webp": "1fd64ea55cb152e44872dd12d8cc1cc22c37cd53066027fd56fadeeb6509aef0",
-    "assets/real-works/covers/scissors-test.svg": "f068a298c28ffcd5a69e5da7f0d6ad79ae967dfe79027b97c9f1777983382ae5",
-    "assets/real-works/covers/thinning-scissors.svg": "80cb39b0ed5b481cb6655243371f2402e6c076d9d8fe7ff38b2259deb25702f2",
-    "assets/real-works/covers/manicure-test.svg": "2d77ba981c19d5bdbeffc2854be7f774a8a94fd4c0cc0815704bad4c8ebc0de4",
-    "assets/real-works/covers/knife-sharpening.svg": "7d5360a179f9e040b2db8c9c5d99b666fd49bcc75ddf7b0768e480938b86b94f"
+    "assets/real-works/clipper-test.webp": "a76733903145521b21c7224f63bb3929d5389a52c3dcf0e794ca5c98f3ba3dac",
+    "assets/real-works/knife-test.webp": "153ac39ebe44be756ec91b133b580882130638aecf9f23b3b3eaf1e8f6f41afa",
+    "assets/real-works/scissors-detail.webp": "d310dcbdba23b315ec702445835ec62127192eedebdeef5dd46a5dbd44da9e99"
   }
 }

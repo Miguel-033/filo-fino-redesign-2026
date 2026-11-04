@@ -14,11 +14,11 @@ def render():
   label='Vídeo'if x['type']=='video'else'Foto'
   verb='Reproducir vídeo'if x['type']=='video'else'Ampliar foto'
   icon='<path d="m8 5 11 7-11 7Z" fill="currentColor" stroke="none"/>'if x['type']=='video'else'<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.75"/>'
-  cards.append(f'''        <article class="real-work">
+  cards.append(f'''        <article class="real-work" style="--preview-ratio:{escape(x['previewRatio'])};--preview-position:{escape(x['previewPosition'])}">
           <a class="real-work__open" data-real-work="{escape(x['id'])}"{(' data-poster="'+escape(x['poster'])+'"')if x.get('poster')else''} href="{escape(x['source'])}" aria-label="{verb}: {escape(x['caption'])}">
-            <span class="real-work__preview"><img src="{escape(x['cover'])}" alt="" width="640" height="480" loading="lazy" decoding="async"></span>
-            <span class="real-work__type">{label}{(' · '+escape(x['duration']))if x.get('duration')else''}</span>
-            <span class="real-work__content"><span class="real-work__title">{escape(x['coverTitle'])}</span><span class="real-work__action"><span>{'Ver vídeo'if x['type']=='video'else'Ver foto'}</span><svg class="real-work__icon" viewBox="0 0 24 24" aria-hidden="true">{icon}</svg></span></span>
+            <span class="real-work__preview"><img src="{escape(x['cover'])}" alt="" width="{x['width']}" height="{x['height']}" loading="lazy" decoding="async"></span>
+            <span class="real-work__type"><svg class="real-work__icon" viewBox="0 0 24 24" aria-hidden="true">{icon}</svg><span>{escape(x['duration'])if x.get('duration')else label}</span></span>
+            <span class="real-work__content"><span class="real-work__title">{escape(x['coverTitle'])}</span></span>
           </a>
         </article>''')
  # Source provenance stays in the editable manifest, not in the public interface.

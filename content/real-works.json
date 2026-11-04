@@ -11,8 +11,10 @@
       "height": 1920,
       "duration": "0:19",
       "provenance": "Existing workshop archive video; already used on the knife service page.",
-      "cover": "assets/real-works/covers/knife-sharpening.svg",
-      "coverTitle": "Afilado de cuchillo"
+      "cover": "assets/real-works/knife-video.webp",
+      "coverTitle": "Afilado de cuchillo",
+      "previewRatio": "1 / 1",
+      "previewPosition": "50% 55%"
     },
     {
       "id": "scissors-detail",
@@ -23,8 +25,10 @@
       "width": 600,
       "height": 1305,
       "provenance": "Existing owner-approved tijeras-card.webp; workshop tool frame. No before/after claim.",
-      "cover": "assets/real-works/covers/thinning-scissors.svg",
-      "coverTitle": "Tijeras de entresacar"
+      "cover": "assets/real-works/scissors-detail.webp",
+      "coverTitle": "Tijeras de entresacar",
+      "previewRatio": "2 / 3",
+      "previewPosition": "50% 50%"
     },
     {
       "id": "manicure-work",
@@ -37,8 +41,10 @@
       "height": 1920,
       "duration": "0:11",
       "provenance": "Existing workshop archive Heramientas-manicura.mp4; cut test.",
-      "cover": "assets/real-works/covers/manicure-test.svg",
-      "coverTitle": "Alicate de manicura"
+      "cover": "assets/real-works/manicure-video.webp",
+      "coverTitle": "Alicate de manicura",
+      "previewRatio": "4 / 3",
+      "previewPosition": "50% 45%"
     },
     {
       "id": "scissors-work",
@@ -51,8 +57,42 @@
       "height": 1920,
       "duration": "0:11",
       "provenance": "Existing workshop archive tijeras_tiran.mp4; test on a hair sample.",
-      "cover": "assets/real-works/covers/scissors-test.svg",
-      "coverTitle": "Prueba de tijeras"
+      "cover": "assets/real-works/scissors-video.webp",
+      "coverTitle": "Prueba de tijeras",
+      "previewRatio": "4 / 5",
+      "previewPosition": "50% 65%"
+    },
+    {
+      "id": "knife-test",
+      "type": "video",
+      "caption": "Prueba de corte de un cuchillo",
+      "alt": "Cuchillo de cocina presentado y probado en el taller",
+      "source": "assets/videos/cuchillo_para_profecional.mp4",
+      "poster": "assets/real-works/knife-test.webp",
+      "cover": "assets/real-works/knife-test.webp",
+      "coverTitle": "Prueba de cuchillo",
+      "width": 1080,
+      "height": 1920,
+      "duration": "0:14",
+      "provenance": "Existing workshop archive cuchillo_para_profecional.mp4; cover is a frame at 2 seconds.",
+      "previewRatio": "3 / 2",
+      "previewPosition": "50% 67%"
+    },
+    {
+      "id": "clipper-test",
+      "type": "video",
+      "caption": "Prueba de cuchillas de máquina",
+      "alt": "Máquina de corte probada sobre una mecha de cabello",
+      "source": "assets/videos/maquena_afilado_cortan.mp4",
+      "poster": "assets/real-works/clipper-test.webp",
+      "cover": "assets/real-works/clipper-test.webp",
+      "coverTitle": "Cuchillas de máquina",
+      "width": 1080,
+      "height": 1920,
+      "duration": "0:11",
+      "provenance": "Existing workshop archive maquena_afilado_cortan.mp4; cover is a frame at 2 seconds.",
+      "previewRatio": "1 / 1",
+      "previewPosition": "50% 48%"
     }
   ]
 }
