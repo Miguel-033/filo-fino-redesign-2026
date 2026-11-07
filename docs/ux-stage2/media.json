@@ -1,0 +1,38 @@
+{
+  "photos": [
+    {
+      "file": "assets/images/drive/img_6874.webp",
+      "original": "IMG_6874.JPG",
+      "context": "Real workshop photograph of kitchen knives, existing owner archive",
+      "sha256": "7c90dd5315860fa79dcb755df859206070c35994cd0a20b89cfc385907c73924",
+      "processing": "Original bytes preserved. CSS grayscale/contrast and responsive crop only. No invented before/after claim."
+    },
+    {
+      "file": "assets/images/tijeras-card.webp",
+      "original": "images/Tijeras_de_entresacar.webp",
+      "context": "Existing real workshop video-poster photograph of thinning scissors held in a gloved hand. Original also referenced in legacy article afilar-tijeras-peluqueria-cerca-de-mi.html.",
+      "sha256": "1e3e5334a8bf26c42761b82453b3ba073c9534cb93f34055ca1e4a474841b42d",
+      "processing": "Byte-identical copy. CSS grayscale/contrast and responsive crop only."
+    },
+    {
+      "file": "assets/images/manicura.webp",
+      "original": "images/Heramientas-manicura.webp",
+      "context": "Existing owner-selected photo of manicure nippers in gloved hands",
+      "sha256": "441bccdb3ca8df27396de1a2082ef0bf2e94567936fe4114c4aed61ba63fa693",
+      "processing": "Original bytes preserved. CSS grayscale/contrast and responsive crop only. No invented before/after claim."
+    }
+  ],
+  "shippingIllustration": {
+    "file": "assets/illustrations/envios.webp",
+    "type": "AI-generated decorative illustration, not a workshop photograph or documented job",
+    "generator": "Built-in imagegen",
+    "source": "generated_images/exec-b04b8808-c0ef-42ca-a768-8d905dcaf79b.png",
+    "outputDimensions": [
+      2048,
+      683
+    ],
+    "processing": "WebP encoding at source dimensions, quality 90; CSS vignette crops from same panorama",
+    "prompt": "Create a professional panoramic editorial illustration for a small artisan workshop postal-service website. Graphite background, bronze contour lines. Five narrative vignettes: phone contact, protective wrapping and box, parcel handoff, artisan at workbench, parcel received. Consistent scale, no labels, brands, logos, trucks or photographic claims.",
+    "bytes": 100212
+  }
+}

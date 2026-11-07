@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc"><title id="title">Afilar</title><desc id="desc">Cuchillo sujeto en una guía de afilado, con el bisel en contacto con la parte superior de una muela de agua.</desc><rect width="640" height="440" fill="#182024"/>
+<g fill="none" stroke="#cda06a" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+<!-- Plain workbench and the wet grinder's plinth. -->
+<path d="M52 380H588M178 350l24 14h301l24-14M202 364v12h16v-12m258 0v12h16v-12"/>
+<!-- Motor enclosure, its switch and the wheel axle. -->
+<path d="M326 221l130-20 56 34v105l-40 10H329M456 201v128l56 11M329 221v129M329 243l54-8v39l-54 8M345 255h20"/>
+<path d="M478 240l17 8v22l-17-8ZM486 251v10M472 291l27 15m-27-6 27 15m-27-6 27 15" stroke-width=".85"/>
+<!-- Cylindrical stone, shown in a consistent three-quarter view. -->
+<path d="M260 160h52c34 0 62 42 62 95s-28 95-62 95h-52"/>
+<ellipse cx="260" cy="255" rx="62" ry="95"/>
+<ellipse cx="260" cy="255" rx="54" ry="86" stroke-width=".75"/>
+<ellipse cx="260" cy="255" rx="12" ry="18"/><ellipse cx="260" cy="255" rx="5" ry="8"/>
+<path d="M274 254h27m-39-35c15 2 25 16 26 33m-48 26c-10-9-15-22-13-35M251 177c-19 6-34 25-40 49m95 102c20-6 39-30 46-57M285 164c18 8 34 28 43 53m-50-44c15 9 28 27 35 49" stroke-width=".75"/>
+<!-- Water trough sits below the working wheel, without hiding its contact point. -->
+<path d="M180 315l15 35 28 12h115l28-12 10-35M180 315l31 10h132l33-10M211 325l12 37m120-37-5 37"/>
+<path d="M204 338c15-5 29 5 44 0s29 5 44 0 27 5 41 0m-105 11c13-3 23 3 36 0s25 3 39 0" stroke-width=".8"/>
+<!-- Adjustable support rail, behind the knife and securely seated in the motor base. -->
+<path d="M181 103h333v8H181m264 0v92m10-92v91m32-91v111m10-111v117M440 178h20m-20 6h20M482 205h20"/>
+<ellipse cx="450" cy="170" rx="9" ry="5"/><ellipse cx="492" cy="195" rx="9" ry="5"/>
+<!-- The guide clamp attaches the knife heel to the rail. -->
+<path d="M386 106v20l-10 9m18-29v24l-10 11M366 128h25v14h-25zM369 158h23v6h-23m12-35v-8m-5-3h11"/>
+<!-- Chef-knife spine, complete point, bevel and wooden handle. The edge meets the wheel at its crown. -->
+<path d="M366 131l-149 7c-17 1-30 5-41 13 18 7 45 9 79 9h111Z" fill="#182024"/>
+<path d="M188 151c45 5 101 5 178 4M219 143l139-6" stroke-width=".8"/>
+<path d="M391 132l114-11c13-1 20 5 20 15s-7 15-17 16l-117 5Z" fill="#182024"/>
+<path d="M397 138l107-10c8-1 13 1 15 5m-118 16 106-7" stroke-width=".8"/>
+<ellipse cx="419" cy="142" rx="3" ry="3.2"/><ellipse cx="491" cy="135" rx="3" ry="3.2"/>
+<!-- Small functional feet and hardware, no decorative marks. -->
+<path d="M367 345v11m98-13v13M202 368h10m269 0h9" stroke-width=".85"/>
+</g></svg>

@@ -1,0 +1,10 @@
+{
+  "method": "Native Enter/Escape in Chrome responsive frame, without screenshot calls between open and close. Locator focus can move page before the activation event.",
+  "beforeActivationY": 3511,
+  "afterCloseY": 3513,
+  "differencePx": 2,
+  "focusAfterClose": "shipping-open",
+  "dialogOpenAfterClose": false,
+  "bodyOverflowAfterClose": "visible",
+  "inlineBodyStyleAfterClose": ""
+}

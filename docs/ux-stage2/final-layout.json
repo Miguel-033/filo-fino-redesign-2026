@@ -1,0 +1,50 @@
+[
+  {
+    "client": 320,
+    "columns": "280px",
+    "css": "shipping.css?v=stage2-5",
+    "scrollWidth": 320,
+    "shippingHeight": 1528.34375,
+    "width": 320
+  },
+  {
+    "client": 360,
+    "columns": "320px",
+    "css": "shipping.css?v=stage2-5",
+    "scrollWidth": 360,
+    "shippingHeight": 1456.953125,
+    "width": 360
+  },
+  {
+    "client": 390,
+    "columns": "350px",
+    "css": "shipping.css?v=stage2-5",
+    "scrollWidth": 390,
+    "shippingHeight": 1362.578125,
+    "width": 390
+  },
+  {
+    "client": 430,
+    "columns": "387px",
+    "css": "shipping.css?v=stage2-5",
+    "scrollWidth": 430,
+    "shippingHeight": 1295.953125,
+    "width": 430
+  },
+  {
+    "client": 768,
+    "columns": "333.609px 333.609px",
+    "css": "shipping.css?v=stage2-5",
+    "scrollWidth": 768,
+    "shippingHeight": 1142.671875,
+    "width": 768
+  },
+  {
+    "client": 1440,
+    "columns": "259.188px 259.203px 259.203px 259.203px 259.203px",
+    "css": "shipping.css?v=stage2-5",
+    "scrollWidth": 1440,
+    "shippingHeight": 971.484375,
+    "width": 1440
+  }
+]

@@ -1,5 +1,9 @@
-# Migration ledger
+# Future migration ledger — no live changes
 
-Fetched 2026-10-15 from https://filofino.es/sitemap.xml (HTTP 200): 42 URLs. All paths retained, including /articulos/*.html and /zonas/. This is an inventory, not proof that every URL is currently canonical/indexed. GSC returned 20 page rows and 648 query-page rows for 2026-07-15–2026-10-12; four primary URL Inspection results were PASS/indexed. No production redirect, indexing request or sitemap submission was made.
+`url-map.csv`: exactly 65 unique full URLs: 42 from the preserved sitemap snapshot plus 23 from Appendix B of FILO_FINO_SEO_PRELAUNCH_AUDIT_2026.md (1 November 2026). Appendix B was recovered via project conversation context; the complete report file was not present in this checkout. Query strings are preserved as distinct observations: 9 additional URLs were reported HTTP 200 and 14 HTTP 404. These are historical observations, not new HTTP checks.
 
-Identity mappings require no redirect. Preserve each legacy page and its assets until replacement or an individually justified redirect is approved. Add URLs discovered from GSC, crawler logs, backlinks and a final production crawl: a sitemap is not guaranteed complete. Never redirect every old article to the homepage. Candidate sitemap deliberately omits lastmod until actual content modification dates are reliable.
+`repository-only.csv` adds three paths found only in the source tree; it does not alter the 42+23 count. The preserved original sitemap is in docs/migration/legacy-sitemap-2026-10-15.xml, outside both builds.
+
+Only the ten final routes have an identity keep action. All other actions are proposals requiring owner approval, with a reason and optional relevant service target. Informational articles are not equivalent to commercial landing pages merely because the tool matches: confirm intent and loss of coverage before any 301. Areas and editorial indexes are not redirected wholesale to home. A 410, or retaining an existing 404, is explicitly considered for routes without an equivalent.
+
+No server redirects, meta refreshes, JavaScript redirects, production writes, Search Console submissions or Google Business Profile actions are installed by this ledger. Sitemap generation uses the final route registry, never this migration inventory.

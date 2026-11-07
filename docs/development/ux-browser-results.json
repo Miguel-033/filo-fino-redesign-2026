@@ -1,0 +1,654 @@
+{
+  "date": "2026-10-27",
+  "environment": "Chrome cloud browser; CSS viewport iframes, desktop input, not actual mobile OS",
+  "results": [
+    {
+      "page": "Hostelería",
+      "buttons": [
+        {
+          "height": 56,
+          "left": 20,
+          "right": 285,
+          "width": 265
+        },
+        {
+          "height": 56,
+          "left": 20,
+          "right": 285,
+          "width": 265
+        }
+      ],
+      "client": 305,
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "header": "sticky",
+      "heroHeight": 951.71875,
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "page": "Hostelería",
+      "buttons": [
+        {
+          "height": 56,
+          "left": 24,
+          "right": 336,
+          "width": 312
+        },
+        {
+          "height": 56,
+          "left": 24,
+          "right": 336,
+          "width": 312
+        }
+      ],
+      "client": 360,
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "header": "sticky",
+      "heroHeight": 848.421875,
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "page": "Hostelería",
+      "buttons": [
+        {
+          "height": 56,
+          "left": 24,
+          "right": 351,
+          "width": 327
+        },
+        {
+          "height": 56,
+          "left": 24,
+          "right": 351,
+          "width": 327
+        }
+      ],
+      "client": 375,
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "header": "sticky",
+      "heroHeight": 852.328125,
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "page": "Hostelería",
+      "buttons": [
+        {
+          "height": 56,
+          "left": 24,
+          "right": 391,
+          "width": 367
+        },
+        {
+          "height": 56,
+          "left": 24,
+          "right": 391,
+          "width": 367
+        }
+      ],
+      "client": 415,
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "header": "sticky",
+      "heroHeight": 835.609375,
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "width": 430
+    },
+    {
+      "page": "Hostelería",
+      "buttons": [
+        {
+          "height": 52,
+          "left": 38.390625,
+          "right": 368.390625,
+          "width": 330
+        },
+        {
+          "height": 52,
+          "left": 378.390625,
+          "right": 578.390625,
+          "width": 200
+        }
+      ],
+      "client": 753,
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "header": "sticky",
+      "heroHeight": 793.046875,
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "page": "Hostelería",
+      "buttons": [
+        {
+          "height": 52,
+          "left": 72,
+          "right": 402,
+          "width": 330
+        },
+        {
+          "height": 52,
+          "left": 412,
+          "right": 612,
+          "width": 200
+        }
+      ],
+      "client": 1425,
+      "h1": "Afilado de cuchillos para hostelería y cocinas profesionales en Valencia",
+      "header": "sticky",
+      "heroHeight": 842.828125,
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "page": "Inicio",
+      "buttons": [
+        {
+          "height": 61.09375,
+          "left": 20,
+          "right": 180.015625,
+          "width": 160.015625
+        },
+        {
+          "height": 61.09375,
+          "left": 188.015625,
+          "right": 284.984375,
+          "width": 96.96875
+        }
+      ],
+      "client": 305,
+      "h1": "Taller de afilado en Valencia Cada filo.Su oficio.",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "shortcutOrder": [
+        "Afilado de herramientas de manicura",
+        "Afilado de tijeras",
+        "Afilado de cuchillos"
+      ],
+      "width": 320
+    },
+    {
+      "page": "Inicio",
+      "buttons": [
+        {
+          "height": 50,
+          "left": 20,
+          "right": 214.25,
+          "width": 194.25
+        },
+        {
+          "height": 50,
+          "left": 222.25,
+          "right": 339.984375,
+          "width": 117.734375
+        }
+      ],
+      "client": 360,
+      "h1": "Taller de afilado en Valencia Cada filo.Su oficio.",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "shortcutOrder": [
+        "Afilado de herramientas de manicura",
+        "Afilado de tijeras",
+        "Afilado de cuchillos"
+      ],
+      "width": 375
+    },
+    {
+      "page": "Inicio",
+      "buttons": [
+        {
+          "height": 50,
+          "left": 20,
+          "right": 223.59375,
+          "width": 203.59375
+        },
+        {
+          "height": 50,
+          "left": 231.59375,
+          "right": 355,
+          "width": 123.40625
+        }
+      ],
+      "client": 375,
+      "h1": "Taller de afilado en Valencia Cada filo.Su oficio.",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "shortcutOrder": [
+        "Afilado de herramientas de manicura",
+        "Afilado de tijeras",
+        "Afilado de cuchillos"
+      ],
+      "width": 390
+    },
+    {
+      "page": "Inicio",
+      "buttons": [
+        {
+          "height": 50,
+          "left": 20,
+          "right": 248.5,
+          "width": 228.5
+        },
+        {
+          "height": 50,
+          "left": 256.5,
+          "right": 394.984375,
+          "width": 138.484375
+        }
+      ],
+      "client": 415,
+      "h1": "Taller de afilado en Valencia Cada filo.Su oficio.",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "shortcutOrder": [
+        "Afilado de herramientas de manicura",
+        "Afilado de tijeras",
+        "Afilado de cuchillos"
+      ],
+      "width": 430
+    },
+    {
+      "page": "Inicio",
+      "buttons": [
+        {
+          "height": 52,
+          "left": 38.390625,
+          "right": 306.125,
+          "width": 267.734375
+        },
+        {
+          "height": 52,
+          "left": 316.125,
+          "right": 478.375,
+          "width": 162.25
+        }
+      ],
+      "client": 753,
+      "h1": "Taller de afilado en Valencia Cada filo.Su oficio.",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "shortcutOrder": [
+        "Afilado de herramientas de manicura",
+        "Afilado de tijeras",
+        "Afilado de cuchillos"
+      ],
+      "width": 768
+    },
+    {
+      "page": "Inicio",
+      "buttons": [
+        {
+          "height": 52,
+          "left": 72,
+          "right": 339.734375,
+          "width": 267.734375
+        },
+        {
+          "height": 52,
+          "left": 349.734375,
+          "right": 511.984375,
+          "width": 162.25
+        }
+      ],
+      "client": 1425,
+      "h1": "Taller de afilado en Valencia Cada filo.Su oficio.",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "shortcutOrder": [
+        "Afilado de herramientas de manicura",
+        "Afilado de tijeras",
+        "Afilado de cuchillos"
+      ],
+      "width": 1440
+    },
+    {
+      "page": "Servicios",
+      "client": 305,
+      "h1": "Servicios de afilado en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "page": "Servicios",
+      "client": 360,
+      "h1": "Servicios de afilado en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "page": "Servicios",
+      "client": 375,
+      "h1": "Servicios de afilado en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "page": "Servicios",
+      "client": 415,
+      "h1": "Servicios de afilado en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "width": 430
+    },
+    {
+      "page": "Servicios",
+      "client": 753,
+      "h1": "Servicios de afilado en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "page": "Servicios",
+      "client": 1425,
+      "h1": "Servicios de afilado en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "page": "Cuchillos",
+      "client": 305,
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "page": "Cuchillos",
+      "client": 360,
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "page": "Cuchillos",
+      "client": 375,
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "page": "Cuchillos",
+      "client": 415,
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "width": 430
+    },
+    {
+      "page": "Cuchillos",
+      "client": 753,
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "page": "Cuchillos",
+      "client": 1425,
+      "h1": "Afilado profesional de cuchillos en Valencia",
+      "header": "sticky",
+      "heroImage": 1140,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "page": "Tijeras",
+      "client": 305,
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "page": "Tijeras",
+      "client": 360,
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "page": "Tijeras",
+      "client": 375,
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "page": "Tijeras",
+      "client": 415,
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "width": 430
+    },
+    {
+      "page": "Tijeras",
+      "client": 753,
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "page": "Tijeras",
+      "client": 1425,
+      "h1": "Afilado de tijeras de peluquería y barbería en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "page": "Manicura",
+      "client": 305,
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "header": "sticky",
+      "heroImage": 600,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "page": "Manicura",
+      "client": 360,
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "header": "sticky",
+      "heroImage": 600,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "page": "Manicura",
+      "client": 375,
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "header": "sticky",
+      "heroImage": 600,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "page": "Manicura",
+      "client": 415,
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "header": "sticky",
+      "heroImage": 600,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "width": 430
+    },
+    {
+      "page": "Manicura",
+      "client": 753,
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "header": "sticky",
+      "heroImage": 600,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "page": "Manicura",
+      "client": 1425,
+      "h1": "Afilado de herramientas de manicura y pedicura en Valencia",
+      "header": "sticky",
+      "heroImage": 600,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "page": "Cuchillas",
+      "client": 305,
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "page": "Cuchillas",
+      "client": 360,
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 360,
+      "width": 375
+    },
+    {
+      "page": "Cuchillas",
+      "client": 375,
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "page": "Cuchillas",
+      "client": 415,
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 415,
+      "width": 430
+    },
+    {
+      "page": "Cuchillas",
+      "client": 753,
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "page": "Cuchillas",
+      "client": 1425,
+      "h1": "Afilado de cuchillas de máquinas de peluquería y grooming en Valencia",
+      "header": "sticky",
+      "heroImage": 800,
+      "robots": "noindex, nofollow",
+      "scroll": 1425,
+      "width": 1440
+    }
+  ],
+  "nativeMenuTests": {
+    "desktop": [
+      "open",
+      "Escape",
+      "focus return",
+      "contact anchor",
+      "scroll unlock"
+    ],
+    "mobile390": [
+      "Enter open",
+      "Tab to Inicio",
+      "Escape",
+      "focus return",
+      "Enter contact anchor",
+      "scroll unlock"
+    ]
+  },
+  "notTested": [
+    "Safari",
+    "actual iOS/Android touch",
+    "Lighthouse",
+    "field CWV",
+    "full video/audio playback"
+  ]
+}

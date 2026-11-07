@@ -1,0 +1,212 @@
+{
+  "knives-390": {
+    "bottom": 878.546875,
+    "ctaTop": 696.359375,
+    "h1": "46.8px",
+    "height": 1100,
+    "heroHeight": 806.546875,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillos-valencia/?uxreview=final-shots",
+    "width": 390,
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 331.85455322265625,
+      "top": 0,
+      "width": 331.85455322265625,
+      "x": 0,
+      "y": 0
+    },
+    "page": "knives"
+  },
+  "knives-1440": {
+    "bottom": 869.390625,
+    "ctaTop": 680.296875,
+    "h1": "80px",
+    "height": 900,
+    "heroHeight": 777.390625,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillos-valencia/?uxreview=final-shots",
+    "width": 1440,
+    "frame": {
+      "bottom": 851.875,
+      "height": 851.875,
+      "left": 0,
+      "right": 1363,
+      "top": 0,
+      "width": 1363,
+      "x": 0,
+      "y": 0
+    },
+    "page": "knives"
+  },
+  "scissors-390": {
+    "bottom": 837.6875,
+    "ctaTop": 713.6875,
+    "h1": "42px",
+    "height": 1100,
+    "heroHeight": 765.6875,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilar-tijeras-peluqueria-valencia/?uxreview=final-d",
+    "width": 390,
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 331.85455322265625,
+      "top": 0,
+      "width": 331.85455322265625,
+      "x": 0,
+      "y": 0
+    },
+    "page": "scissors"
+  },
+  "scissors-1440": {
+    "bottom": 781.46875,
+    "ctaTop": 637.46875,
+    "h1": "76px",
+    "height": 900,
+    "heroHeight": 689.46875,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilar-tijeras-peluqueria-valencia/?uxreview=final-shots",
+    "width": 1440,
+    "frame": {
+      "bottom": 851.875,
+      "height": 851.875,
+      "left": 0,
+      "right": 1363,
+      "top": 0,
+      "width": 1363,
+      "x": 0,
+      "y": 0
+    },
+    "page": "scissors"
+  },
+  "manicure-390": {
+    "bottom": 850.1875,
+    "ctaTop": 726.1875,
+    "h1": "40px",
+    "height": 1100,
+    "heroHeight": 778.1875,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/herramientas-manicura-pedicura-valencia/?uxreview=final-d",
+    "width": 390,
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 331.85455322265625,
+      "top": 0,
+      "width": 331.85455322265625,
+      "x": 0,
+      "y": 0
+    },
+    "page": "manicure"
+  },
+  "manicure-1440": {
+    "bottom": 805.921875,
+    "ctaTop": 661.921875,
+    "h1": "74px",
+    "height": 900,
+    "heroHeight": 713.921875,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/herramientas-manicura-pedicura-valencia/?uxreview=final-shots",
+    "width": 1440,
+    "frame": {
+      "bottom": 851.875,
+      "height": 851.875,
+      "left": 0,
+      "right": 1363,
+      "top": 0,
+      "width": 1363,
+      "x": 0,
+      "y": 0
+    },
+    "page": "manicure"
+  },
+  "blades-390": {
+    "bottom": 831.59375,
+    "ctaTop": 707.59375,
+    "h1": "40px",
+    "height": 1100,
+    "heroHeight": 759.59375,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillas-maquinas-valencia/?uxreview=final-d",
+    "width": 390,
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 331.85455322265625,
+      "top": 0,
+      "width": 331.85455322265625,
+      "x": 0,
+      "y": 0
+    },
+    "page": "blades"
+  },
+  "blades-1440": {
+    "bottom": 793.6875,
+    "ctaTop": 649.6875,
+    "h1": "70px",
+    "height": 900,
+    "heroHeight": 701.6875,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillas-maquinas-valencia/?uxreview=final-shots",
+    "width": 1440,
+    "frame": {
+      "bottom": 851.875,
+      "height": 851.875,
+      "left": 0,
+      "right": 1363,
+      "top": 0,
+      "width": 1363,
+      "x": 0,
+      "y": 0
+    },
+    "page": "blades"
+  },
+  "hospitality-390": {
+    "bottom": 819.890625,
+    "ctaTop": 623.890625,
+    "h1": "49.92px",
+    "height": 1100,
+    "heroHeight": 747.890625,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillos-hosteleria-valencia/?uxreview=final-shots",
+    "width": 390,
+    "frame": {
+      "bottom": 936,
+      "height": 936,
+      "left": 0,
+      "right": 331.85455322265625,
+      "top": 0,
+      "width": 331.85455322265625,
+      "x": 0,
+      "y": 0
+    },
+    "page": "hospitality"
+  },
+  "hospitality-1440": {
+    "bottom": 902.828125,
+    "ctaTop": 742.828125,
+    "h1": "86.4px",
+    "height": 900,
+    "heroHeight": 810.828125,
+    "overflow": 0,
+    "url": "https://miguel-033.github.io/filo-fino-redesign-2026/servicios/afilado-cuchillos-hosteleria-valencia/?uxreview=final-shots",
+    "width": 1440,
+    "frame": {
+      "bottom": 851.875,
+      "height": 851.875,
+      "left": 0,
+      "right": 1363,
+      "top": 0,
+      "width": 1363,
+      "x": 0,
+      "y": 0
+    },
+    "page": "hospitality"
+  }
+}

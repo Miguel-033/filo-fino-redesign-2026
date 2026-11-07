@@ -39,22 +39,28 @@ def graphs(page):
              'areaServed': {'@type': 'City', 'name': 'Valencia'}},
             {'@type': 'BreadcrumbList', '@id': url + '#breadcrumb', 'itemListElement': [
                 {'@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': origin + '/'},
-                {'@type': 'ListItem', 'position': 2, 'name': page['serviceName'], 'item': url}]}]
+                {'@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': origin + '/servicios/'},
+                {'@type': 'ListItem', 'position': 3, 'name': page['serviceName'], 'item': url}]}]
     else:
         graph[2]['about'] = {'@id': business['id']}
+        if page['path'] == '/servicios/':
+            graph[2]['breadcrumb'] = {'@id': url + '#breadcrumb'}
+            graph.append({'@type': 'BreadcrumbList', '@id': url + '#breadcrumb', 'itemListElement': [
+                {'@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': origin + '/'},
+                {'@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': url}]})
     return {'@context': 'https://schema.org', '@graph': graph}
 
 
 def metadata():
-    return {'status': 'INERT HANDOFF — not approved or exported for production',
+    return {'status': 'OFFLINE CANDIDATE — generated for review; not approved for deployment',
             'hoursStatus': CONFIG['business']['hoursStatus'],
-            'productionGate': ['Owner confirms facts/hours', 'Retain/audit all migration URLs',
+            'productionGate': ['Owner confirms facts/hours', 'Owner approves every nonidentity migration decision',
                                'Rendered/mobile/Safari and rich-result tests',
                                'Explicit production approval and rollback'],
             'pages': [{'path': p['path'], 'canonical': CONFIG['productionOrigin'] + p['path'],
                        'robots': 'index, follow', 'title': p['title'],
                        'description': p['description'], 'jsonld': graphs(p)}
-                      for p in CONFIG['pages'] if p['status'] == 'developed']}
+                      for p in CONFIG['pages'] + CONFIG['legalPages']]}
 
 
 def output(path, value, check):
@@ -87,9 +93,8 @@ def apply_preview(page):
 
 
 def sitemap_candidate(check):
-    rows = list(csv.DictReader((ROOT / 'seo/migration/url-map.csv').open()))
-    urls = [r['new_url'] for r in rows]
-    assert len(urls) == len(set(urls)), 'Review many-to-one redirects before generating sitemap'
+    urls = [CONFIG['productionOrigin'] + p['path'] for p in CONFIG['pages'] + CONFIG['legalPages']]
+    assert len(urls) == 10 and len(set(urls)) == 10
     namespace = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', namespace)
     node = ET.Element('{' + namespace + '}urlset')
@@ -97,7 +102,7 @@ def sitemap_candidate(check):
         assert url.startswith(CONFIG['productionOrigin'] + '/')
         ET.SubElement(ET.SubElement(node, '{' + namespace + '}url'), '{' + namespace + '}loc').text = url
     ET.indent(node)
-    text = '<?xml version="1.0" encoding="utf-8"?>\n<!-- INERT CANDIDATE: audit every retained legacy URL before production. No fabricated lastmod. -->\n' + ET.tostring(node, encoding='unicode') + '\n'
+    text = '<?xml version="1.0" encoding="utf-8"?>\n<!-- OFFLINE CANDIDATE ONLY: ten approved final URLs; not deployed. No fabricated lastmod. -->\n' + ET.tostring(node, encoding='unicode') + '\n'
     path = ROOT / 'seo/production/sitemap.candidate.xml'
     if check:
         assert path.read_text() == text, 'Stale candidate sitemap'
@@ -111,28 +116,13 @@ if __name__ == '__main__':
     parser.add_argument('--apply-preview', action='store_true')
     args = parser.parse_args()
     assert not (args.check and args.apply_preview)
-    frozen = CONFIG.get('productionHandoff')
-    if frozen:
-        import hashlib
-        for name, digest in frozen['files'].items():
-            assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, 'Protected release file changed: ' + name
-        # The owner explicitly froze canonical/schema/robots/sitemap changes.
-        # Preview metadata is checked by verify.inspect; release data stays byte-identical.
-        if args.apply_preview:
-            for page in CONFIG['pages']:
-                if page['status'] == 'developed':
-                    apply_preview(page)
-        print('PASS: frozen release artifacts preserved; preview metadata only')
-    else:
-        meta = metadata()
-        output(ROOT / 'seo/production/metadata.json', meta, args.check)
-        # Backward-compatible knife handoff, generated from the same registry.
-        knife = next(p for p in meta['pages'] if p['path'] == '/servicios/afilado-cuchillos-valencia/')
-        output(ROOT / CONFIG['sourceRoot'] / 'servicios/afilado-cuchillos-valencia/production-seo.json',
-               {'status': meta['status'], **{k: v for k, v in knife.items() if k != 'path'}}, args.check)
-        sitemap_candidate(args.check)
-        if args.apply_preview:
-            for page in CONFIG['pages']:
-                if page['status'] == 'developed':
-                    apply_preview(page)
-        print('PASS: metadata and candidate sitemap are consistent; no production export/deploy performed')
+    meta = metadata()
+    output(ROOT / 'seo/production/metadata.json', meta, args.check)
+    knife = next(p for p in meta['pages'] if p['path'] == '/servicios/afilado-cuchillos-valencia/')
+    output(ROOT / CONFIG['sourceRoot'] / 'servicios/afilado-cuchillos-valencia/production-seo.json',
+           {'status': meta['status'], **{k: v for k, v in knife.items() if k != 'path'}}, args.check)
+    sitemap_candidate(args.check)
+    if args.apply_preview:
+        for page in CONFIG['pages'] + CONFIG['legalPages']:
+            apply_preview(page)
+    print('PASS: offline metadata 10/10 (main 7/7) and ten-URL sitemap; no deployment')

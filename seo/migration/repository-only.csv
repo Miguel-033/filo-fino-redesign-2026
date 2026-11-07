@@ -1,0 +1,4 @@
+old_url,new_url,proposed_action,source,observed_status,status_date,owner_decision,rationale,implemented
+https://filofino.es/shop.html,,propose-410-or-retain-404,repository-only-unverified,not-refetched,,owner-approval-required,No equivalent retained page; do not redirect to home.,no
+https://filofino.es/afilado-tijeras-peluqueria-valencia.html,https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/,consider-301-after-intent-review,repository-only-unverified,not-refetched,,owner-approval-required,Legacy redirect stub points to retained scissors service; inspect live behavior before migration.,no
+https://filofino.es/articulos/maekt.html,,propose-410-or-retain-404,repository-only-unverified,not-refetched,,owner-approval-required,Retired topic has no equivalent in ten-page scope; 410 or existing 404 requires owner decision.,no
