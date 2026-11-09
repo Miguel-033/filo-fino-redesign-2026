@@ -159,9 +159,11 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
 @media(max-width:767px){
  .hero .hero-shortcuts{width:100%;max-width:none;gap:8px}
  .hero .hero-shortcuts a,.hero .hero-shortcuts a+a{min-height:52px;padding:11px 12px;font-size:14px;gap:8px}
- .knives-page .knife-jump a{min-height:56px;padding:10px 12px;gap:10px}
+ .knives-page .knife-jump a{min-height:60px;padding:10px 12px;gap:10px}
  .knives-page .knife-jump a:first-child{min-height:48px}
 }
+/* Reserve a third text line in the two-column service navigation. */
+@media(max-width:399px){.knives-page .knife-jump a{min-height:79px}}
 @media(max-width:359px){.hero .hero-shortcuts a,.hero .hero-shortcuts a+a{font-size:13px}}
 
 /* Owner UX batch, 27 October: shared navigation and local home corrections. */
