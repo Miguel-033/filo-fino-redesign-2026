@@ -14,7 +14,8 @@
       "cover": "assets/real-works/knife-video.webp",
       "coverTitle": "Afilado de cuchillo",
       "previewRatio": "1 / 1",
-      "previewPosition": "50% 55%"
+      "previewPosition": "50% 55%",
+      "category": "cuchillos"
     },
     {
       "id": "scissors-detail",
@@ -28,7 +29,8 @@
       "cover": "assets/real-works/scissors-detail.webp",
       "coverTitle": "Tijeras de entresacar",
       "previewRatio": "2 / 3",
-      "previewPosition": "50% 50%"
+      "previewPosition": "50% 50%",
+      "category": "tijeras"
     },
     {
       "id": "manicure-work",
@@ -44,7 +46,8 @@
       "cover": "assets/real-works/manicure-video.webp",
       "coverTitle": "Alicate de manicura",
       "previewRatio": "4 / 3",
-      "previewPosition": "50% 45%"
+      "previewPosition": "50% 45%",
+      "category": "manicura"
     },
     {
       "id": "scissors-work",
@@ -60,7 +63,8 @@
       "cover": "assets/real-works/scissors-video.webp",
       "coverTitle": "Prueba de tijeras",
       "previewRatio": "4 / 5",
-      "previewPosition": "50% 65%"
+      "previewPosition": "50% 65%",
+      "category": "tijeras"
     },
     {
       "id": "knife-test",
@@ -76,7 +80,8 @@
       "duration": "0:14",
       "provenance": "Existing workshop archive cuchillo_para_profecional.mp4; cover is a frame at 2 seconds.",
       "previewRatio": "3 / 2",
-      "previewPosition": "50% 67%"
+      "previewPosition": "50% 67%",
+      "category": "cuchillos"
     },
     {
       "id": "clipper-test",

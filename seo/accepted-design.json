@@ -3,19 +3,19 @@
   "pages": {
     "index.html": {
       "heroSha256": "23ea16789b48871bc3133b806f683923f48dfbc9cb40d86cbac5858d71a4687a",
-      "mainWithRetiredLinksRemovedSha256": "9bc2b8d26f295296c484ecba347dcbd2c8dbbd858c538493d6a7a7e6864f2f20"
+      "mainWithRetiredLinksRemovedSha256": "1987df282be9abd99203f7f353513e17a95bd5b56e908f8d645a6432cf1b7ef7"
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
-      "mainWithRetiredLinksRemovedSha256": "560293072b27d12af125866322857452a02517c55a4a7a3ce07ba882ce9880f4"
+      "mainWithRetiredLinksRemovedSha256": "4d01d7f1895936d8bc544a0bed501ec8e77177b48d88006bc2da86f394149e1a"
     },
     "servicios/afilar-tijeras-peluqueria-valencia/index.html": {
       "heroSha256": "a35169fdb982a3ded057752f7ebab27b9c9fd1a2366cb0ee33d120017e77272c",
-      "mainWithRetiredLinksRemovedSha256": "7cc6eae568e81731008131dec8d7f4449f55f76efc3df152fef12ea29c8885b4"
+      "mainWithRetiredLinksRemovedSha256": "387b867f420def92dff8ee86bf170233ac5251931231c66cc9c0315754eeea1e"
     },
     "servicios/herramientas-manicura-pedicura-valencia/index.html": {
       "heroSha256": "3ed4c06bec211fc17b50d6436a2aa7d78df38be8b3d3b42c1521dfb8a104b854",
-      "mainWithRetiredLinksRemovedSha256": "419975611d2e5659108a6c8f2ce3681a01eddae607fc3dc8af3035f1da58f796"
+      "mainWithRetiredLinksRemovedSha256": "22df582112d0e725bfa589b35f025074a219ac0b23ff19f08ef21d6d9b6a17b4"
     },
     "servicios/afilado-cuchillas-maquinas-valencia/index.html": {
       "heroSha256": "b94655b67e8c79430d62a2a9ec9842b0329f5f0f52da4fbe33cec65ed357024e",
@@ -89,7 +89,7 @@
     "screenshots/pr4-baseline/desktop-first.jpg": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c",
     "screenshots/pr4-baseline/mobile-first.jpg": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c",
     "assets/images/knife-sharpening-poster.webp": "f8cfcef5bedfeb3540874aa545d4dc86b9a03d6ae2890119aadc679fb2f4efeb",
-    "real-works.css": "def1145e83a901157a2bfab1e4b32ffa8f070deca241d971f51e50370ba2f66f",
+    "real-works.css": "05810ccd09fac69819a20ca4d4a96291f0940a93b678f9d6450fdb145ccda49b",
     "real-works.js": "71bb75fc909855230b25bf0d5f61b760fa7915df0013896a9fb4268e8261f824",
     "assets/real-works/manicure-video.webp": "a0b48994360aae53a512dd4badc7d3a913aab70c65e4d4946189909f0d43245b",
     "assets/real-works/scissors-video.webp": "72ae7e508a2e089a310564c502a36d6813ac4f9c8fdd00824444593bdbda4fe7",

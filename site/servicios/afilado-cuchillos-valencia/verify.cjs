@@ -16,7 +16,14 @@ assert.ok(!/[←→↑↓↗↘]/u.test(html));assert.equal(d.querySelectorAll('
 assert.equal(d.querySelectorAll('.hero.hero--service>.hero-photo img').length,1);
 assert.equal(d.querySelector('.hero-photo img').getAttribute('fetchpriority'),'high');
 assert.equal(d.querySelector('.knife-contact-card a.address-study').href,'https://maps.app.goo.gl/Z4WQeCUKKeDbx8Qt7');
-assert.equal(d.querySelector('.knife-jump'),null);
+assert.deepEqual(
+  [...d.querySelectorAll('.knife-jump a')].map(link => [link.textContent, link.getAttribute('href')]),
+  [
+    ['Ver precios', '../#lista'],
+    ['Ver trabajos reales', '../../#trabajos-reales-cuchillos'],
+    ['¿Qué cuchillos afilamos?', '#cuchillos'],
+  ]
+);
 const cssAst=postcss.parse(fs.readFileSync(root+'/refinement.css','utf8'));
 function declarations(selector,media){const out={};cssAst.walkRules(rule=>{if(rule.selector!==selector)return;const m=rule.parent.type==='atrule'?rule.parent.params:null;if(m!==media)return;rule.walkDecls(x=>out[x.prop]=x.value)});return out;}
 assert.equal(declarations('.hero .hero-actions',null).display,'grid');
@@ -29,4 +36,4 @@ const prod=JSON.parse(fs.readFileSync(dir+'/production-seo.json','utf8'));assert
 w.matchMedia=()=>({matches:true,addEventListener(){}});w.Element.prototype.getAnimations=()=>[];d.getAnimations=()=>[];w.Element.prototype.scrollTo=()=>{};w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
 w.eval(fs.readFileSync(root+'/navigation.js','utf8'));w.eval(js);
 d.querySelector('.menu-trigger').click();assert.equal(d.querySelector('#menu-dialog').open,true);assert.equal(d.querySelector('.menu-trigger').getAttribute('aria-expanded'),'true');d.querySelector('.menu-close').click();assert.equal(d.querySelector('.menu-trigger').getAttribute('aria-expanded'),'false');assert.deepEqual([...d.querySelectorAll('a[href^="https://wa.me/"]')].map(a=>new URL(a.href).searchParams.get('text')),msgs);
-const report={page:'Afilado de cuchillos',date:new Date().toISOString(),passed:['Spanish metadata and one H1','noindex and no active canonical/production JSON-LD','resource files, CSS URL refs and syntax','unique IDs and all anchors/SVG symbols','3 types, 4 steps, 7 native FAQ details','shared photographic hero; no decorative gallery; owner-requested removal of under-Hero jump navigation','menu state/aria-expanded','WhatsApp prefix and 3 contexts without JS rewrite','all homepage knife links point at new route','production JSON graph/ref consistency without hours/ratings','owner-confirmed 4 euro / 15 minute references and knife exclusions; no autoplay or text arrows'],limitations:['DOM test doubles are not rendered browser, native Escape/focus/swipe, mobile overflow or Safari tests','No measured field performance or rich-result validation']};fs.writeFileSync(dir+'/checks.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+const report={page:'Afilado de cuchillos',date:new Date().toISOString(),passed:['Spanish metadata and one H1','noindex and no active canonical/production JSON-LD','resource files, CSS URL refs and syntax','unique IDs and all anchors/SVG symbols','3 types, 4 steps, 7 native FAQ details','shared photographic hero; no decorative gallery; three service navigation links','menu state/aria-expanded','WhatsApp prefix and 3 contexts without JS rewrite','all homepage knife links point at new route','production JSON graph/ref consistency without hours/ratings','owner-confirmed 4 euro / 15 minute references and knife exclusions; no autoplay or text arrows'],limitations:['DOM test doubles are not rendered browser, native Escape/focus/swipe, mobile overflow or Safari tests','No measured field performance or rich-result validation']};fs.writeFileSync(dir+'/checks.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
