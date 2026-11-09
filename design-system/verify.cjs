@@ -27,7 +27,7 @@ for(const page of contracts.pages){
    const jump=style(d.querySelector('.knife-jump'),width);assert.equal(jump.display,'grid');assert.ok(jump['grid-template-columns'].includes(width<=767?'repeat(2,':'repeat(3,'));
    if(width<=767)assert.equal(style(d.querySelector('.knife-jump a'),width)['grid-column'],'1/-1');
    for(const card of d.querySelectorAll('.knife-jump a')){assert.equal(style(card,width).display,'flex');assert.equal(style(card,width)['flex-wrap'],'nowrap');assert.equal(style(card,width)['align-items'],'center');assert.equal(style(card.querySelector('svg'),width).flex,'0 0 16px')}
-   if(width<=767){assert.equal(style(d.querySelector('.knife-jump a'),width)['min-height'],'48px');assert.equal(style(d.querySelectorAll('.knife-jump a')[1],width)['min-height'],'56px');assert.equal(style(d.querySelectorAll('.knife-jump a')[2],width)['min-height'],'56px')}
+   if(width<=767){assert.equal(style(d.querySelector('.knife-jump a'),width)['min-height'],'48px');assert.equal(style(d.querySelectorAll('.knife-jump a')[1],width)['min-height'],width<=399?'79px':'60px');assert.equal(style(d.querySelectorAll('.knife-jump a')[2],width)['min-height'],width<=399?'79px':'60px')}
   }else{
    const shortcuts=style(d.querySelector('.hero-shortcuts'),width);assert.equal(shortcuts.display,'grid');assert.equal(shortcuts['grid-template-columns'],'repeat(2,minmax(0,1fr))');assert.equal(style(d.querySelector('.hero-shortcuts a'),width)['grid-column'],'1/-1');
    for(const link of d.querySelectorAll('.hero-shortcuts a'))assert.equal(style(link,width)['align-items'],'center');
