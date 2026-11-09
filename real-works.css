@@ -17,6 +17,12 @@
 .real-work__open:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 .real-work:focus-within{border-color:var(--brass)}
 .real-work__open:active .real-work__title{color:var(--brass)}
+/* Use native fragment scrolling and the existing sticky-header offset. */
+.real-works:has(> #trabajos-reales-cuchillos:target) .real-work:not([data-category="cuchillos"]),
+.real-works:has(> #trabajos-reales-tijeras:target) .real-work:not([data-category="tijeras"]),
+.real-works:has(> #trabajos-reales-manicura:target) .real-work:not([data-category="manicura"]) {
+  display: none;
+}
 .real-works-dialog{margin:auto;padding:0;width:min(calc(100% - 32px),1100px);max-width:none;max-height:calc(100dvh - 32px);border:1px solid var(--line);background:var(--deep);color:var(--paper);overscroll-behavior:contain}
 .real-works-dialog::backdrop{background:#071013e8}
 .real-works-dialog__shell{display:flex;flex-direction:column;max-height:calc(100dvh - 34px);min-width:0}
