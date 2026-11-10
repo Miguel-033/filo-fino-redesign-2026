@@ -156,7 +156,7 @@
 
 .stone-portfolio__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, .85fr);
   gap: clamp(12px, 2vw, 28px);
   align-items: start;
 }
@@ -169,6 +169,11 @@
 .stone-portfolio__grid figure:nth-child(2) img {
   aspect-ratio: 5 / 4;
   object-position: 50% 42%;
+}
+
+.stone-portfolio__grid figure:nth-child(3) img {
+  aspect-ratio: 4 / 5;
+  object-position: 50% 50%;
 }
 
 @media (max-width: 720px) {
@@ -187,8 +192,16 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .stone-portfolio__grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stone-portfolio__grid figure:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .stone-portfolio__grid figure:first-child img {
+    aspect-ratio: 16 / 9;
   }
 }
