@@ -2,18 +2,14 @@
   --stone-accent: var(--brass);
   --stone-copy: var(--steel);
   --stone-rule: var(--line);
-  padding-block: clamp(42px, 6vw, 92px);
+  --stone-gap: clamp(22px, 4vw, 64px);
+  padding-block: clamp(42px, 6vw, 94px);
 }
 
 .stone-section h2 {
-  font-size: clamp(42px, 5.4vw, 80px);
+  font-size: clamp(40px, 5.4vw, 80px);
   line-height: .97;
   text-wrap: balance;
-}
-
-.stone-section h3 {
-  font-size: clamp(25px, 2.6vw, 38px);
-  line-height: 1;
 }
 
 .stone-paper {
@@ -30,37 +26,38 @@
   margin-bottom: 14px;
 }
 
-.stone-section :is(header, .stone-intro) > p:not(.eyebrow) {
-  color: var(--stone-copy);
-  margin-top: 18px;
-  max-width: 48ch;
-}
-
 .stone-detail,
 .stone-types,
-.stone-process__layout {
+.stone-process {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(26px, 6vw, 88px);
+  gap: var(--stone-gap);
 }
 
 .stone-detail {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
 }
 
-.stone-detail .stone-photo img {
-  aspect-ratio: 5 / 4;
-  object-position: center 40%;
+.stone-intro > p:not(.eyebrow) {
+  color: var(--stone-copy);
+  margin-top: 16px;
+  max-width: 42ch;
 }
 
 .stone-photo {
   min-width: 0;
+  margin: 0;
 }
 
 .stone-photo a {
   position: relative;
   display: block;
+  border: 1px solid var(--stone-rule);
+}
+
+.stone-photo a:focus-visible {
+  outline: 2px solid var(--stone-accent);
+  outline-offset: 3px;
 }
 
 .stone-photo img {
@@ -68,81 +65,95 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid var(--stone-rule);
 }
 
 .stone-photo figcaption {
-  margin-top: 9px;
-  font-size: 12px;
+  margin-top: 8px;
+  font-size: 13px;
   color: var(--stone-copy);
 }
 
 .stone-zoom {
   position: absolute;
-  inset: auto 10px 10px auto;
+  inset: auto 8px 8px auto;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border: 1px solid var(--line);
   background: var(--deep);
   color: var(--paper);
 }
 
-.stone-paper a:focus-visible {
-  outline-color: var(--stone-accent);
+.stone-zoom svg {
+  width: 17px;
+  height: 17px;
 }
 
-.stone-types .stone-photo img {
-  aspect-ratio: 5 / 4;
-  object-position: 50% 71%;
+.stone-types {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
+  grid-template-areas: "photos copy";
+}
+
+.stone-types__copy {
+  grid-area: copy;
+}
+
+.stone-types__photos {
+  grid-area: photos;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: end;
+  gap: clamp(8px, 1.4vw, 20px);
+}
+
+.stone-types__photos figure:last-child {
+  margin-bottom: clamp(12px, 3vw, 44px);
 }
 
 .stone-types__list,
 .stone-process__steps {
   padding: 0;
-  margin: 22px 0 0;
-  list-style: none;
+  margin: clamp(20px, 3vw, 36px) 0 0;
 }
 
-.stone-types__list li,
+.stone-types__list > div,
 .stone-process__steps li {
-  padding-block: 14px;
+  padding-block: 13px;
   border-top: 1px solid var(--stone-rule);
 }
 
-.stone-section li p {
-  color: var(--stone-copy);
-  margin-top: 6px;
+.stone-types dt,
+.stone-process h3 {
+  font: 600 clamp(23px, 2.4vw, 33px)/1 var(--display);
 }
 
-.stone-process__layout {
-  margin-top: 24px;
-  align-items: start;
+.stone-types dd,
+.stone-process li p {
+  color: var(--stone-copy);
+  margin: 6px 0 0;
+}
+
+.stone-process {
+  grid-template-columns: minmax(0, 8fr) minmax(0, 3fr);
 }
 
 .stone-process__steps {
-  margin-top: 0;
-}
-
-.stone-process__steps li {
   display: grid;
-  grid-template-columns: 2.25rem minmax(0, 1fr);
-  column-gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px clamp(18px, 3vw, 40px);
+  list-style: none;
 }
 
 .stone-process__steps li > span {
+  display: block;
   color: var(--stone-accent);
   font-size: 12px;
-  padding-top: 5px;
+  margin-bottom: 8px;
 }
 
-.stone-process__steps p {
-  grid-column: 2;
-}
-
-.stone-process .stone-photo {
-  align-self: center;
+.stone-process .stone-photo img {
+  aspect-ratio: 4 / 5;
 }
 
 .stone-portfolio__heading {
@@ -151,57 +162,43 @@
   align-items: end;
   gap: 18px 30px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+}
+
+.stone-portfolio .text-link {
+  color: var(--stone-accent);
 }
 
 .stone-portfolio__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, .85fr);
-  gap: clamp(12px, 2vw, 28px);
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(8px, 1.4vw, 20px);
   align-items: start;
 }
 
-.stone-portfolio__grid img {
-  aspect-ratio: 4 / 3;
-  object-position: 50% 61%;
+.stone-portfolio__grid figure:first-child img {
+  aspect-ratio: 5 / 4;
+  object-position: 50% 65%;
 }
 
-.stone-portfolio__grid figure:nth-child(2) img {
-  aspect-ratio: 5 / 4;
+.stone-portfolio__grid figure:last-child img {
+  aspect-ratio: 4 / 5;
   object-position: 50% 42%;
 }
 
-.stone-portfolio__grid figure:nth-child(3) img {
-  aspect-ratio: 4 / 5;
-  object-position: 50% 50%;
-}
-
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   .stone-detail,
   .stone-types,
-  .stone-process__layout {
+  .stone-process {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .stone-types .stone-photo {
-    order: 1;
+  .stone-types {
+    grid-template-areas: "copy" "photos";
   }
 
-  .stone-process__layout {
-    margin-top: 18px;
-  }
-}
-
-@media (max-width: 600px) {
-  .stone-portfolio__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .stone-portfolio__grid figure:first-child {
-    grid-column: 1 / -1;
-  }
-
-  .stone-portfolio__grid figure:first-child img {
-    aspect-ratio: 16 / 9;
+  .stone-process .stone-photo img {
+    aspect-ratio: 2 / 1;
+    object-position: 50% 46%;
   }
 }
