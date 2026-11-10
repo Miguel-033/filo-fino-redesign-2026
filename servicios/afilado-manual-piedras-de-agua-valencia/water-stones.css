@@ -1,0 +1,194 @@
+.stone-section {
+  --stone-accent: var(--brass);
+  --stone-copy: var(--steel);
+  --stone-rule: var(--line);
+  padding-block: clamp(42px, 6vw, 92px);
+}
+
+.stone-section h2 {
+  font-size: clamp(42px, 5.4vw, 80px);
+  line-height: .97;
+  text-wrap: balance;
+}
+
+.stone-section h3 {
+  font-size: clamp(25px, 2.6vw, 38px);
+  line-height: 1;
+}
+
+.stone-paper {
+  --stone-accent: #735023;
+  --stone-copy: #43555d;
+  --stone-rule: #aebbbe;
+  background: var(--paper);
+  color: var(--ink);
+  color-scheme: light;
+}
+
+.stone-section .eyebrow {
+  color: var(--stone-accent);
+  margin-bottom: 14px;
+}
+
+.stone-section :is(header, .stone-intro) > p:not(.eyebrow) {
+  color: var(--stone-copy);
+  margin-top: 18px;
+  max-width: 48ch;
+}
+
+.stone-detail,
+.stone-types,
+.stone-process__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(26px, 6vw, 88px);
+}
+
+.stone-detail {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+}
+
+.stone-detail .stone-photo img {
+  aspect-ratio: 5 / 4;
+  object-position: center 40%;
+}
+
+.stone-photo {
+  min-width: 0;
+}
+
+.stone-photo a {
+  position: relative;
+  display: block;
+}
+
+.stone-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid var(--stone-rule);
+}
+
+.stone-photo figcaption {
+  margin-top: 9px;
+  font-size: 12px;
+  color: var(--stone-copy);
+}
+
+.stone-zoom {
+  position: absolute;
+  inset: auto 10px 10px auto;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: var(--deep);
+  color: var(--paper);
+}
+
+.stone-paper a:focus-visible {
+  outline-color: var(--stone-accent);
+}
+
+.stone-types .stone-photo img {
+  aspect-ratio: 5 / 4;
+  object-position: 50% 71%;
+}
+
+.stone-types__list,
+.stone-process__steps {
+  padding: 0;
+  margin: 22px 0 0;
+  list-style: none;
+}
+
+.stone-types__list li,
+.stone-process__steps li {
+  padding-block: 14px;
+  border-top: 1px solid var(--stone-rule);
+}
+
+.stone-section li p {
+  color: var(--stone-copy);
+  margin-top: 6px;
+}
+
+.stone-process__layout {
+  margin-top: 24px;
+  align-items: start;
+}
+
+.stone-process__steps {
+  margin-top: 0;
+}
+
+.stone-process__steps li {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  column-gap: 10px;
+}
+
+.stone-process__steps li > span {
+  color: var(--stone-accent);
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.stone-process__steps p {
+  grid-column: 2;
+}
+
+.stone-process .stone-photo {
+  align-self: center;
+}
+
+.stone-portfolio__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px 30px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.stone-portfolio__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(12px, 2vw, 28px);
+  align-items: start;
+}
+
+.stone-portfolio__grid img {
+  aspect-ratio: 4 / 3;
+  object-position: 50% 61%;
+}
+
+.stone-portfolio__grid figure:nth-child(2) img {
+  aspect-ratio: 5 / 4;
+  object-position: 50% 42%;
+}
+
+@media (max-width: 720px) {
+  .stone-detail,
+  .stone-types,
+  .stone-process__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stone-types .stone-photo {
+    order: 1;
+  }
+
+  .stone-process__layout {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .stone-portfolio__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
