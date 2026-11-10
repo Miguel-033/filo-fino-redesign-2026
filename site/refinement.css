@@ -117,10 +117,11 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
 .hero--service h1>span:last-child{color:var(--steel)}
 .hero--service .breadcrumbs{margin-bottom:20px;max-width:fit-content}
 .hero--service .hero-copy{margin-top:24px;max-width:39ch}
-.knives-page .knife-jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:1100px;margin:0 auto;padding-top:20px;padding-bottom:24px;border:0}
-.knives-page .knife-jump a{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;min-width:0;min-height:56px;gap:16px;padding:14px 18px;background:#24343b;border:1px solid #647983;border-radius:3px;font-size:15px;line-height:1.45;transition:background-color .2s,border-color .2s}
-.knives-page .knife-jump a>svg{display:block;flex:0 0 18px;width:18px;height:18px;color:var(--brass)}
+.knives-page .knife-jump{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:1100px;margin:0 auto;padding-top:20px;padding-bottom:24px;border:0}
+.knives-page .knife-jump a{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;min-width:0;min-height:52px;gap:10px;padding:10px 14px;background:#a9bbc309;border:1px solid #71858d80;border-radius:4px;font-size:14px;font-weight:600;line-height:1.35;transition:background-color .2s,border-color .2s}
+.knives-page .knife-jump a>svg{display:block;flex:0 0 16px;width:16px;height:16px;color:var(--brass)}
 .knives-page .knife-jump a:hover,.knives-page .knife-jump a:active{background:#34464f;border-color:var(--brass);color:var(--paper)}
+.knives-page .knife-jump a:hover,.knives-page .knife-jump a:focus-visible{background:#a9bbc312;border-color:var(--brass)}
 .knife-jump a>span{min-width:0;overflow-wrap:break-word}
 .site-footer .text-link{font-size:14px}
 @media(max-width:767px){
@@ -138,10 +139,8 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
  .service-touch svg.touch-hand{width:30px;height:35px}
  .service:not(.service-knives) .service-title h3{font-size:clamp(22px,7.2vw,31px)}
  .service-manicure .service-title h3{font-size:clamp(22px,6.5vw,27px)}
- .knives-page .knife-jump{grid-template-columns:repeat(2,minmax(0,1fr));max-width:600px;padding-top:16px;padding-bottom:24px;gap:8px}
- .knives-page .knife-jump a:first-child{grid-column:1/-1}
- .knives-page .knife-jump a{padding:12px;min-height:64px;gap:10px;align-items:center}
- .knives-page .knife-jump a:first-child{min-height:52px}
+ .knives-page .knife-jump{max-width:600px;padding-top:16px;gap:8px}
+ .knives-page .knife-jump a{min-height:60px;padding-inline:12px}
 }
 @media(prefers-reduced-motion:reduce){.service-touch .touch-ring{animation:none!important;opacity:.7}}
 
@@ -153,17 +152,10 @@ svg.touch-hand{width:34px;height:40px;overflow:visible;stroke-width:2;stroke:var
 .hero .hero-shortcuts .shortcut-affordance{flex:0 0 16px}
 .hero .hero-shortcuts .shortcut-affordance>svg{width:16px;height:16px}
 .hero .hero-shortcuts a:hover,.hero .hero-shortcuts a:focus-visible{background:#a9bbc312;border-color:var(--brass);color:var(--paper)}
-.knives-page .knife-jump a{min-height:52px;padding:10px 14px;gap:10px;background:#a9bbc309;border-color:#71858d80;border-radius:4px;font-size:14px;line-height:1.35;font-weight:600;align-items:center}
-.knives-page .knife-jump a>svg{width:16px;height:16px;flex:0 0 16px}
-.knives-page .knife-jump a:hover,.knives-page .knife-jump a:focus-visible{background:#a9bbc312;border-color:var(--brass)}
 @media(max-width:767px){
  .hero .hero-shortcuts{width:100%;max-width:none;gap:8px}
  .hero .hero-shortcuts a,.hero .hero-shortcuts a+a{min-height:52px;padding:11px 12px;font-size:14px;gap:8px}
- .knives-page .knife-jump a{min-height:60px;padding:10px 12px;gap:10px}
- .knives-page .knife-jump a:first-child{min-height:48px}
 }
-/* Reserve a third text line in the two-column service navigation. */
-@media(max-width:399px){.knives-page .knife-jump a{min-height:79px}}
 @media(max-width:359px){.hero .hero-shortcuts a,.hero .hero-shortcuts a+a{font-size:13px}}
 
 /* Owner UX batch, 27 October: shared navigation and local home corrections. */

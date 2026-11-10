@@ -24,10 +24,21 @@ for(const page of contracts.pages){
   const header=style(d.querySelector('.site-header'),width);assert.equal(header.height,'var(--header-height)');assert.equal(style(d.documentElement,width)['--header-height'],width<=767?'72px':'92px');assert.equal(header.position,'sticky');assert.equal(header.top,'0');
   const photo=style(d.querySelector('.hero-photo'),width);assert.equal(photo.position,'absolute');
   if(page.route!=='/'){
-   const jump=style(d.querySelector('.knife-jump'),width);assert.equal(jump.display,'grid');assert.ok(jump['grid-template-columns'].includes(width<=767?'repeat(2,':'repeat(3,'));
-   if(width<=767)assert.equal(style(d.querySelector('.knife-jump a'),width)['grid-column'],'1/-1');
-   for(const card of d.querySelectorAll('.knife-jump a')){assert.equal(style(card,width).display,'flex');assert.equal(style(card,width)['flex-wrap'],'nowrap');assert.equal(style(card,width)['align-items'],'center');assert.equal(style(card.querySelector('svg'),width).flex,'0 0 16px')}
-   if(width<=767){assert.equal(style(d.querySelector('.knife-jump a'),width)['min-height'],'48px');assert.equal(style(d.querySelectorAll('.knife-jump a')[1],width)['min-height'],width<=399?'79px':'60px');assert.equal(style(d.querySelectorAll('.knife-jump a')[2],width)['min-height'],width<=399?'79px':'60px')}
+   const navigation=d.querySelector('.knife-jump');
+   const jump=style(navigation,width);
+   assert.equal(jump.display,'grid');
+   assert.equal(jump['grid-template-columns'],'repeat(2,minmax(0,1fr))');
+   const links=[...navigation.querySelectorAll('a')];
+   assert.deepEqual(links.map(link=>link.textContent),['Ver precios','Ver trabajos reales']);
+   for(const link of links){
+    const button=style(link,width);
+    assert.equal(button.display,'flex');
+    assert.equal(button['flex-wrap'],'nowrap');
+    assert.equal(button['align-items'],'center');
+    assert.equal(button['grid-column'],undefined);
+    assert.equal(button['min-height'],width<=767?'60px':'52px');
+    assert.equal(style(link.querySelector('svg'),width).flex,'0 0 16px');
+   }
   }else{
    const shortcuts=style(d.querySelector('.hero-shortcuts'),width);assert.equal(shortcuts.display,'grid');assert.equal(shortcuts['grid-template-columns'],'repeat(2,minmax(0,1fr))');assert.equal(style(d.querySelector('.hero-shortcuts a'),width)['grid-column'],'1/-1');
    for(const link of d.querySelectorAll('.hero-shortcuts a'))assert.equal(style(link,width)['align-items'],'center');

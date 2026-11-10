@@ -7,23 +7,23 @@
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
-      "mainWithRetiredLinksRemovedSha256": "4d01d7f1895936d8bc544a0bed501ec8e77177b48d88006bc2da86f394149e1a"
+      "mainWithRetiredLinksRemovedSha256": "347828f9de647ac43fd601cfd7f4b20c1a6f7857f06cbba2e6a9822c8bd0e8f8"
     },
     "servicios/afilar-tijeras-peluqueria-valencia/index.html": {
       "heroSha256": "a35169fdb982a3ded057752f7ebab27b9c9fd1a2366cb0ee33d120017e77272c",
-      "mainWithRetiredLinksRemovedSha256": "80a33a6a31723677cb2fd794f7ce60d6c7ec8ab90fe7baa2232bdfea6f2f12bf"
+      "mainWithRetiredLinksRemovedSha256": "9553809086d17db51d15f5031737ba334c468aa4cd195782c37d801d6b0967b4"
     },
     "servicios/herramientas-manicura-pedicura-valencia/index.html": {
       "heroSha256": "3ed4c06bec211fc17b50d6436a2aa7d78df38be8b3d3b42c1521dfb8a104b854",
-      "mainWithRetiredLinksRemovedSha256": "536cd4a12a10c6bc99dfc89641e864c14a91bcd0eb97b5efaa322905617e036e"
+      "mainWithRetiredLinksRemovedSha256": "69d01ace496bde5ca17b5474406c6178c03a9ae1a49ae9b4caf50b5ab4ad86a6"
     },
     "servicios/afilado-cuchillas-maquinas-valencia/index.html": {
       "heroSha256": "b94655b67e8c79430d62a2a9ec9842b0329f5f0f52da4fbe33cec65ed357024e",
-      "mainWithRetiredLinksRemovedSha256": "bf878407e8209fd123d247d721f2ef2c674cf604a2d724b69ab53ae708151dea"
+      "mainWithRetiredLinksRemovedSha256": "94d93cb6be8b9effdb49ab978beb6d925807455927e09efc89a0f32dab143bf9"
     },
     "servicios/afilado-cuchillos-hosteleria-valencia/index.html": {
       "heroSha256": "b32e6d9cb0fee304eff00411a2ac89f012b72ff56f4185bd01f7416dc12e015e",
-      "mainWithRetiredLinksRemovedSha256": "be17421457c56723971f63593dc44424b16d0a1187513d83c53de83f38779849"
+      "mainWithRetiredLinksRemovedSha256": "0cad56f5853bda10443f602c48c8d9399a0b86f628af7021bffe842d250a6588"
     },
     "servicios/index.html": {
       "heroSha256": "1673f19ab31584840df8ee6d4fb9b7a4e81326fdf4dd973397c42f392c9970bf",
@@ -37,7 +37,7 @@
     "shipping.css": "aaa94d4ced95d2b8698eb9bb2aa95b868c3e280e5c58ccd7bf13f1eecec750d6",
     "navigation.js": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
     "premium.css": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
-    "refinement.css": "d13a32b95edb52fbf7197d9e1e45b959962f21897db384b8fb22d3c67ca42ff9",
+    "refinement.css": "5a62bc429b291d49572388ee4ed79d3eba51e5518845d2e027071a3e94ed6fd4",
     "service-cards.css": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
     "home-hero.css": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
     "premium.js": "be005274e84352c142bbf246985cb14a7757d8c0cb51fd9e8695fb066fc82945",
