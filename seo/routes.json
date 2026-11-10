@@ -58,7 +58,8 @@
         "/",
         "/servicios/afilar-tijeras-peluqueria-valencia/",
         "/servicios/herramientas-manicura-pedicura-valencia/",
-        "/servicios/afilado-cuchillos-hosteleria-valencia/"
+        "/servicios/afilado-cuchillos-hosteleria-valencia/",
+        "/servicios/afilado-manual-piedras-de-agua-valencia/"
       ]
     },
     {
@@ -135,7 +136,23 @@
         "/servicios/afilar-tijeras-peluqueria-valencia/",
         "/servicios/herramientas-manicura-pedicura-valencia/",
         "/servicios/afilado-cuchillas-maquinas-valencia/",
-        "/servicios/afilado-cuchillos-hosteleria-valencia/"
+        "/servicios/afilado-cuchillos-hosteleria-valencia/",
+        "/servicios/afilado-manual-piedras-de-agua-valencia/"
+      ]
+    },
+    {
+      "path": "/servicios/afilado-manual-piedras-de-agua-valencia/",
+      "source": "servicios/afilado-manual-piedras-de-agua-valencia/index.html",
+      "status": "developed",
+      "role": "water-stone-service",
+      "serviceName": "Afilado manual en piedras de agua",
+      "title": "Afilado manual en piedras de agua en Valencia | Filo Fino",
+      "description": "Afilado manual en piedras de agua en Valencia para cuchillos japoneses y de cocina. Valoramos la geometría y el estado de la hoja. Presupuesto personalizado.",
+      "h1Contains": "Afilado manual en piedras de agua",
+      "primaryIntent": "Manual water-stone sharpening for Japanese and quality kitchen knives in Valencia, with a custom quote",
+      "mustLink": [
+        "/",
+        "/servicios/"
       ]
     }
   ],

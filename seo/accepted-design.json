@@ -7,7 +7,7 @@
     },
     "servicios/afilado-cuchillos-valencia/index.html": {
       "heroSha256": "4fe975b1f7dddfc42303a6ee8799dd57ec275399a56134df9dca70038b256a50",
-      "mainWithRetiredLinksRemovedSha256": "347828f9de647ac43fd601cfd7f4b20c1a6f7857f06cbba2e6a9822c8bd0e8f8"
+      "mainWithRetiredLinksRemovedSha256": "6d3cb26a513d6abd26c5c8ffdb2b9c4a8a0e584a5bff98d47eb181ca61930337"
     },
     "servicios/afilar-tijeras-peluqueria-valencia/index.html": {
       "heroSha256": "a35169fdb982a3ded057752f7ebab27b9c9fd1a2366cb0ee33d120017e77272c",
@@ -27,7 +27,11 @@
     },
     "servicios/index.html": {
       "heroSha256": "1673f19ab31584840df8ee6d4fb9b7a4e81326fdf4dd973397c42f392c9970bf",
-      "mainWithRetiredLinksRemovedSha256": "6e2c4198841918667fe36cb78f4eb4371c85534e233083851e1a916e09477d9d"
+      "mainWithRetiredLinksRemovedSha256": "a1b0c96e0649456b436a282bccd3173a8815e74d89f5638c93ad26e349b8e420"
+    },
+    "servicios/afilado-manual-piedras-de-agua-valencia/index.html": {
+      "heroSha256": "f6aa336960450d9c879c2713454f37cc86852e05bd4b2b227a92db07d94eaa8b",
+      "mainWithRetiredLinksRemovedSha256": "1c348d4754b124cbf85f2425406a72623795edfc16864a603d4b8f1164f2c1c1"
     }
   },
   "assets": {

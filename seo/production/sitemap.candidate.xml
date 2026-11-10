@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- OFFLINE CANDIDATE ONLY: ten approved final URLs; not deployed. No fabricated lastmod. -->
+<!-- OFFLINE CANDIDATE ONLY: approved final URLs; not deployed. No fabricated lastmod. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://filofino.es/</loc>
@@ -21,6 +21,9 @@
   </url>
   <url>
     <loc>https://filofino.es/servicios/</loc>
+  </url>
+  <url>
+    <loc>https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/</loc>
   </url>
   <url>
     <loc>https://filofino.es/legal/politica-privacidad.html</loc>

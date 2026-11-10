@@ -1,4 +1,4 @@
-"""Strict release checks for the approved ten-route architecture; entirely offline."""
+"""Strict release checks for the approved route architecture; entirely offline."""
 import csv
 import hashlib
 import json
@@ -18,7 +18,7 @@ def digest(value):
 
 def verify_release():
     expected = {p['path'] for p in PAGES}
-    assert len(expected) == 10 and len(CONFIG['pages']) == 7 and len(CONFIG['legalPages']) == 3
+    assert len(expected) == len(PAGES) == 11 and len(CONFIG['pages']) == 8 and len(CONFIG['legalPages']) == 3
     assert {p['path'] for p in CONFIG['legalPages']} == {
         '/legal/aviso-legal.html', '/legal/politica-privacidad.html', '/legal/politica-cookies.html'}
     assert not any(RETIRED.search(p) for p in expected)
@@ -53,9 +53,9 @@ def verify_release():
         if row['proposed_action'] != 'keep-200':
             assert row['owner_decision'] == 'owner-approval-required'
     meta = json.loads((ROOT / 'seo/production/metadata.json').read_text())
-    assert len(meta['pages']) == 10 and {p['path'] for p in meta['pages']} == expected
+    assert len(meta['pages']) == len(expected) and {p['path'] for p in meta['pages']} == expected
     main_meta = [p for p in meta['pages'] if p['path'] in {x['path'] for x in CONFIG['pages']}]
-    assert len(main_meta) == 7
+    assert len(main_meta) == len(CONFIG['pages'])
     work = ROOT / '.build'
     work.mkdir(exist_ok=True)
     results = []
@@ -63,7 +63,7 @@ def verify_release():
         for mode in ('preview', 'production'):
             dest = build(mode, Path(temporary) / mode)
             pages = list(dest.rglob('*.html'))
-            assert len(pages) == 10
+            assert len(pages) == len(expected)
             assert not any((dest / name).exists() for name in ('seo', 'docs', 'source-materials', 'CNAME', 'qa', 'zonas', 'blog', 'articulos'))
             for p in PAGES:
                 file = dest / p['source']
@@ -101,13 +101,14 @@ def verify_release():
                     assert target.is_relative_to(dest) and target.is_file(), (file, ref)
             if mode == 'production':
                 urls = [n.text for n in ET.parse(dest / 'sitemap.xml').findall('.//{*}loc')]
-                assert len(urls) == 10 and set(urls) == {CONFIG['productionOrigin'] + p for p in expected}
+                assert len(urls) == len(expected) and set(urls) == {CONFIG['productionOrigin'] + p for p in expected}
                 assert (dest / 'robots.txt').read_text() == (ROOT / 'seo/production/robots.txt.template').read_text()
             else:
                 assert not (dest / 'sitemap.xml').exists() and not (dest / 'robots.txt').exists()
-            results.append({'mode': mode, 'pages': 10, 'status': 'PASS'})
-    return {'migrationURLs': 65, 'productionMetadataMainPages': '7/7', 'productionMetadataAllPages': '10/10',
-            'sitemapURLs': 10, 'acceptedHeroAndMainPages': 7, 'acceptedAssetHashesChecked': checked,
+            results.append({'mode': mode, 'pages': len(pages), 'status': 'PASS'})
+    return {'migrationURLs': 65, 'productionMetadataMainPages': f'{len(main_meta)}/{len(CONFIG["pages"])}',
+            'productionMetadataAllPages': f'{len(meta["pages"])}/{len(expected)}',
+            'sitemapURLs': len(expected), 'acceptedHeroAndMainPages': len(baseline['pages']), 'acceptedAssetHashesChecked': checked,
             'builds': results, 'redirectsInstalled': False, 'networkOrDeploy': False}
 
 

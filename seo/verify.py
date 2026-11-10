@@ -123,7 +123,6 @@ def main():
     subprocess.run([sys.executable, str(ROOT / 'seo/prepare_metadata.py'), '--check'], check=True)
     subprocess.run([sys.executable, str(ROOT / 'design-system/render_components.py'), '--check'], check=True)
     pages = CONFIG['pages'] + CONFIG['legalPages']
-    assert len(pages) == 10 and len(CONFIG['pages']) == 7
     assert len({p['path'] for p in CONFIG['pages']}) == len(CONFIG['pages'])
     assert len({p['title'] for p in CONFIG['pages']}) == len(CONFIG['pages'])
     results = [inspect(p) for p in pages]

@@ -42,7 +42,7 @@ for(const p of pages){
  for(const css of d.querySelectorAll('link[rel=stylesheet]'))postcss.parse(fs.readFileSync(path.resolve(path.dirname(file),css.getAttribute('href').split('?')[0]),'utf8'));
  for(const v of d.querySelectorAll('video')){assert.equal(v.preload,'none');assert.equal(v.autoplay,false);assert.equal(v.controls,true);assert.ok(v.hasAttribute('playsinline'));}
  if(p.serviceName){
-  assert.equal(d.querySelectorAll('video').length,1);assert.ok(d.querySelector('a[href="tel:+34614005053"]'));
+  assert.equal(d.querySelectorAll('video').length,p.role==='water-stone-service'?0:1);assert.ok(d.querySelector('a[href="tel:+34614005053"]'));
   assert.ok(d.querySelector('.hero .hero-photo img').getAttribute('fetchpriority')==='high');
   // Each new service reuses the accepted menu script, including keyboard-focus return.
   w.matchMedia=()=>({matches:true,addEventListener(){}});w.Element.prototype.getAnimations=()=>[];d.getAnimations=()=>[];
@@ -66,4 +66,4 @@ assert.equal(crypto.createHash('sha256').update(copy).digest('hex'),media.sha256
 // Offline handoff is generated and checked by seo/prepare_metadata.py --check.
 require('node:child_process').execFileSync('python',['seo/prepare_metadata.py','--check'],{cwd:root,stdio:'inherit'});
 fs.writeFileSync(path.join(__dirname,'service-checks.json'),JSON.stringify({status:'PASS',pages:result,limitations:['This suite does not render a browser or Safari','No measured Lighthouse or field CWV','No production HTTP/indexing or structured data validation']},null,2)+'\n');
-console.log('PASS: seven pages; route graph, facts, metadata, resources/video loading, original media bytes and menu navigation/focus in DOM test doubles. Offline handoff checked; no deployment.');
+console.log('PASS: registered pages; route graph, facts, metadata, resources/video loading, original media bytes and menu navigation/focus in DOM test doubles. Offline handoff checked; no deployment.');

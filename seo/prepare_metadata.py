@@ -94,7 +94,7 @@ def apply_preview(page):
 
 def sitemap_candidate(check):
     urls = [CONFIG['productionOrigin'] + p['path'] for p in CONFIG['pages'] + CONFIG['legalPages']]
-    assert len(urls) == 10 and len(set(urls)) == 10
+    assert len(set(urls)) == len(urls)
     namespace = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', namespace)
     node = ET.Element('{' + namespace + '}urlset')
@@ -102,7 +102,7 @@ def sitemap_candidate(check):
         assert url.startswith(CONFIG['productionOrigin'] + '/')
         ET.SubElement(ET.SubElement(node, '{' + namespace + '}url'), '{' + namespace + '}loc').text = url
     ET.indent(node)
-    text = '<?xml version="1.0" encoding="utf-8"?>\n<!-- OFFLINE CANDIDATE ONLY: ten approved final URLs; not deployed. No fabricated lastmod. -->\n' + ET.tostring(node, encoding='unicode') + '\n'
+    text = '<?xml version="1.0" encoding="utf-8"?>\n<!-- OFFLINE CANDIDATE ONLY: approved final URLs; not deployed. No fabricated lastmod. -->\n' + ET.tostring(node, encoding='unicode') + '\n'
     path = ROOT / 'seo/production/sitemap.candidate.xml'
     if check:
         assert path.read_text() == text, 'Stale candidate sitemap'
@@ -125,4 +125,4 @@ if __name__ == '__main__':
     if args.apply_preview:
         for page in CONFIG['pages'] + CONFIG['legalPages']:
             apply_preview(page)
-    print('PASS: offline metadata 10/10 (main 7/7) and ten-URL sitemap; no deployment')
+    print(f'PASS: offline metadata and sitemap for {len(meta["pages"])} registered pages; no deployment')

@@ -103,7 +103,7 @@ def build(mode, output):
     else:
         (dest / '.nojekyll').touch()
     assert not (dest / 'CNAME').exists()
-    print(f'PASS: {mode} local build, 10 HTML pages, {len(copied)} dependency files. No deployment.')
+    print(f'PASS: {mode} local build, {len(PAGES)} HTML pages, {len(copied)} dependency files. No deployment.')
     return dest
 
 
