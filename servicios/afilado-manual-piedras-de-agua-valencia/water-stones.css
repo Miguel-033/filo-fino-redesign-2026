@@ -186,6 +186,14 @@
   object-position: 50% 42%;
 }
 
+.stone-portfolio__grid:empty {
+  display: none;
+}
+
+.stone-portfolio__heading:has(+ .stone-portfolio__grid:empty) {
+  margin-bottom: 0;
+}
+
 @media (max-width: 760px) {
   .stone-detail,
   .stone-types,
@@ -201,4 +209,13 @@
     aspect-ratio: 2 / 1;
     object-position: 50% 46%;
   }
+}
+
+.stone-detail:not(:has(.stone-photo)),
+.stone-process:not(:has(.stone-photo)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.stone-types:not(:has(.stone-types__photos)) {
+  grid-template: "copy" / minmax(0, 1fr);
 }
