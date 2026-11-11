@@ -1,0 +1,33 @@
+:root {
+  font: 15px/1.45 system-ui, sans-serif;
+  color: #eff3f2;
+  background: #172125;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; height: 100dvh; display: flex; flex-direction: column; }
+.toolbar { display: flex; align-items: center; gap: 10px 16px; flex-wrap: wrap; padding: 10px 14px; border-bottom: 1px solid #526064; }
+.toolbar strong { font-size: 18px; white-space: nowrap; }
+.toolbar label, .toolbar-actions, .dialog-footer, #item-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+#status { color: #c4d1d2; font-size: 13px; }
+button, select, input, textarea { font: inherit; color: inherit; background: #243237; border: 1px solid #667579; border-radius: 5px; padding: 7px 10px; }
+button { cursor: pointer; min-height: 38px; }
+button:hover:not(:disabled) { border-color: #e6bd80; }
+button:disabled { opacity: .5; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #e6bd80; outline-offset: 2px; }
+button.primary { color: #182024; border-color: #e6bd80; background: #e6bd80; font-weight: 650; }
+button.danger { color: #ffb8b2; }
+.workspace { min-height: 0; flex: 1; }
+iframe { width: 100%; height: 100%; border: 0; display: block; background: #182024; }
+[hidden] { display: none !important; }
+dialog { color: inherit; background: #172125; border: 1px solid #667579; border-radius: 8px; width: min(470px, calc(100% - 24px)); max-height: calc(100dvh - 24px); padding: 20px; }
+dialog::backdrop { background: #071013bc; }
+dialog h2 { margin: 0 0 14px; font-size: 21px; }
+#fields { display: grid; gap: 10px; }
+#fields label { display: grid; gap: 4px; }
+#fields input, #fields textarea, #fields select { width: 100%; min-width: 0; }
+#fields textarea { resize: vertical; }
+#form-status:empty, #item-actions:empty { display: none; }
+#form-status { font-size: 14px; }
+.dialog-footer { margin-top: 16px; justify-content: end; }

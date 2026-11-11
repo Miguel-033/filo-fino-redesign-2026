@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Редактор Filo Fino</title>
+  <link rel="stylesheet" href="/editor.css">
+  <script type="module" src="/editor.mjs"></script>
+</head>
+<body>
+  <header class="toolbar">
+    <strong>Filo Fino</strong>
+    <label>Страница <select id="page" aria-label="Страница"></select></label>
+    <div class="toolbar-actions">
+      <button type="button" id="preview" aria-pressed="false">Предпросмотр</button>
+      <button type="button" id="undo" disabled>Отменить</button>
+      <button type="button" class="primary" id="save" disabled>Сохранить</button>
+    </div>
+    <span id="status" role="status" aria-live="polite">Открываю редактор…</span>
+  </header>
+  <main class="workspace">
+    <iframe id="canvas" title="Визуальная страница"></iframe>
+    <iframe id="result" title="Предпросмотр сайта" hidden></iframe>
+  </main>
+  <dialog id="dialog">
+    <form id="form">
+      <h2 id="dialog-title"></h2>
+      <div id="fields"></div>
+      <p id="form-status" role="status"></p>
+      <div id="item-actions"></div>
+      <div class="dialog-footer">
+        <button type="button" id="cancel">Отмена</button>
+        <button type="submit" id="apply" class="primary">Готово</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
