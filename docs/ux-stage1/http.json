@@ -1,0 +1,20 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "bytes": 21905,
+    "matchesSource": true
+  },
+  {
+    "file": "premium.js",
+    "status": 200,
+    "bytes": 9243,
+    "matchesSource": true
+  },
+  {
+    "file": "service-cards.css",
+    "status": 200,
+    "bytes": 3272,
+    "matchesSource": true
+  }
+]

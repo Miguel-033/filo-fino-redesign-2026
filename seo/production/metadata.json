@@ -1,9 +1,9 @@
 {
-  "status": "INERT HANDOFF — not approved or exported for production",
+  "status": "OFFLINE CANDIDATE — generated for review; not approved for deployment",
   "hoursStatus": "owner-confirmation-required",
   "productionGate": [
     "Owner confirms facts/hours",
-    "Retain/audit all migration URLs",
+    "Owner approves every nonidentity migration decision",
     "Rendered/mobile/Safari and rich-result tests",
     "Explicit production approval and rollback"
   ],
@@ -13,7 +13,7 @@
       "canonical": "https://filofino.es/",
       "robots": "index, follow",
       "title": "Taller de afilado en Valencia | Filo Fino",
-      "description": "Taller de afilado en Valencia para cuchillos, tijeras y herramientas de manicura. Atención directa en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+      "description": "Taller especializado en afilado profesional en Valencia. Cuchillos, tijeras, herramientas de manicura y cuchillas de máquina. Calle Maestro Guerrero, 4.",
       "jsonld": {
         "@context": "https://schema.org",
         "@graph": [
@@ -61,7 +61,7 @@
       "canonical": "https://filofino.es/servicios/afilado-cuchillos-valencia/",
       "robots": "index, follow",
       "title": "Afilado de cuchillos en Valencia | Filo Fino",
-      "description": "Afilado de cuchillos de cocina, profesionales y japoneses en Valencia. Revisión de cada pieza en Calle Maestro Guerrero, 4. Consulta por WhatsApp o ven al taller.",
+      "description": "Afilado de cuchillos en Valencia desde 4 € por pieza y desde 15 minutos, según estado y carga del taller. Cocina, profesionales y japoneses. Consulta tu pieza.",
       "jsonld": {
         "@context": "https://schema.org",
         "@graph": [
@@ -131,10 +131,674 @@
               {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Afilado de cuchillos",
                 "item": "https://filofino.es/servicios/afilado-cuchillos-valencia/"
               }
             ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/servicios/afilar-tijeras-peluqueria-valencia/",
+      "canonical": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/",
+      "robots": "index, follow",
+      "title": "Afilado de tijeras de peluquería en Valencia | Filo Fino",
+      "description": "Afilado de tijeras de peluquería en Valencia: rectas 17 €, entresacar 19 € y convex 22 €. Desde 2 horas, según estado y carga del taller.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/#webpage",
+            "url": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/",
+            "name": "Afilado de tijeras de peluquería en Valencia | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "mainEntity": {
+              "@id": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/#service"
+            },
+            "breadcrumb": {
+              "@id": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/#service",
+            "url": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/",
+            "name": "Afilado de tijeras de peluquería",
+            "serviceType": "Afilado de tijeras de peluquería",
+            "provider": {
+              "@id": "https://filofino.es/#business"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Valencia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://filofino.es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Afilado de tijeras de peluquería",
+                "item": "https://filofino.es/servicios/afilar-tijeras-peluqueria-valencia/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/servicios/herramientas-manicura-pedicura-valencia/",
+      "canonical": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/",
+      "robots": "index, follow",
+      "title": "Afilado de herramientas de manicura en Valencia | Filo Fino",
+      "description": "Afilado de herramientas de manicura y pedicura en Valencia. Alicates 8 €, tijeras 7 €, pinzas y empujadores 5 €. Desde 20 minutos, según cantidad y estado.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/#webpage",
+            "url": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/",
+            "name": "Afilado de herramientas de manicura en Valencia | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "mainEntity": {
+              "@id": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/#service"
+            },
+            "breadcrumb": {
+              "@id": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/#service",
+            "url": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/",
+            "name": "Afilado de herramientas de manicura y pedicura",
+            "serviceType": "Afilado de herramientas de manicura y pedicura",
+            "provider": {
+              "@id": "https://filofino.es/#business"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Valencia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://filofino.es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Afilado de herramientas de manicura y pedicura",
+                "item": "https://filofino.es/servicios/herramientas-manicura-pedicura-valencia/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/servicios/afilado-cuchillas-maquinas-valencia/",
+      "canonical": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/",
+      "robots": "index, follow",
+      "title": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
+      "description": "Afilado de cuchillas y bloques de máquinas de peluquería y grooming en Valencia desde 13 €. Plazo desde 2 horas, según cantidad, estado y carga del taller.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/#webpage",
+            "url": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/",
+            "name": "Afilado de cuchillas de máquinas en Valencia | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "mainEntity": {
+              "@id": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/#service"
+            },
+            "breadcrumb": {
+              "@id": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/#service",
+            "url": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/",
+            "name": "Afilado de cuchillas de máquinas",
+            "serviceType": "Afilado de cuchillas de máquinas",
+            "provider": {
+              "@id": "https://filofino.es/#business"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Valencia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://filofino.es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Afilado de cuchillas de máquinas",
+                "item": "https://filofino.es/servicios/afilado-cuchillas-maquinas-valencia/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "canonical": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/",
+      "robots": "index, follow",
+      "title": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
+      "description": "Afilado para restaurantes y cocinas profesionales en Valencia desde 6 € por cuchillo. Recogida y entrega posibles, con condiciones y coste acordados.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/#webpage",
+            "url": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/",
+            "name": "Afilado de cuchillos para hostelería en Valencia | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "mainEntity": {
+              "@id": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/#service"
+            },
+            "breadcrumb": {
+              "@id": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/#service",
+            "url": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/",
+            "name": "Afilado de cuchillos para hostelería",
+            "serviceType": "Afilado de cuchillos para hostelería",
+            "provider": {
+              "@id": "https://filofino.es/#business"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Valencia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://filofino.es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Afilado de cuchillos para hostelería",
+                "item": "https://filofino.es/servicios/afilado-cuchillos-hosteleria-valencia/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/servicios/",
+      "canonical": "https://filofino.es/servicios/",
+      "robots": "index, follow",
+      "title": "Servicios de afilado en Valencia | Filo Fino",
+      "description": "Elige el servicio de Filo Fino: cuchillos, tijeras, herramientas de manicura, bloques de máquinas y cuchillos para hostelería. Taller especializado en Valencia.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/servicios/#webpage",
+            "url": "https://filofino.es/servicios/",
+            "name": "Servicios de afilado en Valencia | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "about": {
+              "@id": "https://filofino.es/#business"
+            },
+            "breadcrumb": {
+              "@id": "https://filofino.es/servicios/#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://filofino.es/servicios/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://filofino.es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/servicios/afilado-manual-piedras-de-agua-valencia/",
+      "canonical": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/",
+      "robots": "index, follow",
+      "title": "Afilado manual en piedras de agua en Valencia | Filo Fino",
+      "description": "Afilado manual en piedras de agua en Valencia para cuchillos japoneses y de cocina. Valoramos la geometría y el estado de la hoja. Presupuesto personalizado.",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/#webpage",
+            "url": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/",
+            "name": "Afilado manual en piedras de agua en Valencia | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "mainEntity": {
+              "@id": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/#service"
+            },
+            "breadcrumb": {
+              "@id": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/#service",
+            "url": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/",
+            "name": "Afilado manual en piedras de agua",
+            "serviceType": "Afilado manual en piedras de agua",
+            "provider": {
+              "@id": "https://filofino.es/#business"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Valencia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://filofino.es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://filofino.es/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Afilado manual en piedras de agua",
+                "item": "https://filofino.es/servicios/afilado-manual-piedras-de-agua-valencia/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/legal/politica-privacidad.html",
+      "canonical": "https://filofino.es/legal/politica-privacidad.html",
+      "robots": "index, follow",
+      "title": "Política de privacidad | Filo Fino",
+      "description": "Política de privacidad del sitio web de Filo Fino (Valencia).",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/legal/politica-privacidad.html#webpage",
+            "url": "https://filofino.es/legal/politica-privacidad.html",
+            "name": "Política de privacidad | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "about": {
+              "@id": "https://filofino.es/#business"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "/legal/aviso-legal.html",
+      "canonical": "https://filofino.es/legal/aviso-legal.html",
+      "robots": "index, follow",
+      "title": "Aviso legal | Filo Fino",
+      "description": "Información legal del sitio web de Filo Fino (Valencia).",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/legal/aviso-legal.html#webpage",
+            "url": "https://filofino.es/legal/aviso-legal.html",
+            "name": "Aviso legal | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "about": {
+              "@id": "https://filofino.es/#business"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "/legal/politica-cookies.html",
+      "canonical": "https://filofino.es/legal/politica-cookies.html",
+      "robots": "index, follow",
+      "title": "Política de cookies | Filo Fino",
+      "description": "Política de cookies del sitio web de Filo Fino (Valencia).",
+      "jsonld": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://filofino.es/#business",
+            "name": "Filo Fino",
+            "url": "https://filofino.es/",
+            "telephone": "+34614005053",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle Maestro Guerrero, 4",
+              "addressLocality": "Valencia",
+              "addressCountry": "ES"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://filofino.es/#website",
+            "url": "https://filofino.es/",
+            "name": "Filo Fino",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://filofino.es/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://filofino.es/legal/politica-cookies.html#webpage",
+            "url": "https://filofino.es/legal/politica-cookies.html",
+            "name": "Política de cookies | Filo Fino",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://filofino.es/#website"
+            },
+            "about": {
+              "@id": "https://filofino.es/#business"
+            }
           }
         ]
       }

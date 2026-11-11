@@ -1,9 +1,9 @@
 // Integration gates for every developed page. jsdom is not a rendering engine.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
 const {JSDOM}=require('jsdom'),postcss=require('postcss');
-const root=path.resolve(__dirname,'..'),web=path.join(root,'design-premium-preview');
+const root=path.resolve(__dirname,'..'),web=path.join(root,'site');
 const config=JSON.parse(fs.readFileSync(path.join(__dirname,'routes.json'),'utf8'));
-const pages=config.pages.filter(p=>p.status==='developed'),routes=new Map(pages.map(p=>[p.path,p]));
+const pages=config.pages.filter(p=>p.status==='developed'),routes=new Map([...pages,...config.legalPages].map(p=>[p.path,p]));
 const facts={
  'knife-service':['Desde 4 €','Desde 15 minutos','cerámicos','dentado','sistema tipo Apex'],
  'scissors-service':['17 €','19 €','22 €','Desde 2 horas','Desde 5 €','Desde 7 €','grooming'],
@@ -35,21 +35,21 @@ for(const p of pages){
   if(url.hostname==='wa.me'){assert.equal(url.pathname,'/34614005053');assert.ok(url.searchParams.get('text')?.length>15);}
  }
  for(const el of d.querySelectorAll('img[src],script[src],source[src],video[poster],link[rel=stylesheet],link[rel=preload]')){
-  const ref=el.getAttribute('src')||el.getAttribute('poster')||el.getAttribute('href'),target=path.resolve(path.dirname(file),ref);
+  const ref=el.getAttribute('src')||el.getAttribute('poster')||el.getAttribute('href'),target=path.resolve(path.dirname(file),ref.split('?')[0]);
   assert.ok(target.startsWith(web+path.sep)&&fs.existsSync(target),p.path+' missing asset: '+ref);
  }
  for(const img of d.querySelectorAll('img')){assert.ok(img.hasAttribute('alt'));assert.ok(+img.width>0&&+img.height>0);}
- for(const css of d.querySelectorAll('link[rel=stylesheet]'))postcss.parse(fs.readFileSync(path.resolve(path.dirname(file),css.getAttribute('href')),'utf8'));
+ for(const css of d.querySelectorAll('link[rel=stylesheet]'))postcss.parse(fs.readFileSync(path.resolve(path.dirname(file),css.getAttribute('href').split('?')[0]),'utf8'));
  for(const v of d.querySelectorAll('video')){assert.equal(v.preload,'none');assert.equal(v.autoplay,false);assert.equal(v.controls,true);assert.ok(v.hasAttribute('playsinline'));}
  if(p.serviceName){
-  assert.equal(d.querySelectorAll('video').length,1);assert.ok(d.querySelector('a[href="tel:+34614005053"]'));
+  assert.equal(d.querySelectorAll('video').length,p.role==='water-stone-service'?0:1);assert.ok(d.querySelector('a[href="tel:+34614005053"]'));
   assert.ok(d.querySelector('.hero .hero-photo img').getAttribute('fetchpriority')==='high');
   // Each new service reuses the accepted menu script, including keyboard-focus return.
   w.matchMedia=()=>({matches:true,addEventListener(){}});w.Element.prototype.getAnimations=()=>[];d.getAnimations=()=>[];
   w.Element.prototype.scrollIntoView=function(){};
   w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
   const before=[...d.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'));
-  w.eval(fs.readFileSync(path.join(web,'servicios/afilado-cuchillos-valencia/knives.js'),'utf8'));
+  w.eval(fs.readFileSync(path.join(web,'navigation.js'),'utf8'));w.eval(fs.readFileSync(path.join(web,'servicios/afilado-cuchillos-valencia/knives.js'),'utf8'));
   const button=d.querySelector('.menu-trigger'),dialog=d.querySelector('#menu-dialog');
   button.click();assert.ok(dialog.open);assert.equal(button.getAttribute('aria-expanded'),'true');
   dialog.querySelector('a[href^="#"]').click();assert.equal(dialog.open,false);assert.equal(button.getAttribute('aria-expanded'),'false');
@@ -59,10 +59,11 @@ for(const p of pages){
  result.push({path:p.path,status:'PASS',method:'HTML/CSS/asset and menu DOM integration; no browser layout'});
 }
 for(const media of JSON.parse(fs.readFileSync(path.join(web,'assets/service-media.json'),'utf8'))){
- const source=fs.readFileSync(path.join(root,media.source)),copy=fs.readFileSync(path.join(web,media.file));
- assert.deepEqual(copy,source);assert.equal(crypto.createHash('sha256').update(copy).digest('hex'),media.sha256);
+ const copy=fs.readFileSync(path.join(web,media.file));
+assert.equal(crypto.createHash('sha256').update(copy).digest('hex'),media.sha256);
 }
 // Historic paths, release files and UI assets are intentionally left intact.
-for(const [file,digest]of Object.entries(config.productionHandoff.files))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),digest);
-fs.writeFileSync(path.join(__dirname,'service-checks.json'),JSON.stringify({status:'PASS',pages:result,limitations:['Preview server unavailable','No real mobile/desktop/Safari render','No measured Lighthouse or field CWV','No production HTTP/indexing or structured data validation']},null,2)+'\n');
-console.log('PASS: seven pages; route graph, facts, metadata, resources/video loading, original media bytes and menu navigation/focus in DOM test doubles. Release files frozen.');
+// Offline handoff is generated and checked by seo/prepare_metadata.py --check.
+require('node:child_process').execFileSync('python',['seo/prepare_metadata.py','--check'],{cwd:root,stdio:'inherit'});
+fs.writeFileSync(path.join(__dirname,'service-checks.json'),JSON.stringify({status:'PASS',pages:result,limitations:['This suite does not render a browser or Safari','No measured Lighthouse or field CWV','No production HTTP/indexing or structured data validation']},null,2)+'\n');
+console.log('PASS: registered pages; route graph, facts, metadata, resources/video loading, original media bytes and menu navigation/focus in DOM test doubles. Offline handoff checked; no deployment.');

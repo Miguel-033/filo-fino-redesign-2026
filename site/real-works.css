@@ -1,0 +1,53 @@
+/* Homepage portfolio only. Existing Hero shortcuts and shipping styles are unchanged. */
+.real-works{padding-block:clamp(44px,6vw,80px);background:var(--ink)}
+.real-works__heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px}
+.real-works__heading h2{font:600 clamp(48px,6vw,80px)/1.02 var(--display);letter-spacing:-.015em}
+.real-works__heading p{font:400 16px/1.7 var(--body);color:var(--steel);margin:0}
+/* Columns pack mixed-ratio previews without shared row heights or spacer cells. */
+.real-works__grid{columns:2;column-gap:10px}
+.real-work{position:relative;display:block;width:100%;aspect-ratio:var(--preview-ratio);break-inside:avoid;margin:0 0 10px;background:var(--ink);border:1px solid var(--line)}
+.real-work__open{display:block;position:absolute;inset:0;min-width:0;color:var(--brass)}
+.real-work__preview{position:absolute;inset:0;display:block;overflow:hidden;pointer-events:none}
+.real-work__preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--preview-position);filter:none;transform:none}
+.real-work__preview::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#101719ed 0%,#10171980 22%,transparent 52%)}
+.real-work__type{position:absolute;top:10px;right:10px;z-index:1;display:flex;align-items:center;gap:5px;padding:4px 6px;background:#182024dc;color:var(--paper);font:500 11px/1.4 var(--body);pointer-events:none}
+.real-work__content{position:absolute;inset:auto 10px 12px;z-index:1;min-width:0;pointer-events:none}
+.real-work__title{display:block;color:var(--paper);font:600 clamp(18px,1.9vw,25px)/1.12 var(--display);letter-spacing:-.01em;overflow-wrap:break-word;text-wrap:pretty}
+.real-work__icon{display:block;width:17px;height:17px;flex:none;stroke:currentColor;stroke-width:1.3;fill:none;pointer-events:none}
+.real-work__open:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.real-work:focus-within{border-color:var(--brass)}
+.real-work__open:active .real-work__title{color:var(--brass)}
+/* Use native fragment scrolling and the existing sticky-header offset. */
+.real-works:has(> #trabajos-reales-cuchillos:target) .real-work:not([data-category="cuchillos"]),
+.real-works:has(> #trabajos-reales-tijeras:target) .real-work:not([data-category="tijeras"]),
+.real-works:has(> #trabajos-reales-manicura:target) .real-work:not([data-category="manicura"]) {
+  display: none;
+}
+.real-works-dialog{margin:auto;padding:0;width:min(calc(100% - 32px),1100px);max-width:none;max-height:calc(100dvh - 32px);border:1px solid var(--line);background:var(--deep);color:var(--paper);overscroll-behavior:contain}
+.real-works-dialog::backdrop{background:#071013e8}
+.real-works-dialog__shell{display:flex;flex-direction:column;max-height:calc(100dvh - 34px);min-width:0}
+.real-works-dialog__header{display:flex;flex:none;align-items:center;justify-content:space-between;gap:18px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.real-works-dialog__header h2{min-width:0;margin:0;font:600 clamp(24px,3vw,32px)/1.15 var(--display);overflow-wrap:break-word}
+.real-works-dialog__close{flex:none;min-width:74px;min-height:44px;padding:10px 14px;border:1px solid var(--line);border-radius:0;background:var(--panel);color:var(--paper);font:600 13px/1.4 var(--body)}
+.real-works-dialog__close:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.real-works-dialog__media{display:flex;justify-content:center;align-items:center;min-width:0;min-height:0;overflow:auto;padding:16px}
+.real-works-dialog__media img{display:block;width:auto;height:auto;max-width:100%;max-height:min(75dvh,820px);object-fit:contain}
+.real-works-dialog__media video{display:block;width:min(100%,calc(75dvh * var(--real-work-ratio)));height:auto;max-width:100%;max-height:75dvh;aspect-ratio:var(--real-work-ratio);object-fit:contain;background:var(--deep)}
+.real-works-dialog__media video:fullscreen{width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:auto;object-fit:contain}
+.real-works-dialog__error{padding:24px;font:400 15px/1.7 var(--body)}
+.real-works-dialog__error a{display:block;min-height:44px;margin-top:12px;color:var(--brass);text-decoration:underline}
+@media(min-width:768px){.real-works__grid{columns:3;column-gap:12px}.real-work{margin-bottom:12px}}
+@media(min-width:1200px){.real-works__grid{columns:4}}
+@media(max-width:639px){
+ .real-works__heading{display:block;margin-bottom:24px}
+ .real-works__heading p{margin-top:14px;font-size:15px}
+ .real-works-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px)}
+ .real-works-dialog__shell{max-height:calc(100dvh - 18px)}
+ .real-works-dialog__header{padding:12px;gap:12px}
+ .real-works-dialog__media{padding:10px}
+}
+@media(hover:hover) and (pointer:fine){
+ .real-work:has(.real-work__open:hover){border-color:var(--brass)}
+ .real-work__open:hover .real-work__title{color:var(--brass)}
+ .real-works-dialog__close:hover{border-color:var(--brass)}
+}

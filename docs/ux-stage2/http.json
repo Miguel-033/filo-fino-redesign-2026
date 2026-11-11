@@ -1,0 +1,56 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "bytes": 23728,
+    "same": true
+  },
+  {
+    "file": "service-cards.css",
+    "status": 200,
+    "bytes": 4468,
+    "same": true
+  },
+  {
+    "file": "shipping.css",
+    "status": 200,
+    "bytes": 5235,
+    "same": true
+  },
+  {
+    "file": "shipping.js",
+    "status": 200,
+    "bytes": 2182,
+    "same": true
+  },
+  {
+    "file": "premium.js",
+    "status": 200,
+    "bytes": 5295,
+    "same": true
+  },
+  {
+    "file": "assets/illustrations/envios.webp",
+    "status": 200,
+    "bytes": 100212,
+    "same": true
+  },
+  {
+    "file": "assets/images/tijeras-card.webp",
+    "status": 200,
+    "bytes": 27190,
+    "same": true
+  },
+  {
+    "file": "assets/images/drive/img_6874.webp",
+    "status": 200,
+    "bytes": 178564,
+    "same": true
+  },
+  {
+    "file": "assets/images/manicura.webp",
+    "status": 200,
+    "bytes": 54316,
+    "same": true
+  }
+]

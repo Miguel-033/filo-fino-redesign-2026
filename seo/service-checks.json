@@ -38,8 +38,7 @@
     }
   ],
   "limitations": [
-    "Preview server unavailable",
-    "No real mobile/desktop/Safari render",
+    "This suite does not render a browser or Safari",
     "No measured Lighthouse or field CWV",
     "No production HTTP/indexing or structured data validation"
   ]

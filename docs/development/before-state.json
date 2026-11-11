@@ -330,7 +330,7 @@
     "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
   },
   {
-    "source": "design-premium-preview/index.html",
+    "source": "site/index.html",
     "title": [
       "Taller de afilado en Valencia | Filo Fino"
     ],
@@ -396,7 +396,7 @@
     "indexStatus": "unknown; live GSC payment_required on 2026-10-26"
   },
   {
-    "source": "design-premium-preview/servicios/afilado-cuchillos-valencia/index.html",
+    "source": "site/servicios/afilado-cuchillos-valencia/index.html",
     "title": [
       "Afilado de cuchillos en Valencia | Filo Fino"
     ],

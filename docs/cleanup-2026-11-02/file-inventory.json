@@ -1,0 +1,1744 @@
+{
+  "baselineCommit": "b2cf0a7b0cd5f7772a58730ce6e0e338be5c1aee",
+  "beforeFiles": 474,
+  "beforeBytes": 418354951,
+  "removedPathsWithoutSameContent": [
+    {
+      "oldPath": ".DS_Store",
+      "bytes": 10244,
+      "sha256": "ce20c0d44ff6d74ddd3dc7be602c171a3370876b95959b9beffe9b11211afe65"
+    },
+    {
+      "oldPath": "CNAME",
+      "bytes": 11,
+      "sha256": "ed96cc3917977dd6670b6b1a5dd0fd674460d70e8ffbcbc3c611f4168d0f7899"
+    },
+    {
+      "oldPath": "afilado-tijeras-peluqueria-valencia.html",
+      "bytes": 1830,
+      "sha256": "943649bec65908381beffc27ca633a1728f95d30f39900c8aeddd76d0fe78ead"
+    },
+    {
+      "oldPath": "articulos/afilado-cuchillos-valencia.html",
+      "bytes": 20925,
+      "sha256": "d094307acbf3d0a7a1f1c42e644abc2c71b5048cf2a63081599ee38bb2f58d55"
+    },
+    {
+      "oldPath": "articulos/afilado-empeora.html",
+      "bytes": 19067,
+      "sha256": "77c5c8ec0745e272c57889f313e4dc37ec7b1657861ea3710cf22725a718edc3"
+    },
+    {
+      "oldPath": "articulos/afilado-tijeras-peluqueria-valencia.html",
+      "bytes": 20079,
+      "sha256": "6c135309179d62c7026570d558a42619fe04848a74fd0920952ecee9eee66645"
+    },
+    {
+      "oldPath": "articulos/afilar-cuchillos-cerca-de-mi.html",
+      "bytes": 19391,
+      "sha256": "fd5c822d556978753d59bf719ea6ba7a23d9f1d13021ac8b55d8f3ac921664c0"
+    },
+    {
+      "oldPath": "articulos/afilar-tijeras-peluqueria-cerca-de-mi.html",
+      "bytes": 19557,
+      "sha256": "9cd154094da7ea81cea7b641687fc81f1532c7a1fb76346921c77d120fde83c1"
+    },
+    {
+      "oldPath": "articulos/alicate-ruega.html",
+      "bytes": 15775,
+      "sha256": "3e4fa36dd0044f6923b8dd1464e1acd46dbe08b6a289c461280f84bc74f83e97"
+    },
+    {
+      "oldPath": "articulos/barato-sale-caro.html",
+      "bytes": 16786,
+      "sha256": "537466bd5aa3fed521937e0c766b2789760a2fc9f51333f9088ac90283a7e618"
+    },
+    {
+      "oldPath": "articulos/cuchillo-aplasta.html",
+      "bytes": 20894,
+      "sha256": "4365019b52ef01708b50dda6765f9a4a47d72eab23d3abaacc5ea7bd97a31513"
+    },
+    {
+      "oldPath": "articulos/cuchillo-no-corta.html",
+      "bytes": 19745,
+      "sha256": "d8421138d121f276c910352e022471b72cf4da1a2693afef091180973f769553"
+    },
+    {
+      "oldPath": "articulos/donde-afilar-cuchillos-valencia.html",
+      "bytes": 18011,
+      "sha256": "d8632f0b0e12d36692e610f7ca7a175d4f296a65f4a3b6fd4cbb906ead7ff67a"
+    },
+    {
+      "oldPath": "articulos/maekt.html",
+      "bytes": 1744,
+      "sha256": "6e173c78779f5201547b1d93ce6bf51f5dc1f337d93f087999f1ffe7a3291d4c"
+    },
+    {
+      "oldPath": "articulos/maquina-muerde.html",
+      "bytes": 23366,
+      "sha256": "f050528cc86f342b8fd11033f35fed78c52b2a27117bea2fd69d62927c566be4"
+    },
+    {
+      "oldPath": "articulos/reparar-o-cambiar.html",
+      "bytes": 17114,
+      "sha256": "b7bec3bec214ffbad544275224eba980b2a21bff33553fc9dbf81b07f25b6818"
+    },
+    {
+      "oldPath": "articulos/tijeras-despues-afilado.html",
+      "bytes": 16723,
+      "sha256": "df7c72cc10fd4f4c9e2adec2878ba578fc70cd430f7e1a4ad77b1fd2c756d22d"
+    },
+    {
+      "oldPath": "articulos/tijeras-no-uniformes.html",
+      "bytes": 16913,
+      "sha256": "38108cfe8628b073b8ef09b1bc58e02a861cb55c31b015b08969f90384c7864d"
+    },
+    {
+      "oldPath": "articulos/tijeras-tiran.html",
+      "bytes": 20834,
+      "sha256": "5ea9dd52ce481649b2cfac75070f06a89f44042ea92d05b1ff1ba9eb2da4a362"
+    },
+    {
+      "oldPath": "blog/index.html",
+      "bytes": 23084,
+      "sha256": "03f87e39ad905d4cff5e5bb0cc458da086b670fc159057a459da85a1a36a1482"
+    },
+    {
+      "oldPath": "blog/styles-blog.css",
+      "bytes": 12237,
+      "sha256": "e48f0a9ccbee059499124135133a76a5f261dc7bb8125731a755d4d890376e11"
+    },
+    {
+      "oldPath": "design-premium-preview/assets/service-media.json",
+      "bytes": 2731,
+      "sha256": "03764bcdb6992a9f2fd9f760cb87b4d9fe2c8ec07314a518dabeaaf734c6e5d2"
+    },
+    {
+      "oldPath": "design-premium-preview/index.html",
+      "bytes": 24819,
+      "sha256": "f7b77e5b2327fb9647533f816381272e95560a97a6d9508e3b45b36450e0b93e"
+    },
+    {
+      "oldPath": "design-premium-preview/qa/knife-approved.html",
+      "bytes": 1017,
+      "sha256": "99aa1033c2d119e6633ab9a250f6222e4f1721a7c685f9322c9f8b34307c5a44"
+    },
+    {
+      "oldPath": "design-premium-preview/qa/responsive.html",
+      "bytes": 2693,
+      "sha256": "b77ffe58f3213c2fcda3d066db3852c34ba069079780fb0fd9095320ab6265de"
+    },
+    {
+      "oldPath": "design-premium-preview/screenshots/README.md",
+      "bytes": 1360,
+      "sha256": "ab3931cc7d62f44aaaf90d7b5d370dfe9631214a15ff11440ccb4f4195618025"
+    },
+    {
+      "oldPath": "design-premium-preview/screenshots/pr4-baseline/desktop-first.jpg",
+      "bytes": 165068,
+      "sha256": "b26a487a6835c0ad29f9b8d5638e2630cd6882d69320b12c0b92ba89a3bbd86c"
+    },
+    {
+      "oldPath": "design-premium-preview/screenshots/pr4-baseline/desktop-full.jpg",
+      "bytes": 907818,
+      "sha256": "03755533187bd2da20dfb5b345d87abdb89d1b60ae5deea928ec27e65e22eafa"
+    },
+    {
+      "oldPath": "design-premium-preview/screenshots/pr4-baseline/mobile-first.jpg",
+      "bytes": 67047,
+      "sha256": "69fa01a3663d3a1a8e1a3ec743fc456f69e6b61eb70fd882d620125dcdff670c"
+    },
+    {
+      "oldPath": "design-premium-preview/screenshots/pr4-baseline/mobile-full.jpg",
+      "bytes": 412135,
+      "sha256": "d6c7e1f218fad3406d16e636cc139a33f10f252ed0133de89cd2532bd3362aae"
+    },
+    {
+      "oldPath": "design-premium-preview/screenshots/pr4-baseline/mobile-menu.jpg",
+      "bytes": 41249,
+      "sha256": "b6120d42177172840cb47035375bc3898cc2c1c80f32895128837f9d3d4c23fb"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillas-maquinas-valencia/index.html",
+      "bytes": 17101,
+      "sha256": "4e7cb0d35d23d71173351e336c771501bf7ef5a265f37313893d6fe5a4bc6759"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-hosteleria-valencia/index.html",
+      "bytes": 18010,
+      "sha256": "e59d7bd634b53b368bab11ffe199d515aee2eb68970939c4f05ddfcb19a7a694"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/checks.json",
+      "bytes": 908,
+      "sha256": "eae842b81b05c5ac19f4e9674ddb6901e42fc75c784033f19bbd417557fd3b9e"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/index.html",
+      "bytes": 23904,
+      "sha256": "b89b2d1be29a63e3a759615160e63c5f6da3c3537b79532bce220ec182e7bf68"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/production-seo.json",
+      "bytes": 2807,
+      "sha256": "a9c01cfcad0437dbe1da8c69c605dd06bb7a8f09646341079af3bda92d54f270"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/verify-browser.cjs",
+      "bytes": 4318,
+      "sha256": "eb7a4e08897cd8068dd8dd3a726bb42a78dc3b00c0fd6fbe88094e55a881efba"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilar-tijeras-peluqueria-valencia/index.html",
+      "bytes": 17226,
+      "sha256": "3ad4bddc0dd2128cbd46bb8ece363b8b610d921f4c5313a68a81af68d25b1ec7"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/herramientas-manicura-pedicura-valencia/index.html",
+      "bytes": 17054,
+      "sha256": "1fe62e6ccdd85cd059380b69dbe9ab737680e8801aaaeeefea18ba49f8b9c9a8"
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/index.html",
+      "bytes": 9706,
+      "sha256": "2fdb115391ec894a14a32e4c39b166745098be252bf441ca0b7943a160e1ada2"
+    },
+    {
+      "oldPath": "design-premium-preview/verify-preview.cjs",
+      "bytes": 7188,
+      "sha256": "60daab3a12b192be15bf3f3f721d7dcec61fab1e4ca5154dace8a52445b19d07"
+    },
+    {
+      "oldPath": "docs/development/ux-screenshots/hosteleria-desktop.jpg",
+      "bytes": 98684,
+      "sha256": "a8cf7f661c3e1034da960182452127d3550794713a4b486cd6de5852ceaffd07"
+    },
+    {
+      "oldPath": "docs/development/ux-screenshots/hosteleria-mobile-review.jpg",
+      "bytes": 55169,
+      "sha256": "d4ca7968172b2e2f30649eb2d48db80e9a766123a4cc894bedd304e16ed66ba6"
+    },
+    {
+      "oldPath": "docs/knife-approved/comparison-390.jpg",
+      "bytes": 326537,
+      "sha256": "6b30d62b8004860cf44b58a78911acf0191100aa9537907303adbbd9eaa59c98"
+    },
+    {
+      "oldPath": "docs/knife-approved/comparison-details.jpg",
+      "bytes": 76523,
+      "sha256": "1a5c0d9478e6bcc88279795fb60137645303a74da1dda09410484c7338995c40"
+    },
+    {
+      "oldPath": "docs/knife-approved/reference-390.jpg",
+      "bytes": 161944,
+      "sha256": "fb2cbacce701c2cdbc32acbd8c98aa32d0c6b36282a13958b15854b36c4e15cb"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/before-390.jpg",
+      "bytes": 125587,
+      "sha256": "05267b3d6c1d6bdfd06a168163202814d42026d5e44497a74e5fc173d5f80152"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/knife-1440.jpg",
+      "bytes": 279382,
+      "sha256": "0b0cf895100512f312817f23475ec8be26ee0354db574f981cf34533b5e7f73c"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/knife-320.jpg",
+      "bytes": 128496,
+      "sha256": "efedd8bab9a50489a47737f89456360212c8d5571cca93f89f757a6a7e4c4c1d"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/knife-360.jpg",
+      "bytes": 140902,
+      "sha256": "456fb02171e64ce27e05a69d8abc79e653092340bc1aac619f8c741fdefbd0c7"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/knife-390.jpg",
+      "bytes": 149752,
+      "sha256": "d0a098e804c47812d94d204ed68b14fa73329457e419de9fb93dc05d66fd6544"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/knife-430.jpg",
+      "bytes": 159530,
+      "sha256": "93155ce3627095e354f83fe037068cb62fbe172e3a2ce29cbbfdcc2eeff831eb"
+    },
+    {
+      "oldPath": "docs/knife-approved/screenshots/knife-768.jpg",
+      "bytes": 172529,
+      "sha256": "fa45f54ee1d743dc531f612137ecd2e33c1eb47219548ed0096c4c88b51b4dcc"
+    },
+    {
+      "oldPath": "docs/knife-compact/knife-compact-390x700.jpg",
+      "bytes": 83592,
+      "sha256": "19d75a2e92ee3c7b46839d1306cf1b7e46f83910682aed2f3b3eb1bc043a51fa"
+    },
+    {
+      "oldPath": "docs/knife-compact/knife-compact-390x800.jpg",
+      "bytes": 91960,
+      "sha256": "67839cd0d118a8724eed356e3a02736a76473381032fdaea27f70bbbdfa92aff"
+    },
+    {
+      "oldPath": "docs/knife-compact/knife-compact-hero-full.jpg",
+      "bytes": 101427,
+      "sha256": "36e7f65cd841317163dc0add3a2ce17b37edaff49c23d826612dace3c50d1009"
+    },
+    {
+      "oldPath": "docs/scissors-hero/1440.jpg",
+      "bytes": 355558,
+      "sha256": "0e2e5cdf0fa8cb64382f2a22cea0922dc161c0991dbe96f5684694f5ea610e51"
+    },
+    {
+      "oldPath": "docs/scissors-hero/390x700.jpg",
+      "bytes": 81440,
+      "sha256": "6ae75ccf06357458c42ee6bc5352ff4e74c9f7641178584b835e70cc733b94c8"
+    },
+    {
+      "oldPath": "docs/scissors-hero/390x800.jpg",
+      "bytes": 88044,
+      "sha256": "45903876486302f8b85140dfee223b7795f1773d1ee1cbc446269dd6d37d6a23"
+    },
+    {
+      "oldPath": "docs/scissors-hero/comparison.jpg",
+      "bytes": 388914,
+      "sha256": "ccae0c30b325279122b2777fe2fabc04c40b3e0af83ac702a414c2baa0ada6e5"
+    },
+    {
+      "oldPath": "docs/scissors-hero/full.jpg",
+      "bytes": 102895,
+      "sha256": "8111126c537fe1b5494d8c7e9106ea607abc5f385144e1e791fc7ce0ff1fa80c"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/review.html",
+      "bytes": 1002,
+      "sha256": "28cb55c094de06b193cee1b969051d51678342fc517071815e3231ca3d43c253"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/blades-1440.jpg",
+      "bytes": 448892,
+      "sha256": "0dfe5e7f85acf964ac69a300358fa18075075e2eed10742fe9f03b12467aec6e"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/blades-390.jpg",
+      "bytes": 189299,
+      "sha256": "1dc9cc883654959aa9aa362870269eb40af659e47f10d4fd6c556c72f7c37e8e"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/hospitality-1440.jpg",
+      "bytes": 312696,
+      "sha256": "e620c79369c4bfde8b7b090f1a733074bf41a1642612931ef5206d4d8717950d"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/hospitality-390.jpg",
+      "bytes": 176005,
+      "sha256": "0bb496f567d7a9f1ae0fa9fbbef7f4123aea2fa2662d0f7c46d3bf32c1bbc63a"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/knives-1440.jpg",
+      "bytes": 357459,
+      "sha256": "d38ca33d0d7b97bebd08ec0d3a8cf7e7922fc1b489c15913143703b4338b2e0f"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/knives-390.jpg",
+      "bytes": 186148,
+      "sha256": "cc5733952abb5044bfcbf7a6b19ee1b7b54b7024d904e0dab8d55db232294dfc"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/manicure-1440.jpg",
+      "bytes": 400800,
+      "sha256": "a9e4a9e84619ceb1c90156adf9936f9492dd4bcf2fd27c132967d1ea5d89f3e3"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/manicure-390.jpg",
+      "bytes": 182654,
+      "sha256": "4e30d62a21a73179123c7d38c84edcd848eb30843496013eccfeb2f419f3df5b"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/menu-390x667.jpg",
+      "bytes": 101689,
+      "sha256": "79ec9cd6723a5bdbdba202ae8d96172abafe4448712c10c1124eade4c2291a31"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/menu-390x800.jpg",
+      "bytes": 106993,
+      "sha256": "8ed2f464142f674e6e6fb429e55b55ebe88ac560e8cd4d11c96bdd1536ef83ef"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/scissors-1440.jpg",
+      "bytes": 325063,
+      "sha256": "58253c769e1763093fdedf3b236409acaa786872643c38fffa3bc9115575ba33"
+    },
+    {
+      "oldPath": "docs/ux-f02-f07-f08/screenshots/scissors-390.jpg",
+      "bytes": 175302,
+      "sha256": "78a3a83038a4fe278c6d220bebf292dcf1f66b19f3b8c6f9c21d8231e32ee346"
+    },
+    {
+      "oldPath": "docs/ux-f02/after-1440x900.jpg",
+      "bytes": 120628,
+      "sha256": "cf703eec17a0ab14252c40146b7ab8f9a17194ee2b5dffd5086c2969c54f34e2"
+    },
+    {
+      "oldPath": "docs/ux-f02/after-390x800.jpg",
+      "bytes": 51782,
+      "sha256": "0c529a2c102834f2f1d184ca216bf80e5d9d29aba4daf6ad01b132db527c74d7"
+    },
+    {
+      "oldPath": "docs/ux-f02/before-1440x900.jpg",
+      "bytes": 120628,
+      "sha256": "cf703eec17a0ab14252c40146b7ab8f9a17194ee2b5dffd5086c2969c54f34e2"
+    },
+    {
+      "oldPath": "docs/ux-f02/before-390x800.jpg",
+      "bytes": 32563,
+      "sha256": "5100b268d740ef402637e02c4a422af1dc32f0f63137c4300b3ab8969e7f65fb"
+    },
+    {
+      "oldPath": "docs/ux-f02/before-after-390x800.jpg",
+      "bytes": 106078,
+      "sha256": "bb06aee759c6722f680f3b041b7c6bba58669a352d94ddef2da94ad8daafcef3"
+    },
+    {
+      "oldPath": "docs/ux-f02/review.html",
+      "bytes": 1219,
+      "sha256": "5e735dfdeb55974ba481d16fc4689d7749b5cf294432d2e38ef928e2c1c998a3"
+    },
+    {
+      "oldPath": "docs/ux-shipping-approved/review.html",
+      "bytes": 1114,
+      "sha256": "0a899745dd32fd325d1fd0c3c3b6ed01858423355c374fb9900a062a676cc2ea"
+    },
+    {
+      "oldPath": "docs/ux-shipping-approved/shipping-1440.jpg",
+      "bytes": 181618,
+      "sha256": "c5fbf7d6db7526e11497f4b2865e46ec0bba9326337b8dd72c22486071c4a99c"
+    },
+    {
+      "oldPath": "docs/ux-shipping-approved/shipping-390.jpg",
+      "bytes": 81353,
+      "sha256": "933fa649692d201b48f30941242a4a15a5d073291983d92ec8c1ddf63fa92289"
+    },
+    {
+      "oldPath": "docs/ux-stage1/cards-review.html",
+      "bytes": 1904,
+      "sha256": "be29ce9ac22c7590f3e747a51db9ce6b54e22eae18e4910191e84b4d5ef69cf8"
+    },
+    {
+      "oldPath": "docs/ux-stage1/comparison.html",
+      "bytes": 1476518,
+      "sha256": "14a74d31a32bac55307e437ba93a3c07317ff50ac1bb74b0838bdfda07f841a3"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/after-1440-viewport.jpg",
+      "bytes": 62058,
+      "sha256": "0f3e70e6705687ae9390de6e652c21b4dcd7aa6e66449fb13a447c752dbd2cbe"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/after-320.jpg",
+      "bytes": 77047,
+      "sha256": "a7b1a7fad5bb0e900e56b4fd78f09547396e1fc20fc0a178cd5f02186e93ed3f"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/after-360.jpg",
+      "bytes": 78899,
+      "sha256": "76013ce832e841eed7c4b335c7723ef83ef3439becc525f1a71da3bc6c543ca3"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/after-390.jpg",
+      "bytes": 80875,
+      "sha256": "dfd1f0c38ea180ca1a8f7596a59ca21d3cf169e67da8f6e2abfaf8fe15a3e613"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/after-430.jpg",
+      "bytes": 84921,
+      "sha256": "5e48062e4f241e62c691a4c5d5071e355bfb645439ca7362e9e428066e25339f"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/after-768.jpg",
+      "bytes": 106044,
+      "sha256": "e074000762864a30228f6d1efacf7395d816ad2fd16377c6877880d4358e56a1"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/before-1440.jpg",
+      "bytes": 138176,
+      "sha256": "99bb34b196a119df39e57d843cd41aeeec9ddb3f0e995d4ddd82920b2387e024"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/before-320.jpg",
+      "bytes": 88716,
+      "sha256": "665170e289cfaa43e755ec4e19405858e7fa4b5fcacb1d39a2c6a21be7f266ce"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/before-360.jpg",
+      "bytes": 89859,
+      "sha256": "62a0bcea64d014a6dce0abab5997c61a8d446b14f2d9974099a21f75f894fc4d"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/before-390.jpg",
+      "bytes": 92120,
+      "sha256": "07ead6cec709da7698e0038d9b75d29823c200a523ed5c2df84384a1b9991b2e"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/before-430.jpg",
+      "bytes": 95388,
+      "sha256": "34a5cf1ecf122eee514ac600d04d97523b54e91f451091e0cf145d7c56c993e1"
+    },
+    {
+      "oldPath": "docs/ux-stage1/screenshots/before-768.jpg",
+      "bytes": 109679,
+      "sha256": "0f713f0da08d660b6226a037e478af9c8306bb6b9f1d3d97af3f45311ef5f076"
+    },
+    {
+      "oldPath": "docs/ux-stage2/review.html",
+      "bytes": 2077,
+      "sha256": "047189198d60c9ad235f4349ca5b9763b5731dc93e97f0cf64e15f903a96ab5e"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/after-cards-1440.jpg",
+      "bytes": 110027,
+      "sha256": "3ab18e9170eae7e64dda5ef6ff8ac22a2533c5cecf9852c53d5ad0159ea74c78"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/after-cards-390.jpg",
+      "bytes": 56999,
+      "sha256": "928fcd7996265500d816104a800236e4413fe7215b04b77479ef9a8a2ebe1569"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/before-cards-1440.jpg",
+      "bytes": 83340,
+      "sha256": "29c2098a0e293d66a4244d67ad1201e11139da6b02152135ac09e405d999a21f"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/before-cards-390.jpg",
+      "bytes": 60335,
+      "sha256": "04dff0e59a179478cbedeb11136dce5b17503b64b393302a2f87aa5fa64ecd27"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/modal-390-bottom.jpg",
+      "bytes": 61656,
+      "sha256": "8049829161cf224e88f3281715e852cca9ec83f149cbee052bbe8e4a1e1ba2f0"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/modal-390.jpg",
+      "bytes": 50367,
+      "sha256": "7e6d228c0db49f7a51dcdb2e4ee5368fb9938218b4df7453ffdfe63f02526a00"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/shipping-1440.jpg",
+      "bytes": 133076,
+      "sha256": "89100c33cd7bb8040cbfc5af22dda1d0afef6d7f2b5ca3afd4d8a5c28e00f63a"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/shipping-390-bottom.jpg",
+      "bytes": 32983,
+      "sha256": "3e8d681bde2172f54f29bd2ecc3f2579864234e36e5f0274fba5ca494232e5d7"
+    },
+    {
+      "oldPath": "docs/ux-stage2/screenshots/shipping-390-top.jpg",
+      "bytes": 50725,
+      "sha256": "506cd176a1d5ef0d86525d0d94c0a5eb21105f49acabf083abd895cf78e0c116"
+    },
+    {
+      "oldPath": "favicon/android-chrome-192x192.png",
+      "bytes": 36911,
+      "sha256": "bd0eb4155d180cf9cd8ab9c8ed0015ccaed0237dcd76184e34aae8ef21c4d70b"
+    },
+    {
+      "oldPath": "favicon/android-chrome-512x512.png",
+      "bytes": 233298,
+      "sha256": "284081214e62276d9dbd56d0a0d4c6cb6bc0aa8f10f4439d585b331d531c2148"
+    },
+    {
+      "oldPath": "favicon/apple-touch-icon.png",
+      "bytes": 36008,
+      "sha256": "adc9094fcf25877a105a21a42b9ea304027d0ff26d57e4cf37485880020a20c0"
+    },
+    {
+      "oldPath": "favicon/favicon-16x16.png",
+      "bytes": 415,
+      "sha256": "c7fe1fe760730161f27533da35e0d0d23fd43a0faf2f58ef1ebf806f0afd1640"
+    },
+    {
+      "oldPath": "favicon/favicon-32x32.png",
+      "bytes": 1013,
+      "sha256": "77551a490d1f8b4d812460e8560cb491978ef8911edda441e48130ef745b0e49"
+    },
+    {
+      "oldPath": "favicon/favicon.ico",
+      "bytes": 15406,
+      "sha256": "f451e3498f5515210aebb6bf99bd73ee2d96c03f44d9fba9009b371a5a2d44ea"
+    },
+    {
+      "oldPath": "favicon/site.webmanifest",
+      "bytes": 254,
+      "sha256": "8f44b446e8c0c0a453e18fb9589a8b305c883768841a75f0ee3a9544ca193751"
+    },
+    {
+      "oldPath": "images/.DS_Store",
+      "bytes": 8196,
+      "sha256": "e0637a3095eed7702e35734f6f0c1c713749c839e5c80dcfa7a057c71d30cc27"
+    },
+    {
+      "oldPath": "images/ALICATES-STALEKS-PARA-UNAS.webp",
+      "bytes": 8966,
+      "sha256": "635367600aa9a47a6d6f6616344ace6f72455851618898121dd66aad7be68bbd"
+    },
+    {
+      "oldPath": "images/Alicates_Expert.webp",
+      "bytes": 3998,
+      "sha256": "876d9dc10fdca17c7d95a226a42de1df1255c6eaff9b08e94be226963c1dfee1"
+    },
+    {
+      "oldPath": "images/Arcos_cuchillos_afilado.webp",
+      "bytes": 54658,
+      "sha256": "1463fb502222f4f663fd83f88a4a18b77e272420167bdf246eed291d72dddd1d"
+    },
+    {
+      "oldPath": "images/Cuchillos.webp",
+      "bytes": 40234,
+      "sha256": "1bc164276015da6ed8043a5b86410d7c6b3646da685639f5e354c19b0f8dad81"
+    },
+    {
+      "oldPath": "images/afilado-mal03.webp",
+      "bytes": 62506,
+      "sha256": "d76ffef0859bf95223e2bb0aba49d52cb31f1f0fceba056edd1783b9ee4cb28c"
+    },
+    {
+      "oldPath": "images/afilado-profesional-cuchillos-valencia.webp",
+      "bytes": 27026,
+      "sha256": "d7e9cc17d407a95c75f3bd75ab6061aee41d4013a516f831253f29eeb23ffeae"
+    },
+    {
+      "oldPath": "images/cuchillos_psrs_maquina.webp",
+      "bytes": 43702,
+      "sha256": "af2c8f1686ed9757d3a403edfd5981cbdd0a464069abf1604fadd13eff55c18d"
+    },
+    {
+      "oldPath": "images/empujaodr.webp",
+      "bytes": 7612,
+      "sha256": "5e255760ea215c0986220aeb1340db960d5c86eb491726dafdd51caab2d5add0"
+    },
+    {
+      "oldPath": "images/filo-fino-interior-taller-afilado-valencia.webp",
+      "bytes": 209988,
+      "sha256": "8ee3dc547bcf3b9d6308167a70e1e4bec515c67bdd627910dc735563da9353ff"
+    },
+    {
+      "oldPath": "images/photo_taller_logo01.webp",
+      "bytes": 126430,
+      "sha256": "436323178e72bb3361eb0894a7e8bc8518f6d078b46c090f6a55756a3bbf5651"
+    },
+    {
+      "oldPath": "images/poster01.webp",
+      "bytes": 71774,
+      "sha256": "49fb153778af31850f73da4bce616546e966e581f65c456d3a333075ffb7e638"
+    },
+    {
+      "oldPath": "images/tijeras_tiran_despues_afilado.webp",
+      "bytes": 72238,
+      "sha256": "f3f4f0e45b89b972da1f9615f4eeeb33f85ccc1f8af68f48dc5d0e87c4af0bf5"
+    },
+    {
+      "oldPath": "index.html",
+      "bytes": 52895,
+      "sha256": "55deb1f80fa0d3237da34fa977e4bb12d74199ec25bd4f7c24a219a02201aa74"
+    },
+    {
+      "oldPath": "js/blog-categories.js",
+      "bytes": 904,
+      "sha256": "84e49e0827a474027dd37a61c078ba976181384ec57ebc3037f34d5389f4335e"
+    },
+    {
+      "oldPath": "js/blog-featured-cards.js",
+      "bytes": 6734,
+      "sha256": "36784ad5286f82b1d302254bb311bb148a93651047c20166f44ee0845829419e"
+    },
+    {
+      "oldPath": "js/blog-filter.js",
+      "bytes": 1104,
+      "sha256": "5429e482e232366f6d416414655c48a066dda95600272863b78e956e62dd8adc"
+    },
+    {
+      "oldPath": "js/carito.js",
+      "bytes": 2398,
+      "sha256": "ba193e814d77009cf3483dd8fc8cd328d49d702bfa4d713e2c764ae4e9c51b6d"
+    },
+    {
+      "oldPath": "js/products.json",
+      "bytes": 1386,
+      "sha256": "8baf0ff1cd68f8dd2dd4c8c97b44571731cbd81ea3621ef7bd5dd4a12a13c511"
+    },
+    {
+      "oldPath": "js/script.js",
+      "bytes": 7247,
+      "sha256": "adc3f702f8359de587d2ea0b637808d1582cc701d3a5ac3fcaf2eac0b94a30f3"
+    },
+    {
+      "oldPath": "js/site-config.js",
+      "bytes": 7757,
+      "sha256": "2e651949fb74f3dbe004f30588d2e45d6be4b07b82618863f8687c0978ad0cc0"
+    },
+    {
+      "oldPath": "legal/aviso-legal.html",
+      "bytes": 11286,
+      "sha256": "4390bc22ba73d3e2c85d27e5cd524f0d20e643e8de2d17d662eec407203d159a"
+    },
+    {
+      "oldPath": "legal/politica-cookies.html",
+      "bytes": 8294,
+      "sha256": "efa9e1687b8088daf1f6f5fca751f466542af12d17c421f4591a460cd0658525"
+    },
+    {
+      "oldPath": "legal/politica-privacidad.html",
+      "bytes": 9464,
+      "sha256": "22990a77ce24555d10a44a04152328a444136be2b62d39f65ad16c2ec8819459"
+    },
+    {
+      "oldPath": "robots.txt",
+      "bytes": 64,
+      "sha256": "7626ae9e01cec899a9b0bcbf6fcef69581bf196bf4fada89f199ca2e80e433ce"
+    },
+    {
+      "oldPath": "servicios/afilado-cuchillas-maquinas-valencia/index.html",
+      "bytes": 14327,
+      "sha256": "284fd42adb63df25fe6e2d1063478dd1d08bbba89b48bb61dd72e66b287a71c9"
+    },
+    {
+      "oldPath": "servicios/afilado-cuchillos-hosteleria-valencia/index.html",
+      "bytes": 18963,
+      "sha256": "f96f6a112c64a531e241831fba796e9626ded66c1b6c9b9086f7bcb5e182ea63"
+    },
+    {
+      "oldPath": "servicios/afilado-cuchillos-valencia/index.html",
+      "bytes": 17539,
+      "sha256": "db6c28c4113221fcbe25b68a3c7721e002a2d7ff0878e2bd08160a173aec912e"
+    },
+    {
+      "oldPath": "servicios/afilar-tijeras-peluqueria-valencia/index.html",
+      "bytes": 18902,
+      "sha256": "8d6beac784abee2054108faba6cd8f8039cbabc6817558a793bf8835435a07d8"
+    },
+    {
+      "oldPath": "servicios/herramientas-manicura-pedicura-valencia/index.html",
+      "bytes": 14088,
+      "sha256": "09e41c67d89db5f716dc9fb9a79523e1208b9cddf845540c0c5f6311fbca09ae"
+    },
+    {
+      "oldPath": "servicios/index.html",
+      "bytes": 20680,
+      "sha256": "e2c91a0ec2f986e7eaa143dec47a00879fb0c2c757ed674ac956e505c44f562e"
+    },
+    {
+      "oldPath": "shop.html",
+      "bytes": 17691,
+      "sha256": "be41d49fa067170d55c3437cdfe83f8f2a895fa49a41ccc7109786ed5a2b3304"
+    },
+    {
+      "oldPath": "styles.css",
+      "bytes": 24407,
+      "sha256": "91fadaaf181ad03795884dc83cb707383758cbe7bb3b937fd60aafcef172f531"
+    },
+    {
+      "oldPath": "videos/.DS_Store",
+      "bytes": 6148,
+      "sha256": "1e8b90ab98cefb862daa794c6b10fdb1431b47e7b31a5b337913087a1de68d4a"
+    },
+    {
+      "oldPath": "videos/Arcos_cuchillos_afilado.orig.mp4",
+      "bytes": 28345670,
+      "sha256": "e20890b501277e79da635d75a73bd66d7874482ae5c480c51a8ecfe6d26922c0"
+    },
+    {
+      "oldPath": "videos/Tijeras_de_entresacar.orig.mp4",
+      "bytes": 31632366,
+      "sha256": "1914b40f5239b77dbe010c133da959c1eb3bafd869a0f5a5c72f81287895fd35"
+    },
+    {
+      "oldPath": "videos/arcos_cuchillos_afilado.mp4",
+      "bytes": 7430983,
+      "sha256": "436a37394e6b78e7e4dfb6868e99126d7a2ecc71b69da57dd2e864ad4f8260e6"
+    },
+    {
+      "oldPath": "videos/cuchillo-no-corta.mp4",
+      "bytes": 8335523,
+      "sha256": "1b4f720238a6743105f8499129f241cc2299a4b5b3c5b37bc2cb3a3812f4d084"
+    },
+    {
+      "oldPath": "videos/cuchillo-no-corta.orig.mp4",
+      "bytes": 28249281,
+      "sha256": "493c1b7669014d4abe93ae6a7f0b5c966a93aea13d781e3a4dcbbfcf7a80aeb7"
+    },
+    {
+      "oldPath": "videos/maquena_afilado.mp4",
+      "bytes": 5657483,
+      "sha256": "3c8847863c1506b32b86f4268b4a2b0ca5e851e60c05fbf04e32592d135a361e"
+    },
+    {
+      "oldPath": "videos/maquena_afilado.orig.mp4",
+      "bytes": 25702361,
+      "sha256": "e0725e3797053be9e9dc9d11d2dd0c40ff51c0e5a86f010045fcfb3e9542d3b1"
+    },
+    {
+      "oldPath": "videos/tijeras_de_entresacar.mp4",
+      "bytes": 8999333,
+      "sha256": "6b08ea5328d11f13d83b6f2221c627923cb95ba5535bca4adae21e8180770007"
+    },
+    {
+      "oldPath": "videos/tijeras_tiran_despues_afilado.mp4",
+      "bytes": 5249338,
+      "sha256": "b0a2e6026afc597b8aa3475281dfcc0e8ae8a46bad30428addc1753d7843836c"
+    },
+    {
+      "oldPath": "videos/tijeras_tiran_despues_afilado.orig.mp4",
+      "bytes": 20069847,
+      "sha256": "7891155930d307eb8985ee3569f380529b510650da6fe6bb822f384ede5a7bfc"
+    },
+    {
+      "oldPath": "zonas/alaquas/index.html",
+      "bytes": 11009,
+      "sha256": "30019afc978567d0497f59e7b897c577b1a6b74d832452f191a80eaf16f40be5"
+    },
+    {
+      "oldPath": "zonas/alboraya/index.html",
+      "bytes": 10947,
+      "sha256": "c49cfc8907de0b5095ee59cb475dfd4f164995394d24ced522fcbb6be29d9413"
+    },
+    {
+      "oldPath": "zonas/aldaia/index.html",
+      "bytes": 11019,
+      "sha256": "480c5c35d638eb972a3408dbf8163586a3c38b60450c2ff8974fea025bd49f0a"
+    },
+    {
+      "oldPath": "zonas/burjassot/index.html",
+      "bytes": 11895,
+      "sha256": "6f89942c6105b305284babb8e6528dca722f255b279c68122b01d7f7637f3f89"
+    },
+    {
+      "oldPath": "zonas/catarroja/index.html",
+      "bytes": 10966,
+      "sha256": "0a83997e3d2e0b1bbb92d8cd770574d892817e055da31f3fe7d79fa160d748dd"
+    },
+    {
+      "oldPath": "zonas/el-puig/index.html",
+      "bytes": 10849,
+      "sha256": "811bfcdf30805f36c587a0aea31db6ee803e500e0ac6bcb04ddb6915d4d10129"
+    },
+    {
+      "oldPath": "zonas/gandia/index.html",
+      "bytes": 11191,
+      "sha256": "aa21c4e9d8bf6bc565881a96d25286257258ade6d6066caefff154c3fd5f849b"
+    },
+    {
+      "oldPath": "zonas/manises/index.html",
+      "bytes": 10926,
+      "sha256": "a7fd68dc2b6fc28f2e4f220df257fc8251f606bfad1f8b14ddd433e941726043"
+    },
+    {
+      "oldPath": "zonas/mislata/index.html",
+      "bytes": 12794,
+      "sha256": "11ecce95fdabf7552946aa1eb9b76cfc1cd5822bd2e64d11d05b333fc7f6ed11"
+    },
+    {
+      "oldPath": "zonas/paterna/index.html",
+      "bytes": 10243,
+      "sha256": "9d6f648850a2969ce10a6d40db3956e1ecf6069146e4f0f689654c900c9557c4"
+    },
+    {
+      "oldPath": "zonas/puzol/index.html",
+      "bytes": 10901,
+      "sha256": "95aba0daf78fbd31d560a9fec7845ef695a56d9f1f037c831e2432c2bb615cfd"
+    },
+    {
+      "oldPath": "zonas/quart-de-poblet/index.html",
+      "bytes": 11050,
+      "sha256": "e17110dcc888b785f8c0a9e742fd3aa694fa37aa55276ba92b62cc45b174b6ad"
+    },
+    {
+      "oldPath": "zonas/sagunto/index.html",
+      "bytes": 10226,
+      "sha256": "6a9d5ed7d5becaee3374b5a6e238ddbcbdc60b6c0a0d1eb41355c61a9e8b7b84"
+    },
+    {
+      "oldPath": "zonas/tavernes-blanques/index.html",
+      "bytes": 11053,
+      "sha256": "58af6b831c702b8b87522d786b886a2a288db3a3cb30c959f4cc4d925e93d9f2"
+    },
+    {
+      "oldPath": "zonas/torrent/index.html",
+      "bytes": 11088,
+      "sha256": "11ac5212799e214889b33aaa8235c0a519d92ac4bb9953748be0f339706f45ea"
+    },
+    {
+      "oldPath": "zonas/xirivella/index.html",
+      "bytes": 10995,
+      "sha256": "106ee5bf5466de79b4135a97bf0a05534bce7dfd4c2300bc61ca9569a948d5db"
+    }
+  ],
+  "removedOrMovedPathsWithRetainedBytes": [
+    {
+      "oldPath": "design-premium-preview/ART_DIRECTION.md",
+      "bytes": 4712,
+      "sha256": "9e59ce5da815b05e7c1a5af508ec6d51f13a07a2fe197c4a417b653a7c9ecf14",
+      "sameContentNowAt": [
+        "docs/history/ART_DIRECTION.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/OWNER_CORRECTIONS.md",
+      "bytes": 8128,
+      "sha256": "c244b67d74066d6cbf72df44a412ad88abc0540d177a26ff43ae11bfaeef01e9",
+      "sameContentNowAt": [
+        "docs/history/OWNER_CORRECTIONS.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/PREVIEW_UPDATE.md",
+      "bytes": 8748,
+      "sha256": "56aebb674834da9ec81398c7fe0422f0c355e55f49355949f88f937600816637",
+      "sameContentNowAt": [
+        "docs/history/PREVIEW_UPDATE.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/README.md",
+      "bytes": 9436,
+      "sha256": "c94ab13c0e870b745d7f6db6e062ca1a5e2468624d66d06278f6112d1786af54",
+      "sameContentNowAt": [
+        "docs/history/README.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/STATIC_CHECKS.md",
+      "bytes": 4143,
+      "sha256": "76942e5477e806269b73f104bdff401854b6823a53a4232f464f82b294cff5ef",
+      "sameContentNowAt": [
+        "docs/history/STATIC_CHECKS.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/SOURCES.md",
+      "bytes": 6077,
+      "sha256": "d4bd262f7e17776e1ef150f6ea245754372084288e6d73b53a6ae2c7492ad88d",
+      "sameContentNowAt": [
+        "docs/history/MEDIA_SOURCES_2026-10-15.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/fonts/Barlow-Condensed-OFL.txt",
+      "bytes": 4378,
+      "sha256": "f15bcb147f45ca7edb47109f4a887a3eecd09d29fc251f3fbb2d748b32abdaa2",
+      "sameContentNowAt": [
+        "site/assets/fonts/Barlow-Condensed-OFL.txt"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/fonts/Manrope-OFL.txt",
+      "bytes": 4388,
+      "sha256": "4f67b767d602edc0065ca540cfb36d15e3d5e41eecb4c32f768a5f6d396d56fb",
+      "sameContentNowAt": [
+        "site/assets/fonts/Manrope-OFL.txt"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/fonts/body.ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "sameContentNowAt": [
+        "site/assets/fonts/body.ttf"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/fonts/display.ttf",
+      "bytes": 109428,
+      "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9",
+      "sameContentNowAt": [
+        "site/assets/fonts/display.ttf"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/illustrations/afilar.svg",
+      "bytes": 1173,
+      "sha256": "360fc8869763a550e2e9a38d21d333d1a4cf9ce7edbbe83b00f4f59decdad0a6",
+      "sameContentNowAt": [
+        "site/assets/illustrations/afilar.svg"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/illustrations/comprobar.svg",
+      "bytes": 1011,
+      "sha256": "f1254e8ded51fa85553d763cbf3d5f7e9f756d4520e5fc4fe944d468f662b90a",
+      "sameContentNowAt": [
+        "site/assets/illustrations/comprobar.svg"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/illustrations/envios.webp",
+      "bytes": 100212,
+      "sha256": "0808d2357354a7bbb18b09269b7108bcd9d9205d4cf946ac1149acb1d2f26c87",
+      "sameContentNowAt": [
+        "site/assets/illustrations/envios.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/illustrations/escuchar.svg",
+      "bytes": 981,
+      "sha256": "023653149c47e1471d89a698b2ef22601947e3b21d5e74fcd8b100c2b5f9c9c6",
+      "sameContentNowAt": [
+        "site/assets/illustrations/escuchar.svg"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/illustrations/knife-study.svg",
+      "bytes": 742,
+      "sha256": "306b002ced7b02af44368f06a036b99181c81db4aee044eb478dc29229415116",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/illustrations/knife-study.svg"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/illustrations/revisar.svg",
+      "bytes": 917,
+      "sha256": "02f88f7c4aeee34a1b4ba8248a3490a9c8157a3d9d67f9f01e34520b41b27408",
+      "sameContentNowAt": [
+        "site/assets/illustrations/revisar.svg"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/afilado.webp",
+      "bytes": 59676,
+      "sha256": "5bb252b5a8f537084cd079ed4b532077a253e78a386d9e0a415d2345b7b97243",
+      "sameContentNowAt": [
+        "site/assets/images/afilado.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/blade-blocks-approved-hero.webp",
+      "bytes": 114888,
+      "sha256": "158a076bfa4b73d6d0acb654fcdf94a2344a6fed51230e42bcfd0f6790cee73c",
+      "sameContentNowAt": [
+        "site/assets/images/blade-blocks-approved-hero.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/bloques.webp",
+      "bytes": 69928,
+      "sha256": "67d7a00365fde17d4deaf43e8994c7b0aa6beceed759fc95eec62e25c101a78c",
+      "sameContentNowAt": [
+        "site/assets/images/bloques.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_0734.webp",
+      "bytes": 314464,
+      "sha256": "e816b9f695767b849df8c98bc25285cb72f80dc7078df3437b51330a8ccf5317",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_0734.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_1118.webp",
+      "bytes": 382094,
+      "sha256": "e18383492496d62f2bbfa6e932787135d8db1392653828f17a13c89e3a17f51e",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_1118.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_6018.webp",
+      "bytes": 293182,
+      "sha256": "d0831ca40fccdc06a2ca59bde7ba4865a16ab203064a41880fc7a548a05ae606",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_6018.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_6463.webp",
+      "bytes": 284202,
+      "sha256": "15e9e5d398f619f4f514e860a504c894c20ebddd745403d00663c243f0a1ed7c",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_6463.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_6874.webp",
+      "bytes": 178564,
+      "sha256": "7c90dd5315860fa79dcb755df859206070c35994cd0a20b89cfc385907c73924",
+      "sameContentNowAt": [
+        "site/assets/images/drive/img_6874.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_7034.webp",
+      "bytes": 324190,
+      "sha256": "bc648e2c581958f0438b7435c61738406dddc2a43dc06925250852031b582d52",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_7034.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_7653.webp",
+      "bytes": 299428,
+      "sha256": "267c290877d1c6ea674c72903cfdee7c572441c86795db10cbe46a9e878bb218",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_7653.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/drive/img_8001.webp",
+      "bytes": 401552,
+      "sha256": "06d6920451bd536b361a0dee6e5ad28385fdeb0b914adfa6f1d1812ea69e612a",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/drive/img_8001.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/home-tools-approved-hero.webp",
+      "bytes": 81080,
+      "sha256": "71b20a787f8ae8130218f46b3003f6d10dd5d80b35d4d7400816c73aa436a199",
+      "sameContentNowAt": [
+        "site/assets/images/home-tools-approved-hero.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/hosteleria-approved-hero.webp",
+      "bytes": 100020,
+      "sha256": "8052ae3015969122a861c8af55e7c45cec3d159a05309cfd6fc5be77b66296e5",
+      "sameContentNowAt": [
+        "site/assets/images/hosteleria-approved-hero.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/hosteleria.webp",
+      "bytes": 69936,
+      "sha256": "81d9ad86f3d84a744e86f3bb69ebb2c72ed210c880cfa2ecf0774b88bd868969",
+      "sameContentNowAt": [
+        "site/assets/images/hosteleria.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/knife-approved-hero.jpeg",
+      "bytes": 450860,
+      "sha256": "89d245159058b70a9c6c3840d66dffde030282554278ebafd1749696956bab73",
+      "sameContentNowAt": [
+        "site/assets/images/knife-approved-hero.jpeg"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/manicura.webp",
+      "bytes": 54316,
+      "sha256": "441bccdb3ca8df27396de1a2082ef0bf2e94567936fe4114c4aed61ba63fa693",
+      "sameContentNowAt": [
+        "site/assets/images/manicura.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/manicure-approved-hero.webp",
+      "bytes": 119200,
+      "sha256": "2b10ff7926f4cfbcc3dca9e73421afee632fbb6eb72ec1daa1c60f249807729e",
+      "sameContentNowAt": [
+        "site/assets/images/manicure-approved-hero.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/scissors-approved-hero.webp",
+      "bytes": 300302,
+      "sha256": "35609a8972a3768d63a811b0c44ad2308728813fb389b932db7b2ea3f6f73b56",
+      "sameContentNowAt": [
+        "site/assets/images/scissors-approved-hero.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/tijeras-card.webp",
+      "bytes": 27190,
+      "sha256": "1e3e5334a8bf26c42761b82453b3ba073c9534cb93f34055ca1e4a474841b42d",
+      "sameContentNowAt": [
+        "site/assets/images/tijeras-card.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/images/tijeras.webp",
+      "bytes": 62128,
+      "sha256": "14977c2b70bdc99538fe0416ea4aa2963b8109f236df588faaee0a0d3872eba5",
+      "sameContentNowAt": [
+        "site/assets/images/tijeras.webp"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/media-manifest.json",
+      "bytes": 1219,
+      "sha256": "13caf05430f1331043414bc53e8d6af70953eb6e41f4b9384f001bee93010d03",
+      "sameContentNowAt": [
+        "source-materials/approved-archive/media-manifest.json"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/videos/Heramientas-manicura.mp4",
+      "bytes": 2796501,
+      "sha256": "4df9ebb3daea66462790fcc9831cc0ba6443f10951fc0e2b3d533d08a4d1231f",
+      "sameContentNowAt": [
+        "site/assets/videos/Heramientas-manicura.mp4"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4",
+      "bytes": 4661756,
+      "sha256": "5614fce6fa954fc499f5f126ec6b9b363eeef408abc51e00c217bd9ba77a1814",
+      "sameContentNowAt": [
+        "site/assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/videos/cuchillo_para_profecional.mp4",
+      "bytes": 3325296,
+      "sha256": "91bbd3572176dd33c67fdde0c494b7c8ca0f194e414fb42ba1a8d62f2df6a241",
+      "sameContentNowAt": [
+        "site/assets/videos/cuchillo_para_profecional.mp4"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/videos/maquena_afilado_cortan.mp4",
+      "bytes": 4438042,
+      "sha256": "476adf0be64fd75b1fd68b1773ae8bb657a2435095b3c1227eb41987225b2fae",
+      "sameContentNowAt": [
+        "site/assets/videos/maquena_afilado_cortan.mp4"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/assets/videos/tijeras_tiran.mp4",
+      "bytes": 8220053,
+      "sha256": "40529932c61c45847f491c0c4cff6f49ba4fd85b8a2dcafdffc02b928f61227b",
+      "sameContentNowAt": [
+        "site/assets/videos/tijeras_tiran.mp4"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/home-hero.css",
+      "bytes": 5757,
+      "sha256": "7752e4097510b325692915fde1e5a92d2dd3ef214950e0db1a83999551520246",
+      "sameContentNowAt": [
+        "site/home-hero.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/navigation.js",
+      "bytes": 2751,
+      "sha256": "16eaad0d7653a43a0007f3ba6452adf7ae9dbfef03ef221eecf019524504e9e0",
+      "sameContentNowAt": [
+        "site/navigation.js"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/premium.css",
+      "bytes": 34427,
+      "sha256": "6bf25ea465749b57313cd5cbcbd9964717b844597cb72271d27126c50b56b0fd",
+      "sameContentNowAt": [
+        "site/premium.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/premium.js",
+      "bytes": 5295,
+      "sha256": "6cfb0ad15f2d10158e07fac99fd4f243a7c5dd1f933ad07a4af4d362896a997f",
+      "sameContentNowAt": [
+        "site/premium.js"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/refinement.css",
+      "bytes": 33524,
+      "sha256": "ee8702d50be8cfe3b2aa5a05544afef09a877159c88b395190d07148772482a1",
+      "sameContentNowAt": [
+        "site/refinement.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/seo.css",
+      "bytes": 661,
+      "sha256": "98df95844681d2b073506a6316c670b54aa6f0b5cd287c37a42493f49bfcf3bb",
+      "sameContentNowAt": [
+        "site/seo.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/service-cards.css",
+      "bytes": 4468,
+      "sha256": "c12e8551035371d40dab1dbec2feb10c0ef09fe5548c5094e3b9951dfd2437cd",
+      "sameContentNowAt": [
+        "site/service-cards.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/services.css",
+      "bytes": 8428,
+      "sha256": "b9322f75ee15848d23151f4f5195d08d6ade2f4a5ecdcaa9de104d7da32ae25b",
+      "sameContentNowAt": [
+        "site/services.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillas-maquinas-valencia/blades-hero.css",
+      "bytes": 10360,
+      "sha256": "69eac0efbf8df5bb25e203dcae4f1ef93ab21bd716d89889f754e38e43ae60b9",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillas-maquinas-valencia/blades-hero.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-hosteleria-valencia/hospitality-hero.css",
+      "bytes": 11080,
+      "sha256": "ed45d8c463ecb3244dda2a8f9a03ca7e88e52061955d56a458a3638df5a15d05",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-hosteleria-valencia/hospitality-hero.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/README.md",
+      "bytes": 9468,
+      "sha256": "bd959dd207aad261724ad0fb891ee59dedf8f429208394fdff65968a6e0d1afe",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-valencia/README.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/UI_REFINEMENT_2026-10-16.md",
+      "bytes": 1927,
+      "sha256": "b3dfb15d5c90add46a46348bfaba1c7042118323c94d9e7a763fb52c2f789e04",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-valencia/UI_REFINEMENT_2026-10-16.md"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/knife-hero.css",
+      "bytes": 8564,
+      "sha256": "6dd9e948dc7d449401f5c5fc03453e38a0e8db215077aeb94f841468086ed0ac",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-valencia/knife-hero.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/knives.css",
+      "bytes": 10360,
+      "sha256": "ade31bbb1dc6f1f3b630a0b126d6ebf405f147d0e09c2c9ce4e17f21d52323d2",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-valencia/knives.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/knives.js",
+      "bytes": 2168,
+      "sha256": "02d62e3584ccef972045a6fe8ad4d889480a85b0ace0eebb2fced32dc1e91083",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-valencia/knives.js"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilado-cuchillos-valencia/verify.cjs",
+      "bytes": 7267,
+      "sha256": "cda3eb11559f298810af75dcdde37a1e924d4fe187b41fbabb9f3cb3c7c0d607",
+      "sameContentNowAt": [
+        "site/servicios/afilado-cuchillos-valencia/verify.cjs"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css",
+      "bytes": 1190,
+      "sha256": "c505035682903c20726dfe8bf0ecaf5a7916ab3952bdcd1b011cee5518e83b81",
+      "sameContentNowAt": [
+        "site/servicios/afilar-tijeras-peluqueria-valencia/scissors-hero.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/servicios/herramientas-manicura-pedicura-valencia/manicure-hero.css",
+      "bytes": 10957,
+      "sha256": "65dcfaded729e3a10e2dd3e771692c172e5917d329318e241df6c1155273ebdd",
+      "sameContentNowAt": [
+        "site/servicios/herramientas-manicura-pedicura-valencia/manicure-hero.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/shipping.css",
+      "bytes": 8110,
+      "sha256": "aaa94d4ced95d2b8698eb9bb2aa95b868c3e280e5c58ccd7bf13f1eecec750d6",
+      "sameContentNowAt": [
+        "site/shipping.css"
+      ]
+    },
+    {
+      "oldPath": "design-premium-preview/shipping.js",
+      "bytes": 2182,
+      "sha256": "19238443f7dc417c87f82f3045eb59bdc80fa52ff84e46b1ade5a4485af13045",
+      "sameContentNowAt": [
+        "site/shipping.js"
+      ]
+    },
+    {
+      "oldPath": "design-qa.md",
+      "bytes": 5975,
+      "sha256": "8265b49de76284467ce1c27b5a47b920d60913dc398734b95d6b1ba0cef77756",
+      "sameContentNowAt": [
+        "docs/history/design-qa.md"
+      ]
+    },
+    {
+      "oldPath": "images/ALICATES-STALEKS-PARA-UNAS.jpg",
+      "bytes": 8672,
+      "sha256": "ff3a09098bf95666d7385a1ff40e87381071ed649d2edc93cddf7d5e849cdf4c",
+      "sameContentNowAt": [
+        "source-materials/photos/ALICATES-STALEKS-PARA-UNAS.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/Afilado profesional de cuchillos en Valencia.JPG",
+      "bytes": 3021850,
+      "sha256": "5be346e5e54ecf593e34edb845dda0a71724d53e9efb6bd0db9d284a94c1acb3",
+      "sameContentNowAt": [
+        "source-materials/photos/Afilado profesional de cuchillos en Valencia.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/Alicates_Expert.jpg",
+      "bytes": 5168,
+      "sha256": "27e5e6167b85b08446d2eca5a916bc6f63cbee7974c216bf20589d89108cf1e3",
+      "sameContentNowAt": [
+        "source-materials/photos/Alicates_Expert.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/Arcos_cuchillos_afilado.png",
+      "bytes": 3162823,
+      "sha256": "4a3880aa90674776a252e7ae6f7ac542179a1eb8dc63d370fee7bfa8ca02b4ba",
+      "sameContentNowAt": [
+        "source-materials/photos/Arcos_cuchillos_afilado.png"
+      ]
+    },
+    {
+      "oldPath": "images/Cuchillos.JPG",
+      "bytes": 7495220,
+      "sha256": "02ab2575323149bfc91648e047fa40f88780d9a1b7cecbc621348e0c234eb6be",
+      "sameContentNowAt": [
+        "source-materials/photos/Cuchillos.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/Heramientas de_manicura.png",
+      "bytes": 3381260,
+      "sha256": "e6d6b9025cc2c7261a43553a26741dae74116d68d7229decc6c85596967f00d7",
+      "sameContentNowAt": [
+        "source-materials/photos/Heramientas de_manicura.png"
+      ]
+    },
+    {
+      "oldPath": "images/Heramientas-manicura.webp",
+      "bytes": 54316,
+      "sha256": "441bccdb3ca8df27396de1a2082ef0bf2e94567936fe4114c4aed61ba63fa693",
+      "sameContentNowAt": [
+        "site/assets/images/manicura.webp"
+      ]
+    },
+    {
+      "oldPath": "images/Herramientas-manicura-acero-inoxidable.jpg",
+      "bytes": 19734,
+      "sha256": "3ecf63506e159bfc46ea0c13fe76466369114ecd7170e98a0e5bb93caac3cd76",
+      "sameContentNowAt": [
+        "source-materials/photos/Herramientas-manicura-acero-inoxidable.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/Tijeras_de_entresacar.png",
+      "bytes": 2169140,
+      "sha256": "8c0827bdaba28664984304d022b1b762b8d007e3551e572248f9cd52fc52674a",
+      "sameContentNowAt": [
+        "source-materials/photos/Tijeras_de_entresacar.png"
+      ]
+    },
+    {
+      "oldPath": "images/Tijeras_de_entresacar.webp",
+      "bytes": 27190,
+      "sha256": "1e3e5334a8bf26c42761b82453b3ba073c9534cb93f34055ca1e4a474841b42d",
+      "sameContentNowAt": [
+        "site/assets/images/tijeras-card.webp"
+      ]
+    },
+    {
+      "oldPath": "images/afilado mal.JPG",
+      "bytes": 4439285,
+      "sha256": "fadf994c790d2e1b46e87f40359245e831e6edb77fe41fc088272574908eab8b",
+      "sameContentNowAt": [
+        "source-materials/photos/afilado mal.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/afilado mal02.JPG",
+      "bytes": 2568657,
+      "sha256": "461b09dbc51b0d0a808193667f864b5bd2ebcffe26795ec6da616e5d84adce2a",
+      "sameContentNowAt": [
+        "source-materials/photos/afilado mal02.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/afilado mal03.JPG",
+      "bytes": 3159665,
+      "sha256": "6b80ec1229bff022d56d23797b048ffec58f5b407e81107ee048884552b92cd7",
+      "sameContentNowAt": [
+        "source-materials/photos/afilado mal03.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/cuchillo_para_profecional01.PNG",
+      "bytes": 2769192,
+      "sha256": "d2b8a4dfce358da438ca744733e89094849eaf842c969b10e5a7258340713bcb",
+      "sameContentNowAt": [
+        "source-materials/photos/cuchillo_para_profecional01.PNG"
+      ]
+    },
+    {
+      "oldPath": "images/cuchillo_para_profecional01.webp",
+      "bytes": 69936,
+      "sha256": "81d9ad86f3d84a744e86f3bb69ebb2c72ed210c880cfa2ecf0774b88bd868969",
+      "sameContentNowAt": [
+        "site/assets/images/hosteleria.webp"
+      ]
+    },
+    {
+      "oldPath": "images/cuchillos_psrs_maquina.JPG",
+      "bytes": 2037986,
+      "sha256": "99740ff08c30588bc05e27a335775a94ec2943d5d6239c536450bac1df34930f",
+      "sameContentNowAt": [
+        "source-materials/photos/cuchillos_psrs_maquina.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/empujaodr.jpg",
+      "bytes": 6820,
+      "sha256": "52ddbfcfa2cbdcb21b4b384ab23de22d01b7c20fb53f85f21b058ab320be7ed6",
+      "sameContentNowAt": [
+        "source-materials/photos/empujaodr.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/fhoto_taller_logo01 — копия.JPG",
+      "bytes": 3754822,
+      "sha256": "675ab5e9f26bc1ffe070ca2068ecc7e97e91ffd0eb566f23996c7ecb8cd0cce8",
+      "sameContentNowAt": [
+        "source-materials/photos/fhoto_taller_logo01 — копия.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/filo-fino-interior-taller-afilado-valencia.jpg",
+      "bytes": 6333606,
+      "sha256": "07e6ddca9a5797e3789d99b48bca6bd621e2463f326a91e98ef24a084092d584",
+      "sameContentNowAt": [
+        "source-materials/photos/filo-fino-interior-taller-afilado-valencia.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/hero.jpg",
+      "bytes": 238599,
+      "sha256": "6d8f692f22e83b50dc3e70a68f26eed2ba9b3a3dd8ecbadd2e5c3fd6198dff65",
+      "sameContentNowAt": [
+        "source-materials/photos/hero.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/hero.webp",
+      "bytes": 59676,
+      "sha256": "5bb252b5a8f537084cd079ed4b532077a253e78a386d9e0a415d2345b7b97243",
+      "sameContentNowAt": [
+        "site/assets/images/afilado.webp"
+      ]
+    },
+    {
+      "oldPath": "images/maquena_afilado.PNG",
+      "bytes": 2369590,
+      "sha256": "eb9f2db02a55631aafaea10a9b4c86ea6381be197836470d07e6f80be2968619",
+      "sameContentNowAt": [
+        "source-materials/photos/maquena_afilado.PNG"
+      ]
+    },
+    {
+      "oldPath": "images/maquena_afilado_cortan.PNG",
+      "bytes": 2664447,
+      "sha256": "511b226b1a9697606fc290d57df1b9f8e031fb4e4a69c66490772cc162e96484",
+      "sameContentNowAt": [
+        "source-materials/photos/maquena_afilado_cortan.PNG"
+      ]
+    },
+    {
+      "oldPath": "images/maquena_afilado_cortan.webp",
+      "bytes": 69928,
+      "sha256": "67d7a00365fde17d4deaf43e8994c7b0aa6beceed759fc95eec62e25c101a78c",
+      "sameContentNowAt": [
+        "site/assets/images/bloques.webp"
+      ]
+    },
+    {
+      "oldPath": "images/photo_taller_logo.JPG",
+      "bytes": 5618574,
+      "sha256": "989fdfe1fe456c74de319c9fcfcb3646cc06037c339bab55f45fb776dcc7d2de",
+      "sameContentNowAt": [
+        "source-materials/photos/photo_taller_logo.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/photo_taller_logo01.JPG",
+      "bytes": 3754822,
+      "sha256": "675ab5e9f26bc1ffe070ca2068ecc7e97e91ffd0eb566f23996c7ecb8cd0cce8",
+      "sameContentNowAt": [
+        "source-materials/photos/fhoto_taller_logo01 — копия.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/photo_taller_logo02.JPG",
+      "bytes": 5618574,
+      "sha256": "989fdfe1fe456c74de319c9fcfcb3646cc06037c339bab55f45fb776dcc7d2de",
+      "sameContentNowAt": [
+        "source-materials/photos/photo_taller_logo.JPG"
+      ]
+    },
+    {
+      "oldPath": "images/poster01.PNG",
+      "bytes": 3918002,
+      "sha256": "9985b70cbc6aa2a284799ebd6b92ac1dac6e88ac63eb266a8a507d09c3e4a316",
+      "sameContentNowAt": [
+        "source-materials/photos/poster01.PNG"
+      ]
+    },
+    {
+      "oldPath": "images/s226428980703485357_p2_i1_w640.jpeg",
+      "bytes": 124965,
+      "sha256": "01f9e678e3d9e84f5a0c51e0b54340629a044a404b9c035d67470728b4d874fc",
+      "sameContentNowAt": [
+        "source-materials/photos/s226428980703485357_p2_i1_w640.jpeg"
+      ]
+    },
+    {
+      "oldPath": "images/taller.jpg",
+      "bytes": 238060,
+      "sha256": "110fffae7c21b3c007eaa4700af4a7824a5a62898c9c7e03ebff4beeefee2335",
+      "sameContentNowAt": [
+        "source-materials/photos/taller.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/tijera-de-peluqueria-sculpby-gothik-55-.jpg",
+      "bytes": 32497,
+      "sha256": "5a1d4ed49cc2d0831076354554e268d312bd6e298cd290669363a73dd1afa5e1",
+      "sameContentNowAt": [
+        "source-materials/photos/tijera-de-peluqueria-sculpby-gothik-55-.jpg"
+      ]
+    },
+    {
+      "oldPath": "images/tijeras_tiran.png",
+      "bytes": 2235406,
+      "sha256": "3d98aaaac32de26aebe42000eef34408d780346659dea5dd8ff17a38dedbabc7",
+      "sameContentNowAt": [
+        "source-materials/photos/tijeras_tiran.png"
+      ]
+    },
+    {
+      "oldPath": "images/tijeras_tiran.webp",
+      "bytes": 62128,
+      "sha256": "14977c2b70bdc99538fe0416ea4aa2963b8109f236df588faaee0a0d3872eba5",
+      "sameContentNowAt": [
+        "site/assets/images/tijeras.webp"
+      ]
+    },
+    {
+      "oldPath": "images/tijeras_tiran_despues_afilado.PNG",
+      "bytes": 2733278,
+      "sha256": "38e2607f32d33d00e68a4e63b4866b2a824b0709b039733f656e90f333cbd5e8",
+      "sameContentNowAt": [
+        "source-materials/photos/tijeras_tiran_despues_afilado.PNG"
+      ]
+    },
+    {
+      "oldPath": "sitemap.xml",
+      "bytes": 7683,
+      "sha256": "71432c40ec811acc17ef4b136433e0816ed5a43f14532cc24cc9f19d533fb314",
+      "sameContentNowAt": [
+        "docs/migration/legacy-sitemap-2026-10-15.xml"
+      ]
+    },
+    {
+      "oldPath": "videos/Afilado profesional de cuchillos en Valencia.orig.mp4",
+      "bytes": 26182831,
+      "sha256": "e011b7032840f1b2659f6af8390a1040a1c77a250d4bf2213d0f93750a75d41a",
+      "sameContentNowAt": [
+        "source-materials/videos/Afilado profesional de cuchillos en Valencia.orig.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/Heramientas-de-manicura.orig.mp4",
+      "bytes": 15898862,
+      "sha256": "a7e881da768dadb4af63ee89eaefd065c4e46856115239cbc4636e25c2d89944",
+      "sameContentNowAt": [
+        "source-materials/videos/Heramientas-de-manicura.orig.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/Heramientas-manicura.mp4",
+      "bytes": 2796501,
+      "sha256": "4df9ebb3daea66462790fcc9831cc0ba6443f10951fc0e2b3d533d08a4d1231f",
+      "sameContentNowAt": [
+        "site/assets/videos/Heramientas-manicura.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/Tijeras_tiran.orig.mp4",
+      "bytes": 27450956,
+      "sha256": "aefafd5bac96281f53ea2a8abb522af1c9c138411c436501e9b6919cbab044c6",
+      "sameContentNowAt": [
+        "source-materials/videos/Tijeras_tiran.orig.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/afilado-profesional-de-cuchillos-en-valencia.mp4",
+      "bytes": 4661756,
+      "sha256": "5614fce6fa954fc499f5f126ec6b9b363eeef408abc51e00c217bd9ba77a1814",
+      "sameContentNowAt": [
+        "site/assets/videos/afilado-profesional-de-cuchillos-en-valencia.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/cuchillo_para_profecional.mp4",
+      "bytes": 3325296,
+      "sha256": "91bbd3572176dd33c67fdde0c494b7c8ca0f194e414fb42ba1a8d62f2df6a241",
+      "sameContentNowAt": [
+        "site/assets/videos/cuchillo_para_profecional.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/cuchillo_para_profecional.orig.mp4",
+      "bytes": 20289625,
+      "sha256": "b5f33abaf5ac068063aca26e826ba50013d55053f5bdf7a583924dc7f2f9d2ce",
+      "sameContentNowAt": [
+        "source-materials/videos/cuchillo_para_profecional.orig.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/maquena_afilado_cortan.mp4",
+      "bytes": 4438042,
+      "sha256": "476adf0be64fd75b1fd68b1773ae8bb657a2435095b3c1227eb41987225b2fae",
+      "sameContentNowAt": [
+        "site/assets/videos/maquena_afilado_cortan.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/maquena_afilado_cortan.orig.mp4",
+      "bytes": 15078605,
+      "sha256": "13ee4366d8c691f946f2107586eb52b758b976a532faf80e8d48518fddbd6af5",
+      "sameContentNowAt": [
+        "source-materials/videos/maquena_afilado_cortan.orig.mp4"
+      ]
+    },
+    {
+      "oldPath": "videos/tijeras_tiran.mp4",
+      "bytes": 8220053,
+      "sha256": "40529932c61c45847f491c0c4cff6f49ba4fd85b8a2dcafdffc02b928f61227b",
+      "sameContentNowAt": [
+        "site/assets/videos/tijeras_tiran.mp4"
+      ]
+    }
+  ],
+  "note": "Revised text files are checked by Git diff; unchanged-path edits are not deletions. Git history is preserved."
+}
