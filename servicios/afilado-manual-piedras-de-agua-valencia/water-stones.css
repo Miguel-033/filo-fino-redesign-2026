@@ -219,3 +219,47 @@
 .stone-types:not(:has(.stone-types__photos)) {
   grid-template: "copy" / minmax(0, 1fr);
 }
+
+.content-media-group {
+  display: grid;
+  gap: clamp(8px, 1.4vw, 20px);
+  min-width: 0;
+}
+
+.content-media-group.stone-types__photos:not(:has(> figure:nth-of-type(2))) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.content-media-group.stone-types__photos figure:last-child {
+  margin-bottom: 0;
+}
+
+.stone-process .content-media-group .stone-photo img {
+  aspect-ratio: auto;
+}
+
+.knife-faq > .content-media-group,
+.knife-contact > .content-media-group {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 761px) {
+  .stone-detail:has(> :is(.stone-photo, .content-media-group) + .stone-intro) {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  }
+
+  .stone-process:has(> :is(.stone-photo, .content-media-group) + .stone-process__copy) {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 8fr);
+  }
+
+  .stone-types:has(> .stone-types__copy + .content-media-group) {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
+    grid-template-areas: "copy photos";
+  }
+}
+
+@media (max-width: 760px) {
+  .stone-types:has(> .content-media-group + .stone-types__copy) {
+    grid-template-areas: "photos" "copy";
+  }
+}

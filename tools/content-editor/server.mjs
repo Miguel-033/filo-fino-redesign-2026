@@ -223,7 +223,7 @@ const server = createServer(async (request, response) => {
       file = staged ? inside(staging, pending[1] + '/' + pending[2]) : inside(root, relative);
     } else {
       const name = path === '/' ? 'editor.html' : path.slice(1);
-      if (!['editor.html', 'editor.css', 'editor.mjs', 'templates.mjs'].includes(name)) {
+      if (!['editor.html', 'editor.css', 'editor.mjs', 'templates.mjs', 'reorder.mjs'].includes(name)) {
         throw failure('Файл не найден.', 404);
       }
       response.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self'; frame-src 'self'; frame-ancestors 'none'");

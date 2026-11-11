@@ -15,7 +15,11 @@ const preview = 'https://miguel-033.github.io/filo-fino-redesign-2026/';
 const previewPath = new URL(preview).pathname;
 const api = 'https://api.github.com/repos/' + repository;
 const actions = 'https://github.com/' + repository + '/actions';
-const tracked = { ...Object.fromEntries(Object.entries(pages).map(([id, page]) => [id, page.path])), css: 'real-works.css' };
+const tracked = {
+  ...Object.fromEntries(Object.entries(pages).map(([id, page]) => [id, page.path])),
+  css: 'real-works.css',
+  'stones-css': 'servicios/afilado-manual-piedras-de-agua-valencia/water-stones.css',
+};
 const mediaFile = /\.(?:avif|gif|jpe?g|png|svg|webp|m4v|mov|mp4|ogv|webm)$/i;
 const uploadFile = /^assets\/editor-media\/[a-f0-9-]{36}\/(?:photo|preview)\.(?:jpe?g|png|webp)$|^assets\/editor-media\/[a-f0-9-]{36}\/video\.mp4$/;
 const allowedRemote = /^(?:https:\/\/github\.com\/|git@github\.com:|ssh:\/\/git@github\.com\/)Miguel-033\/filo-fino-redesign-2026(?:\.git)?$/i;
