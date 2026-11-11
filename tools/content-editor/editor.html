@@ -14,9 +14,14 @@
     <div class="toolbar-actions">
       <button type="button" id="preview" aria-pressed="false">Предпросмотр</button>
       <button type="button" id="undo" disabled>Отменить</button>
-      <button type="button" class="primary" id="save" disabled>Сохранить</button>
+      <button type="button" class="primary" id="save" disabled>Сохранить локально</button>
+      <button type="button" id="publish" disabled>Опубликовать на GitHub Pages</button>
     </div>
     <span id="status" role="status" aria-live="polite">Открываю редактор…</span>
+    <div id="publication" hidden>
+      <span id="publish-status" role="status" aria-live="polite"></span>
+      <span id="publish-links"></span>
+    </div>
   </header>
   <main class="workspace">
     <iframe id="canvas" title="Визуальная страница"></iframe>

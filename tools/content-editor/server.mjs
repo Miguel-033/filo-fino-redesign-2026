@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { pipeline } from 'node:stream/promises';
 import { processUpload } from './media.mjs';
 import { pages, referencedMedia, renderPage, revision } from './pages.mjs';
+import { createPublisher } from './publish.mjs';
 
 const editor = dirname(fileURLToPath(import.meta.url));
 const root = resolve(editor, '../..');
@@ -17,11 +18,13 @@ const host = '127.0.0.1';
 const origin = 'http://' + host + ':' + port;
 const key = randomUUID();
 const staging = await mkdtemp(join(tmpdir(), 'filo-fino-editor-'));
+const publisher = createPublisher(root, staging);
 const assets = join(root, 'assets/editor-media');
 const drafts = new Map();
 const uploads = new Map();
 let saving = false;
 let processing = false;
+let publishing = false;
 
 const contentTypes = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
@@ -90,7 +93,7 @@ async function publishFiles(path, rendered) {
 
 async function api(request, response, url) {
   if (request.method === 'GET' && url.pathname === '/api/session') {
-    return json(response, 200, { key, pages });
+    return json(response, 200, { key, pages, publication: publisher.current() });
   }
   if (request.method === 'GET' && url.pathname === '/api/page') {
     const page = pages[url.searchParams.get('id')];
@@ -117,6 +120,23 @@ async function api(request, response, url) {
       processing = false;
     }
   }
+  if (url.pathname === '/api/publish/status') {
+    const requestBody = await readDraft(request);
+    return json(response, 200, publisher.status(requestBody?.id));
+  }
+  if (['/api/publish/prepare', '/api/publish/confirm'].includes(url.pathname)) {
+    if (saving || publishing) throw failure('Дождитесь завершения текущей операции.', 409);
+    publishing = true;
+    try {
+      const requestBody = await readDraft(request);
+      const result = url.pathname.endsWith('/prepare')
+        ? await publisher.prepare(requestBody?.page)
+        : await publisher.push(requestBody?.id);
+      return json(response, 200, result);
+    } finally {
+      publishing = false;
+    }
+  }
   if (!['/api/preview', '/api/save'].includes(url.pathname)) throw failure('Маршрут недоступен.', 404);
 
   const draft = await readDraft(request);
@@ -124,6 +144,7 @@ async function api(request, response, url) {
   if (!page?.path) throw failure('Страница не поддерживается.', 404);
   if (saving) throw failure('Подождите завершения сохранения.', 409);
   const save = url.pathname === '/api/save';
+  if (save && publishing) throw failure('Дождитесь завершения отправки в GitHub.', 409);
   if (save) saving = true;
   try {
     const path = join(root, page.path);
@@ -137,6 +158,7 @@ async function api(request, response, url) {
       return json(response, 200, { url: '/site/' + page.path + '?draft=' + id });
     }
     await publishFiles(path, html);
+    publisher.invalidate();
     drafts.clear();
     return json(response, 200, { revision: revision(html) });
   } finally {

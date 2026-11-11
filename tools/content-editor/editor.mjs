@@ -6,6 +6,7 @@ const ui = {
   frame: $('canvas'), result: $('result'), dialog: $('dialog'), title: $('dialog-title'),
   fields: $('fields'), form: $('form'), formStatus: $('form-status'), itemActions: $('item-actions'),
   apply: $('apply'), cancel: $('cancel'),
+  publish: $('publish'), publication: $('publication'), publishStatus: $('publish-status'), publishLinks: $('publish-links'),
 };
 const accept = {
   image: '.jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp',
@@ -36,6 +37,7 @@ let dirty = false;
 let busy = false;
 let previewing = false;
 let formAction;
+let publishing = false;
 
 function status(message) {
   ui.status.textContent = message;
@@ -45,6 +47,8 @@ function buttons() {
   ui.page.disabled = busy;
   ui.preview.disabled = busy || !doc;
   ui.save.disabled = busy || !dirty;
+  ui.publish.disabled = busy || publishing || dirty || !doc;
+  ui.publish.title = dirty ? 'Сначала сохраните изменения локально' : '';
   ui.undo.disabled = busy || !dirty;
   ui.preview.setAttribute('aria-pressed', String(previewing));
   ui.preview.textContent = previewing ? 'Вернуться к редактированию' : 'Предпросмотр';
@@ -184,6 +188,7 @@ function showDialog(title, fields, action, controls = []) {
   ui.itemActions.replaceChildren(...controls);
   ui.formStatus.textContent = '';
   ui.apply.hidden = !action;
+  ui.apply.textContent = 'Готово';
   ui.apply.disabled = false;
   ui.cancel.disabled = false;
   formAction = action;
@@ -591,9 +596,81 @@ ui.save.addEventListener('click', async () => {
     await api('/api/save', draft());
     dirty = false;
     await openPage(page, scroll);
-    status('Сохранено в файлах сайта');
+    status('Сохранено локально. Для отправки в preview нажмите «Опубликовать на GitHub Pages».');
   } catch (error) {
     status(error.message);
+  } finally {
+    busy = false;
+    buttons();
+  }
+});
+
+function publication(message, links = []) {
+  ui.publication.hidden = false;
+  ui.publishStatus.textContent = message;
+  ui.publishLinks.replaceChildren(...links.map(({ label, url }) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.textContent = label;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    return link;
+  }));
+}
+
+async function watchPublication(result) {
+  publishing = true;
+  buttons();
+  try {
+    while (result.state === 'building') {
+      publication(result.message);
+      await new Promise(resolve => setTimeout(resolve, 4000));
+      const next = await api('/api/publish/status', { id: result.id });
+      result = next;
+    }
+    const links = result.state === 'success'
+      ? result.urls.map(({ label, url }) => ({ label: 'Открыть · ' + label, url }))
+      : [{ label: 'Журнал GitHub Actions', url: result.actions }];
+    publication(result.message + ' Коммит ' + result.sha.slice(0, 7) + '.', links);
+  } catch (error) {
+    publication('Не удалось проверить результат. Коммит ' + result.sha.slice(0, 7) + '. ' + error.message,
+      [{ label: 'Журнал GitHub Actions', url: result.actions }]);
+  } finally {
+    publishing = false;
+    buttons();
+  }
+}
+
+ui.publish.addEventListener('click', async () => {
+  if (dirty || publishing) return;
+  busy = true;
+  buttons();
+  publication('Проверяю сохранённые файлы, медиа и ветку preview…');
+  try {
+    const result = await api('/api/publish/prepare', { page });
+    if (!result.id) return publication(result.message);
+    const description = document.createElement('p');
+    description.textContent = 'Проверенные файлы будут отправлены в ' + result.branch + ' для GitHub Pages preview.';
+    const files = document.createElement('ul');
+    files.className = 'publish-files';
+    for (const file of result.files) {
+      const item = document.createElement('li');
+      item.textContent = file;
+      files.append(item);
+    }
+    publication('Статическая сборка готова. Подтвердите публикацию.');
+    showDialog('Подтвердить публикацию', [description, files], async () => {
+      if (dirty) throw new Error('Сначала сохраните изменения локально и повторите проверку.');
+      ui.formStatus.textContent = 'Отправляю проверенную сборку в GitHub…';
+      const sent = await api('/api/publish/confirm', { id: result.id });
+      void watchPublication(sent);
+    });
+    ui.apply.textContent = 'Подтвердить и опубликовать';
+    ui.dialog.addEventListener('close', () => {
+      if (!publishing) publication('Публикация отменена.');
+    }, { once: true });
+  } catch (error) {
+    publication(error.message);
   } finally {
     busy = false;
     buttons();
@@ -607,6 +684,7 @@ try {
   session = await api('/api/session');
   for (const [id, entry] of Object.entries(session.pages)) ui.page.add(new Option(entry.label, id));
   await openPage('stones');
+  if (session.publication) void watchPublication(session.publication);
 } catch (error) {
   status(error.message);
 }
