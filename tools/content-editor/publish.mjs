@@ -25,6 +25,45 @@ const uploadFile = /^assets\/editor-media\/[a-f0-9-]{36}\/(?:photo|preview)\.(?:
 const allowedRemote = /^(?:https:\/\/github\.com\/|git@github\.com:|ssh:\/\/git@github\.com\/)Miguel-033\/filo-fino-redesign-2026(?:\.git)?$/i;
 const sha = /^[a-f0-9]{40}$/;
 
+function pushProblem(error, https) {
+  const output = String(error.stderr || '') + '\n' + String(error.stdout || '');
+  const diagnostic = output
+    .replace(/authorization\s*:[^\n]*/gi, 'Authorization: [скрыто]')
+    .replace(/https?:\/\/[^\s]+/gi, '[адрес скрыт]')
+    .replace(/\b(?:gh[pousr]_[a-z0-9_]+|github_pat_[a-z0-9_]+)\b/gi, '[токен скрыт]')
+    .replace(/[\x00-\x09\x0b-\x1f\x7f]/g, '')
+    .trim().slice(-2400);
+  console.error('[Filo Fino] Git push ' + previewBranch + ':\n' + (diagnostic || 'Git не вернул подробностей.'));
+
+  if (/stale info|non-fast-forward|fetch first|cannot lock ref|is at [a-f\d]+ but expected/i.test(output)) {
+    return 'Ветка preview изменилась. Закройте окно и начните публикацию заново.';
+  }
+  if (/GH001|large files detected|file size limit|pack exceeds/i.test(output)) {
+    return 'GitHub отклонил отправку из-за размера файлов. Подробности в Терминале.';
+  }
+  if (/GH007|publish a private email address/i.test(output)) {
+    return 'GitHub отклонил коммит из-за настройки приватности почты. Укажите адрес GitHub noreply в git config user.email для этого репозитория.';
+  }
+  if (/GH006|GH013|protected branch|repository rule|signed commit|hook declined/i.test(output)) {
+    return 'GitHub отклонил отправку из-за правил ветки preview. Подробности в Терминале.';
+  }
+  if (/publickey|host key verification failed|too many authentication failures/i.test(output)) {
+    return 'Git не смог подключиться по SSH. Проверьте ключ GitHub командой ssh -T git@github.com.';
+  }
+  if (/could not read (?:username|password)|terminal prompts disabled|authentication failed|invalid username or token|bad credentials|error: 401/i.test(output)) {
+    return https
+      ? 'Git не авторизован в GitHub. В Терминале войдите через gh auth login и выполните gh auth setup-git --hostname github.com.'
+      : 'GitHub не принял данные для входа по SSH. Проверьте ключ и аккаунт.';
+  }
+  if (/\b403\b|write access|permission to .* denied|not authorized|repository not found/i.test(output)) {
+    return 'GitHub не дал права на запись. Проверьте, что Git использует аккаунт с доступом на запись в gh-pages-preview.';
+  }
+  if (error.killed || /could not resolve|failed to connect|timed out|connection reset|SSL certificate|RPC failed|unexpected disconnect/i.test(output)) {
+    return 'Отправка прервалась при подключении к GitHub. Проверьте сеть и повторите попытку.';
+  }
+  return 'Git не смог отправить сборку. Причина выведена в Терминале, где запущен редактор.';
+}
+
 function pageUrl(path) {
   return new URL(path.replace(/index\.html$/, ''), preview).href;
 }
@@ -149,6 +188,7 @@ export function createPublisher(root, staging) {
       ]);
       if (branch !== editorBranch || await realpath(top) !== await realpath(root) ||
           !allowedRemote.test(pull) || !allowedRemote.test(push)) throw new Error();
+      return push.startsWith('https://');
     } catch {
       throw new Error('Публикация доступна из корня ' + repository + ' в ветке ' + editorBranch + ' с этим репозиторием в origin.');
     }
@@ -292,7 +332,7 @@ export function createPublisher(root, staging) {
     const current = plan;
     plan = null;
     try {
-      await checkTarget();
+      const https = await checkTarget();
       for (const [path, hash] of current.observed) {
         if (await fileHash(path, false) !== hash) throw new Error('Локальный файл изменился после проверки: ' + path);
       }
@@ -310,11 +350,15 @@ export function createPublisher(root, staging) {
       try {
         // The commit has exactly the checked preview tip as its parent. The lease also
         // rejects a concurrent branch rewind, which an ordinary fast-forward could miss.
-        await git(['push', '--no-follow-tags', '--recurse-submodules=no', '--force-with-lease=' + previewRef + ':' + current.remote,
+        await git(['push', '--porcelain', '--no-follow-tags', '--recurse-submodules=no', '--force-with-lease=' + previewRef + ':' + current.remote,
           'origin', commit + ':' + previewRef], { timeout: 180_000 });
-      } catch {
-        if (await fetchPreview().catch(() => null) !== commit) {
-          throw new Error('GitHub отклонил отправку. Проверьте авторизацию Git, права записи и изменения ветки preview.');
+      } catch (error) {
+        const tip = await fetchPreview().catch(() => null);
+        if (tip !== commit) {
+          const message = pushProblem(error, https);
+          if (tip && tip !== current.remote) throw new Error('Ветка preview обновилась во время отправки. Начните публикацию заново.');
+          if (tip === current.remote) plan = current;
+          throw new Error(message);
         }
       }
       for (const id of current.saved) {
