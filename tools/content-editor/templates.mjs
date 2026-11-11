@@ -11,7 +11,7 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g, char =>
 export function mediaItem(upload, page, fields) {
   const prefix = page === 'home' ? '' : '../../';
   const directory = prefix + 'assets/editor-media/' + upload.id + '/';
-  const preview = directory + 'preview.webp';
+  const preview = directory + upload.previewFilename;
   return {
     id: fields.id ?? upload.id, type: upload.type, caption: fields.title,
     alt: fields.alt || fields.title, coverTitle: fields.title, source: directory + upload.filename,

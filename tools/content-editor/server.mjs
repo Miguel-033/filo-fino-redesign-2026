@@ -195,8 +195,10 @@ const server = createServer(async (request, response) => {
         response.writeHead(200, { 'Content-Type': contentTypes['.html'] });
         return response.end(request.method === 'HEAD' ? undefined : draft.html);
       }
-      const pending = relative.match(/^assets\/editor-media\/([a-f0-9-]{36})\/(photo\.webp|video\.mp4|preview\.webp)$/);
-      file = pending && uploads.has(pending[1]) ? inside(staging, pending[1] + '/' + pending[2]) : inside(root, relative);
+      const pending = relative.match(/^assets\/editor-media\/([a-f0-9-]{36})\/([^/]+)$/);
+      const upload = pending && uploads.get(pending[1]);
+      const staged = upload && [upload.filename, upload.previewFilename].includes(pending[2]);
+      file = staged ? inside(staging, pending[1] + '/' + pending[2]) : inside(root, relative);
     } else {
       const name = path === '/' ? 'editor.html' : path.slice(1);
       if (!['editor.html', 'editor.css', 'editor.mjs', 'templates.mjs'].includes(name)) {
