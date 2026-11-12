@@ -26,6 +26,8 @@ const editorCss = `
   .editor-drag--overlay { position:absolute; z-index:4; inset:5px auto auto 5px; padding:3px 7px;
     background:#202e33; color:#ffda9c; border:1px solid #697b80; border-radius:4px; font:600 16px system-ui,sans-serif }
   .editor-drag--end { inset:5px 5px auto auto }
+  .editor-resize { inset:5px 5px auto auto; cursor:ew-resize !important }
+  .stone-photo:has(> .editor-drag--end) > .editor-resize { right:47px }
   .editor-drag:focus-visible { outline:2px solid #e6bd80; outline-offset:2px }
   [data-editor-dragging] { opacity:.65 }
   [data-editor-drop] { outline:3px solid #d6a66a; outline-offset:3px }
@@ -49,6 +51,8 @@ let formAction;
 let publishing = false;
 let handles;
 const editorNode = '[data-editor-target], [data-editor-ui], [data-editor-position], [data-editor-dragging], [data-editor-drop]';
+const minPhotoWidth = 80;
+const maxPhotoWidth = 2000;
 
 function status(message) {
   ui.status.textContent = message;
@@ -221,6 +225,10 @@ function field(name, label, options = {}) {
   } else if (options.file) {
     control.type = 'file';
     control.accept = options.file;
+  } else if (options.number) {
+    control.type = 'number';
+    control.min = options.number.min;
+    control.max = options.number.max;
   } else {
     control.maxLength = options.long ? 4000 : 180;
   }
@@ -325,6 +333,91 @@ function markSortable(items, label, alignEnd = false) {
   }
 }
 
+function setPhotoWidth(figure, width) {
+  if (!width) {
+    figure.removeAttribute('data-content-photo-width');
+    figure.style.removeProperty('--content-photo-width');
+    if (!figure.style.length) figure.removeAttribute('style');
+    return;
+  }
+  figure.dataset.contentPhotoWidth = String(width);
+  figure.style.setProperty('--content-photo-width', width + 'px');
+}
+
+function editPhotoWidth(figure) {
+  const note = document.createElement('p');
+  note.textContent = 'Оставьте поле пустым, чтобы вернуть автоматический размер. На узком экране фото впишется в колонку.';
+  showDialog('Размер фото', [
+    field('width', 'Ширина фото, px', {
+      value: figure.dataset.contentPhotoWidth || '',
+      number: { min: minPhotoWidth, max: maxPhotoWidth },
+    }),
+    note,
+  ], values => {
+    const width = Number(values.width);
+    if (width !== Number(figure.dataset.contentPhotoWidth || 0)) {
+      setPhotoWidth(figure, width);
+      changed();
+    }
+  });
+}
+
+function photoResizeHandle(figure) {
+  if (doc.defaultView.getComputedStyle(figure).position === 'static') {
+    figure.setAttribute('data-editor-position', '');
+  }
+  const handle = doc.createElement('button');
+  handle.type = 'button';
+  handle.textContent = '↔';
+  handle.className = 'editor-drag editor-drag--overlay editor-resize';
+  handle.setAttribute('data-editor-ui', '');
+  handle.setAttribute('aria-label', 'Размер фото');
+  handle.title = 'Размер фото — нажмите или потяните в сторону';
+  let drag;
+  let suppressClick = false;
+  const clamp = value => Math.max(minPhotoWidth, Math.min(maxPhotoWidth, Math.round(value)));
+
+  handle.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.button !== 0 || busy) return;
+    suppressClick = false;
+    drag = {
+      id: event.pointerId, x: event.clientX, width: figure.getBoundingClientRect().width,
+      saved: Number(figure.dataset.contentPhotoWidth || 0),
+    };
+    handle.setPointerCapture(event.pointerId);
+  });
+  handle.addEventListener('pointermove', event => {
+    if (drag?.id !== event.pointerId) return;
+    const delta = event.clientX - drag.x;
+    if (!drag.moved && Math.abs(delta) < 4) return;
+    drag.moved = true;
+    // Resized photos are centered in their column, so the right edge travels half the width change.
+    setPhotoWidth(figure, clamp(drag.width + delta * 2));
+  });
+  function end(event) {
+    if (drag?.id !== event.pointerId) return;
+    const previous = drag;
+    drag = null;
+    if (!previous.moved) return;
+    suppressClick = true;
+    if (event.type !== 'pointerup') setPhotoWidth(figure, previous.saved);
+    else if (previous.saved !== Number(figure.dataset.contentPhotoWidth)) changed();
+  }
+  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) handle.addEventListener(type, end);
+  handle.addEventListener('click', () => {
+    if (!suppressClick) editPhotoWidth(figure);
+    suppressClick = false;
+  });
+  handle.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    const width = figure.getBoundingClientRect().width;
+    setPhotoWidth(figure, clamp(width + (event.key === 'ArrowLeft' ? -16 : 16)));
+    changed();
+  });
+  figure.append(handle);
+}
+
 function refresh() {
   for (const item of doc.querySelectorAll('[data-editor-ui]')) item.remove();
   for (const item of doc.querySelectorAll('[data-editor-position]')) item.removeAttribute('data-editor-position');
@@ -357,6 +450,11 @@ function refresh() {
   for (const grid of main.querySelectorAll(gallerySelector)) {
     grid.before(bar(canvasButton('+ Добавить фото или видео', () => editWork(grid))));
     markSortable(() => entries(grid), 'Переместить работу');
+  }
+  for (const section of sections) {
+    for (const figure of section.querySelectorAll('figure.stone-photo:has(img)')) {
+      if (!figure.closest(gallerySelector)) photoResizeHandle(figure);
+    }
   }
   main.querySelectorAll('[data-real-work], img, video').forEach(node => {
     if (!node.closest('nav, [data-editor-ui]')) mark(node);
@@ -441,6 +539,7 @@ function addSectionMedia(section, type) {
     const item = mediaItem(uploaded, page, { title: values.caption || alt, alt });
     if (photo) media.set(item.id, item);
     const figure = element(mediaMarkup(type, item, values.caption, true));
+    if (photo) setPhotoWidth(figure, Math.min(560, Math.max(minPhotoWidth, item.width)));
     mediaGroup(section).append(figure);
     changed();
     refresh();
@@ -601,6 +700,7 @@ function editMedia(node) {
     changed();
     refresh();
   }, { danger: true })] : [];
+  if (figure && type === 'image') controls.unshift(button('Размер фото', () => editPhotoWidth(figure)));
   showDialog('Заменить ' + kind, [
     field('file', 'Выберите файл', { file: accept[type], required: true }),
     field('alt', 'Описание', { value: node.alt || node.getAttribute('aria-label') || '' }),
@@ -612,7 +712,9 @@ function editMedia(node) {
     });
     if (figure) {
       const compact = Boolean(figure.closest('.stone-detail, ' + groupSelector));
-      figure.replaceWith(element(mediaMarkup(type, next, values.caption, compact)));
+      const replacement = element(mediaMarkup(type, next, values.caption, compact));
+      if (figure.dataset.contentPhotoWidth) setPhotoWidth(replacement, Number(figure.dataset.contentPhotoWidth));
+      figure.replaceWith(replacement);
       if (type === 'image') media.set(next.id, next);
     } else {
       node.src = next.source;

@@ -238,6 +238,17 @@
   aspect-ratio: auto;
 }
 
+.stone-photo[data-content-photo-width] {
+  width: min(100%, var(--content-photo-width));
+  /* Explicit sizing also applies to older photos with an inline automatic limit. */
+  max-width: 100% !important;
+  margin-inline: auto;
+}
+
+.stone-photo[data-content-photo-width] img {
+  aspect-ratio: auto;
+}
+
 .knife-faq > .content-media-group,
 .knife-contact > .content-media-group {
   grid-column: 1 / -1;
