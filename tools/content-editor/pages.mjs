@@ -1,12 +1,22 @@
 import { createHash } from 'node:crypto';
+import { applyPhotos, photoStyles } from './photos.mjs';
 
 export const pages = {
-  home: { path: 'index.html', label: 'Главная · Trabajos reales', type: 'gallery' },
+  home: { path: 'index.html', label: 'Главная', type: 'gallery' },
   stones: {
     path: 'servicios/afilado-manual-piedras-de-agua-valencia/index.html',
     label: 'Ручная заточка на водных камнях',
     type: 'sections',
   },
+  services: { path: 'servicios/index.html', label: 'Все услуги' },
+  knives: { path: 'servicios/afilado-cuchillos-valencia/index.html', label: 'Заточка ножей' },
+  scissors: { path: 'servicios/afilar-tijeras-peluqueria-valencia/index.html', label: 'Заточка ножниц' },
+  manicure: { path: 'servicios/herramientas-manicura-pedicura-valencia/index.html', label: 'Маникюр и педикюр' },
+  blades: { path: 'servicios/afilado-cuchillas-maquinas-valencia/index.html', label: 'Ножевые блоки' },
+  horeca: { path: 'servicios/afilado-cuchillos-hosteleria-valencia/index.html', label: 'Заточка для ресторанов' },
+  legal: { path: 'legal/aviso-legal.html', label: 'Правовая информация' },
+  cookies: { path: 'legal/politica-cookies.html', label: 'Политика cookie' },
+  privacy: { path: 'legal/politica-privacidad.html', label: 'Политика конфиденциальности' },
 };
 
 const gallery = /(<div class="real-works__grid">)[\s\S]*?(<\/div>\s*<\/section>)/;
@@ -76,6 +86,8 @@ function applySections(html, draft) {
 }
 
 export function renderPage(page, html, draft) {
+  const edited = applyPhotos(html, draft.photos);
+  if (!page.type) return photoStyles(edited, page.path);
   const entries = draft.media;
   if (!Array.isArray(entries) || entries.length > 300 || new Set(entries.map(item => item.id)).size !== entries.length ||
       entries.some(item => !safeId.test(item.id) || !['image', 'video'].includes(item.type) ||
@@ -83,10 +95,10 @@ export function renderPage(page, html, draft) {
         item.source.includes('..', item.source.indexOf('assets/')))) {
     throw new Error('Не удалось проверить список медиа.');
   }
-  requireMatch(html, data);
-  const rendered = page.type === 'gallery' ? applyGallery(html, draft.cards) : applySections(html, draft);
+  requireMatch(edited, data);
+  const rendered = page.type === 'gallery' ? applyGallery(edited, draft.cards) : applySections(edited, draft);
   const media = JSON.stringify(entries).replaceAll('<', '\\u003c');
-  return rendered.replace(data, (_, start, end) => start + media + end);
+  return photoStyles(rendered.replace(data, (_, start, end) => start + media + end), page.path);
 }
 
 export function referencedMedia(html) {

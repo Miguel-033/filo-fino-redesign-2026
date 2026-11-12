@@ -19,6 +19,7 @@ const tracked = {
   ...Object.fromEntries(Object.entries(pages).map(([id, page]) => [id, page.path])),
   css: 'real-works.css',
   'stones-css': 'servicios/afilado-manual-piedras-de-agua-valencia/water-stones.css',
+  'photo-css': 'photo-framing.css',
 };
 const mediaFile = /\.(?:avif|gif|jpe?g|png|svg|webp|m4v|mov|mp4|ogv|webm)$/i;
 const uploadFile = /^assets\/editor-media\/[a-f0-9-]{36}\/(?:photo|preview)\.(?:jpe?g|png|webp)$|^assets\/editor-media\/[a-f0-9-]{36}\/video\.mp4$/;

@@ -10,6 +10,7 @@ import { pipeline } from 'node:stream/promises';
 import { processUpload } from './media.mjs';
 import { pages, referencedMedia, renderPage, revision } from './pages.mjs';
 import { createPublisher } from './publish.mjs';
+import { labelPhotos } from './photos.mjs';
 
 const editor = dirname(fileURLToPath(import.meta.url));
 const root = resolve(editor, '../..');
@@ -217,6 +218,11 @@ const server = createServer(async (request, response) => {
         response.writeHead(200, { 'Content-Type': contentTypes['.html'] });
         return response.end(request.method === 'HEAD' ? undefined : draft.html);
       }
+      if (url.searchParams.has('editor') && Object.values(pages).some(page => page.path === relative)) {
+        const html = labelPhotos(await readFile(inside(root, relative), 'utf8'));
+        response.writeHead(200, { 'Content-Type': contentTypes['.html'] });
+        return response.end(request.method === 'HEAD' ? undefined : html);
+      }
       const pending = relative.match(/^assets\/editor-media\/([a-f0-9-]{36})\/([^/]+)$/);
       const upload = pending && uploads.get(pending[1]);
       const staged = upload && [upload.filename, upload.previewFilename].includes(pending[2]);
@@ -226,7 +232,7 @@ const server = createServer(async (request, response) => {
       if (!['editor.html', 'editor.css', 'editor.mjs', 'templates.mjs', 'reorder.mjs'].includes(name)) {
         throw failure('Файл не найден.', 404);
       }
-      response.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self'; frame-src 'self'; frame-ancestors 'none'");
+      response.setHeader('Content-Security-Policy', "default-src 'self'; img-src 'self' blob:; style-src 'self'; frame-src 'self'; frame-ancestors 'none'");
       file = join(editor, name);
     }
     await serve(request, response, file, contentTypes[extname(file)] || 'application/octet-stream');

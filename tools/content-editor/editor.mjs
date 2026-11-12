@@ -6,7 +6,7 @@ const ui = {
   page: $('page'), preview: $('preview'), undo: $('undo'), save: $('save'), status: $('status'),
   frame: $('canvas'), result: $('result'), dialog: $('dialog'), title: $('dialog-title'),
   fields: $('fields'), form: $('form'), formStatus: $('form-status'), itemActions: $('item-actions'),
-  apply: $('apply'), cancel: $('cancel'),
+  apply: $('apply'), cancel: $('cancel'), photos: $('photos'),
   publish: $('publish'), publication: $('publication'), publishStatus: $('publish-status'), publishLinks: $('publish-links'),
 };
 const accept = {
@@ -50,6 +50,7 @@ let previewing = false;
 let formAction;
 let publishing = false;
 let handles;
+let photoEdits;
 const editorNode = '[data-editor-target], [data-editor-ui], [data-editor-position], [data-editor-dragging], [data-editor-drop]';
 const minMediaWidth = 80;
 const maxMediaWidth = 2000;
@@ -60,6 +61,7 @@ function status(message) {
 
 function buttons() {
   ui.page.disabled = busy;
+  ui.photos.disabled = busy || !doc || previewing;
   ui.preview.disabled = busy || !doc;
   ui.save.disabled = busy || !dirty;
   ui.publish.disabled = busy || publishing || dirty || !doc;
@@ -101,8 +103,7 @@ function entries(grid) {
 }
 
 function pageHref(id) {
-  return '/site/' + session.pages[id].path + '?editor=' + crypto.randomUUID() +
-    (id === 'home' ? '#trabajos-reales' : '');
+  return '/site/' + session.pages[id].path + '?editor=' + crypto.randomUUID();
 }
 
 function loadFrame(frame, url) {
@@ -114,12 +115,12 @@ function loadFrame(frame, url) {
 
 function clean(element) {
   const clone = element.cloneNode(true);
-  for (const node of [clone, ...clone.querySelectorAll(editorNode + ', details')]) {
+  for (const node of [clone, ...clone.querySelectorAll(editorNode + ', [data-editor-photo-index], details')]) {
     if (node.hasAttribute('data-editor-ui')) {
       node.remove();
       continue;
     }
-    for (const attribute of ['data-editor-position', 'data-editor-dragging', 'data-editor-drop']) {
+    for (const attribute of ['data-editor-position', 'data-editor-dragging', 'data-editor-drop', 'data-editor-photo-index']) {
       node.removeAttribute(attribute);
     }
     if (node.hasAttribute('data-editor-target')) {
@@ -133,6 +134,8 @@ function clean(element) {
 }
 
 function draft() {
+  const photos = [...photoEdits.values()];
+  if (!session.pages[page].type) return { page, revision, photos };
   const items = page === 'home' ? entries(workGrid()) : serviceSections();
   const active = page === 'home' ? workGrid() : main;
   const data = [...active.querySelectorAll('[data-real-work]')]
@@ -142,7 +145,7 @@ function draft() {
     return original.get(node)?.html === html ? { index: original.get(node).index } : { html };
   });
   return {
-    page, revision, media: data,
+    page, revision, media: data, photos,
     ...(page === 'home' ? { cards: blocks } :
       { sections: blocks, hero: clean(hero) === originalHero ? null : clean(hero) }),
   };
@@ -172,23 +175,23 @@ async function openPage(id, scrollY = null) {
     await loadFrame(ui.frame, pageHref(id));
     doc = ui.frame.contentDocument;
     main = doc.querySelector('main');
-    hero = main.querySelector(':scope > .hero');
+    hero = main?.querySelector(':scope > .hero');
     page = id;
     revision = state.revision;
     ui.page.value = id;
-    const data = JSON.parse(doc.querySelector('#real-works-data').textContent);
+    const data = JSON.parse(doc.querySelector('#real-works-data')?.textContent || '[]');
     media = new Map(data.map(item => [item.id, item]));
-    originalHero = clean(hero);
-    const items = id === 'home' ? entries(workGrid()) : serviceSections();
+    photoEdits = new Map();
+    originalHero = hero ? clean(hero) : '';
+    const items = id === 'home' ? entries(workGrid()) : id === 'stones' ? serviceSections() : [];
     original = new Map(items.map((node, index) => [node, { html: clean(node), index }]));
     const style = doc.createElement('style');
     style.textContent = editorCss;
     doc.head.append(style);
     doc.addEventListener('click', onCanvasClick, true);
     doc.addEventListener('keydown', onCanvasKey, true);
-    if (id !== 'home') main.querySelectorAll('details').forEach(details => { details.open = true; });
+    if (id === 'stones') main.querySelectorAll('details').forEach(details => { details.open = true; });
     refresh();
-    if (id === 'home' && scrollY == null) doc.querySelector('#trabajos-reales').scrollIntoView();
     if (scrollY !== null) ui.frame.contentWindow.scrollTo(0, scrollY);
     dirty = false;
     status('Нажмите на текст или медиа, чтобы изменить содержимое');
@@ -229,6 +232,10 @@ function field(name, label, options = {}) {
     control.type = 'number';
     control.min = options.number.min;
     control.max = options.number.max;
+  } else if (options.range) {
+    control.type = 'range';
+    control.min = options.range.min;
+    control.max = options.range.max;
   } else {
     control.maxLength = options.long ? 4000 : 180;
   }
@@ -275,6 +282,151 @@ const textSelector = 'h1 > span, h2, h3, h4, p, dt, dd, figcaption, summary, .kn
 function editableText(node) {
   return node.matches(textSelector) && !node.closest('a, button, [data-real-work], .knife-address') &&
     [...node.children].every(child => child.localName === 'svg');
+}
+
+function pagePhotos() {
+  return [...doc.querySelectorAll('img')].filter(image =>
+    !image.closest('[data-editor-ui]') && !image.getAttribute('src')?.includes('assets/illustrations/'));
+}
+
+function assetPrefix() {
+  return '../'.repeat(session.pages[page].path.split('/').length - 1);
+}
+
+function photoPatch(image, change) {
+  if (image.dataset.editorPhotoIndex !== undefined) {
+    const index = Number(image.dataset.editorPhotoIndex);
+    photoEdits.set(index, { ...photoEdits.get(index), ...change, index });
+  }
+}
+
+function usePhotoFrame(image, frame) {
+  const names = ['fit', 'x', 'y', 'scale', 'width'];
+  for (const name of names) {
+    if (frame?.[name] == null) image.removeAttribute('data-photo-' + name);
+    else image.setAttribute('data-photo-' + name, frame[name]);
+  }
+  for (const name of names.slice(1)) image.style.removeProperty('--photo-' + name);
+  if (frame) {
+    image.style.setProperty('--photo-x', frame.x + '%');
+    image.style.setProperty('--photo-y', frame.y + '%');
+    image.style.setProperty('--photo-scale', frame.scale / 100);
+    if (frame.width) image.style.setProperty('--photo-width', frame.width + 'px');
+    if (!doc.querySelector('link[href*="photo-framing.css"]')) {
+      const link = doc.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = assetPrefix() + 'photo-framing.css?v=1';
+      doc.head.append(link);
+    }
+  }
+  if (!image.style.length) image.removeAttribute('style');
+}
+
+function fixedPhoto(image) {
+  return !!image.closest('.hero-photo, .service-link, .menu-photo, .real-work__preview') ||
+    doc.defaultView.getComputedStyle(image).position === 'absolute';
+}
+
+function savedPhotoFrame(image) {
+  if (!image?.dataset.photoFit) return null;
+  return { fit: image.dataset.photoFit, x: Number(image.dataset.photoX), y: Number(image.dataset.photoY),
+    scale: Number(image.dataset.photoScale), width: Number(image.dataset.photoWidth) || null };
+}
+
+function editPicture(image, framingOnly = false) {
+  const fixed = fixedPhoto(image);
+  const sample = document.createElement('div');
+  sample.className = 'photo-sample';
+  const preview = document.createElement('img');
+  preview.alt = '';
+  preview.src = image.currentSrc || image.src;
+  const rect = (fixed ? image.parentElement : image).getBoundingClientRect();
+  const ratio = rect.width && rect.height ? rect.width / rect.height : 1.5;
+  sample.style.aspectRatio = String(ratio);
+  sample.style.maxWidth = 'calc(26vh * ' + ratio + ')';
+  sample.append(preview);
+  const fitNames = ['Целиком', 'Заполнить рамку'];
+  const computed = doc.defaultView.getComputedStyle(image);
+  preview.style.filter = computed.filter;
+  const position = computed.objectPosition.match(/^([\d.]+)% ([\d.]+)%$/);
+  const fit = field('fit', 'Как показать фото', { choices: fitNames,
+    value: (image.dataset.photoFit || computed.objectFit) === 'cover' ? fitNames[1] : fitNames[0] });
+  const sliders = [
+    field('scale', 'Масштаб, %', { range: { min: 50, max: 200 }, value: image.dataset.photoScale || 100 }),
+    field('x', 'Положение по горизонтали, %', { range: { min: 0, max: 100 }, value: image.dataset.photoX ?? Math.round(Number(position?.[1] ?? 50)) }),
+    field('y', 'Положение по вертикали, %', { range: { min: 0, max: 100 }, value: image.dataset.photoY ?? Math.round(Number(position?.[2] ?? 50)) }),
+  ];
+  for (const wrapper of sliders) {
+    const input = wrapper.querySelector('input');
+    const value = document.createElement('output');
+    value.textContent = input.value + '%';
+    input.addEventListener('input', () => { value.textContent = input.value + '%'; });
+    wrapper.append(value);
+  }
+  const width = fixed || framingOnly ? null : field('width', 'Ширина фото, px (необязательно)', {
+    value: image.dataset.photoWidth || '', number: { min: minMediaWidth, max: maxMediaWidth },
+  });
+  const file = framingOnly ? null : field('file', 'Заменить фото (необязательно)', { file: accept.image });
+  const description = framingOnly ? null : field('alt', 'Описание при замене фото', { value: image.alt });
+  const settings = [sample, fit, ...sliders, ...[width, file, description].filter(Boolean)];
+  function readFrame(values) {
+    return {
+      fit: values.fit === fitNames[0] ? 'contain' : 'cover',
+      x: Number(values.x), y: Number(values.y), scale: Number(values.scale),
+      width: values.width ? Number(values.width) : null,
+    };
+  }
+  function draw() {
+    const frame = readFrame(Object.fromEntries(new FormData(ui.form)));
+    preview.style.objectFit = frame.fit;
+    preview.style.objectPosition = frame.x + '% ' + frame.y + '%';
+    preview.style.transformOrigin = preview.style.objectPosition;
+    preview.style.transform = 'scale(' + frame.scale / 100 + ')';
+  }
+  let localUrl;
+  file?.querySelector('input').addEventListener('change', event => {
+    if (localUrl) URL.revokeObjectURL(localUrl);
+    const picked = event.target.files[0];
+    localUrl = picked ? URL.createObjectURL(picked) : null;
+    preview.src = localUrl || image.currentSrc || image.src;
+  });
+  showDialog('Кадрирование фото', settings, async values => {
+    const frame = readFrame(values);
+    if (values.file?.size) {
+      const item = await upload(values.file, 'image');
+      const replacement = { src: assetPrefix() + 'assets/editor-media/' + item.id + '/' + item.filename,
+        width: item.width, height: item.height, alt: values.alt };
+      for (const [name, value] of Object.entries(replacement)) image.setAttribute(name, value);
+      image.removeAttribute('srcset');
+      image.removeAttribute('sizes');
+      photoPatch(image, { replacement });
+    }
+    usePhotoFrame(image, frame);
+    photoPatch(image, { frame });
+    changed();
+  }, [button('Сбросить кадрирование', () => {
+    usePhotoFrame(image, null);
+    photoPatch(image, { frame: null });
+    ui.dialog.close();
+    changed();
+  }, { disabled: !image.hasAttribute('data-photo-fit') })]);
+  for (const wrapper of [fit, ...sliders]) wrapper.addEventListener('input', draw);
+  ui.dialog.addEventListener('close', () => { if (localUrl) URL.revokeObjectURL(localUrl); }, { once: true });
+  draw();
+}
+
+function photoMenu() {
+  const list = document.createElement('div');
+  list.className = 'photo-list';
+  for (const [index, image] of pagePhotos().entries()) {
+    const title = image.closest('.service-link, article, figure')?.querySelector('h3, .real-work__title, figcaption')?.textContent.trim();
+    const label = title || image.alt || (image.closest('.hero-photo') ? 'Главное фото' : 'Фото ' + (index + 1));
+    list.append(button(label, () => {
+      image.scrollIntoView({ block: 'center' });
+      activateTarget(image);
+    }));
+  }
+  showDialog('Фото на странице', [list], null);
 }
 
 const gallerySelector = '[data-content-gallery], .stone-portfolio__grid';
@@ -429,6 +581,7 @@ function refresh() {
   for (const item of doc.querySelectorAll('[data-editor-ui]')) item.remove();
   for (const item of doc.querySelectorAll('[data-editor-position]')) item.removeAttribute('data-editor-position');
   handles = new WeakMap();
+  for (const image of pagePhotos()) mark(image);
   if (page === 'home') {
     const grid = workGrid();
     grid.before(bar(canvasButton('+ Добавить работу', () => editWork(grid))));
@@ -436,6 +589,7 @@ function refresh() {
     markSortable(() => entries(grid), 'Переместить работу');
     return;
   }
+  if (page !== 'stones') return;
   const sections = serviceSections();
   const end = main.querySelector(':scope > aside');
   for (const section of sections) {
@@ -637,6 +791,8 @@ function editWork(grid, work = null) {
       refresh();
     }, { danger: true }),
   ] : [];
+  const cover = work?.querySelector('img');
+  if (cover) controls.unshift(button('Кадрирование', () => editPicture(cover, true)));
 
   function reorder(step) {
     const other = list[index + step];
@@ -651,8 +807,12 @@ function editWork(grid, work = null) {
     if (values.file.size) {
       const uploaded = await upload(values.file);
       const entry = mediaItem(uploaded, page, { ...values, id: item?.id });
+      if (item?.previewRatio) entry.previewRatio = item.previewRatio;
+      if (item?.previewPosition) entry.previewPosition = item.previewPosition;
       media.set(entry.id, entry);
       const fresh = element(card(entry));
+      const frame = savedPhotoFrame(cover);
+      if (frame) usePhotoFrame(fresh.querySelector('img'), frame);
       if (work) work.replaceWith(fresh);
       else grid.append(fresh);
       if (!home) {
@@ -708,6 +868,7 @@ function editMedia(node) {
     refresh();
   }, { danger: true })] : [];
   if (figure) controls.unshift(button('Размер ' + kind, () => editMediaWidth(figure, kind)));
+  if (figure && type === 'image') controls.unshift(button('Кадрирование', () => editPicture(node, true)));
   showDialog('Заменить ' + kind, [
     field('file', 'Выберите файл', { file: accept[type], required: true }),
     field('alt', 'Описание', { value: node.alt || node.getAttribute('aria-label') || '' }),
@@ -721,6 +882,8 @@ function editMedia(node) {
       const compact = Boolean(figure.closest('.stone-detail, ' + groupSelector));
       const replacement = element(mediaMarkup(type, next, values.caption, compact));
       if (mediaWidth(figure)) setMediaWidth(replacement, mediaWidth(figure));
+      const frame = savedPhotoFrame(node);
+      if (frame) usePhotoFrame(replacement.querySelector('img'), frame);
       figure.replaceWith(replacement);
       if (type === 'image') media.set(next.id, next);
     } else {
@@ -745,6 +908,8 @@ function activateTarget(target) {
   const grid = work?.parentElement;
   if (grid?.matches('.real-works__grid, .stone-portfolio__grid') && work.querySelector('[data-real-work]')) {
     editWork(grid, work);
+  } else if (target.matches('img') && !(page === 'stones' && target.closest('figure.stone-photo'))) {
+    editPicture(target);
   } else if (target.matches('img, video')) {
     editMedia(target);
   } else if (editableText(target)) {
@@ -756,6 +921,7 @@ function activateTarget(target) {
 
 function onCanvasClick(event) {
   if (event.target.closest('[data-editor-ui]')) return;
+  if (event.target.closest('.menu-trigger, .menu-close')) return;
   const target = event.target.closest('[data-editor-target]');
   if (target) {
     event.preventDefault();
@@ -801,6 +967,7 @@ ui.dialog.addEventListener('cancel', event => {
   if (ui.cancel.disabled) event.preventDefault();
 });
 ui.cancel.addEventListener('click', () => ui.dialog.close());
+ui.photos.addEventListener('click', photoMenu);
 ui.page.addEventListener('change', () => {
   if (dirty && !confirm('Отменить несохранённые изменения на этой странице?')) {
     ui.page.value = page;
