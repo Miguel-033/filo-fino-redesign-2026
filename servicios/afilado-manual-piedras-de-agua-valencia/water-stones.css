@@ -238,14 +238,17 @@
   aspect-ratio: auto;
 }
 
-.stone-photo[data-content-photo-width] {
-  width: min(100%, var(--content-photo-width));
-  /* Explicit sizing also applies to older photos with an inline automatic limit. */
-  max-width: 100% !important;
+.stone-photo:is([data-content-photo-width], [data-content-media-width]) {
+  width: min(100%, var(--content-media-width, var(--content-photo-width)));
   margin-inline: auto;
 }
 
-.stone-photo[data-content-photo-width] img {
+.stone-photo:is([data-content-photo-width], [data-content-media-width]):has(img) {
+  /* Explicit sizing also applies to older photos with an inline automatic limit. */
+  max-width: 100% !important;
+}
+
+.stone-photo:is([data-content-photo-width], [data-content-media-width]) img {
   aspect-ratio: auto;
 }
 
