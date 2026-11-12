@@ -51,8 +51,8 @@ let formAction;
 let publishing = false;
 let handles;
 const editorNode = '[data-editor-target], [data-editor-ui], [data-editor-position], [data-editor-dragging], [data-editor-drop]';
-const minPhotoWidth = 80;
-const maxPhotoWidth = 2000;
+const minMediaWidth = 80;
+const maxMediaWidth = 2000;
 
 function status(message) {
   ui.status.textContent = message;
@@ -333,36 +333,43 @@ function markSortable(items, label, alignEnd = false) {
   }
 }
 
-function setPhotoWidth(figure, width) {
+function mediaWidth(figure) {
+  return Number(figure.dataset.contentMediaWidth || figure.dataset.contentPhotoWidth || 0);
+}
+
+function setMediaWidth(figure, width) {
+  figure.removeAttribute('data-content-photo-width');
+  figure.style.removeProperty('--content-photo-width');
   if (!width) {
-    figure.removeAttribute('data-content-photo-width');
-    figure.style.removeProperty('--content-photo-width');
+    figure.removeAttribute('data-content-media-width');
+    figure.style.removeProperty('--content-media-width');
     if (!figure.style.length) figure.removeAttribute('style');
     return;
   }
-  figure.dataset.contentPhotoWidth = String(width);
-  figure.style.setProperty('--content-photo-width', width + 'px');
+  figure.dataset.contentMediaWidth = String(width);
+  figure.style.setProperty('--content-media-width', width + 'px');
 }
 
-function editPhotoWidth(figure) {
+function editMediaWidth(figure, kind) {
   const note = document.createElement('p');
-  note.textContent = 'Оставьте поле пустым, чтобы вернуть автоматический размер. На узком экране фото впишется в колонку.';
-  showDialog('Размер фото', [
-    field('width', 'Ширина фото, px', {
-      value: figure.dataset.contentPhotoWidth || '',
-      number: { min: minPhotoWidth, max: maxPhotoWidth },
+  note.textContent = 'Оставьте поле пустым, чтобы вернуть автоматический размер. На узком экране размер подстроится под колонку.';
+  showDialog('Размер ' + kind, [
+    field('width', 'Ширина ' + kind + ', px', {
+      value: mediaWidth(figure) || '',
+      number: { min: minMediaWidth, max: maxMediaWidth },
     }),
     note,
   ], values => {
     const width = Number(values.width);
-    if (width !== Number(figure.dataset.contentPhotoWidth || 0)) {
-      setPhotoWidth(figure, width);
+    if (width !== mediaWidth(figure)) {
+      setMediaWidth(figure, width);
       changed();
     }
   });
 }
 
-function photoResizeHandle(figure) {
+function mediaResizeHandle(figure) {
+  const kind = figure.querySelector('video') ? 'видео' : 'фото';
   if (doc.defaultView.getComputedStyle(figure).position === 'static') {
     figure.setAttribute('data-editor-position', '');
   }
@@ -371,18 +378,18 @@ function photoResizeHandle(figure) {
   handle.textContent = '↔';
   handle.className = 'editor-drag editor-drag--overlay editor-resize';
   handle.setAttribute('data-editor-ui', '');
-  handle.setAttribute('aria-label', 'Размер фото');
-  handle.title = 'Размер фото — нажмите или потяните в сторону';
+  handle.setAttribute('aria-label', 'Размер ' + kind);
+  handle.title = 'Размер ' + kind + ' — нажмите или потяните в сторону';
   let drag;
   let suppressClick = false;
-  const clamp = value => Math.max(minPhotoWidth, Math.min(maxPhotoWidth, Math.round(value)));
+  const clamp = value => Math.max(minMediaWidth, Math.min(maxMediaWidth, Math.round(value)));
 
   handle.addEventListener('pointerdown', event => {
     if (!event.isPrimary || event.button !== 0 || busy) return;
     suppressClick = false;
     drag = {
       id: event.pointerId, x: event.clientX, width: figure.getBoundingClientRect().width,
-      saved: Number(figure.dataset.contentPhotoWidth || 0),
+      saved: mediaWidth(figure),
     };
     handle.setPointerCapture(event.pointerId);
   });
@@ -391,8 +398,8 @@ function photoResizeHandle(figure) {
     const delta = event.clientX - drag.x;
     if (!drag.moved && Math.abs(delta) < 4) return;
     drag.moved = true;
-    // Resized photos are centered in their column, so the right edge travels half the width change.
-    setPhotoWidth(figure, clamp(drag.width + delta * 2));
+    // Resized figures are centered in their column, so the right edge travels half the width change.
+    setMediaWidth(figure, clamp(drag.width + delta * 2));
   });
   function end(event) {
     if (drag?.id !== event.pointerId) return;
@@ -400,19 +407,19 @@ function photoResizeHandle(figure) {
     drag = null;
     if (!previous.moved) return;
     suppressClick = true;
-    if (event.type !== 'pointerup') setPhotoWidth(figure, previous.saved);
-    else if (previous.saved !== Number(figure.dataset.contentPhotoWidth)) changed();
+    if (event.type !== 'pointerup') setMediaWidth(figure, previous.saved);
+    else if (previous.saved !== mediaWidth(figure)) changed();
   }
   for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) handle.addEventListener(type, end);
-  handle.addEventListener('click', () => {
-    if (!suppressClick) editPhotoWidth(figure);
+  handle.addEventListener('click', event => {
+    if (!suppressClick || event.detail === 0) editMediaWidth(figure, kind);
     suppressClick = false;
   });
   handle.addEventListener('keydown', event => {
     if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
     event.preventDefault();
     const width = figure.getBoundingClientRect().width;
-    setPhotoWidth(figure, clamp(width + (event.key === 'ArrowLeft' ? -16 : 16)));
+    setMediaWidth(figure, clamp(width + (event.key === 'ArrowLeft' ? -16 : 16)));
     changed();
   });
   figure.append(handle);
@@ -452,8 +459,8 @@ function refresh() {
     markSortable(() => entries(grid), 'Переместить работу');
   }
   for (const section of sections) {
-    for (const figure of section.querySelectorAll('figure.stone-photo:has(img)')) {
-      if (!figure.closest(gallerySelector)) photoResizeHandle(figure);
+    for (const figure of section.querySelectorAll('figure.stone-photo:has(img, video)')) {
+      if (!figure.closest(gallerySelector)) mediaResizeHandle(figure);
     }
   }
   main.querySelectorAll('[data-real-work], img, video').forEach(node => {
@@ -539,7 +546,7 @@ function addSectionMedia(section, type) {
     const item = mediaItem(uploaded, page, { title: values.caption || alt, alt });
     if (photo) media.set(item.id, item);
     const figure = element(mediaMarkup(type, item, values.caption, true));
-    if (photo) setPhotoWidth(figure, Math.min(560, Math.max(minPhotoWidth, item.width)));
+    if (photo) setMediaWidth(figure, Math.min(560, Math.max(minMediaWidth, item.width)));
     mediaGroup(section).append(figure);
     changed();
     refresh();
@@ -700,7 +707,7 @@ function editMedia(node) {
     changed();
     refresh();
   }, { danger: true })] : [];
-  if (figure && type === 'image') controls.unshift(button('Размер фото', () => editPhotoWidth(figure)));
+  if (figure) controls.unshift(button('Размер ' + kind, () => editMediaWidth(figure, kind)));
   showDialog('Заменить ' + kind, [
     field('file', 'Выберите файл', { file: accept[type], required: true }),
     field('alt', 'Описание', { value: node.alt || node.getAttribute('aria-label') || '' }),
@@ -713,7 +720,7 @@ function editMedia(node) {
     if (figure) {
       const compact = Boolean(figure.closest('.stone-detail, ' + groupSelector));
       const replacement = element(mediaMarkup(type, next, values.caption, compact));
-      if (figure.dataset.contentPhotoWidth) setPhotoWidth(replacement, Number(figure.dataset.contentPhotoWidth));
+      if (mediaWidth(figure)) setMediaWidth(replacement, mediaWidth(figure));
       figure.replaceWith(replacement);
       if (type === 'image') media.set(next.id, next);
     } else {
