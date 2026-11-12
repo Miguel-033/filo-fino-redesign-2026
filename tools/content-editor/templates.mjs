@@ -8,8 +8,7 @@ export const categories = ['cuchillos', 'tijeras', 'manicura'];
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 
-export function mediaItem(upload, page, fields) {
-  const prefix = page === 'home' ? '' : '../../';
+export function mediaItem(upload, prefix, fields) {
   const directory = prefix + 'assets/editor-media/' + upload.id + '/';
   const preview = directory + upload.previewFilename;
   return {

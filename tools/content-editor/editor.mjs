@@ -41,7 +41,6 @@ let revision;
 let doc;
 let main;
 let hero;
-let originalHero;
 let original;
 let media;
 let dirty = false;
@@ -95,7 +94,7 @@ function workGrid() {
 }
 
 function serviceSections() {
-  return [...main.children].filter(element => element.matches('section') && element !== hero);
+  return [...main.children].filter(element => element.matches('section, article, aside') && element !== hero);
 }
 
 function entries(grid) {
@@ -115,7 +114,7 @@ function loadFrame(frame, url) {
 
 function clean(element) {
   const clone = element.cloneNode(true);
-  for (const node of [clone, ...clone.querySelectorAll(editorNode + ', [data-editor-photo-index], details')]) {
+  for (const node of [clone, ...clone.querySelectorAll(editorNode + ', [data-editor-photo-index], [data-editor-details-open]')]) {
     if (node.hasAttribute('data-editor-ui')) {
       node.remove();
       continue;
@@ -128,27 +127,26 @@ function clean(element) {
       if (node.hasAttribute('data-editor-tab')) node.removeAttribute('tabindex');
       node.removeAttribute('data-editor-tab');
     }
-    if (node.matches('details')) node.removeAttribute('open');
+    if (node.hasAttribute('data-editor-details-open')) {
+      node.removeAttribute('open');
+      node.removeAttribute('data-editor-details-open');
+    }
   }
   return clone.outerHTML;
 }
 
 function draft() {
   const photos = [...photoEdits.values()];
-  if (!session.pages[page].type) return { page, revision, photos };
-  const items = page === 'home' ? entries(workGrid()) : serviceSections();
-  const active = page === 'home' ? workGrid() : main;
-  const data = [...active.querySelectorAll('[data-real-work]')]
+  const data = [...main.querySelectorAll('[data-real-work]')]
     .map(node => media.get(node.dataset.realWork)).filter(Boolean);
-  const blocks = items.map(node => {
+  const blocks = [...main.children].filter(node => !node.hasAttribute('data-editor-ui')).map(node => {
+    const saved = original.get(node);
+    if (!node.matches('section, article, aside')) return { index: saved.index };
     const html = clean(node);
-    return original.get(node)?.html === html ? { index: original.get(node).index } : { html };
+    if (!saved) return { html };
+    return saved.html === html ? { index: saved.index } : { index: saved.index, html };
   });
-  return {
-    page, revision, media: data, photos,
-    ...(page === 'home' ? { cards: blocks } :
-      { sections: blocks, hero: clean(hero) === originalHero ? null : clean(hero) }),
-  };
+  return { page, revision, media: data, photos, blocks };
 }
 
 function element(html) {
@@ -182,15 +180,18 @@ async function openPage(id, scrollY = null) {
     const data = JSON.parse(doc.querySelector('#real-works-data')?.textContent || '[]');
     media = new Map(data.map(item => [item.id, item]));
     photoEdits = new Map();
-    originalHero = hero ? clean(hero) : '';
-    const items = id === 'home' ? entries(workGrid()) : id === 'stones' ? serviceSections() : [];
-    original = new Map(items.map((node, index) => [node, { html: clean(node), index }]));
+    original = new Map([...main.children].map((node, index) => [node, { html: clean(node), index }]));
     const style = doc.createElement('style');
     style.textContent = editorCss;
     doc.head.append(style);
+    ensureStyle('water-stones.css', 'servicios/afilado-manual-piedras-de-agua-valencia/water-stones.css');
+    ensureStyle('real-works.css', 'real-works.css');
     doc.addEventListener('click', onCanvasClick, true);
     doc.addEventListener('keydown', onCanvasKey, true);
-    if (id === 'stones') main.querySelectorAll('details').forEach(details => { details.open = true; });
+    main.querySelectorAll('details:not([open])').forEach(details => {
+      details.setAttribute('data-editor-details-open', '');
+      details.open = true;
+    });
     refresh();
     if (scrollY !== null) ui.frame.contentWindow.scrollTo(0, scrollY);
     dirty = false;
@@ -278,10 +279,10 @@ function mark(node) {
   }
 }
 
-const textSelector = 'h1 > span, h2, h3, h4, p, dt, dd, figcaption, summary, .knife-hero-fact strong, .knife-hero-fact span';
+const textSelector = 'h1, h1 span, h2, h3, h4, h5, h6, p, dt, dd, li, td, th, figcaption, summary, strong, em, a, .service-cta span, .knife-hero-fact span';
 function editableText(node) {
-  return node.matches(textSelector) && !node.closest('a, button, [data-real-work], .knife-address') &&
-    [...node.children].every(child => child.localName === 'svg');
+  return node.matches(textSelector) && !node.closest('nav, button, [data-real-work], [data-editor-ui]') &&
+    textNodes(node).length > 0;
 }
 
 function pagePhotos() {
@@ -291,6 +292,14 @@ function pagePhotos() {
 
 function assetPrefix() {
   return '../'.repeat(session.pages[page].path.split('/').length - 1);
+}
+
+function ensureStyle(name, path) {
+  if (doc.querySelector('link[href*="' + name + '"]')) return;
+  const link = doc.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = assetPrefix() + path + '?v=editor';
+  doc.head.append(link);
 }
 
 function photoPatch(image, change) {
@@ -312,12 +321,7 @@ function usePhotoFrame(image, frame) {
     image.style.setProperty('--photo-y', frame.y + '%');
     image.style.setProperty('--photo-scale', frame.scale / 100);
     if (frame.width) image.style.setProperty('--photo-width', frame.width + 'px');
-    if (!doc.querySelector('link[href*="photo-framing.css"]')) {
-      const link = doc.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = assetPrefix() + 'photo-framing.css?v=1';
-      doc.head.append(link);
-    }
+    ensureStyle('photo-framing.css', 'photo-framing.css');
   }
   if (!image.style.length) image.removeAttribute('style');
 }
@@ -433,7 +437,7 @@ const gallerySelector = '[data-content-gallery], .stone-portfolio__grid';
 const groupSelector = '[data-content-media-group], .stone-types__photos';
 
 function sectionUnits(section) {
-  return [...section.children].filter(node => !node.matches('[data-editor-ui], ' + gallerySelector));
+  return [...section.children].filter(node => !node.matches('[data-editor-ui], script, dialog, ' + gallerySelector));
 }
 
 function moveItem(source, target, items, focus = false) {
@@ -478,6 +482,11 @@ function markSortable(items, label, alignEnd = false) {
   const siblings = items();
   if (siblings.length < 2) return;
   for (const [index, node] of siblings.entries()) {
+    if (node.matches('img, br, hr, source, track, input')) continue;
+    if (node.matches('video')) {
+      node.after(bar(dragHandle(node, items, label + ' ' + (index + 1))));
+      continue;
+    }
     if (doc.defaultView.getComputedStyle(node).position === 'static') node.setAttribute('data-editor-position', '');
     const handle = dragHandle(node, items, label + ' ' + (index + 1), true);
     if (alignEnd) handle.classList.add('editor-drag--end');
@@ -521,27 +530,42 @@ function editMediaWidth(figure, kind) {
 }
 
 function mediaResizeHandle(figure) {
-  const kind = figure.querySelector('video') ? 'видео' : 'фото';
-  if (doc.defaultView.getComputedStyle(figure).position === 'static') {
+  const nativeVideo = figure.matches('video');
+  const inlineImage = figure.matches('img');
+  const inline = nativeVideo || inlineImage;
+  const kind = nativeVideo || figure.querySelector('video') ? 'видео' : 'фото';
+  if (!inline && doc.defaultView.getComputedStyle(figure).position === 'static') {
     figure.setAttribute('data-editor-position', '');
   }
   const handle = doc.createElement('button');
   handle.type = 'button';
   handle.textContent = '↔';
-  handle.className = 'editor-drag editor-drag--overlay editor-resize';
+  handle.className = inline ? 'editor-drag editor-resize' : 'editor-drag editor-drag--overlay editor-resize';
   handle.setAttribute('data-editor-ui', '');
   handle.setAttribute('aria-label', 'Размер ' + kind);
   handle.title = 'Размер ' + kind + ' — нажмите или потяните в сторону';
   let drag;
   let suppressClick = false;
   const clamp = value => Math.max(minMediaWidth, Math.min(maxMediaWidth, Math.round(value)));
+  const savedWidth = () => inlineImage ? savedPhotoFrame(figure)?.width || 0 : mediaWidth(figure);
+  function resize(width) {
+    if (inlineImage) {
+      const frame = savedPhotoFrame(figure) || { fit: 'contain', x: 50, y: 50, scale: 100 };
+      usePhotoFrame(figure, { ...frame, width });
+    } else setMediaWidth(figure, width);
+  }
+  function finish() {
+    if (inlineImage) photoPatch(figure, { frame: savedPhotoFrame(figure) });
+    changed();
+  }
 
   handle.addEventListener('pointerdown', event => {
     if (!event.isPrimary || event.button !== 0 || busy) return;
     suppressClick = false;
     drag = {
       id: event.pointerId, x: event.clientX, width: figure.getBoundingClientRect().width,
-      saved: mediaWidth(figure),
+      saved: savedWidth(),
+      frame: inlineImage ? savedPhotoFrame(figure) : null,
     };
     handle.setPointerCapture(event.pointerId);
   });
@@ -551,7 +575,7 @@ function mediaResizeHandle(figure) {
     if (!drag.moved && Math.abs(delta) < 4) return;
     drag.moved = true;
     // Resized figures are centered in their column, so the right edge travels half the width change.
-    setMediaWidth(figure, clamp(drag.width + delta * 2));
+    resize(clamp(drag.width + delta * 2));
   });
   function end(event) {
     if (drag?.id !== event.pointerId) return;
@@ -559,39 +583,47 @@ function mediaResizeHandle(figure) {
     drag = null;
     if (!previous.moved) return;
     suppressClick = true;
-    if (event.type !== 'pointerup') setMediaWidth(figure, previous.saved);
-    else if (previous.saved !== mediaWidth(figure)) changed();
+    if (event.type !== 'pointerup') {
+      if (inlineImage) usePhotoFrame(figure, previous.frame);
+      else setMediaWidth(figure, previous.saved);
+    } else if (previous.saved !== savedWidth()) finish();
   }
   for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) handle.addEventListener(type, end);
   handle.addEventListener('click', event => {
-    if (!suppressClick || event.detail === 0) editMediaWidth(figure, kind);
+    if (!suppressClick || event.detail === 0) {
+      if (inlineImage) editPicture(figure);
+      else editMediaWidth(figure, kind);
+    }
     suppressClick = false;
   });
   handle.addEventListener('keydown', event => {
     if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
     event.preventDefault();
     const width = figure.getBoundingClientRect().width;
-    setMediaWidth(figure, clamp(width + (event.key === 'ArrowLeft' ? -16 : 16)));
-    changed();
+    resize(clamp(width + (event.key === 'ArrowLeft' ? -16 : 16)));
+    finish();
   });
-  figure.append(handle);
+  if (nativeVideo) figure.after(bar(handle, canvasButton('Заменить видео', () => editMedia(figure))));
+  else if (inlineImage) figure.after(bar(handle));
+  else figure.append(handle);
 }
 
 function refresh() {
   for (const item of doc.querySelectorAll('[data-editor-ui]')) item.remove();
   for (const item of doc.querySelectorAll('[data-editor-position]')) item.removeAttribute('data-editor-position');
   handles = new WeakMap();
-  for (const image of pagePhotos()) mark(image);
-  if (page === 'home') {
-    const grid = workGrid();
+  for (const image of pagePhotos()) {
+    mark(image);
+    if (main.contains(image) && !image.closest('.stone-photo') && !fixedPhoto(image)) mediaResizeHandle(image);
+  }
+  const homeGrid = workGrid();
+  if (homeGrid) {
+    const grid = homeGrid;
     grid.before(bar(canvasButton('+ Добавить работу', () => editWork(grid))));
     grid.querySelectorAll('[data-real-work]').forEach(mark);
     markSortable(() => entries(grid), 'Переместить работу');
-    return;
   }
-  if (page !== 'stones') return;
   const sections = serviceSections();
-  const end = main.querySelector(':scope > aside');
   for (const section of sections) {
     const index = sections.indexOf(section);
     section.before(bar(
@@ -600,14 +632,14 @@ function refresh() {
       ...(sections.length > 1 ? [dragHandle(section, serviceSections, 'Переместить секцию')] : []),
       canvasButton('Вверх', () => moveSection(section, -1), { disabled: !index }),
       canvasButton('Вниз', () => moveSection(section, 1), { disabled: index === sections.length - 1 }),
-      canvasButton('Удалить блок', () => removeSection(section)),
+      canvasButton('Удалить блок', () => removeSection(section), { disabled: !section.textContent.trim() && !section.childElementCount }),
     ));
     markSortable(() => sectionUnits(section), 'Переместить содержимое секции', true);
     for (const group of section.querySelectorAll(groupSelector)) {
       markSortable(() => entries(group), 'Переместить фото или видео');
     }
   }
-  end.before(bar(canvasButton('+ Добавить блок', () => chooseBlock(end))));
+  main.append(bar(canvasButton('+ Добавить блок', () => chooseBlock(null))));
   for (const grid of main.querySelectorAll(gallerySelector)) {
     grid.before(bar(canvasButton('+ Добавить фото или видео', () => editWork(grid))));
     markSortable(() => entries(grid), 'Переместить работу');
@@ -617,7 +649,10 @@ function refresh() {
       if (!figure.closest(gallerySelector)) mediaResizeHandle(figure);
     }
   }
-  main.querySelectorAll('[data-real-work], img, video').forEach(node => {
+  for (const video of main.querySelectorAll('video')) {
+    if (!video.closest('.stone-photo, dialog')) mediaResizeHandle(video);
+  }
+  main.querySelectorAll('[data-real-work], video').forEach(node => {
     if (!node.closest('nav, [data-editor-ui]')) mark(node);
   });
   main.querySelectorAll(textSelector).forEach(node => {
@@ -633,7 +668,9 @@ function moveSection(section, step) {
 function removeSection(section) {
   showDialog('Удалить блок?', [], null, [
     button('Удалить', () => {
-      if (section.id === 'visita' && section.childElementCount) {
+      const linked = section.id && [...doc.querySelectorAll('a[href]')].some(link =>
+        link.getAttribute('href').endsWith('#' + section.id));
+      if (linked) {
         const anchor = doc.createElement('section');
         anchor.id = section.id;
         anchor.setAttribute('aria-hidden', 'true');
@@ -655,14 +692,15 @@ function chooseBlock(before) {
 }
 
 function editSection(section) {
-  const gallery = section.querySelector(gallerySelector);
+  const gallery = section.querySelector(gallerySelector + ', .real-works__grid');
   const controls = gallery ? [button('Добавить фото или видео', () => editWork(gallery))] : [
     button('Добавить фото', () => addSectionMedia(section, 'image')),
     button('Добавить видео', () => addSectionMedia(section, 'video')),
   ];
   const units = sectionUnits(section);
-  const visual = units.find(node => node.matches('figure.stone-photo, ' + groupSelector));
-  const text = units.find(node => node !== visual && !node.matches('figure.stone-photo, ' + groupSelector));
+  const visualSelector = 'figure, video, img, ' + groupSelector;
+  const visual = units.find(node => node.matches(visualSelector));
+  const text = units.find(node => !node.matches(visualSelector));
   if (visual && text) {
     controls.push(button('Поменять фото или видео и текст местами', () => {
       ui.dialog.close();
@@ -697,7 +735,7 @@ function addSectionMedia(section, type) {
     const alt = values.alt.trim();
     if (!alt) throw new Error('Введите описание.');
     const uploaded = await upload(values.file, type);
-    const item = mediaItem(uploaded, page, { title: values.caption || alt, alt });
+    const item = mediaItem(uploaded, assetPrefix(), { title: values.caption || alt, alt });
     if (photo) media.set(item.id, item);
     const figure = element(mediaMarkup(type, item, values.caption, true));
     if (photo) setMediaWidth(figure, Math.min(560, Math.max(minMediaWidth, item.width)));
@@ -726,12 +764,14 @@ function createBlock(kind, before) {
     let item;
     if (isPhoto || isVideo) {
       const uploaded = await upload(values.file, isPhoto ? 'image' : 'video');
-      item = mediaItem(uploaded, page, { title: values.caption || values.alt, alt: values.alt });
+      item = mediaItem(uploaded, assetPrefix(), { title: values.caption || values.alt, alt: values.alt });
       media.set(item.id, item);
     }
-    const contact = hero.querySelector('.hero-actions .button-brass')?.outerHTML || '';
-    const section = element(block(kind, values, item, contact));
-    before.before(section);
+    const contact = doc.querySelector('.hero-actions .button-brass, a[data-whatsapp], a[href*="wa.me/"]')?.cloneNode(true);
+    if (contact) contact.classList.add('button', 'button-brass');
+    const section = element(block(kind, values, item, contact ? clean(contact) : ''));
+    if (before) before.before(section);
+    else main.append(section);
     changed();
     refresh();
     section.scrollIntoView({ block: 'nearest' });
@@ -766,7 +806,7 @@ function editWork(grid, work = null) {
   const item = media.get(link?.dataset.realWork);
   const list = entries(grid);
   const index = list.indexOf(work);
-  const home = page === 'home';
+  const home = grid === workGrid();
   const title = field('title', 'Короткое название', { value: item?.coverTitle || item?.caption || '', required: true });
   const fields = [
     title,
@@ -806,7 +846,7 @@ function editWork(grid, work = null) {
     if (!values.title) throw new Error('Введите название.');
     if (values.file.size) {
       const uploaded = await upload(values.file);
-      const entry = mediaItem(uploaded, page, { ...values, id: item?.id });
+      const entry = mediaItem(uploaded, assetPrefix(), { ...values, id: item?.id });
       if (item?.previewRatio) entry.previewRatio = item.previewRatio;
       if (item?.previewPosition) entry.previewPosition = item.previewPosition;
       media.set(entry.id, entry);
@@ -831,21 +871,23 @@ function editWork(grid, work = null) {
   }, controls);
 }
 
-function textValue(node) {
-  return [...node.childNodes].filter(child => child.nodeType === Node.TEXT_NODE)
-    .map(child => child.textContent).join('').trim();
+function textNodes(node) {
+  return [...node.childNodes].filter(child => child.nodeType === Node.TEXT_NODE && child.textContent.trim());
 }
 
 function editText(node) {
-  showDialog('Редактировать текст', [
-    field('copy', 'Текст на странице', { long: true, value: textValue(node), required: true }),
-  ], values => {
-    const text = values.copy.trim();
-    if (!text) throw new Error('Введите текст.');
-    for (const child of [...node.childNodes]) {
-      if (child.nodeType === Node.TEXT_NODE) child.remove();
+  const parts = textNodes(node);
+  const fields = parts.map((part, index) => field('copy' + index,
+    parts.length === 1 ? 'Текст на странице' : 'Текст на странице ' + (index + 1),
+    { long: true, value: part.textContent.trim(), required: true }));
+  showDialog('Редактировать текст', fields, values => {
+    const text = parts.map((_, index) => values['copy' + index].trim());
+    if (text.some(value => !value)) throw new Error('Введите текст.');
+    for (const [index, part] of parts.entries()) {
+      if (part.textContent.trim() !== text[index]) {
+        part.textContent = part.textContent.replace(/\S[\s\S]*\S|\S/, () => text[index]);
+      }
     }
-    node.prepend(doc.createTextNode(text));
     changed();
   });
 }
@@ -867,7 +909,7 @@ function editMedia(node) {
     changed();
     refresh();
   }, { danger: true })] : [];
-  if (figure) controls.unshift(button('Размер ' + kind, () => editMediaWidth(figure, kind)));
+  if (figure || type === 'video') controls.unshift(button('Размер ' + kind, () => editMediaWidth(figure || node, kind)));
   if (figure && type === 'image') controls.unshift(button('Кадрирование', () => editPicture(node, true)));
   showDialog('Заменить ' + kind, [
     field('file', 'Выберите файл', { file: accept[type], required: true }),
@@ -875,7 +917,7 @@ function editMedia(node) {
     ...(figure ? [field('caption', 'Подпись (необязательно)', { value: caption })] : []),
   ], async values => {
     const uploaded = await upload(values.file, type);
-    const next = mediaItem(uploaded, page, {
+    const next = mediaItem(uploaded, assetPrefix(), {
       id: item?.id, title: values.caption || values.alt || (type === 'image' ? 'Foto' : 'Vídeo'), alt: values.alt,
     });
     if (figure) {
@@ -908,7 +950,7 @@ function activateTarget(target) {
   const grid = work?.parentElement;
   if (grid?.matches('.real-works__grid, .stone-portfolio__grid') && work.querySelector('[data-real-work]')) {
     editWork(grid, work);
-  } else if (target.matches('img') && !(page === 'stones' && target.closest('figure.stone-photo'))) {
+  } else if (target.matches('img') && !target.closest('figure.stone-photo')) {
     editPicture(target);
   } else if (target.matches('img, video')) {
     editMedia(target);

@@ -52,7 +52,7 @@
 .stone-photo a {
   position: relative;
   display: block;
-  border: 1px solid var(--stone-rule);
+  border: 1px solid var(--stone-rule, var(--line));
 }
 
 .stone-photo a:focus-visible {
@@ -70,7 +70,7 @@
 .stone-photo figcaption {
   margin-top: 8px;
   font-size: 13px;
-  color: var(--stone-copy);
+  color: var(--stone-copy, var(--steel));
 }
 
 .stone-zoom {
@@ -240,6 +240,11 @@
 
 .stone-photo:is([data-content-photo-width], [data-content-media-width]) {
   width: min(100%, var(--content-media-width, var(--content-photo-width)));
+  margin-inline: auto;
+}
+
+video[data-content-media-width]:not(:fullscreen) {
+  width: min(100%, var(--content-media-width));
   margin-inline: auto;
 }
 

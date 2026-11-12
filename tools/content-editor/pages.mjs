@@ -1,12 +1,11 @@
 import { createHash } from 'node:crypto';
-import { applyPhotos, photoStyles } from './photos.mjs';
+import { applyPhotos, pagePrefix, photoStyles } from './photos.mjs';
 
 export const pages = {
-  home: { path: 'index.html', label: 'Главная', type: 'gallery' },
+  home: { path: 'index.html', label: 'Главная' },
   stones: {
     path: 'servicios/afilado-manual-piedras-de-agua-valencia/index.html',
     label: 'Ручная заточка на водных камнях',
-    type: 'sections',
   },
   services: { path: 'servicios/index.html', label: 'Все услуги' },
   knives: { path: 'servicios/afilado-cuchillos-valencia/index.html', label: 'Заточка ножей' },
@@ -19,20 +18,15 @@ export const pages = {
   privacy: { path: 'legal/politica-privacidad.html', label: 'Политика конфиденциальности' },
 };
 
-const gallery = /(<div class="real-works__grid">)[\s\S]*?(<\/div>\s*<\/section>)/;
 const data = /(<script type="application\/json" id="real-works-data">)[\s\S]*?(<\/script>)/;
-const main = /(<main id="main">)([\s\S]*?)(<\/main>)/;
-const sections = /<section\b[^>]*>[\s\S]*?<\/section>/g;
+const main = /(<main\b[^>]*>)([\s\S]*?)(<\/main>)/i;
+const tags = /<!--[\s\S]*?-->|<script\b[^>]*>[\s\S]*?<\/script\s*>|<\/?[a-z][\w:-]*(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi;
+const voidTags = new Set('area base br col embed hr img input link meta param source track wbr'.split(' '));
+const editableTags = new Set(['section', 'article', 'aside']);
 const safeId = /^[a-z0-9-]+$/;
 const fragmentLimit = 300_000;
 
 export const revision = html => createHash('sha256').update(html).digest('hex');
-
-function requireMatch(html, pattern) {
-  const match = html.match(pattern);
-  if (!match) throw new Error('Разметка страницы изменилась. Откройте поддерживаемую версию сайта.');
-  return match;
-}
 
 function fragment(html, root) {
   if (typeof html !== 'string' || html.length > fragmentLimit ||
@@ -43,62 +37,101 @@ function fragment(html, root) {
   return html;
 }
 
-function useOriginals(incoming, originals, tag) {
-  if (!Array.isArray(incoming) || incoming.length > 300) throw new Error('Слишком много блоков.');
-  const used = new Set();
-  return incoming.map(block => {
-    if (block.index !== undefined) {
-      if (!Number.isInteger(block.index) || !originals[block.index] || used.has(block.index)) {
-        throw new Error('Исходный порядок блоков изменился.');
-      }
-      used.add(block.index);
-      return originals[block.index];
+// Find direct children without reserializing untouched HTML, including raw JSON scripts.
+function mainChildren(body) {
+  const children = [];
+  const stack = [];
+  let start;
+  let cursor = 0;
+  for (const match of body.matchAll(tags)) {
+    const raw = match[0];
+    if (raw.startsWith('<!--')) continue;
+    const [, closing, tag] = raw.match(/^<(\/?)([\w:-]+)/);
+    const name = tag.toLowerCase();
+    if (closing) {
+      if (stack.pop() !== name) throw new Error('Не удалось разобрать структуру страницы.');
+    } else {
+      if (stack.length === 0) start = { name, index: match.index };
+      if (!voidTags.has(name) && !raw.endsWith('/>') && !(name === 'script' && /<\/script\s*>$/i.test(raw))) stack.push(name);
     }
-    return fragment(block.html, tag);
+    if (stack.length === 0 && start) {
+      const end = match.index + raw.length;
+      children.push({ tag: start.name, before: body.slice(cursor, start.index), html: body.slice(start.index, end) });
+      cursor = end;
+      start = null;
+    }
+  }
+  if (stack.length) throw new Error('Не удалось разобрать структуру страницы.');
+  return { children, after: body.slice(cursor) };
+}
+
+function editable(part) {
+  return editableTags.has(part.tag);
+}
+
+function applyBlocks(html, sequence) {
+  if (!Array.isArray(sequence) || sequence.length > 300) throw new Error('Слишком много блоков страницы.');
+  if (!main.test(html)) throw new Error('Не найден основной контент страницы.');
+  return html.replace(main, (_, opening, body, closing) => {
+    const { children, after } = mainChildren(body);
+    const used = new Set();
+    let lastFixed = -1;
+    const parts = sequence.map(part => {
+      if (part.index === undefined) return '\n    ' + fragment(part.html, 'section');
+      const saved = children[part.index];
+      if (!Number.isInteger(part.index) || !saved || used.has(part.index)) throw new Error('Исходный порядок блоков изменился.');
+      used.add(part.index);
+      if (!editable(saved)) {
+        if (part.html !== undefined || part.index <= lastFixed) throw new Error('Служебный блок страницы защищён.');
+        lastFixed = part.index;
+      }
+      return saved.before + (part.html === undefined ? saved.html : fragment(part.html, saved.tag));
+    });
+    if (children.some((part, index) => (!editable(part) || /\bclass="hero(?:\s|")/.test(part.html.slice(0, part.html.indexOf('>')))) && !used.has(index))) {
+      throw new Error('Служебный блок страницы защищён.');
+    }
+    return opening + parts.join('') + after + closing;
   });
 }
 
-function applyGallery(html, cards) {
-  const grid = requireMatch(html, gallery)[0];
-  const originals = [...grid.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(match => match[0]);
-  const entries = useOriginals(cards, originals, 'article');
-  return html.replace(gallery, (_, start, end) => start + '\n' +
-    entries.map(entry => '        ' + entry).join('\n') + '\n      ' + end);
+function addResource(html, name, tag) {
+  const existing = [...html.matchAll(/\b(?:href|src)=["']([^"']+)["']/g)]
+    .some(match => match[1].split('?')[0].endsWith('/' + name) || match[1].split('?')[0] === name);
+  if (existing) return html;
+  return html.replace('</head>', tag + '\n</head>');
 }
 
-function applySections(html, draft) {
-  const [, , body] = requireMatch(html, main);
-  const matches = [...body.matchAll(sections)];
-  if (matches.length === 0 || !matches[0][0].startsWith('<section class="hero ')) {
-    throw new Error('Не найдена структура страницы услуги.');
-  }
-  const [hero, ...editable] = matches;
-  const afterHero = hero.index + hero[0].length;
-  const first = editable[0]?.index ?? body.indexOf('<aside');
-  const last = editable.at(-1);
-  const end = last ? last.index + last[0].length : first;
-  if (first < afterHero) throw new Error('Не найдена область редактирования услуги.');
-  const entries = useOriginals(draft.sections, editable.map(match => match[0]), 'section');
-  const savedHero = draft.hero == null ? hero[0] : fragment(draft.hero, 'section');
-  if (!savedHero.startsWith('<section class="hero ')) throw new Error('Структура первого экрана защищена.');
-  return html.replace(main, (_, open, content, close) => open + content.slice(0, hero.index) + savedHero +
-    content.slice(afterHero, first) + entries.join('\n\n    ') + content.slice(end) + close);
+export function contentStyles(html, path) {
+  if (!/\b(?:stone-section|stone-photo|content-media-group)\b|\bdata-content-media-width=/.test(html)) return html;
+  return addResource(html, 'water-stones.css',
+    '<link rel="stylesheet" href="' + pagePrefix(path) + 'servicios/afilado-manual-piedras-de-agua-valencia/water-stones.css?v=editor">');
+}
+
+function galleryResources(html, path, entries) {
+  const content = JSON.stringify(entries).replaceAll('<', '\\u003c');
+  if (data.test(html)) return html.replace(data, (_, start, end) => start + content + end);
+  if (!entries.length) return html;
+  const prefix = pagePrefix(path);
+  html = addResource(html, 'real-works.css', '<link rel="stylesheet" href="' + prefix + 'real-works.css?v=editor">');
+  html = addResource(html, 'real-works.js', '<script src="' + prefix + 'real-works.js" defer></script>');
+  return html.replace('</body>', () => '<dialog id="real-works-dialog" class="real-works-dialog" aria-labelledby="real-works-view-title">' +
+    '<div class="real-works-dialog__shell"><header class="real-works-dialog__header"><h2 id="real-works-view-title"></h2>' +
+    '<button type="button" class="real-works-dialog__close">Cerrar</button></header>' +
+    '<div class="real-works-dialog__media"></div></div></dialog>\n' +
+    '<script type="application/json" id="real-works-data">' + content + '</script>\n</body>');
 }
 
 export function renderPage(page, html, draft) {
-  const edited = applyPhotos(html, draft.photos);
-  if (!page.type) return photoStyles(edited, page.path);
   const entries = draft.media;
   if (!Array.isArray(entries) || entries.length > 300 || new Set(entries.map(item => item.id)).size !== entries.length ||
       entries.some(item => !safeId.test(item.id) || !['image', 'video'].includes(item.type) ||
-        typeof item.source !== 'string' || !/^(?:\.\.\/\.\.\/)?assets\/[a-z0-9_./-]+$/i.test(item.source) ||
+        typeof item.source !== 'string' || !/^(?:\.\.\/){0,2}assets\/[a-z0-9_./-]+$/i.test(item.source) ||
         item.source.includes('..', item.source.indexOf('assets/')))) {
     throw new Error('Не удалось проверить список медиа.');
   }
-  requireMatch(edited, data);
-  const rendered = page.type === 'gallery' ? applyGallery(edited, draft.cards) : applySections(edited, draft);
-  const media = JSON.stringify(entries).replaceAll('<', '\\u003c');
-  return photoStyles(rendered.replace(data, (_, start, end) => start + media + end), page.path);
+  const edited = applyPhotos(html, draft.photos);
+  const rendered = applyBlocks(edited, draft.blocks);
+  return contentStyles(photoStyles(galleryResources(rendered, page.path, entries), page.path), page.path);
 }
 
 export function referencedMedia(html) {
