@@ -54,3 +54,15 @@ gh auth setup-git --hostname github.com
 ```sh
 node tools/content-editor/export.mjs ../filo-fino-pages
 ```
+
+Для локальной сборки будущего production-сайта в отдельный пустой каталог:
+
+```sh
+node tools/content-editor/export.mjs ../filo-fino-production --production
+python3 -m http.server 4181 --bind 127.0.0.1 --directory ../filo-fino-production
+```
+
+Откройте http://127.0.0.1:4181/. Этот режим добавляет canonical, структурированные
+данные, robots.txt и sitemap.xml для filofino.es. Он не отправляет файлы.
+Обычный экспорт и публикация из редактора используют страницы с noindex,nofollow.
+Перед переносом подтвердите юридические данные и условия работы production-хостинга.

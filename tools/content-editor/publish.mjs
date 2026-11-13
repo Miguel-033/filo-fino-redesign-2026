@@ -242,7 +242,7 @@ export function createPublisher(root, staging) {
           [...files.keys()].some(path => path.startsWith('tools/') || path.toLowerCase() === 'cname')) {
         throw new Error('Ветка preview содержит неожиданные файлы. Проверьте источник публикации GitHub Pages.');
       }
-      const baseline = await tree(common);
+      const [baseline, committed] = await Promise.all([tree(common), tree('HEAD')]);
       const changes = new Map();
       const saved = new Set();
       const observed = new Map();
@@ -251,7 +251,12 @@ export function createPublisher(root, staging) {
         observed.set(path, local);
         const remoteFile = files.get(path)?.oid;
         const receipt = await git(['rev-parse', '--verify', receipts(id)]).catch(() => null);
-        const previous = receipt ? (await tree(receipt)).get(path)?.oid : baseline.get(path)?.oid;
+        // A site change can be committed independently to main and preview.
+        // Identical blobs establish the same starting point even with different commit SHAs.
+        const committedFile = committed.get(path)?.oid;
+        const previous = committedFile === remoteFile && committedFile
+          ? committedFile
+          : receipt ? (await tree(receipt)).get(path)?.oid : baseline.get(path)?.oid;
         if (local !== remoteFile && local !== previous) {
           if (remoteFile !== previous) throw new Error('Конфликт с веткой preview: ' + path + '. Сначала согласуйте изменения этого файла.');
           changes.set(path, local);
@@ -267,6 +272,9 @@ export function createPublisher(root, staging) {
         const hash = changes.get(path) || files.get(path)?.oid;
         if (!hash) throw new Error('В preview отсутствует страница: ' + path);
         const html = (await git(['cat-file', 'blob', hash], { encoding: 'buffer' })).toString('utf8');
+        if (!/<meta name="robots" content="noindex,\s*nofollow">/i.test(html)) {
+          throw new Error('Для публикации в preview требуется noindex,nofollow: ' + path);
+        }
         for (const asset of mediaReferences(html, path)) {
           const existing = files.get(asset);
           if (!existing && !uploadFile.test(asset)) throw new Error('В сборке отсутствует медиа: ' + asset);

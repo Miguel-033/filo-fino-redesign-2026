@@ -1,10 +1,12 @@
 import { cp, mkdir, readdir } from 'node:fs/promises';
 import { basename, dirname, extname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { prepareProduction } from './production.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const destination = process.argv[2] && resolve(process.argv[2]);
-if (!destination || destination === root || destination.startsWith(root + sep)) {
+const [, , target, mode, ...extra] = process.argv;
+const destination = target && resolve(target);
+if (extra.length || (mode && mode !== '--production') || !destination || destination === root || destination.startsWith(root + sep)) {
   console.error('Укажите новый или пустой каталог вне репозитория.');
   process.exitCode = 1;
 } else {
@@ -24,6 +26,7 @@ if (!destination || destination === root || destination.startsWith(root + sep)) 
         });
       }
     }
+    if (mode === '--production') await prepareProduction(destination);
     console.log('Сайт собран локально: ' + destination);
   } catch (error) {
     console.error(error.message);
