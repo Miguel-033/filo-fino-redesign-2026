@@ -62,7 +62,9 @@ node tools/content-editor/export.mjs ../filo-fino-production --production
 python3 -m http.server 4181 --bind 127.0.0.1 --directory ../filo-fino-production
 ```
 
-Откройте http://127.0.0.1:4181/. Этот режим добавляет canonical, структурированные
-данные, robots.txt и sitemap.xml для filofino.es. Он не отправляет файлы.
+Откройте http://127.0.0.1:4181/. Этот режим собирает 11 публичных страниц
+для `https://filofino.es/` с canonical, JSON-LD, Open Graph, Twitter Card,
+robots.txt и sitemap.xml. Выходной каталог создаётся отдельно от исходников.
+Редактор не включается в сборку. Команда не отправляет файлы на сервер.
 Обычный экспорт и публикация из редактора используют страницы с noindex,nofollow.
 Перед переносом подтвердите юридические данные и условия работы production-хостинга.
