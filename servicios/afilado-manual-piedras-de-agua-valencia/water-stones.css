@@ -282,3 +282,24 @@ video[data-content-media-width]:not(:fullscreen) {
     grid-template-areas: "photos" "copy";
   }
 }
+
+@media (max-width: 767px) {
+  .service-page .hero--stones .hero-photo {
+    inset: 0;
+    height: 100%;
+  }
+
+  .service-page .hero--stones .hero-photo img {
+    object-position: 59% center;
+  }
+
+  .service-page .hero--stones .hero-photo::after {
+    background:
+      linear-gradient(90deg, #030e1166, transparent 85%),
+      linear-gradient(180deg, #030e1120 0%, #030e1140 19%, #030e11cc 44%, #030e11 78%);
+  }
+
+  .service-page .hero--stones .knife-hero-fact:first-child strong {
+    font-size: clamp(1.625rem, 7.5vw, 2rem);
+  }
+}
